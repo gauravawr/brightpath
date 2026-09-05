@@ -5,7 +5,7 @@ export const environment = {
 
   // Shared eApp backend (production)
   apiBaseUrl: 'https://eshoppingapi.azurewebsites.net',
-  idServerEndpoint: 'https://eapp-auth.azurewebsites.net',
+  idServerEndpoint: 'https://eshopauth.azurewebsites.net',
 
   clientId: 'brightpath-spa',
   localhostAuthBypassEnabled: false,
