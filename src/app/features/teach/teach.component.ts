@@ -1,6 +1,9 @@
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ContentService, QuestionInput, TestPaperInput } from '../../core/services/content.service';
+import {
+  ContentService, QuestionInput, TestPaperInput,
+  ACCEPTED_UPLOADS, MAX_UPLOAD_BYTES,
+} from '../../core/services/content.service';
 import { AuthService } from '../../core/services/auth.service';
 import { Subject, QuestionType } from '../../shared/models/content.models';
 
@@ -32,6 +35,13 @@ export class TeachComponent {
   // paper form
   paper = { subjectId: 0, title: '', summary: '', instructions: '', durationMinutes: null as number | null, level: 'beginner', isPublished: true };
   questions = signal<QuestionInput[]>([this.newQuestion()]);
+
+  // uploads
+  readonly accept = ACCEPTED_UPLOADS;
+  readonly uploadingCover = signal(false);
+  readonly uploadingFiles = signal(false);
+  /** Files staged before the lesson exists; attached once it has an id. */
+  readonly pendingFiles = signal<File[]>([]);
 
   readonly levels = ['beginner', 'intermediate', 'advanced'];
   readonly types: { v: QuestionType; label: string }[] = [
@@ -92,13 +102,90 @@ export class TeachComponent {
     });
   }
 
+  // ── Uploads ────────────────────────────────────────────────────────────────
+
+  /** Cover image: upload immediately so the teacher sees it resolve before saving. */
+  pickCover(ev: Event): void {
+    const input = ev.target as HTMLInputElement;
+    const file = input.files?.[0];
+    if (!file) return;
+    if (!this.checkSize(file)) { input.value = ''; return; }
+
+    this.uploadingCover.set(true);
+    this.content.upload(file).subscribe({
+      next: r => {
+        this.lesson.coverImageName = r.blobName;
+        this.uploadingCover.set(false);
+        this.flash(`Cover uploaded ✓ (${this.fmtSize(r.sizeBytes)})`);
+        input.value = '';
+      },
+      error: e => {
+        this.uploadingCover.set(false);
+        this.flash(e?.error?.error ?? 'Could not upload the cover image.', true);
+        input.value = '';
+      },
+    });
+  }
+
+  /** Worksheets/slides are staged locally; they need a lesson id to attach to. */
+  pickFiles(ev: Event): void {
+    const input = ev.target as HTMLInputElement;
+    const picked = Array.from(input.files ?? []).filter(f => this.checkSize(f));
+    if (picked.length) this.pendingFiles.update(list => [...list, ...picked]);
+    input.value = '';
+  }
+
+  removePending(i: number): void {
+    this.pendingFiles.update(list => list.filter((_, idx) => idx !== i));
+  }
+
+  private checkSize(file: File): boolean {
+    if (file.size > MAX_UPLOAD_BYTES) {
+      this.flash(`"${file.name}" is ${this.fmtSize(file.size)} — the limit is 100MB. `
+               + 'Host large video on YouTube and paste the embed URL instead.', true);
+      return false;
+    }
+    return true;
+  }
+
+  fmtSize(bytes: number): string {
+    if (bytes < 1024) return `${bytes} B`;
+    if (bytes < 1024 * 1024) return `${Math.round(bytes / 1024)} KB`;
+    return `${(bytes / 1024 / 1024).toFixed(1)} MB`;
+  }
+
   saveLesson(): void {
     if (!this.lesson.title.trim() || !this.lesson.subjectId) { this.flash('Pick a subject and add a title.', true); return; }
     this.saving.set(true);
     this.content.createLesson({ ...this.lesson, durationMinutes: this.lesson.durationMinutes ?? undefined }).subscribe({
-      next: () => { this.flash('Lesson created ✓'); this.saving.set(false); },
+      next: created => {
+        const files = this.pendingFiles();
+        if (!files.length) { this.afterLessonSaved('Lesson created ✓'); return; }
+
+        // Attach staged files now that the lesson has an id.
+        this.uploadingFiles.set(true);
+        let done = 0, failed = 0;
+        files.forEach(f => this.content.uploadToLesson(created.id, f).subscribe({
+          next: () => { if (++done + failed === files.length) this.finishAttachments(files.length, failed); },
+          error: () => { failed++; if (done + failed === files.length) this.finishAttachments(files.length, failed); },
+        }));
+      },
       error: () => { this.flash('Could not save lesson.', true); this.saving.set(false); },
     });
+  }
+
+  private finishAttachments(total: number, failed: number): void {
+    this.uploadingFiles.set(false);
+    this.afterLessonSaved(failed
+      ? `Lesson created, but ${failed} of ${total} file(s) failed to upload.`
+      : `Lesson created with ${total} file(s) ✓`, failed > 0);
+  }
+
+  private afterLessonSaved(msg: string, isError = false): void {
+    this.flash(msg, isError);
+    this.pendingFiles.set([]);
+    this.lesson = { subjectId: 0, title: '', summary: '', bodyHtml: '', coverImageName: '', videoUrl: '', durationMinutes: null, level: 'beginner', isPublished: true };
+    this.saving.set(false);
   }
 
   savePaper(): void {

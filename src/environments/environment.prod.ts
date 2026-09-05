@@ -12,6 +12,7 @@ export const environment = {
   webAppEndpoint: 'https://calm-tree-0f5893110.3.azurestaticapps.net/',
 
   blobImageBaseUrl: 'https://eshoppingstorage.blob.core.windows.net/images',
+  blobContentBaseUrl: 'https://eshoppingstorage.blob.core.windows.net/brightpath',
   blobVideoBaseUrl: 'https://eshoppingstorage.blob.core.windows.net/videos',
 
   // Shared YugTree/eApp GTM container (as agreed: BrightPath reuses YugTree analytics).

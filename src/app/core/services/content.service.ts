@@ -54,6 +54,38 @@ export class ContentService {
   createPaper(input: TestPaperInput): Observable<TestPaperSummary> {
     return this.http.post<TestPaperSummary>(`${this.api}/api/BrightPathTestPapers`, input);
   }
+
+  // ── File uploads (teacher only) ─────────────────────────────────────────────
+  /** Upload a standalone file (e.g. a cover image chosen before the lesson exists). */
+  upload(file: File): Observable<UploadedFile> {
+    const form = new FormData();
+    form.append('file', file, file.name);
+    return this.http.post<UploadedFile>(`${this.api}/api/BrightPathUploads`, form);
+  }
+
+  /** Upload and attach to an existing lesson in one round trip. */
+  uploadToLesson(lessonId: number, file: File): Observable<Attachment> {
+    const form = new FormData();
+    form.append('file', file, file.name);
+    return this.http.post<Attachment>(`${this.api}/api/BrightPathUploads/lesson/${lessonId}`, form);
+  }
+
+  deleteAttachment(id: number): Observable<void> {
+    return this.http.delete<void>(`${this.api}/api/BrightPathUploads/attachment/${id}`);
+  }
+}
+
+/** Mirrors BrightPathUploadService.MaxBytes on the server. */
+export const MAX_UPLOAD_BYTES = 100 * 1024 * 1024;
+export const ACCEPTED_UPLOADS = '.pdf,.ppt,.pptx,.doc,.docx,.jpg,.jpeg,.png,.webp,.gif,.svg';
+
+export interface UploadedFile {
+  blobName: string; url: string; fileName: string;
+  contentType: string; sizeBytes: number; kind: string;
+}
+export interface Attachment {
+  id: number; fileName: string; url: string;
+  contentType: string; sizeBytes: number; kind: string;
 }
 
 export interface SubjectInput {

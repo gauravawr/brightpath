@@ -31,3 +31,33 @@ input[type=color] { padding: 4px; height: 44px; }
 .link { align-self: flex-start; background: none; border: none; color: var(--brand-d); font-weight: 600; cursor: pointer; padding: 4px 0; font-size: .9rem; }
 
 @media (max-width: 560px) { .form .row { grid-template-columns: 1fr; } }
+
+/* File uploads */
+.upload { display: flex; flex-direction: column; gap: .4rem; }
+.upload-label { font-weight: 600; font-size: .9rem; color: var(--slate-700); }
+.upload input[type=file] {
+  width: 100%; min-width: 0; font-size: .88rem; padding: .55rem;
+  border: 1.5px dashed var(--border); border-radius: var(--r-md);
+  background: var(--page-bg); cursor: pointer;
+}
+.upload input[type=file]::file-selector-button {
+  border: none; background: var(--brand-tint); color: var(--brand-d);
+  font-weight: 600; padding: .4rem .75rem; border-radius: 8px;
+  margin-right: .7rem; cursor: pointer; font-family: inherit;
+}
+.upload input[type=file]:disabled { opacity: .6; cursor: default; }
+.hint { color: var(--slate-500); font-size: .8rem; font-weight: 400; }
+.ok { color: var(--accent-emerald); font-size: .8rem; font-weight: 600; word-break: break-all; }
+
+.pending { list-style: none; margin: .2rem 0 0; padding: 0; display: flex; flex-direction: column; gap: .35rem; }
+.pending li {
+  display: flex; align-items: center; gap: .6rem; min-width: 0;
+  background: var(--page-bg); border: 1px solid var(--border);
+  border-radius: 8px; padding: .45rem .6rem; font-size: .85rem;
+}
+.pending .fname { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pending .fsize { color: var(--slate-500); flex: none; font-variant-numeric: tabular-nums; }
+.pending .rm {
+  border: none; background: var(--slate-200); color: var(--slate-600);
+  width: 26px; height: 26px; border-radius: 6px; cursor: pointer; flex: none; line-height: 1;
+}

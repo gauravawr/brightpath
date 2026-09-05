@@ -41,6 +41,26 @@ import { Lesson } from '../../shared/models/content.models';
             <img class="lesson__cover" [src]="cover()" [alt]="lesson()!.title" />
           }
           <div class="prose" [innerHTML]="body()"></div>
+
+          @if (lesson()!.attachments?.length) {
+            <section class="dl">
+              <h2 class="dl__h">Lesson materials</h2>
+              <ul class="dl__list">
+                @for (a of lesson()!.attachments; track a.id) {
+                  <li>
+                    <a class="dl__item" [href]="a.url" target="_blank" rel="noopener">
+                      <span class="dl__icon" aria-hidden="true">{{ icon(a.kind) }}</span>
+                      <span class="dl__meta">
+                        <span class="dl__name">{{ a.fileName }}</span>
+                        <span class="dl__size">{{ fmtSize(a.sizeBytes) }}</span>
+                      </span>
+                      <span class="dl__go" aria-hidden="true">↓</span>
+                    </a>
+                  </li>
+                }
+              </ul>
+            </section>
+          }
         </div>
       </article>
     }
@@ -56,6 +76,22 @@ import { Lesson } from '../../shared/models/content.models';
     .prose :is(h2,h3) { color: var(--slate-900); margin-top: 1.6em; }
     .prose img { border-radius: var(--r-sm); margin: 1rem 0; }
     .prose a { color: var(--brand-d); text-decoration: underline; }
+
+    .dl { margin-top: 2.4rem; }
+    .dl__h { font-size: 1.15rem; margin: 0 0 .8rem; color: var(--slate-900); }
+    .dl__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: .6rem; }
+    .dl__item {
+      display: flex; align-items: center; gap: .9rem; min-width: 0;
+      padding: .8rem 1rem; border: 1px solid var(--border); border-radius: var(--r-md);
+      background: var(--white); text-decoration: none; color: inherit;
+      transition: border-color .15s, box-shadow .15s, transform .15s;
+    }
+    .dl__item:hover { border-color: var(--brand-l); box-shadow: var(--shadow-card); transform: translateY(-1px); }
+    .dl__icon { font-size: 1.4rem; flex: none; }
+    .dl__meta { display: flex; flex-direction: column; min-width: 0; flex: 1; }
+    .dl__name { font-weight: 600; color: var(--slate-900); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .dl__size { font-size: .8rem; color: var(--slate-500); font-variant-numeric: tabular-nums; }
+    .dl__go { flex: none; color: var(--brand-d); font-weight: 800; font-size: 1.1rem; }
   `],
 })
 export class LessonDetailComponent {
@@ -76,5 +112,14 @@ export class LessonDetailComponent {
   body(): SafeHtml { return this.sanitizer.bypassSecurityTrustHtml(this.lesson()?.bodyHtml ?? ''); }
   safeVideo(): SafeResourceUrl { return this.sanitizer.bypassSecurityTrustResourceUrl(this.lesson()?.videoUrl ?? ''); }
   cover(): string { return imageUrl(this.lesson()?.coverImageUrl, 'og'); }
+
+  icon(kind: string): string {
+    return kind === 'slides' ? '📊' : kind === 'image' ? '🖼️' : '📄';
+  }
+  fmtSize(bytes: number): string {
+    if (bytes < 1024) return `${bytes} B`;
+    if (bytes < 1024 * 1024) return `${Math.round(bytes / 1024)} KB`;
+    return `${(bytes / 1024 / 1024).toFixed(1)} MB`;
+  }
   l(p: string): string { return this.lang.localise(p); }
 }

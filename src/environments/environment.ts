@@ -16,6 +16,7 @@ export const environment = {
 
   // Shared blob storage; BrightPath assets live under the 'brightpath' prefix
   blobImageBaseUrl: 'https://eshoppingstorage.blob.core.windows.net/images',
+  blobContentBaseUrl: 'https://eshoppingstorage.blob.core.windows.net/brightpath',
   blobVideoBaseUrl: 'https://eshoppingstorage.blob.core.windows.net/videos',
 
   // Analytics (GTM shared container; disabled on localhost)

@@ -34,8 +34,19 @@ export interface LessonSummary {
 export interface Lesson extends LessonSummary {
   bodyHtml: string;
   videoUrl?: string;
-  attachments?: { name: string; url: string }[];
+  /** Downloadable files (worksheets, slide decks) — shape matches AttachmentDto on the API. */
+  attachments?: LessonAttachment[];
   relatedPaperSlugs?: string[];
+}
+
+export interface LessonAttachment {
+  id: number;
+  fileName: string;
+  url: string;
+  contentType: string;
+  sizeBytes: number;
+  /** document | slides | image */
+  kind: string;
 }
 
 export interface TestPaperSummary {
