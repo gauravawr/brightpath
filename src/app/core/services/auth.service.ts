@@ -18,7 +18,13 @@ export class AuthService {
   private readonly _user = signal<CurrentUser | null>(null);
   readonly user = this._user.asReadonly();
   readonly isAuthenticated = computed(() => this._user() !== null);
-  readonly isTeacher = computed(() => this._user()?.roles.includes('Teacher') ?? false);
+  /**
+   * eApp seeds the role lowercase ("teacher", matching the existing "consumer"
+   * convention) so the token carries that casing. Compare case-insensitively,
+   * as BrightPathControllerBase.IsTeacher does on the server.
+   */
+  readonly isTeacher = computed(() =>
+    this._user()?.roles.some(r => r.toLowerCase() === 'teacher') ?? false);
 
   private mgr?: UserManager;
 
