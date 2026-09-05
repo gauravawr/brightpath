@@ -30,7 +30,7 @@ export class AuthService {
         redirect_uri: `${environment.webAppEndpoint}signin-callback`,
         post_logout_redirect_uri: `${environment.webAppEndpoint}signout-callback`,
         response_type: 'code',
-        scope: 'openid profile email roles brightpath.api',
+        scope: 'openid profile email roles projects-api offline_access',
         userStore: new WebStorageStateStore({ store: window.localStorage }),
         automaticSilentRenew: true,
       });
