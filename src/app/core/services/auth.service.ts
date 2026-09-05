@@ -56,6 +56,24 @@ export class AuthService {
     } catch { /* not signed in */ }
   }
 
+  /**
+   * Pull a fresh token without a round trip through the login page. The auth server
+   * re-reads roles from the database on every refresh, so this is how a role granted
+   * a moment ago becomes usable immediately instead of at the next token expiry.
+   * Returns false if there is no usable refresh token.
+   */
+  async refreshSession(): Promise<boolean> {
+    if (environment.localhostAuthBypassEnabled) return false;
+    try {
+      const u = await this.manager().signinSilent();
+      if (!u) return false;
+      this.setFromOidc(u);
+      return true;
+    } catch {
+      return false;
+    }
+  }
+
   login(): Promise<void> { return this.manager().signinRedirect(); }
   loginWithGoogle(): Promise<void> { return this.manager().signinRedirect({ extraQueryParams: { idp: 'Google' } }); }
 

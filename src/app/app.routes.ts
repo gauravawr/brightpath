@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { langPrefixGuard } from './core/guards/lang-prefix.guard';
 import { teacherGuard } from './core/guards/teacher.guard';
+import { adminGuard } from './core/guards/admin.guard';
 
 const placeholder = (title: string, metaDescription: string, noIndex = false) => ({
   loadComponent: () => import('./shared/components/placeholder/placeholder.component').then(m => m.PlaceholderComponent),
@@ -69,6 +70,15 @@ export const routes: Routes = [
         canActivate: [teacherGuard],
         loadComponent: () => import('./features/teach/teach.component').then(m => m.TeachComponent),
         data: { title: 'Teach', metaDescription: 'Create and manage your lessons and practice papers.', noIndex: true },
+      },
+
+      // Admin area. Intentionally unlinked - no nav entry anywhere; you reach it by
+      // typing /admin, and the guard asks the server whether you may stay.
+      {
+        path: 'admin',
+        canActivate: [adminGuard],
+        loadComponent: () => import('./features/admin/admin.component').then(m => m.AdminComponent),
+        data: { title: 'Admin', metaDescription: 'Manage BrightPath access.', noIndex: true },
       },
 
       // Legal
