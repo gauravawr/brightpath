@@ -1,0 +1,26 @@
+<footer class="ftr">
+  <div class="bp-container ftr__grid">
+    <div class="ftr__brand">
+      <span class="brand"><span class="brand__mark">✦</span> Bright<span>Path</span></span>
+      <p>{{ 'footer.tagline' | translate }}</p>
+    </div>
+
+    <nav class="ftr__col">
+      <h4>{{ 'footer.learn' | translate }}</h4>
+      <a [routerLink]="l('/subjects')">{{ 'nav.subjects' | translate }}</a>
+      <a [routerLink]="l('/lessons')">{{ 'nav.lessons' | translate }}</a>
+      <a [routerLink]="l('/practice')">{{ 'nav.practice' | translate }}</a>
+    </nav>
+
+    <nav class="ftr__col">
+      <h4>{{ 'footer.about' | translate }}</h4>
+      <a [routerLink]="l('/support')">{{ 'nav.support' | translate }}</a>
+      <a [routerLink]="l('/privacy')">{{ 'footer.privacy' | translate }}</a>
+      <a [routerLink]="l('/terms')">{{ 'footer.terms' | translate }}</a>
+    </nav>
+  </div>
+
+  <div class="ftr__bar">
+    <div class="bp-container">© {{ year }} BrightPath. {{ 'footer.rights' | translate }}</div>
+  </div>
+</footer>

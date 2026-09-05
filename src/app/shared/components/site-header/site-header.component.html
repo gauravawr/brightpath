@@ -1,0 +1,32 @@
+<header class="hdr">
+  <div class="bp-container hdr__bar">
+    <a class="brand" [routerLink]="l('/')" (click)="close()">
+      <span class="brand__mark">✦</span>
+      <span class="brand__name">Bright<span>Path</span></span>
+    </a>
+
+    <nav class="nav" [class.nav--open]="menuOpen()">
+      <a [routerLink]="l('/subjects')" routerLinkActive="is-active" (click)="close()">{{ 'nav.subjects' | translate }}</a>
+      <a [routerLink]="l('/lessons')" routerLinkActive="is-active" (click)="close()">{{ 'nav.lessons' | translate }}</a>
+      <a [routerLink]="l('/practice')" routerLinkActive="is-active" (click)="close()">{{ 'nav.practice' | translate }}</a>
+      <a [routerLink]="l('/support')" routerLinkActive="is-active" (click)="close()">{{ 'nav.support' | translate }}</a>
+
+      @if (isTeacher()) {
+        <a class="nav__teach" [routerLink]="l('/teach')" routerLinkActive="is-active" (click)="close()">{{ 'nav.teach' | translate }}</a>
+      }
+
+      <div class="nav__auth">
+        @if (user(); as u) {
+          <span class="nav__who">{{ u.name }}</span>
+          <button class="bp-btn bp-btn--ghost" (click)="logout(); close()">{{ 'nav.signOut' | translate }}</button>
+        } @else {
+          <button class="bp-btn" (click)="login(); close()">{{ 'nav.signIn' | translate }}</button>
+        }
+      </div>
+    </nav>
+
+    <button class="hdr__burger" (click)="toggle()" [attr.aria-expanded]="menuOpen()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- Static top-level routes. Content URLs (lessons/papers/subjects) should be
+       appended by a build/publish script that reads active slugs from the API. -->
+  <url><loc>https://brightpath.app/en</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://brightpath.app/en"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://brightpath.app/hi"/>
+  </url>
+  <url><loc>https://brightpath.app/en/subjects</loc></url>
+  <url><loc>https://brightpath.app/en/lessons</loc></url>
+  <url><loc>https://brightpath.app/en/practice</loc></url>
+  <url><loc>https://brightpath.app/en/support</loc></url>
+</urlset>

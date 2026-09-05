@@ -1,0 +1,16 @@
+.sup { max-width: 560px; }
+.choose, .pay, .thanks { padding: 1.8rem; }
+.choose:hover, .pay:hover, .thanks:hover { transform: none; box-shadow: var(--shadow-card); }
+.choose h2, .pay h2 { margin-top: 0; }
+.choose__amts { display: grid; grid-template-columns: repeat(4, 1fr); gap: .7rem; margin-bottom: 1.4rem; }
+.amt { padding: 14px 0; border: 1.5px solid var(--border); border-radius: var(--r-md); background: var(--white); font-weight: 700; font-size: 1.05rem; color: var(--slate-700); cursor: pointer; transition: .15s; }
+.amt:hover { border-color: var(--brand-l); }
+.amt--on { border-color: var(--brand-d); background: var(--brand-tint); color: var(--brand-d); }
+.choose__custom { display: block; margin-bottom: 1.4rem; }
+.choose__custom span { display: block; font-size: .85rem; color: var(--text-muted); margin-bottom: .4rem; }
+.pay__element { margin: 1.2rem 0; min-height: 40px; }
+.pay__secure { font-size: .8rem; color: var(--text-muted); margin: 1rem 0 0; }
+.sup__err { color: var(--accent-rose); font-weight: 600; font-size: .9rem; }
+.thanks { text-align: center; }
+.thanks__icon { font-size: 3rem; }
+@media (max-width: 480px) { .choose__amts { grid-template-columns: repeat(2, 1fr); } }

@@ -1,0 +1,65 @@
+<!-- HERO -->
+<section class="hero">
+  <div class="hero__glow" aria-hidden="true"></div>
+  <div class="bp-container hero__inner bp-reveal">
+    <span class="bp-chip">{{ 'home.badge' | translate }}</span>
+    <h1 class="hero__title">{{ 'home.hero.title' | translate }}</h1>
+    <p class="hero__sub">{{ 'home.hero.sub' | translate }}</p>
+    <div class="hero__cta">
+      <a class="bp-btn" [routerLink]="l('/lessons')">{{ 'home.hero.primary' | translate }}</a>
+      <a class="bp-btn bp-btn--ghost" [routerLink]="l('/practice')">{{ 'home.hero.secondary' | translate }}</a>
+    </div>
+    <p class="hero__note">{{ 'home.hero.note' | translate }}</p>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="bp-section">
+  <div class="bp-container">
+    <div class="sec-head">
+      <span class="bp-label">{{ 'home.why.label' | translate }}</span>
+      <h2>{{ 'home.why.title' | translate }}</h2>
+    </div>
+    <div class="grid grid--4">
+      @for (f of features; track f.titleKey) {
+        <article class="bp-card feat" [attr.data-accent]="f.accent">
+          <div class="feat__icon">{{ f.icon }}</div>
+          <h3>{{ f.titleKey | translate }}</h3>
+          <p>{{ f.bodyKey | translate }}</p>
+        </article>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="bp-section how">
+  <div class="bp-container">
+    <div class="sec-head sec-head--center">
+      <span class="bp-label">{{ 'home.how.label' | translate }}</span>
+      <h2>{{ 'home.how.title' | translate }}</h2>
+    </div>
+    <div class="grid grid--3">
+      @for (s of steps; track s.n) {
+        <div class="step">
+          <span class="step__n">{{ s.n }}</span>
+          <h3>{{ s.titleKey | translate }}</h3>
+          <p>{{ s.bodyKey | translate }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="bp-section">
+  <div class="bp-container">
+    <div class="cta bp-card">
+      <div>
+        <h2>{{ 'home.cta.title' | translate }}</h2>
+        <p>{{ 'home.cta.sub' | translate }}</p>
+      </div>
+      <a class="bp-btn" [routerLink]="l('/subjects')">{{ 'home.cta.button' | translate }}</a>
+    </div>
+  </div>
+</section>

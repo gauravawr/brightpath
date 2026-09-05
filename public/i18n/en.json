@@ -1,0 +1,54 @@
+{
+  "nav": {
+    "subjects": "Subjects",
+    "lessons": "Lessons",
+    "practice": "Practice",
+    "support": "Support",
+    "teach": "Teach",
+    "signIn": "Sign in",
+    "signOut": "Sign out"
+  },
+  "home": {
+    "badge": "Free · Learn at your own pace",
+    "hero": {
+      "title": "Lessons and practice papers that make learning click",
+      "sub": "BrightPath brings clear lessons and real practice test papers from teachers into one calm, focused place — so you can learn, practise, and see your progress.",
+      "primary": "Start learning",
+      "secondary": "Try a practice paper",
+      "note": "No fees. Optional donations keep BrightPath running."
+    },
+    "why": {
+      "label": "Why BrightPath",
+      "title": "Everything you need to learn and to prove it"
+    },
+    "f1": { "title": "Structured lessons", "body": "Clear, step-by-step lessons grouped by subject — text, video, and downloadable notes." },
+    "f2": { "title": "Real practice papers", "body": "Timed test papers with a mix of question types, just like the real thing." },
+    "f3": { "title": "Instant scoring", "body": "Submit and get scored immediately, with a breakdown of what you got right." },
+    "f4": { "title": "Track your progress", "body": "See attempts and results over time so you always know your next step." },
+    "how": {
+      "label": "How it works",
+      "title": "Three simple steps"
+    },
+    "s1": { "title": "Pick a subject", "body": "Browse subjects and choose what you want to work on today." },
+    "s2": { "title": "Learn the lesson", "body": "Work through the lesson at your own pace, as many times as you like." },
+    "s3": { "title": "Take a practice paper", "body": "Test yourself, get scored instantly, and see where to improve." },
+    "cta": {
+      "title": "Ready to start?",
+      "sub": "Jump into your first lesson — it's completely free.",
+      "button": "Browse subjects"
+    }
+  },
+  "footer": {
+    "tagline": "Lessons and practice test papers from real teachers. Learn at your own pace.",
+    "learn": "Learn",
+    "about": "About",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "rights": "All rights reserved."
+  },
+  "cookie": {
+    "text": "BrightPath uses cookies to understand what's working and improve your experience.",
+    "accept": "Accept",
+    "decline": "Decline"
+  }
+}

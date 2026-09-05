@@ -1,0 +1,47 @@
+<header class="bp-page-hero">
+  <div class="bp-container">
+    <span class="bp-chip">💜 {{ 'nav.support' | translate }}</span>
+    <h1>Support BrightPath</h1>
+    <p>BrightPath is completely free. If it helps you learn, an optional donation keeps the lessons and servers running.</p>
+  </div>
+</header>
+
+<section class="bp-section"><div class="bp-container sup">
+  @switch (phase()) {
+    @case ('disabled') {
+      <div class="bp-empty"><h3>Donations are paused</h3><p>Thank you for wanting to help — donations aren't open right now.</p></div>
+    }
+    @case ('done') {
+      <div class="thanks bp-card bp-reveal">
+        <div class="thanks__icon">🎉</div>
+        <h2>Thank you!</h2>
+        <p>Your support means a lot and helps keep BrightPath free for everyone.</p>
+      </div>
+    }
+    @case ('paying') {
+      <div class="pay bp-card">
+        <h2>Donate {{ effectiveAmount() | currency:'USD' }}</h2>
+        <div #payEl class="pay__element"></div>
+        @if (error()) { <p class="sup__err">{{ error() }}</p> }
+        <button class="bp-btn" (click)="confirm()" [disabled]="busy()">{{ busy() ? 'Processing…' : 'Complete donation' }}</button>
+        <p class="pay__secure">🔒 Payments are processed securely by Stripe. BrightPath never sees your card details.</p>
+      </div>
+    }
+    @default {
+      <div class="choose bp-card">
+        <h2>Choose an amount</h2>
+        <div class="choose__amts">
+          @for (a of amounts; track a) {
+            <button class="amt" [class.amt--on]="!custom() && amount() === a" (click)="pick(a)">{{ a | currency:'USD':'symbol':'1.0-0' }}</button>
+          }
+        </div>
+        <label class="choose__custom">
+          <span>Or enter a custom amount (USD)</span>
+          <input type="number" min="1" step="1" placeholder="e.g. 15" (input)="setCustom($any($event.target).value)" />
+        </label>
+        @if (error()) { <p class="sup__err">{{ error() }}</p> }
+        <button class="bp-btn" (click)="proceed()" [disabled]="busy()">{{ busy() ? 'Please wait…' : 'Continue to payment →' }}</button>
+      </div>
+    }
+  }
+</div></section>

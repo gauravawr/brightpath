@@ -1,0 +1,107 @@
+<header class="bp-page-hero">
+  <div class="bp-container">
+    <span class="bp-chip">👩‍🏫 Teacher</span>
+    <h1>Create content</h1>
+    <p>Welcome, {{ teacherName() }}. Add subjects, lessons and practice papers for your students.</p>
+  </div>
+</header>
+
+<section class="bp-section"><div class="bp-container teach">
+  <nav class="tabs">
+    <button [class.tabs--on]="tab() === 'subject'" (click)="tab.set('subject')">Subject</button>
+    <button [class.tabs--on]="tab() === 'lesson'" (click)="tab.set('lesson')">Lesson</button>
+    <button [class.tabs--on]="tab() === 'paper'" (click)="tab.set('paper')">Practice paper</button>
+  </nav>
+
+  @if (toast()) { <div class="toast" [class.toast--err]="toastErr()">{{ toast() }}</div> }
+
+  @switch (tab()) {
+    @case ('subject') {
+      <div class="form bp-card">
+        <label>Name<input [(ngModel)]="subj.name" placeholder="e.g. Mathematics" /></label>
+        <label>Description<textarea [(ngModel)]="subj.description" rows="2" placeholder="Short description"></textarea></label>
+        <div class="row">
+          <label>Accent colour<input type="color" [(ngModel)]="subj.colorHex" /></label>
+          <label>Icon emoji<input [(ngModel)]="subj.iconEmoji" maxlength="4" /></label>
+        </div>
+        <button class="bp-btn" (click)="saveSubject()" [disabled]="saving()">{{ saving() ? 'Saving…' : 'Create subject' }}</button>
+      </div>
+    }
+
+    @case ('lesson') {
+      <div class="form bp-card">
+        <label>Subject
+          <select [(ngModel)]="lesson.subjectId">
+            <option [ngValue]="0" disabled>Choose a subject…</option>
+            @for (s of subjects(); track s.id) { <option [ngValue]="s.id">{{ s.name }}</option> }
+          </select>
+        </label>
+        <label>Title<input [(ngModel)]="lesson.title" placeholder="Lesson title" /></label>
+        <label>Summary<textarea [(ngModel)]="lesson.summary" rows="2"></textarea></label>
+        <label>Body (HTML allowed)<textarea [(ngModel)]="lesson.bodyHtml" rows="6" placeholder="<p>Lesson content…</p>"></textarea></label>
+        <div class="row">
+          <label>Video URL (embed)<input [(ngModel)]="lesson.videoUrl" placeholder="https://www.youtube.com/embed/…" /></label>
+          <label>Cover image (blob file name)<input [(ngModel)]="lesson.coverImageName" placeholder="abc.webp" /></label>
+        </div>
+        <div class="row">
+          <label>Duration (min)<input type="number" [(ngModel)]="lesson.durationMinutes" /></label>
+          <label>Level<select [(ngModel)]="lesson.level">@for (lv of levels; track lv) { <option [ngValue]="lv">{{ lv }}</option> }</select></label>
+          <label class="chk"><input type="checkbox" [(ngModel)]="lesson.isPublished" /> Publish now</label>
+        </div>
+        <button class="bp-btn" (click)="saveLesson()" [disabled]="saving()">{{ saving() ? 'Saving…' : 'Create lesson' }}</button>
+      </div>
+    }
+
+    @case ('paper') {
+      <div class="form bp-card">
+        <label>Subject
+          <select [(ngModel)]="paper.subjectId">
+            <option [ngValue]="0" disabled>Choose a subject…</option>
+            @for (s of subjects(); track s.id) { <option [ngValue]="s.id">{{ s.name }}</option> }
+          </select>
+        </label>
+        <label>Title<input [(ngModel)]="paper.title" placeholder="Paper title" /></label>
+        <label>Summary<textarea [(ngModel)]="paper.summary" rows="2"></textarea></label>
+        <label>Instructions<textarea [(ngModel)]="paper.instructions" rows="2"></textarea></label>
+        <div class="row">
+          <label>Duration (min)<input type="number" [(ngModel)]="paper.durationMinutes" /></label>
+          <label>Level<select [(ngModel)]="paper.level">@for (lv of levels; track lv) { <option [ngValue]="lv">{{ lv }}</option> }</select></label>
+          <label class="chk"><input type="checkbox" [(ngModel)]="paper.isPublished" /> Publish now</label>
+        </div>
+
+        <h3 class="qh">Questions</h3>
+        @for (q of questions(); track $index) {
+          <div class="qb">
+            <div class="qb__top">
+              <span class="qb__n">Q{{ $index + 1 }}</span>
+              <select [(ngModel)]="q.type" (ngModelChange)="onTypeChange($index)">
+                @for (t of types; track t.v) { <option [ngValue]="t.v">{{ t.label }}</option> }
+              </select>
+              <input class="qb__marks" type="number" min="1" [(ngModel)]="q.marks" title="Marks" />
+              <button class="qb__del" (click)="removeQuestion($index)" [disabled]="questions().length === 1">✕</button>
+            </div>
+            <input [(ngModel)]="q.prompt" placeholder="Question prompt" />
+
+            @if (q.type === 'short') {
+              <input [(ngModel)]="q.expectedAnswer" placeholder="Expected answer (for auto-marking)" />
+            } @else {
+              <div class="qb__opts">
+                @for (o of q.options; track $index; let oi = $index) {
+                  <div class="qb__opt">
+                    <button class="qb__correct" [class.on]="o.isCorrect" (click)="markCorrect($index, oi)" title="Mark correct" type="button">✓</button>
+                    <input [(ngModel)]="o.text" placeholder="Option text" />
+                    <button class="qb__delopt" (click)="removeOption($index, oi)" type="button">✕</button>
+                  </div>
+                }
+                <button class="link" (click)="addOption($index)" type="button">+ Add option</button>
+              </div>
+            }
+          </div>
+        }
+        <button class="link" (click)="addQuestion()" type="button">+ Add question</button>
+
+        <button class="bp-btn" (click)="savePaper()" [disabled]="saving()">{{ saving() ? 'Saving…' : 'Create practice paper' }}</button>
+      </div>
+    }
+  }
+</div></section>

@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /en/teach
+Disallow: /hi/teach
+Disallow: /*/signin-callback
+Disallow: /*/signout-callback
+
+Sitemap: https://brightpath.app/sitemap.xml

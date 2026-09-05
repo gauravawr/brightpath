@@ -1,0 +1,166 @@
+/* ============================================================
+   BrightPath — global design tokens + reset + base
+   Design system: indigo / academic (per webapp-blueprint design-system.md)
+   Rule: components use var(--token) only — never hard-code colors.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap');
+
+:root {
+  /* Brand — indigo/academic */
+  --brand-d: #4f46e5;   /* primary            */
+  --brand-m: #6366f1;   /* hover / mid        */
+  --brand-l: #818cf8;   /* accent / grad end  */
+  --brand-tint: #eef2ff;/* soft brand wash    */
+
+  /* Accents (keep the app from reading single-hue) */
+  --accent-amber: #f59e0b;
+  --accent-emerald: #10b981;
+  --accent-rose: #f43f5e;
+  --accent-sky: #0ea5e9;
+
+  /* Neutrals — slate scale (do not change) */
+  --slate-100: #f1f5f9;
+  --slate-200: #e2e8f0;
+  --slate-300: #cbd5e1;
+  --slate-400: #94a3b8;
+  --slate-500: #64748b;
+  --slate-600: #475569;
+  --slate-700: #334155;
+  --slate-800: #1e293b;
+  --slate-900: #0f172a;
+  --white: #ffffff;
+  --page-bg: #f8fafc;
+
+  /* Semantic */
+  --text: var(--slate-800);
+  --text-muted: var(--slate-500);
+  --border: var(--slate-200);
+
+  /* Shadows */
+  --shadow-card: 0 2px 12px rgba(15, 23, 42, .07);
+  --shadow-hover: 0 12px 32px rgba(79, 70, 229, .16);
+  --shadow-hero: 0 16px 48px rgba(15, 23, 42, .18);
+
+  /* Radii */
+  --r-sm: 10px;
+  --r-md: 16px;
+  --r-lg: 22px;
+  --r-pill: 999px;
+
+  /* Fixed bottom bar clearance (mobile) */
+  --app-bottom-bar-clearance: 0px;
+
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-head: 'Sora', 'Inter', system-ui, sans-serif;
+
+  --easing-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ---- reset ---- */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--text);
+  background: var(--page-bg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  line-height: 1.55;
+}
+h1, h2, h3, h4 { font-family: var(--font-head); font-weight: 800; line-height: 1.15; margin: 0 0 .5em; color: var(--slate-900); }
+h2 { font-weight: 700; }
+p { margin: 0 0 1em; }
+a { color: var(--brand-d); text-decoration: none; }
+a:hover { color: var(--brand-m); }
+img { max-width: 100%; display: block; }
+button { font-family: inherit; }
+ul { margin: 0; padding: 0; list-style: none; }
+
+/* ---- layout helpers ---- */
+.bp-container { width: 100%; max-width: 1160px; margin-inline: auto; padding-inline: 20px; }
+.bp-section { padding-block: clamp(48px, 7vw, 88px); }
+
+/* ---- primary CTA ---- */
+.bp-btn {
+  display: inline-flex; align-items: center; gap: .5rem;
+  border: none; cursor: pointer;
+  background: linear-gradient(135deg, var(--brand-d), var(--brand-l));
+  color: var(--white); font-weight: 700; font-size: .95rem;
+  border-radius: var(--r-pill); padding: 12px 26px;
+  transition: transform .18s var(--easing-spring), opacity .18s, box-shadow .18s;
+  box-shadow: 0 6px 18px rgba(79, 70, 229, .28);
+}
+.bp-btn:hover { opacity: .94; transform: translateY(-1px); box-shadow: 0 10px 24px rgba(79, 70, 229, .34); color: var(--white); }
+.bp-btn--ghost {
+  background: var(--white); color: var(--brand-d);
+  border: 1.5px solid var(--brand-tint); box-shadow: none;
+}
+.bp-btn--ghost:hover { background: var(--brand-tint); color: var(--brand-d); }
+
+/* ---- card ---- */
+.bp-card {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: var(--r-lg); box-shadow: var(--shadow-card);
+  transition: transform .2s var(--easing-spring), box-shadow .2s;
+}
+.bp-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-hover); }
+
+/* ---- chip / badge ---- */
+.bp-chip {
+  display: inline-flex; align-items: center; gap: .35rem;
+  border-radius: var(--r-pill); padding: 5px 14px;
+  font-size: .72rem; font-weight: 700; letter-spacing: .04em;
+  background: var(--brand-tint); color: var(--brand-d);
+}
+.bp-label { font-size: .7rem; text-transform: uppercase; letter-spacing: .1em; font-weight: 700; color: var(--text-muted); }
+
+/* ---- reveal animation ---- */
+@keyframes bpReveal { from { opacity: 0; transform: scale(.9) translateY(18px); } to { opacity: 1; transform: none; } }
+.bp-reveal { animation: bpReveal .5s var(--easing-spring) both; }
+
+/* ---- form controls (mobile-safe: full width, min-width 0) ---- */
+input, select, textarea {
+  width: 100%; min-width: 0; font-family: inherit; font-size: 1rem;
+  padding: 11px 14px; border: 1.5px solid var(--border); border-radius: var(--r-sm);
+  background: var(--white); color: var(--text); transition: border-color .15s, box-shadow .15s;
+}
+input:focus, select:focus, textarea:focus {
+  outline: none; border-color: var(--brand-m); box-shadow: 0 0 0 3px var(--brand-tint);
+}
+
+:focus-visible { outline: 2px solid var(--brand-m); outline-offset: 2px; }
+
+/* ---- page primitives (shared by feature pages) ---- */
+.bp-page-hero {
+  background: linear-gradient(180deg, var(--brand-tint), var(--page-bg));
+  padding-block: clamp(40px, 6vw, 72px);
+  border-bottom: 1px solid var(--border);
+}
+.bp-page-hero h1 { font-size: clamp(1.9rem, 4.5vw, 3rem); margin-bottom: .5rem; }
+.bp-page-hero p { color: var(--slate-600); max-width: 60ch; margin: 0; }
+
+.bp-grid { display: grid; gap: 1.3rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); }
+
+.bp-empty, .bp-loading {
+  text-align: center; color: var(--text-muted);
+  padding: clamp(48px, 10vw, 96px) 20px; display: flex; flex-direction: column; align-items: center; gap: 1rem;
+}
+.bp-empty h3 { color: var(--slate-700); margin: 0; }
+.bp-spinner {
+  width: 34px; height: 34px; border-radius: 50%;
+  border: 3px solid var(--brand-tint); border-top-color: var(--brand-d);
+  animation: bpSpin .8s linear infinite;
+}
+@keyframes bpSpin { to { transform: rotate(360deg); } }
+
+/* entity card (lesson / paper / subject) */
+.bp-ecard { display: flex; flex-direction: column; overflow: hidden; height: 100%; text-align: left; }
+.bp-ecard__thumb { aspect-ratio: 16 / 9; background: var(--brand-tint); display: grid; place-items: center; font-size: 2.4rem; overflow: hidden; }
+.bp-ecard__thumb img { width: 100%; height: 100%; object-fit: cover; }
+.bp-ecard__body { padding: 1.1rem 1.2rem 1.3rem; display: flex; flex-direction: column; gap: .5rem; flex: 1; }
+.bp-ecard__title { font-family: var(--font-head); font-weight: 700; font-size: 1.05rem; color: var(--slate-900); margin: 0; }
+.bp-ecard__sub { color: var(--text-muted); font-size: .88rem; margin: 0; flex: 1; }
+.bp-ecard__meta { display: flex; flex-wrap: wrap; gap: .4rem; align-items: center; margin-top: .3rem; }
+.bp-meta-chip { font-size: .72rem; font-weight: 600; color: var(--slate-500); background: var(--slate-100); border-radius: var(--r-pill); padding: 3px 10px; }

@@ -1,0 +1,120 @@
+@switch (phase()) {
+  @case ('loading') {
+    <div class="bp-loading" style="min-height:55vh"><span class="bp-spinner"></span> Loading paper…</div>
+  }
+  @case ('notfound') {
+    <div class="bp-empty" style="min-height:55vh"><h3>Paper not found</h3>
+      <a class="bp-btn" [routerLink]="l('/practice')">Back to practice</a></div>
+  }
+
+  @case ('intro') {
+    <header class="bp-page-hero">
+      <div class="bp-container">
+        <span class="bp-chip">📝 Practice paper</span>
+        <h1>{{ paper()!.title }}</h1>
+        @if (paper()!.summary) { <p>{{ paper()!.summary }}</p> }
+      </div>
+    </header>
+    <section class="bp-section"><div class="bp-container intro">
+      <div class="intro__stats">
+        <div class="stat"><span class="stat__n">{{ total() }}</span><span class="stat__l">questions</span></div>
+        @if (paper()!.durationMinutes) { <div class="stat"><span class="stat__n">{{ paper()!.durationMinutes }}</span><span class="stat__l">minutes</span></div> }
+        @if (paper()!.level) { <div class="stat"><span class="stat__n">{{ paper()!.level }}</span><span class="stat__l">level</span></div> }
+      </div>
+      @if (paper()!.instructions) { <div class="intro__instr"><h3>Instructions</h3><p>{{ paper()!.instructions }}</p></div> }
+      <p class="intro__note">Your answers are scored automatically the moment you submit.</p>
+      <button class="bp-btn" (click)="start()">Start paper →</button>
+    </div></section>
+  }
+
+  @case ('result') {
+    <section class="bp-section"><div class="bp-container result">
+      <div class="score bp-card bp-reveal">
+        <div class="score__ring" [style.--pct]="result()!.percentage">
+          <span>{{ result()!.percentage }}%</span>
+        </div>
+        <div class="score__detail">
+          <h1>{{ headline(result()!.percentage) }}</h1>
+          <p>You scored <strong>{{ result()!.scoredMarks }}/{{ result()!.totalMarks }}</strong> marks —
+             {{ result()!.correctCount }} of {{ result()!.questionCount }} correct.</p>
+          <div class="score__cta">
+            <a class="bp-btn bp-btn--ghost" [routerLink]="l('/practice')">More papers</a>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="result__h">Review</h2>
+      @for (q of paper()!.questions; track q.id; let i = $index) {
+        <div class="review" [class.review--ok]="breakdownFor(q.id)?.correct" [class.review--no]="breakdownFor(q.id)?.correct === false">
+          <div class="review__head"><span class="review__i">Q{{ i + 1 }}</span>
+            <span class="review__badge">{{ breakdownFor(q.id)?.correct ? '✓ Correct' : '✗ Incorrect' }}</span></div>
+          <p class="review__q">{{ q.prompt }}</p>
+          @if (q.type !== 'short') {
+            <ul class="review__opts">
+              @for (o of q.options; track o.id) {
+                <li [class.is-correct]="breakdownFor(q.id)?.correctOptionIds?.includes(o.id)"
+                    [class.is-picked]="isSelected(q.id, o.id)">{{ o.text }}</li>
+              }
+            </ul>
+          } @else {
+            <p class="review__short">Your answer: <em>{{ textOf(q.id) || '—' }}</em></p>
+          }
+        </div>
+      }
+    </div></section>
+  }
+
+  @default {
+    <!-- taking / submitting -->
+    <div class="run">
+      <div class="run__bar">
+        <div class="bp-container run__barin">
+          <span class="run__progress">Question {{ index() + 1 }} / {{ total() }}</span>
+          <div class="run__dots">
+            @for (q of paper()!.questions; track q.id; let i = $index) {
+              <button class="dot" [class.dot--active]="i === index()" [class.dot--done]="isAnswered(q.id)"
+                      (click)="goTo(i)" [attr.aria-label]="'Question ' + (i+1)"></button>
+            }
+          </div>
+          @if (secondsLeft() !== null) { <span class="run__timer" [class.run__timer--low]="(secondsLeft() ?? 0) < 30">⏱ {{ fmtTime(secondsLeft()) }}</span> }
+        </div>
+      </div>
+
+      <section class="bp-section run__body"><div class="bp-container">
+        @if (current(); as q) {
+          <div class="qcard bp-card bp-reveal">
+            <span class="bp-label">{{ q.marks }} {{ q.marks === 1 ? 'mark' : 'marks' }} · {{ typeLabel(q.type) }}</span>
+            <h2 class="qcard__prompt">{{ q.prompt }}</h2>
+
+            @if (q.type === 'short') {
+              <input type="text" placeholder="Type your answer…" [value]="textOf(q.id)"
+                     (input)="setText(q, $any($event.target).value)" />
+            } @else {
+              <div class="opts">
+                @for (o of q.options; track o.id) {
+                  <button class="opt" [class.opt--on]="isSelected(q.id, o.id)" (click)="select(q, o.id)">
+                    <span class="opt__mark">{{ isSelected(q.id, o.id) ? '●' : '' }}</span>{{ o.text }}
+                  </button>
+                }
+              </div>
+            }
+          </div>
+
+          @if (submitError()) { <p class="run__err">Couldn't submit — please check your connection and try again.</p> }
+
+          <div class="run__nav">
+            <button class="bp-btn bp-btn--ghost" (click)="prev()" [disabled]="index() === 0">← Previous</button>
+            @if (index() < total() - 1) {
+              <button class="bp-btn" (click)="next()">Next →</button>
+            } @else {
+              <button class="bp-btn" (click)="submit()" [disabled]="phase() === 'submitting'">
+                {{ phase() === 'submitting' ? 'Submitting…' : 'Submit paper' }}
+              </button>
+            }
+          </div>
+          <p class="run__count">{{ answeredCount() }} of {{ total() }} answered</p>
+        }
+      </div></section>
+    </div>
+  }
+}
