@@ -42,3 +42,9 @@ __screenshots__/
 # System files
 .DS_Store
 Thumbs.db
+
+# Deployment — Azure SWA token must NEVER be committed (matches yugtree)
+swa-cli.config.json
+.env
+.env.local
+_swa*.log

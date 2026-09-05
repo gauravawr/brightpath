@@ -14,7 +14,8 @@ export const environment = {
   blobImageBaseUrl: 'https://eshoppingstorage.blob.core.windows.net/images',
   blobVideoBaseUrl: 'https://eshoppingstorage.blob.core.windows.net/videos',
 
-  // TODO: set BrightPath's own GTM container id before launch
-  gtmContainerId: '',
+  // Shared YugTree/eApp GTM container (as agreed: BrightPath reuses YugTree analytics).
+  // Swap for a BrightPath-only container if the traffic ever needs separating.
+  gtmContainerId: 'GTM-5228QGVV',
   amplitudeApiKey: '',
 };
