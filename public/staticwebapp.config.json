@@ -1,0 +1,17 @@
+{
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": ["/i18n/*", "/*.{js,css,ico,png,jpg,jpeg,webp,svg,json,txt,xml,woff,woff2}"]
+  },
+  "routes": [
+    { "route": "/", "redirect": "/en", "statusCode": 302 },
+    { "route": "/*/teach", "headers": { "X-Robots-Tag": "noindex, nofollow" } }
+  ],
+  "responseOverrides": {
+    "404": { "rewrite": "/index.html", "statusCode": 200 }
+  },
+  "mimeTypes": {
+    ".json": "application/json",
+    ".webp": "image/webp"
+  }
+}

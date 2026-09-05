@@ -9,7 +9,7 @@ export const environment = {
 
   clientId: 'brightpath-spa',
   localhostAuthBypassEnabled: false,
-  webAppEndpoint: 'https://brightpath.app/',
+  webAppEndpoint: 'https://calm-tree-0f5893110.3.azurestaticapps.net/',
 
   blobImageBaseUrl: 'https://eshoppingstorage.blob.core.windows.net/images',
   blobVideoBaseUrl: 'https://eshoppingstorage.blob.core.windows.net/videos',
