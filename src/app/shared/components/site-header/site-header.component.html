@@ -7,9 +7,6 @@
 
     <nav class="nav" [class.nav--open]="menuOpen()">
       <a [routerLink]="l('/subjects')" routerLinkActive="is-active" (click)="close()">{{ 'nav.subjects' | translate }}</a>
-      <a [routerLink]="l('/lessons')" routerLinkActive="is-active" (click)="close()">{{ 'nav.lessons' | translate }}</a>
-      <a [routerLink]="l('/practice')" routerLinkActive="is-active" (click)="close()">{{ 'nav.practice' | translate }}</a>
-      <a [routerLink]="l('/support')" routerLinkActive="is-active" (click)="close()">{{ 'nav.support' | translate }}</a>
 
       @if (isTeacher()) {
         <a class="nav__teach" [routerLink]="l('/teach')" routerLinkActive="is-active" (click)="close()">{{ 'nav.teach' | translate }}</a>

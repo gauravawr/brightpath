@@ -17,8 +17,8 @@ export const routes: Routes = [
     children: [
       {
         path: '',
-        loadComponent: () => import('./features/home/home.component').then(m => m.HomeComponent),
-        data: { title: '', metaDescription: 'Lessons and practice test papers from real teachers. Learn at your own pace on BrightPath.' },
+        loadComponent: () => import('./features/subjects/subjects-hub.component').then(m => m.SubjectsHubComponent),
+        data: { title: '', metaDescription: 'Choose English or Maths, then browse BrightPath resources by year group.' },
       },
 
       // Subjects
