@@ -40,6 +40,11 @@ export const routes: Routes = [
 
       // Lessons
       {
+        path: 'curriculum/:subject/year/:year',
+        loadComponent: () => import('./features/curriculum/year1-maths-map.component').then(m => m.Year1MathsMapComponent),
+        data: { title: '30-week curriculum map', metaDescription: 'A National Curriculum-aligned 30-week teaching map with five daily lesson focuses each week.' },
+      },
+      {
         path: 'lessons',
         loadComponent: () => import('./features/lessons/lessons-list.component').then(m => m.LessonsListComponent),
         data: { title: 'Lessons', metaDescription: 'Learn with clear, structured lessons from real teachers on BrightPath.' },
@@ -47,7 +52,7 @@ export const routes: Routes = [
       {
         path: 'lessons/year-1-maths-map',
         loadComponent: () => import('./features/curriculum/year1-maths-map.component').then(m => m.Year1MathsMapComponent),
-        data: { title: 'Year 1 Maths Curriculum Map', metaDescription: 'A complete 30-week Year 1 Maths teaching map with five daily lesson focuses each week.' },
+        data: { subject: 'maths', year: 1, title: 'Year 1 Maths Curriculum Map', metaDescription: 'A complete 30-week Year 1 Maths teaching map with five daily lesson focuses each week.' },
       },
       {
         path: 'lessons/year-1-maths/week-1/:slug',

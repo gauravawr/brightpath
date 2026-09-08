@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/cor
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { LanguageService } from '../../core/services/language.service';
 
 interface Question { q: string; a: string; }
@@ -10,6 +11,7 @@ interface WeekLesson {
   warmup:string; teacherModel:string[]; guided:string; independent:string; plenary:string;
   preteach:{focus:string;steps:string[];questions:Question[]}; lower:Question[]; expected:Question[]; higher:Question[];
 }
+interface ResourcePreview { title:string; kind:'slides'|'pdf'; download:string; preview?:string; slideCount?:number; description:string; }
 
 @Component({
   selector:'bp-year1-week1-lesson', standalone:true, imports:[RouterLink, FormsModule], changeDetection:ChangeDetectionStrategy.OnPush,
@@ -24,13 +26,25 @@ interface WeekLesson {
         <nav class="resource-card bp-card" aria-label="Lesson downloads">
           <span class="bp-label">Complete lesson pack</span><h2>Open and adapt every resource</h2>
           <div class="downloads">
-            <a class="download" [href]="asset('editable-teacher-plan.docx')" download><span>📝</span><b>Editable teacher plan</b><small>Word document</small></a>
-            <a class="download" [href]="asset('interactive-teaching-slides.pptx')" download><span>📽️</span><b>Interactive PowerPoint</b><small>Teacher-led slides</small></a>
-            <a class="download" [href]="asset('pre-teach.pdf')" download><span>🌱</span><b>Pre-teach</b><small>Vocabulary and early practice</small></a>
-            <a class="download" [href]="asset('lower-worksheet.pdf')" download><span>●</span><b>Lower worksheet</b><small>Concrete and supported</small></a>
-            <a class="download" [href]="asset('expected-worksheet.pdf')" download><span>●●</span><b>Expected worksheet</b><small>Independent core practice</small></a>
-            <a class="download" [href]="asset('higher-worksheet.pdf')" download><span>●●●</span><b>Higher worksheet</b><small>Reasoning and challenge</small></a>
+            <button class="download" type="button" (click)="openPreview('plan')"><span>📝</span><b>Editable teacher plan</b><small>Preview first · one-page Word plan</small></button>
+            <button class="download" type="button" (click)="openPreview('slides')"><span>📽️</span><b>Teaching PowerPoint</b><small>Preview all slides first</small></button>
+            <button class="download" type="button" (click)="openPreview('preteach')"><span>🌱</span><b>Pre-teach</b><small>Preview before printing</small></button>
+            <button class="download" type="button" (click)="openPreview('lower')"><span>●</span><b>Lower worksheet</b><small>Preview before printing</small></button>
+            <button class="download" type="button" (click)="openPreview('expected')"><span>●●</span><b>Expected worksheet</b><small>Preview before printing</small></button>
+            <button class="download" type="button" (click)="openPreview('higher')"><span>●●●</span><b>Higher worksheet</b><small>Preview before printing</small></button>
           </div>
+          @if (preview(); as resource) {
+            <section class="preview" aria-live="polite">
+              <div class="preview__head"><div><span class="bp-label">Preview before download</span><h3>{{ resource.title }}</h3><p>{{ resource.description }}</p></div><button class="preview__close" type="button" (click)="closePreview()" aria-label="Close preview">×</button></div>
+              @if (resource.kind === 'slides') {
+                <div class="slide-preview"><img [src]="slidePreviewSrc()" [alt]="resource.title + ', slide ' + previewSlide()" /></div>
+                <div class="slide-controls"><button type="button" (click)="changeSlide(-1)" [disabled]="previewSlide() === 1">← Previous</button><b>Slide {{ previewSlide() }} of {{ resource.slideCount }}</b><button type="button" (click)="changeSlide(1)" [disabled]="previewSlide() === resource.slideCount">Next →</button></div>
+              } @else if (previewUrl()) {
+                <iframe class="document-preview" [src]="previewUrl()" [title]="resource.title + ' preview'"></iframe>
+              }
+              <div class="preview__actions"><span>Happy with the preview?</span><a class="bp-btn" [href]="asset(resource.download)" download>Download {{ resource.title }}</a></div>
+            </section>
+          }
         </nav>
 
         <section class="editor bp-card">
@@ -60,15 +74,32 @@ interface WeekLesson {
     } @else { <div class="bp-loading"><span class="bp-spinner"></span>Loading lesson…</div> }
   `,
   styles:[`
-    .back{display:block;width:max-content;margin-bottom:1rem;font-weight:700}.lesson-layout{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr);gap:1.5rem}.resource-card,.editor,.preteach,.overview{padding:clamp(1.2rem,3vw,2rem)}.resource-card h2,.editor h2{margin:.35rem 0 1rem}.downloads{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.75rem}.download{display:grid;grid-template-columns:auto 1fr;column-gap:.7rem;align-items:center;border:1px solid var(--border);border-radius:12px;padding:.9rem;color:var(--text);background:var(--page-bg)}.download:hover{border-color:var(--brand-l);background:var(--brand-tint);color:var(--text)}.download span{grid-row:1/3;color:var(--brand-d)}.download b{font-size:.9rem}.download small{color:var(--text-muted)}.editor__head{display:flex;justify-content:space-between;align-items:start;gap:1rem}.editor .bp-btn{padding:.65rem 1rem;white-space:nowrap}.hint{font-size:.86rem;color:var(--text-muted)}label{display:block;font-weight:700;font-size:.82rem;margin-top:.85rem}label input,label textarea{font-weight:400;margin-top:.3rem}.field-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}.saved{margin:.8rem 0 0;color:var(--accent-emerald);font-weight:700}.sequence{grid-column:1/-1}.sequence h2{margin:.35rem 0 1rem}.sequence-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:.8rem}.sequence-grid article{padding:1rem;display:flex;flex-direction:column}.sequence-grid p,.sequence-grid ol{font-size:.86rem;color:var(--slate-600);padding-left:1rem;flex:1}.sequence-grid p{padding-left:0}.sequence-grid small{color:var(--brand-d);font-weight:700}.preteach{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:2rem;background:linear-gradient(135deg,var(--brand-tint),var(--white))}.preteach ul li{margin:.45rem 0}.overview{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}.overview ul{list-style:disc;padding-left:1rem}.overview p,.overview li{font-size:.9rem;color:var(--slate-600)}@media(max-width:950px){.lesson-layout{grid-template-columns:1fr}.sequence-grid{grid-template-columns:repeat(2,1fr)}.overview{grid-template-columns:1fr}.resource-card,.editor,.sequence,.preteach,.overview{grid-column:1}}@media(max-width:560px){.downloads,.field-grid,.sequence-grid,.preteach{grid-template-columns:1fr}.editor__head{display:block}.editor .bp-btn{margin-top:.5rem;width:100%;justify-content:center}.download{min-width:0}}
+    .back{display:block;width:max-content;margin-bottom:1rem;font-weight:700}.lesson-layout{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr);gap:1.5rem}.resource-card,.editor,.preteach,.overview{padding:clamp(1.2rem,3vw,2rem)}.resource-card h2,.editor h2{margin:.35rem 0 1rem}.downloads{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.75rem}.download{appearance:none;width:100%;font:inherit;text-align:left;display:grid;grid-template-columns:auto 1fr;column-gap:.7rem;align-items:center;border:1px solid var(--border);border-radius:12px;padding:.9rem;color:var(--text);background:var(--page-bg);cursor:pointer}.download:hover,.download:focus-visible{border-color:var(--brand-l);background:var(--brand-tint);color:var(--text);outline:2px solid transparent}.download span{grid-row:1/3;color:var(--brand-d)}.download b{font-size:.9rem}.download small{color:var(--text-muted)}.preview{margin-top:1rem;border:1px solid var(--border);border-radius:16px;padding:1rem;background:var(--white)}.preview__head{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem}.preview__head h3{margin:.25rem 0}.preview__head p{margin:.25rem 0 .8rem;color:var(--text-muted);font-size:.86rem}.preview__close{border:0;background:var(--page-bg);border-radius:50%;width:2rem;height:2rem;font-size:1.25rem;cursor:pointer}.slide-preview{background:var(--page-bg);border:1px solid var(--border);border-radius:12px;overflow:hidden}.slide-preview img{display:block;width:100%;height:auto}.slide-controls{display:flex;align-items:center;justify-content:space-between;gap:.75rem;margin-top:.75rem}.slide-controls button{border:1px solid var(--border);background:var(--white);border-radius:9px;padding:.55rem .75rem;cursor:pointer}.slide-controls button:disabled{opacity:.45;cursor:not-allowed}.document-preview{width:100%;height:560px;border:1px solid var(--border);border-radius:12px;background:var(--page-bg)}.preview__actions{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-top:.85rem}.preview__actions span{font-size:.86rem;color:var(--text-muted)}.editor__head{display:flex;justify-content:space-between;align-items:start;gap:1rem}.editor .bp-btn{padding:.65rem 1rem;white-space:nowrap}.hint{font-size:.86rem;color:var(--text-muted)}label{display:block;font-weight:700;font-size:.82rem;margin-top:.85rem}label input,label textarea{font-weight:400;margin-top:.3rem}.field-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}.saved{margin:.8rem 0 0;color:var(--accent-emerald);font-weight:700}.sequence{grid-column:1/-1}.sequence h2{margin:.35rem 0 1rem}.sequence-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:.8rem}.sequence-grid article{padding:1rem;display:flex;flex-direction:column}.sequence-grid p,.sequence-grid ol{font-size:.86rem;color:var(--slate-600);padding-left:1rem;flex:1}.sequence-grid p{padding-left:0}.sequence-grid small{color:var(--brand-d);font-weight:700}.preteach{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:2rem;background:linear-gradient(135deg,var(--brand-tint),var(--white))}.preteach ul li{margin:.45rem 0}.overview{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}.overview ul{list-style:disc;padding-left:1rem}.overview p,.overview li{font-size:.9rem;color:var(--slate-600)}@media(max-width:950px){.lesson-layout{grid-template-columns:1fr}.sequence-grid{grid-template-columns:repeat(2,1fr)}.overview{grid-template-columns:1fr}.resource-card,.editor,.sequence,.preteach,.overview{grid-column:1}.document-preview{height:480px}}@media(max-width:560px){.downloads,.field-grid,.sequence-grid,.preteach{grid-template-columns:1fr}.editor__head{display:block}.editor .bp-btn{margin-top:.5rem;width:100%;justify-content:center}.download{min-width:0}.preview__actions,.slide-controls{align-items:stretch;flex-direction:column}.preview__actions .bp-btn,.slide-controls button{width:100%;justify-content:center}.document-preview{height:420px}}
   `]
 })
 export class Year1Week1LessonComponent {
-  private http=inject(HttpClient); private route=inject(ActivatedRoute); private lang=inject(LanguageService);
-  readonly slug=this.route.snapshot.paramMap.get('slug') ?? ''; readonly week=Number(this.route.snapshot.data['week'] ?? 1); readonly lesson=signal<WeekLesson|null>(null); readonly saved=signal(false);
+  private http=inject(HttpClient); private route=inject(ActivatedRoute); private lang=inject(LanguageService); private sanitizer=inject(DomSanitizer);
+  readonly slug=this.route.snapshot.paramMap.get('slug') ?? ''; readonly week=Number(this.route.snapshot.data['week'] ?? 1); readonly lesson=signal<WeekLesson|null>(null); readonly saved=signal(false); readonly preview=signal<ResourcePreview|null>(null); readonly previewUrl=signal<SafeResourceUrl|null>(null); readonly previewSlide=signal(1);
   draft={teacher:'',date:'',initials:'',send:'',adaptations:'',assessment:''};
   constructor(){ this.http.get<WeekLesson[]>(`/lessons/year-1-maths/week-${this.week}/week${this.week}-lessons.json`).subscribe(items=>{this.lesson.set(items.find(item=>item.slug===this.slug)??null);this.loadDraft();}); }
   asset(file:string):string{return `/lessons/year-1-maths/week-${this.week}/${this.slug}/${file}`;} l(path:string):string{return this.lang.localise(path);}
   private key():string{return `brightpath-plan-week-${this.week}-${this.slug}`;} private loadDraft():void{try{const value=localStorage.getItem(this.key());if(value)this.draft={...this.draft,...JSON.parse(value)};}catch{}}
   saveDraft():void{try{localStorage.setItem(this.key(),JSON.stringify(this.draft));this.saved.set(true);setTimeout(()=>this.saved.set(false),2500);}catch{}}
+  openPreview(kind:'plan'|'slides'|'preteach'|'lower'|'expected'|'higher'):void{
+    const newPack=this.week===1&&this.slug==='sort-objects-into-groups';
+    const resources:Record<typeof kind,ResourcePreview>={
+      plan:{title:'Editable teacher plan',kind:'pdf',download:newPack?'editable-teacher-plan-one-page.docx':'editable-teacher-plan.docx',preview:newPack?'teacher-plan-preview.pdf':'teacher-plan-preview.pdf',description:'One-page, supply-teacher-ready lesson plan. Download the Word version only when you are ready to edit it.'},
+      slides:{title:'Teaching PowerPoint',kind:'slides',download:newPack?'teaching-powerpoint-v4.pptx':'interactive-teaching-slides.pptx',preview:'preview/powerpoint',slideCount:newPack?15:8,description:'Teaching, worked modelling, selected pupil checkpoints and Pip’s misconception. Use Previous and Next to inspect every slide.'},
+      preteach:{title:'Pre-teach resource',kind:'pdf',download:'pre-teach.pdf',preview:'pre-teach.pdf',description:'Adult guide and pupil quick check for the lower/CUSP group.'},
+      lower:{title:'Lower support worksheet',kind:'pdf',download:'lower-worksheet.pdf',preview:'lower-worksheet.pdf',description:'Concrete, visual practice with reduced language and supported recording.'},
+      expected:{title:'Expected worksheet',kind:'pdf',download:'expected-worksheet.pdf',preview:'expected-worksheet.pdf',description:'Independent core practice at the expected lesson outcome.'},
+      higher:{title:'Higher challenge worksheet',kind:'pdf',download:'higher-worksheet.pdf',preview:'higher-worksheet.pdf',description:'Reasoning, two-rule sorting and early-finisher extension.'},
+    };
+    const resource=resources[kind]; this.preview.set(resource); this.previewSlide.set(1);
+    this.previewUrl.set(resource.kind==='pdf'&&resource.preview?this.sanitizer.bypassSecurityTrustResourceUrl(this.asset(resource.preview)):null);
+    setTimeout(()=>document.querySelector('.preview')?.scrollIntoView({behavior:'smooth',block:'nearest'}));
+  }
+  closePreview():void{this.preview.set(null);this.previewUrl.set(null);this.previewSlide.set(1);}
+  changeSlide(delta:number):void{const total=this.preview()?.slideCount??1;this.previewSlide.set(Math.min(total,Math.max(1,this.previewSlide()+delta)));}
+  slidePreviewSrc():string{const folder=this.preview()?.preview??'preview/powerpoint';return this.asset(`${folder}/slide-${this.previewSlide()}.png`);}
 }

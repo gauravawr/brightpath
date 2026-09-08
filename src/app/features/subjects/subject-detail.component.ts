@@ -24,14 +24,13 @@ import { LanguageService } from '../../core/services/language.service';
             <span class="bp-label">Year-group folders</span>
             <h2>Year 1 to Year 6</h2>
           </div>
-          @if (isMaths) { <p>Open Year 1 to see the complete 30-week Maths structure.</p> }
+          <p>Every year opens a complete 30-week, three-term teaching structure.</p>
         </div>
 
         <div class="year-grid" [attr.aria-label]="displayName + ' year groups'">
           @for (year of years; track year; let index = $index) {
             <a
-              class="year-tile bp-card bp-reveal"
-              [class.year-tile--featured]="isMaths && year === 1"
+              class="year-tile year-tile--featured bp-card bp-reveal"
               [style.animation-delay.ms]="index * 45"
               [routerLink]="yearLink(year)"
               [attr.aria-label]="'Open ' + displayName + ' Year ' + year">
@@ -42,7 +41,7 @@ import { LanguageService } from '../../core/services/language.service';
               <strong>Y{{ year }}</strong>
               <span class="year-tile__name">Year {{ year }}</span>
               <span class="year-tile__status">
-                {{ isMaths && year === 1 ? '30-week whole-year map' : 'Open year folder' }}
+                30-week whole-year map
                 <b aria-hidden="true">→</b>
               </span>
             </a>
@@ -71,9 +70,7 @@ export class SubjectDetailComponent {
   });
 
   yearLink(year: number): string {
-    return this.isMaths && year === 1
-      ? this.l('/lessons/year-1-maths-map')
-      : this.l(`/subjects/${this.subjectSlug}/year/${year}`);
+    return this.l(`/curriculum/${this.subjectSlug}/year/${year}`);
   }
 
   l(path: string): string { return this.lang.localise(path); }

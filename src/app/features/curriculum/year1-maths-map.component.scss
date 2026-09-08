@@ -6,6 +6,7 @@
   font-family: var(--font-head); font-size: clamp(9rem, 22vw, 18rem); font-weight: 800;
   line-height: 1; color: var(--brand-d); opacity: .055; pointer-events: none;
 }
+.map-hero--english::after { content: 'Aa'; }
 .map-hero .bp-container { position: relative; z-index: 1; }
 .map-back { display: block; width: fit-content; margin-bottom: 1.4rem; color: var(--text-muted); font-size: .9rem; font-weight: 700; }
 .map-hero h1 { max-width: 17ch; margin-top: .8rem; }
@@ -55,6 +56,7 @@
 .planning-note { margin-top: 1.5rem; border-left: 4px solid var(--brand-d); border-radius: 0 var(--r-md) var(--r-md) 0; background: var(--brand-tint); padding: 1rem 1.2rem; }
 .planning-note strong { color: var(--slate-900); }
 .planning-note p { margin: .35rem 0 0; color: var(--slate-600); }
+.source-link { display: inline-block; margin-top: .7rem; font-size: .88rem; font-weight: 750; }
 
 @media (max-width: 720px) {
   .term-path { grid-template-columns: 1fr; }

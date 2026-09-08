@@ -1,0 +1,362 @@
+[
+  {
+    "week": 1,
+    "term": "Autumn",
+    "unit": "Number — place value within 20",
+    "days": [
+      "Introduce and represent: Number — place value within 20",
+      "Develop fluency: Number — place value within 20",
+      "Compare, connect and explain: Number — place value within 20",
+      "Reason and solve problems: Number — place value within 20",
+      "Apply, assess and revisit: Number — place value within 20"
+    ]
+  },
+  {
+    "week": 2,
+    "term": "Autumn",
+    "unit": "Number — place value within 100",
+    "days": [
+      "Introduce and represent: Number — place value within 100",
+      "Develop fluency: Number — place value within 100",
+      "Compare, connect and explain: Number — place value within 100",
+      "Reason and solve problems: Number — place value within 100",
+      "Apply, assess and revisit: Number — place value within 100"
+    ]
+  },
+  {
+    "week": 3,
+    "term": "Autumn",
+    "unit": "Number — count in 2s, 5s and 10s",
+    "days": [
+      "Introduce and represent: Number — count in 2s, 5s and 10s",
+      "Develop fluency: Number — count in 2s, 5s and 10s",
+      "Compare, connect and explain: Number — count in 2s, 5s and 10s",
+      "Reason and solve problems: Number — count in 2s, 5s and 10s",
+      "Apply, assess and revisit: Number — count in 2s, 5s and 10s"
+    ]
+  },
+  {
+    "week": 4,
+    "term": "Autumn",
+    "unit": "Number — compare and order numbers to 100",
+    "days": [
+      "Introduce and represent: Number — compare and order numbers to 100",
+      "Develop fluency: Number — compare and order numbers to 100",
+      "Compare, connect and explain: Number — compare and order numbers to 100",
+      "Reason and solve problems: Number — compare and order numbers to 100",
+      "Apply, assess and revisit: Number — compare and order numbers to 100"
+    ]
+  },
+  {
+    "week": 5,
+    "term": "Autumn",
+    "unit": "Number — number bonds and related facts",
+    "days": [
+      "Introduce and represent: Number — number bonds and related facts",
+      "Develop fluency: Number — number bonds and related facts",
+      "Compare, connect and explain: Number — number bonds and related facts",
+      "Reason and solve problems: Number — number bonds and related facts",
+      "Apply, assess and revisit: Number — number bonds and related facts"
+    ]
+  },
+  {
+    "week": 6,
+    "term": "Autumn",
+    "unit": "Calculation — addition and subtraction within 20",
+    "days": [
+      "Introduce and represent: Calculation — addition and subtraction within 20",
+      "Develop fluency: Calculation — addition and subtraction within 20",
+      "Compare, connect and explain: Calculation — addition and subtraction within 20",
+      "Reason and solve problems: Calculation — addition and subtraction within 20",
+      "Apply, assess and revisit: Calculation — addition and subtraction within 20"
+    ]
+  },
+  {
+    "week": 7,
+    "term": "Autumn",
+    "unit": "Calculation — add and subtract tens and ones",
+    "days": [
+      "Introduce and represent: Calculation — add and subtract tens and ones",
+      "Develop fluency: Calculation — add and subtract tens and ones",
+      "Compare, connect and explain: Calculation — add and subtract tens and ones",
+      "Reason and solve problems: Calculation — add and subtract tens and ones",
+      "Apply, assess and revisit: Calculation — add and subtract tens and ones"
+    ]
+  },
+  {
+    "week": 8,
+    "term": "Autumn",
+    "unit": "Calculation — addition across a ten",
+    "days": [
+      "Introduce and represent: Calculation — addition across a ten",
+      "Develop fluency: Calculation — addition across a ten",
+      "Compare, connect and explain: Calculation — addition across a ten",
+      "Reason and solve problems: Calculation — addition across a ten",
+      "Apply, assess and revisit: Calculation — addition across a ten"
+    ]
+  },
+  {
+    "week": 9,
+    "term": "Autumn",
+    "unit": "Calculation — subtraction across a ten",
+    "days": [
+      "Introduce and represent: Calculation — subtraction across a ten",
+      "Develop fluency: Calculation — subtraction across a ten",
+      "Compare, connect and explain: Calculation — subtraction across a ten",
+      "Reason and solve problems: Calculation — subtraction across a ten",
+      "Apply, assess and revisit: Calculation — subtraction across a ten"
+    ]
+  },
+  {
+    "week": 10,
+    "term": "Autumn",
+    "unit": "Autumn consolidation and assessment",
+    "days": [
+      "Retrieve and revisit: Autumn consolidation and assessment",
+      "Diagnose misconceptions: Autumn consolidation and assessment",
+      "Targeted fluency: Autumn consolidation and assessment",
+      "Reasoning and problem solving: Autumn consolidation and assessment",
+      "Assess and plan next steps: Autumn consolidation and assessment"
+    ]
+  },
+  {
+    "week": 11,
+    "term": "Spring",
+    "unit": "Measurement — recognise and use money",
+    "days": [
+      "Introduce and represent: Measurement — recognise and use money",
+      "Develop fluency: Measurement — recognise and use money",
+      "Compare, connect and explain: Measurement — recognise and use money",
+      "Reason and solve problems: Measurement — recognise and use money",
+      "Apply, assess and revisit: Measurement — recognise and use money"
+    ]
+  },
+  {
+    "week": 12,
+    "term": "Spring",
+    "unit": "Calculation — equal groups and repeated addition",
+    "days": [
+      "Introduce and represent: Calculation — equal groups and repeated addition",
+      "Develop fluency: Calculation — equal groups and repeated addition",
+      "Compare, connect and explain: Calculation — equal groups and repeated addition",
+      "Reason and solve problems: Calculation — equal groups and repeated addition",
+      "Apply, assess and revisit: Calculation — equal groups and repeated addition"
+    ]
+  },
+  {
+    "week": 13,
+    "term": "Spring",
+    "unit": "Calculation — 2 times table",
+    "days": [
+      "Introduce and represent: Calculation — 2 times table",
+      "Develop fluency: Calculation — 2 times table",
+      "Compare, connect and explain: Calculation — 2 times table",
+      "Reason and solve problems: Calculation — 2 times table",
+      "Apply, assess and revisit: Calculation — 2 times table"
+    ]
+  },
+  {
+    "week": 14,
+    "term": "Spring",
+    "unit": "Calculation — 5 and 10 times tables",
+    "days": [
+      "Introduce and represent: Calculation — 5 and 10 times tables",
+      "Develop fluency: Calculation — 5 and 10 times tables",
+      "Compare, connect and explain: Calculation — 5 and 10 times tables",
+      "Reason and solve problems: Calculation — 5 and 10 times tables",
+      "Apply, assess and revisit: Calculation — 5 and 10 times tables"
+    ]
+  },
+  {
+    "week": 15,
+    "term": "Spring",
+    "unit": "Calculation — division by sharing and grouping",
+    "days": [
+      "Introduce and represent: Calculation — division by sharing and grouping",
+      "Develop fluency: Calculation — division by sharing and grouping",
+      "Compare, connect and explain: Calculation — division by sharing and grouping",
+      "Reason and solve problems: Calculation — division by sharing and grouping",
+      "Apply, assess and revisit: Calculation — division by sharing and grouping"
+    ]
+  },
+  {
+    "week": 16,
+    "term": "Spring",
+    "unit": "Measurement — length and height",
+    "days": [
+      "Introduce and represent: Measurement — length and height",
+      "Develop fluency: Measurement — length and height",
+      "Compare, connect and explain: Measurement — length and height",
+      "Reason and solve problems: Measurement — length and height",
+      "Apply, assess and revisit: Measurement — length and height"
+    ]
+  },
+  {
+    "week": 17,
+    "term": "Spring",
+    "unit": "Measurement — mass, capacity and temperature",
+    "days": [
+      "Introduce and represent: Measurement — mass, capacity and temperature",
+      "Develop fluency: Measurement — mass, capacity and temperature",
+      "Compare, connect and explain: Measurement — mass, capacity and temperature",
+      "Reason and solve problems: Measurement — mass, capacity and temperature",
+      "Apply, assess and revisit: Measurement — mass, capacity and temperature"
+    ]
+  },
+  {
+    "week": 18,
+    "term": "Spring",
+    "unit": "Fractions — halves, quarters and thirds",
+    "days": [
+      "Introduce and represent: Fractions — halves, quarters and thirds",
+      "Develop fluency: Fractions — halves, quarters and thirds",
+      "Compare, connect and explain: Fractions — halves, quarters and thirds",
+      "Reason and solve problems: Fractions — halves, quarters and thirds",
+      "Apply, assess and revisit: Fractions — halves, quarters and thirds"
+    ]
+  },
+  {
+    "week": 19,
+    "term": "Spring",
+    "unit": "Fractions — equivalence and fractions of quantities",
+    "days": [
+      "Introduce and represent: Fractions — equivalence and fractions of quantities",
+      "Develop fluency: Fractions — equivalence and fractions of quantities",
+      "Compare, connect and explain: Fractions — equivalence and fractions of quantities",
+      "Reason and solve problems: Fractions — equivalence and fractions of quantities",
+      "Apply, assess and revisit: Fractions — equivalence and fractions of quantities"
+    ]
+  },
+  {
+    "week": 20,
+    "term": "Spring",
+    "unit": "Spring consolidation and assessment",
+    "days": [
+      "Retrieve and revisit: Spring consolidation and assessment",
+      "Diagnose misconceptions: Spring consolidation and assessment",
+      "Targeted fluency: Spring consolidation and assessment",
+      "Reasoning and problem solving: Spring consolidation and assessment",
+      "Assess and plan next steps: Spring consolidation and assessment"
+    ]
+  },
+  {
+    "week": 21,
+    "term": "Summer",
+    "unit": "Geometry — properties of 2-D and 3-D shapes",
+    "days": [
+      "Introduce and represent: Geometry — properties of 2-D and 3-D shapes",
+      "Develop fluency: Geometry — properties of 2-D and 3-D shapes",
+      "Compare, connect and explain: Geometry — properties of 2-D and 3-D shapes",
+      "Reason and solve problems: Geometry — properties of 2-D and 3-D shapes",
+      "Apply, assess and revisit: Geometry — properties of 2-D and 3-D shapes"
+    ]
+  },
+  {
+    "week": 22,
+    "term": "Summer",
+    "unit": "Geometry — position, direction and turns",
+    "days": [
+      "Introduce and represent: Geometry — position, direction and turns",
+      "Develop fluency: Geometry — position, direction and turns",
+      "Compare, connect and explain: Geometry — position, direction and turns",
+      "Reason and solve problems: Geometry — position, direction and turns",
+      "Apply, assess and revisit: Geometry — position, direction and turns"
+    ]
+  },
+  {
+    "week": 23,
+    "term": "Summer",
+    "unit": "Measurement — o'clock, half past and quarter times",
+    "days": [
+      "Introduce and represent: Measurement — o'clock, half past and quarter times",
+      "Develop fluency: Measurement — o'clock, half past and quarter times",
+      "Compare, connect and explain: Measurement — o'clock, half past and quarter times",
+      "Reason and solve problems: Measurement — o'clock, half past and quarter times",
+      "Apply, assess and revisit: Measurement — o'clock, half past and quarter times"
+    ]
+  },
+  {
+    "week": 24,
+    "term": "Summer",
+    "unit": "Measurement — tell time to five minutes",
+    "days": [
+      "Introduce and represent: Measurement — tell time to five minutes",
+      "Develop fluency: Measurement — tell time to five minutes",
+      "Compare, connect and explain: Measurement — tell time to five minutes",
+      "Reason and solve problems: Measurement — tell time to five minutes",
+      "Apply, assess and revisit: Measurement — tell time to five minutes"
+    ]
+  },
+  {
+    "week": 25,
+    "term": "Summer",
+    "unit": "Statistics — tally charts and pictograms",
+    "days": [
+      "Introduce and represent: Statistics — tally charts and pictograms",
+      "Develop fluency: Statistics — tally charts and pictograms",
+      "Compare, connect and explain: Statistics — tally charts and pictograms",
+      "Reason and solve problems: Statistics — tally charts and pictograms",
+      "Apply, assess and revisit: Statistics — tally charts and pictograms"
+    ]
+  },
+  {
+    "week": 26,
+    "term": "Summer",
+    "unit": "Statistics — block diagrams and simple tables",
+    "days": [
+      "Introduce and represent: Statistics — block diagrams and simple tables",
+      "Develop fluency: Statistics — block diagrams and simple tables",
+      "Compare, connect and explain: Statistics — block diagrams and simple tables",
+      "Reason and solve problems: Statistics — block diagrams and simple tables",
+      "Apply, assess and revisit: Statistics — block diagrams and simple tables"
+    ]
+  },
+  {
+    "week": 27,
+    "term": "Summer",
+    "unit": "Calculation — mixed-operation problems",
+    "days": [
+      "Introduce and represent: Calculation — mixed-operation problems",
+      "Develop fluency: Calculation — mixed-operation problems",
+      "Compare, connect and explain: Calculation — mixed-operation problems",
+      "Reason and solve problems: Calculation — mixed-operation problems",
+      "Apply, assess and revisit: Calculation — mixed-operation problems"
+    ]
+  },
+  {
+    "week": 28,
+    "term": "Summer",
+    "unit": "Measurement — problem solving across measures",
+    "days": [
+      "Introduce and represent: Measurement — problem solving across measures",
+      "Develop fluency: Measurement — problem solving across measures",
+      "Compare, connect and explain: Measurement — problem solving across measures",
+      "Reason and solve problems: Measurement — problem solving across measures",
+      "Apply, assess and revisit: Measurement — problem solving across measures"
+    ]
+  },
+  {
+    "week": 29,
+    "term": "Summer",
+    "unit": "Number — reasoning investigations",
+    "days": [
+      "Introduce and represent: Number — reasoning investigations",
+      "Develop fluency: Number — reasoning investigations",
+      "Compare, connect and explain: Number — reasoning investigations",
+      "Reason and solve problems: Number — reasoning investigations",
+      "Apply, assess and revisit: Number — reasoning investigations"
+    ]
+  },
+  {
+    "week": 30,
+    "term": "Summer",
+    "unit": "Summer assessment and transition to Year 3",
+    "days": [
+      "Retrieve and revisit: Summer assessment and transition to Year 3",
+      "Diagnose misconceptions: Summer assessment and transition to Year 3",
+      "Targeted fluency: Summer assessment and transition to Year 3",
+      "Reasoning and problem solving: Summer assessment and transition to Year 3",
+      "Assess and plan next steps: Summer assessment and transition to Year 3"
+    ]
+  }
+]
