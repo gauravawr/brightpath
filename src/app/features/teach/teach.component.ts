@@ -29,7 +29,7 @@ export class TeachComponent {
   readonly teacherName = computed(() => this.auth.user()?.name ?? 'Teacher');
 
   // subject form
-  subj = { name: '', description: '', colorHex: '#4f46e5', iconEmoji: '📘' };
+  subj = { name: '', description: '', colorHex: '#b91c1c', iconEmoji: '📘' };
   // lesson form
   lesson = { subjectId: 0, title: '', summary: '', bodyHtml: '', coverImageName: '', videoUrl: '', durationMinutes: null as number | null, level: 'beginner', isPublished: true };
   // paper form
@@ -97,7 +97,7 @@ export class TeachComponent {
     if (!this.subj.name.trim()) return;
     this.saving.set(true);
     this.content.createSubject(this.subj).subscribe({
-      next: () => { this.flash('Subject created ✓'); this.subj = { name: '', description: '', colorHex: '#4f46e5', iconEmoji: '📘' }; this.reloadSubjects(); this.saving.set(false); },
+      next: () => { this.flash('Subject created ✓'); this.subj = { name: '', description: '', colorHex: '#b91c1c', iconEmoji: '📘' }; this.reloadSubjects(); this.saving.set(false); },
       error: () => { this.flash('Could not save subject (are you signed in as a teacher, and is the API running?)', true); this.saving.set(false); },
     });
   }

@@ -1,0 +1,272 @@
+[
+  {
+    "day": 1,
+    "slug": "sort-objects-into-groups",
+    "title": "Sort objects into groups",
+    "objective": "Sort a mixed collection by one clear property and explain the sorting rule.",
+    "vocabulary": ["sort", "group", "same", "different", "rule"],
+    "successCriteria": ["I can notice a property of an object.", "I can place objects that are the same in one group.", "I can explain the rule I used."],
+    "prior": "Children can name familiar colours, shapes and everyday objects.",
+    "resources": "A mixed collection of buttons or classroom objects, sorting hoops, colour and shape cards, mini whiteboards.",
+    "misconception": "A child changes the sorting rule part-way through. Restate the rule and check every object against it.",
+    "warmup": "Show two objects. Children say one way they are the same and one way they are different.",
+    "teacherModel": ["Choose one property, such as colour.", "Say the rule aloud before moving anything.", "Place each object in the matching hoop.", "Check that every object follows the same rule."],
+    "guided": "Pairs sort six objects by colour, mix them again, then sort by shape. Partners say the rule before checking.",
+    "independent": "Children complete the chosen worksheet. Lower group may use real objects. Expected group sorts pictures independently. Higher group finds two valid rules and explains which is more useful.",
+    "plenary": "Display a completed sort with one object in the wrong group. Children find it and explain why it does not follow the rule.",
+    "preteach": {
+      "focus": "Notice one property at a time and match objects that share it.",
+      "steps": ["Place one red and one blue object in separate hoops.", "Name the colour of each object.", "Add another object by matching its colour.", "Repeat the rule: red here, blue here."],
+      "questions": [
+        {"q": "Which hoop should a red button go in?", "a": "The red hoop."},
+        {"q": "Are these two blue objects the same colour?", "a": "Yes."},
+        {"q": "What is our sorting rule?", "a": "Sort by colour."},
+        {"q": "Move one object to the correct group and explain why.", "a": "Answer matches the chosen colour group."}
+      ]
+    },
+    "lower": [
+      {"q": "Circle the red shapes: red circle, blue square, red triangle.", "a": "Red circle and red triangle."},
+      {"q": "Draw a line from the blue button to the BLUE group.", "a": "Line to BLUE."},
+      {"q": "Which object belongs with two circles: circle or square?", "a": "Circle."},
+      {"q": "Put these into two groups: big star, small star, big circle, small circle. Sort by size.", "a": "Big star and big circle; small star and small circle."},
+      {"q": "Complete the sentence: I sorted by ___.", "a": "Size."}
+    ],
+    "expected": [
+      {"q": "Sort: red triangle, blue circle, red square, blue star. Write the two colour groups.", "a": "Red: triangle, square. Blue: circle, star."},
+      {"q": "Sort the same objects by shape. Can any objects share a group?", "a": "No, all four shapes differ."},
+      {"q": "A yellow square is in the circle group. Is it correct? Explain.", "a": "No. It belongs in the square group."},
+      {"q": "Draw four objects that could be sorted into two colour groups.", "a": "Answers vary; two clear colour groups."},
+      {"q": "Write your sorting rule in a full sentence.", "a": "Answers vary, for example: I sorted the objects by colour."}
+    ],
+    "higher": [
+      {"q": "Give two different rules for sorting a set of red and blue circles and squares.", "a": "By colour and by shape."},
+      {"q": "Which rule gives two equal groups: colour or shape? Explain using your set.", "a": "Depends on the drawn set; explanation must match."},
+      {"q": "Create a set of six objects that can be sorted in two ways.", "a": "Answers vary with two valid properties."},
+      {"q": "Sam puts a small red circle with big red circles. What rule might Sam be using?", "a": "Colour or shape, not size."},
+      {"q": "Explain why an object may belong to more than one possible group.", "a": "It has several properties, such as colour, shape and size."}
+    ],
+    "hook": "What is the same? What is different?",
+    "tryQuestion": "Sort a red circle, blue circle, red square and blue square by colour.",
+    "tryAnswer": "Red group: circle and square. Blue group: circle and square.",
+    "talkQuestion": "How could you sort the same four objects in a different way?",
+    "talkAnswer": "Sort by shape: both circles together and both squares together.",
+    "exitQuestions": ["What does sort mean?", "Name one property we can use.", "Why must the rule stay the same?"],
+    "exitAnswers": ["Put objects into groups.", "Colour, shape, size or type.", "So every object can be checked fairly."]
+  },
+  {
+    "day": 2,
+    "slug": "count-objects-one-to-one",
+    "title": "Count objects using one-to-one correspondence",
+    "objective": "Count a set accurately by saying one number for each object.",
+    "vocabulary": ["count", "touch", "move", "once", "altogether"],
+    "successCriteria": ["I can organise objects before counting.", "I can say one number for each object.", "I know the last number tells the total."],
+    "prior": "Children can join in with the counting sequence to 10.",
+    "resources": "Counters, ten frames, small trays, numeral cards 0 to 10, mini whiteboards.",
+    "misconception": "A child skips or recounts an object. Arrange objects in a line and move each one after saying its number.",
+    "warmup": "Count five claps together, matching one number word to each clap.",
+    "teacherModel": ["Arrange the objects so each can be seen.", "Touch or move one object for each number said.", "Keep the counting sequence in order.", "Say that the final number is how many altogether."],
+    "guided": "Partners count sets of 3 to 8 objects. One child counts and moves; the other checks that each object is counted once.",
+    "independent": "Children count picture sets on the chosen worksheet. Lower group may cover each counted object. Expected group counts mixed arrangements. Higher group explains and corrects inaccurate counts.",
+    "plenary": "Count the same six objects in a line and then in a circle. Discuss why the total stays six.",
+    "preteach": {
+      "focus": "Coordinate touching one object with saying one number.",
+      "steps": ["Place four counters in a straight line.", "Touch the first counter and say one.", "Continue, touching each counter once.", "Move the final counter and say there are four altogether."],
+      "questions": [
+        {"q": "Count three counters in a line.", "a": "3."},
+        {"q": "Why do we move each counter?", "a": "To count it once."},
+        {"q": "What does the last number tell us?", "a": "How many altogether."},
+        {"q": "Count five objects and show the numeral.", "a": "5."}
+      ]
+    },
+    "lower": [
+      {"q": "Count: O O O. Write the total.", "a": "3."},
+      {"q": "Count: ★ ★ ★ ★. Write the total.", "a": "4."},
+      {"q": "Count: ● ●. Circle 2 or 3.", "a": "2."},
+      {"q": "Draw one dot for each number: 1, 2, 3, 4, 5.", "a": "Five dots."},
+      {"q": "Why should we touch each object once?", "a": "So we do not miss or recount an object."}
+    ],
+    "expected": [
+      {"q": "Count: ▲ ● ■ ▲ ●. Write the total.", "a": "5."},
+      {"q": "Count six dots arranged in two rows. Write the total.", "a": "6."},
+      {"q": "Mia counts four objects as 1, 2, 3, 4, 5. What went wrong?", "a": "She counted one object twice or said an extra number."},
+      {"q": "Draw seven objects in a way that is easy to count.", "a": "Seven objects in an organised arrangement."},
+      {"q": "Explain how you know your total is correct.", "a": "I counted each object once and checked again."}
+    ],
+    "higher": [
+      {"q": "A set looks different after the objects move. Does the total change? Explain.", "a": "No. The same objects remain."},
+      {"q": "Create a messy set of eight objects, then show two ways to count it accurately.", "a": "Answers include moving, lining up or marking counted objects."},
+      {"q": "Ben says the total is 7. He counted 1, 2, 3, 5, 6, 7. Find the error.", "a": "He skipped 4, so his count is unreliable."},
+      {"q": "Why can we start counting at any object if we count each one once?", "a": "The number of objects does not depend on the starting object."},
+      {"q": "Write advice for a child who keeps counting objects twice.", "a": "Organise or move each object as it is counted."}
+    ],
+    "hook": "Can you count the claps without seeing them?",
+    "tryQuestion": "Count six counters arranged in a circle. How will you remember where you started?",
+    "tryAnswer": "Mark or move the first counter, then count each counter once.",
+    "talkQuestion": "Why does moving the counters not change how many there are?",
+    "talkAnswer": "The same six counters remain, so only their position changes.",
+    "exitQuestions": ["What must match each object?", "What does the final number tell us?", "Name one way to avoid counting twice."],
+    "exitAnswers": ["One number word.", "The total.", "Move, touch, line up or mark each object."]
+  },
+  {
+    "day": 3,
+    "slug": "represent-numbers-0-to-5",
+    "title": "Represent numbers 0 to 5",
+    "objective": "Show numbers from 0 to 5 using objects, pictures and marks.",
+    "vocabulary": ["represent", "number", "zero", "object", "picture"],
+    "successCriteria": ["I can make a number with objects.", "I can draw a picture for the same number.", "I can explain that different representations can show the same amount."],
+    "prior": "Children can count small sets accurately.",
+    "resources": "Counters, cubes, five frames, dot cards, numeral cards 0 to 5, crayons.",
+    "misconception": "A child thinks a larger drawing represents a larger number. Recount each item and compare the totals.",
+    "warmup": "Flash dot patterns from 0 to 5. Children show the number on their fingers.",
+    "teacherModel": ["Choose a numeral card.", "Make that number with counters.", "Draw the same number of marks.", "Count both representations to prove they show the same amount."],
+    "guided": "Children rotate through numeral cards 0 to 5 and show each number with cubes, fingers and dots.",
+    "independent": "Children match and create representations on the chosen worksheet. Higher group finds unusual but accurate ways to show each number.",
+    "plenary": "Show three very large dots and four tiny dots. Ask which represents the greater number and how children know.",
+    "preteach": {
+      "focus": "Understand that a representation shows how many, not the size of the objects.",
+      "steps": ["Show the numeral 3.", "Place three counters on a five frame.", "Draw three dots.", "Count both sets and say both represent 3."],
+      "questions": [
+        {"q": "Show 2 using fingers.", "a": "Two fingers."},
+        {"q": "Draw 4 dots.", "a": "Four dots."},
+        {"q": "What does zero look like on an empty frame?", "a": "No counters."},
+        {"q": "Do five small dots and five big dots show the same number?", "a": "Yes, both show 5."}
+      ]
+    },
+    "lower": [
+      {"q": "Draw 1 dot.", "a": "One dot."},
+      {"q": "Draw 3 circles.", "a": "Three circles."},
+      {"q": "Which shows 2: ●● or ●●●?", "a": "●●."},
+      {"q": "Show 4 on your fingers, then draw the fingers.", "a": "Four fingers."},
+      {"q": "Draw an empty box to represent zero.", "a": "Empty box."}
+    ],
+    "expected": [
+      {"q": "Show 5 in two different ways.", "a": "Any two accurate representations of 5."},
+      {"q": "Match numerals 0, 2 and 4 to an empty frame, two dots and four cubes.", "a": "0 empty; 2 dots; 4 cubes."},
+      {"q": "Draw a five frame showing 3.", "a": "Three filled spaces."},
+      {"q": "A child draws four stars for numeral 5. Correct the representation.", "a": "Add one more star."},
+      {"q": "Explain how you know two different pictures both show 4.", "a": "Each picture contains four items."}
+    ],
+    "higher": [
+      {"q": "Create three different representations of 5.", "a": "Any three accurate representations."},
+      {"q": "Can 0 be represented? Show and explain.", "a": "Yes, by an empty set or empty frame."},
+      {"q": "Draw two representations that look different but both show 3.", "a": "Each contains three items."},
+      {"q": "Which matters when representing a number: object size or object count? Explain.", "a": "Count, because number tells how many."},
+      {"q": "Invent a symbol and use it exactly four times to represent 4.", "a": "Any symbol repeated four times."}
+    ],
+    "hook": "How many ways can we show the number 3?",
+    "tryQuestion": "Show 4 with counters, fingers and drawn marks.",
+    "tryAnswer": "Each representation must contain or show four items.",
+    "talkQuestion": "Do four large circles show more than four small circles?",
+    "talkAnswer": "No. Both represent 4 because each set has four circles.",
+    "exitQuestions": ["What does represent mean?", "How can we show zero?", "What must stay the same in different representations?"],
+    "exitAnswers": ["Show a number in a form we can see.", "Use an empty set or frame.", "The number of items."]
+  },
+  {
+    "day": 4,
+    "slug": "match-numerals-to-quantities-0-to-5",
+    "title": "Match numerals to quantities 0 to 5",
+    "objective": "Match each numeral from 0 to 5 to a set with the same quantity.",
+    "vocabulary": ["numeral", "quantity", "match", "same", "how many"],
+    "successCriteria": ["I can recognise numerals 0 to 5.", "I can count a quantity accurately.", "I can match the numeral and quantity when they show the same number."],
+    "prior": "Children can represent and count numbers from 0 to 5.",
+    "resources": "Numeral cards 0 to 5, dot and object cards, five frames, counters, matching game cards.",
+    "misconception": "A child matches by appearance or position instead of counting. Count the set first, then name the numeral.",
+    "warmup": "Hold up numeral cards 0 to 5 in mixed order. Children show the matching number of fingers.",
+    "teacherModel": ["Read the numeral.", "Count the objects in the set once.", "Compare the number said with the numeral.", "Place them together only when both show the same quantity."],
+    "guided": "Pairs play a matching game with numeral cards and quantity cards. Every match must be proved by counting.",
+    "independent": "Children complete the chosen matching worksheet. Lower group uses five frames. Expected group matches mixed arrangements. Higher group identifies false matches and creates clues.",
+    "plenary": "Show numeral 4 beside five dots. Children decide whether it is a match and explain the correction.",
+    "preteach": {
+      "focus": "Count a small set, then connect the total to the written numeral.",
+      "steps": ["Show three counters.", "Touch and count each counter.", "Say there are three altogether.", "Place numeral 3 beside the set."],
+      "questions": [
+        {"q": "Match numeral 1 to one dot or two dots.", "a": "One dot."},
+        {"q": "Count four counters. Which numeral matches?", "a": "4."},
+        {"q": "Which numeral matches an empty set?", "a": "0."},
+        {"q": "Does numeral 5 match three stars?", "a": "No."}
+      ]
+    },
+    "lower": [
+      {"q": "Match 1 to ● or ●●.", "a": "●."},
+      {"q": "Match 2 to ★★ or ★★★.", "a": "★★."},
+      {"q": "Match 0 to an empty box or a box with one dot.", "a": "Empty box."},
+      {"q": "Count four circles. Write the numeral.", "a": "4."},
+      {"q": "Draw a set to match numeral 3.", "a": "Three objects."}
+    ],
+    "expected": [
+      {"q": "Match numerals 0 to 5 to six mixed dot patterns.", "a": "Each numeral matches the pattern with that many dots."},
+      {"q": "A card shows numeral 2 and three dots. Is it a match?", "a": "No. Remove one dot or change the numeral to 3."},
+      {"q": "Draw a quantity to match numeral 5.", "a": "Five objects."},
+      {"q": "Write the numeral that matches an empty five frame.", "a": "0."},
+      {"q": "Explain how you checked a match.", "a": "I counted the set and compared the total to the numeral."}
+    ],
+    "higher": [
+      {"q": "Create two different quantity cards that both match numeral 4.", "a": "Two different sets of four."},
+      {"q": "Find every way to correct a card showing numeral 3 and five dots.", "a": "Change numeral to 5 or remove two dots."},
+      {"q": "Write a clue for a quantity card that matches 0.", "a": "It has no objects."},
+      {"q": "Can two differently arranged sets match the same numeral? Explain.", "a": "Yes, if both have the same number of objects."},
+      {"q": "Make a wrong match for a partner to diagnose and correct.", "a": "Answers vary with an intentional mismatch."}
+    ],
+    "hook": "Which numeral belongs with this hidden set?",
+    "tryQuestion": "Match numeral 4 to the correct card: three stars, four dots or five squares.",
+    "tryAnswer": "Four dots match numeral 4.",
+    "talkQuestion": "Why can four dots in a line and four dots in a square both match 4?",
+    "talkAnswer": "Arrangement changes, but both sets contain four dots.",
+    "exitQuestions": ["What is a numeral?", "What is a quantity?", "How do you prove a match?"],
+    "exitAnswers": ["A written number symbol.", "How many are in a set.", "Count the set and compare with the numeral."]
+  },
+  {
+    "day": 5,
+    "slug": "compare-sets-more-fewer-equal",
+    "title": "Compare sets using more fewer and equal",
+    "objective": "Compare two sets and describe them using more, fewer and equal.",
+    "vocabulary": ["compare", "more", "fewer", "equal", "set"],
+    "successCriteria": ["I can count both sets accurately.", "I can say which set has more or fewer.", "I can recognise when two sets are equal."],
+    "prior": "Children can count and match quantities from 0 to 5.",
+    "resources": "Counters in two colours, five frames, more/fewer/equal word cards, comparison mats, mini whiteboards.",
+    "misconception": "A spread-out set looks larger. Pair objects one-to-one or count both sets before comparing.",
+    "warmup": "Show two finger patterns. Children point to the hand showing more, then explain how they know.",
+    "teacherModel": ["Count both sets.", "Pair one object from one set with one from the other.", "Notice which set has objects left over.", "Say the full comparison using more, fewer or equal."],
+    "guided": "Pairs build two sets from number cards 0 to 5, compare them by matching, then swap one object to make the sets equal.",
+    "independent": "Children compare sets on the chosen worksheet. Lower group uses paired pictures. Expected group writes comparison sentences. Higher group solves missing-set and reasoning problems.",
+    "plenary": "Show three large counters and four tiny counters. Children decide which set has more and challenge the idea that object size matters.",
+    "preteach": {
+      "focus": "Match objects one-to-one to see whether a set has more, fewer or the same amount.",
+      "steps": ["Place three red counters in a row.", "Place two blue counters underneath and pair them.", "Notice one red counter has no partner.", "Say red has more and blue has fewer."],
+      "questions": [
+        {"q": "Which has more: two counters or four counters?", "a": "Four counters."},
+        {"q": "Which has fewer: one star or three stars?", "a": "One star."},
+        {"q": "Two dots and two squares are ___.", "a": "Equal."},
+        {"q": "How can pairing help us compare?", "a": "Leftover objects show which set has more."}
+      ]
+    },
+    "lower": [
+      {"q": "Circle the set with more: ●● or ●●●.", "a": "●●●."},
+      {"q": "Circle the set with fewer: ★ or ★★★.", "a": "★."},
+      {"q": "Are ■■ and ●● equal?", "a": "Yes."},
+      {"q": "Draw one more circle than these two circles.", "a": "Three circles."},
+      {"q": "Complete: 1 is ___ than 4.", "a": "Fewer."}
+    ],
+    "expected": [
+      {"q": "Compare four stars and two circles using more and fewer.", "a": "Stars have more; circles have fewer."},
+      {"q": "Draw a set equal to five dots.", "a": "Five objects."},
+      {"q": "A set of three large objects and four small objects: which has more?", "a": "The four small objects."},
+      {"q": "Complete: ___ is more than 2 but fewer than 4.", "a": "3."},
+      {"q": "Explain how pairing proves two sets are equal.", "a": "Every object has one partner and none are left."}
+    ],
+    "higher": [
+      {"q": "Draw two unequal sets. Write two comparison sentences about them.", "a": "Answers match the drawn sets using more and fewer."},
+      {"q": "A set has fewer than 5 but more than 2. List every possible quantity.", "a": "3 and 4."},
+      {"q": "How can you change sets of 2 and 5 so they become equal? Give two ways.", "a": "Add 3 to the first, remove 3 from the second, or adjust both to a common total."},
+      {"q": "True or false: the set that takes more space always has more objects. Explain.", "a": "False. Spacing does not determine quantity."},
+      {"q": "Create a comparison where both sets are equal but look different.", "a": "Two differently arranged sets with the same count."}
+    ],
+    "hook": "Which set wins: the biggest objects or the most objects?",
+    "tryQuestion": "Compare three red counters and five blue counters.",
+    "tryAnswer": "Blue has more. Red has fewer.",
+    "talkQuestion": "How could you make the two sets equal?",
+    "talkAnswer": "Add two red counters, remove two blue counters, or change both to another equal total.",
+    "exitQuestions": ["What does more mean?", "How do we know sets are equal?", "Does object size change quantity?"],
+    "exitAnswers": ["A greater number of objects.", "Each object has one partner and none remain.", "No."]
+  }
+]

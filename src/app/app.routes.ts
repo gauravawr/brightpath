@@ -32,12 +32,32 @@ export const routes: Routes = [
         loadComponent: () => import('./features/subjects/subject-detail.component').then(m => m.SubjectDetailComponent),
         data: { title: 'Subject', metaDescription: 'Lessons and practice papers for this subject on BrightPath.' },
       },
+      {
+        path: 'subjects/:slug/year/:year',
+        loadComponent: () => import('./features/subjects/year-group.component').then(m => m.YearGroupComponent),
+        data: { title: 'Year group', metaDescription: 'Lessons and practice papers organised by year group on BrightPath.' },
+      },
 
       // Lessons
       {
         path: 'lessons',
         loadComponent: () => import('./features/lessons/lessons-list.component').then(m => m.LessonsListComponent),
         data: { title: 'Lessons', metaDescription: 'Learn with clear, structured lessons from real teachers on BrightPath.' },
+      },
+      {
+        path: 'lessons/year-1-maths-map',
+        loadComponent: () => import('./features/curriculum/year1-maths-map.component').then(m => m.Year1MathsMapComponent),
+        data: { title: 'Year 1 Maths Curriculum Map', metaDescription: 'A complete 30-week Year 1 Maths teaching map with five daily lesson focuses each week.' },
+      },
+      {
+        path: 'lessons/year-1-maths/week-1/:slug',
+        loadComponent: () => import('./features/curriculum/year1-week1-lesson.component').then(m => m.Year1Week1LessonComponent),
+        data: { week: 1, title: 'Year 1 Maths lesson', metaDescription: 'A complete Year 1 Maths lesson with editable planning, pre-teach, slides and differentiated worksheets.' },
+      },
+      {
+        path: 'lessons/year-1-maths/week-2/:slug',
+        loadComponent: () => import('./features/curriculum/year1-week1-lesson.component').then(m => m.Year1Week1LessonComponent),
+        data: { week: 2, title: 'Year 1 Maths lesson', metaDescription: 'A complete Year 1 Maths lesson with editable planning, pre-teach, slides and differentiated worksheets.' },
       },
       {
         path: 'lessons/:slug',

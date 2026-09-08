@@ -1,0 +1,277 @@
+[
+  {
+    "week": 2,
+    "day": 1,
+    "slug": "count-and-represent-6-to-10",
+    "title": "Count and represent 6 to 10",
+    "objective": "Count sets from 6 to 10 accurately and represent each quantity in different ways.",
+    "vocabulary": ["count", "represent", "quantity", "six", "seven", "eight", "nine", "ten"],
+    "successCriteria": ["I can touch or move each object once.", "I can say the numbers in order to 10.", "I can show the same quantity with objects, pictures or marks."],
+    "prior": "Children can count and represent quantities from 0 to 5 using one-to-one correspondence.",
+    "resources": "Counters, ten frames, numeral cards 0 to 10, dot cards, cubes, mini whiteboards and the teaching slides.",
+    "misconception": "A child counts an object twice when objects are scattered. Ask the child to move each object into a line or a ten frame while counting.",
+    "warmup": "Flash quantities 1 to 5 on a five frame. Children say the number and explain how they know without counting every dot.",
+    "teacherModel": ["Place six counters in a line and touch each one while counting.", "Move the six counters into a ten frame without adding or removing any.", "Draw six marks and write the numeral 6 beside them.", "Count each representation again to prove the quantity stayed the same."],
+    "guided": "Pairs receive numeral cards 6 to 10. They build each number with counters on a ten frame, then a partner checks by counting each counter once.",
+    "independent": "Lower support uses ten frames and prepared counters. Expected pupils count and complete representations. Higher challenge pupils compare representations and explain errors.",
+    "plenary": "Show three different representations of 8, including one incorrect example. Children identify the error and explain how to correct it.",
+    "preteach": {
+      "focus": "Secure the spoken number sequence from 6 to 10 and connect each number name to a quantity.",
+      "steps": ["Count six counters slowly while moving each one.", "Build 7, 8, 9 and 10 on a ten frame.", "Say the number name after the final counter.", "Match each set to its numeral card."],
+      "questions": [
+        {"q": "Count six counters. What is the total?", "a": "6."},
+        {"q": "Add one counter to 6. How many now?", "a": "7."},
+        {"q": "Which number comes after 8?", "a": "9."},
+        {"q": "Show 10 on a ten frame.", "a": "All ten spaces filled."}
+      ]
+    },
+    "lower": [
+      {"q": "Count: ● ● ● ● ● ●. Write the total.", "a": "6."},
+      {"q": "Draw 7 dots.", "a": "Seven dots."},
+      {"q": "Circle the set that shows 8: seven stars or eight stars.", "a": "Eight stars."},
+      {"q": "Complete a ten frame to show 9.", "a": "Nine filled spaces and one empty space."},
+      {"q": "Draw one more counter to make 10: ● ● ● ● ● ● ● ● ●.", "a": "One extra counter."}
+    ],
+    "expected": [
+      {"q": "Represent 6 using dots, tally marks and a ten frame.", "a": "Each representation shows six."},
+      {"q": "Count nine objects in a scattered set. Write the numeral.", "a": "9."},
+      {"q": "Complete: 7 counters and 2 more counters make __ counters.", "a": "9."},
+      {"q": "Draw a representation of 10 that is not a ten frame.", "a": "Any clear representation of ten."},
+      {"q": "Mia says eight counters show 9. Explain her mistake.", "a": "She has one too few; eight counters show 8."}
+    ],
+    "higher": [
+      {"q": "Show 8 in three different ways. Explain what stays the same.", "a": "The quantity stays eight."},
+      {"q": "Create two differently arranged sets of 9. Prove they are equal.", "a": "Count or pair the objects; both sets total nine."},
+      {"q": "A ten frame has two empty spaces. How many counters are there? Explain.", "a": "8, because 10 minus 2 is 8."},
+      {"q": "Find and correct the error: seven dots labelled 8.", "a": "Add one dot or change the label to 7."},
+      {"q": "Write a clue for a number from 6 to 10 without naming it.", "a": "Answers vary; the clue must identify one number."}
+    ],
+    "hook": "How can a full five frame help us recognise numbers greater than 5?",
+    "tryQuestion": "Show 7 using a five frame and extra counters.",
+    "tryAnswer": "A full five frame and two extra counters show 7.",
+    "talkQuestion": "Which is easier to count: objects in a line or scattered objects? Why?",
+    "talkAnswer": "A line is often easier because we can count each object once in order.",
+    "exitQuestions": ["What number comes after 7?", "How can you prove a set has 9 objects?", "How many empty spaces are on a ten frame showing 8?"],
+    "exitAnswers": ["8.", "Count each object once or arrange them on a ten frame.", "2 empty spaces."]
+  },
+  {
+    "week": 2,
+    "day": 2,
+    "slug": "read-and-write-numerals-6-to-10",
+    "title": "Read and write numerals 6 to 10",
+    "objective": "Read numerals from 6 to 10 and form each numeral correctly.",
+    "vocabulary": ["numeral", "number", "read", "write", "form", "six", "seven", "eight", "nine", "ten"],
+    "successCriteria": ["I can say the number shown by a numeral.", "I can match a numeral to its quantity.", "I can form numerals 6 to 10 correctly."],
+    "prior": "Children can count and represent quantities from 6 to 10.",
+    "resources": "Large numeral cards, sand or tracing trays, whiteboards, ten frames, counters, numeral formation strips and slides.",
+    "misconception": "A child reverses 6 or 9. Place the numeral beside a matching ten-frame quantity and model the starting point and direction slowly.",
+    "warmup": "Show dot cards from 6 to 10. Children hold up or point to the matching numeral card.",
+    "teacherModel": ["Count a set, then choose the numeral that records the quantity.", "Say the numeral name before writing it.", "Model the starting point and movement for 6, 7, 8, 9 and 10.", "Check the written numeral against a clear numeral card."],
+    "guided": "Children sky-write each numeral, trace it with a finger, then write it on a whiteboard and match it to a ten-frame card.",
+    "independent": "Lower support traces and matches numerals. Expected pupils read, write and match independently. Higher challenge pupils diagnose reversed or mismatched numerals.",
+    "plenary": "Display five numeral cards, including one reversed numeral. Children identify it, explain the issue and model the correct formation.",
+    "preteach": {
+      "focus": "Connect the spoken number names six to ten with their written numerals before handwriting practice.",
+      "steps": ["Say each number name while showing the numeral.", "Trace each numeral with a finger.", "Build the matching quantity on a ten frame.", "Cover the numeral and write it from memory."],
+      "questions": [
+        {"q": "Point to numeral 6.", "a": "6."},
+        {"q": "Which numeral records eight objects?", "a": "8."},
+        {"q": "Read this numeral: 9.", "a": "Nine."},
+        {"q": "What two digits make the numeral 10?", "a": "1 and 0."}
+      ]
+    },
+    "lower": [
+      {"q": "Trace and copy: 6   6   6.", "a": "Three correctly formed sixes."},
+      {"q": "Trace and copy: 7   7   7.", "a": "Three correctly formed sevens."},
+      {"q": "Match the word eight to 6, 8 or 9.", "a": "8."},
+      {"q": "Write the numeral for nine.", "a": "9."},
+      {"q": "Complete the sequence: 6, 7, __, 9, 10.", "a": "8."}
+    ],
+    "expected": [
+      {"q": "Write numerals 6 to 10 in order.", "a": "6, 7, 8, 9, 10."},
+      {"q": "Read and write these in words: 7 and 10.", "a": "Seven and ten."},
+      {"q": "Match 6, 8 and 9 to sets with the same quantities.", "a": "Each numeral matches the equal set."},
+      {"q": "Complete: six = __, nine = __, ten = __.", "a": "6, 9, 10."},
+      {"q": "Circle and correct the reversed numeral in a set of examples.", "a": "The reversed numeral is rewritten correctly."}
+    ],
+    "higher": [
+      {"q": "Write three numerals from 6 to 10, then draw matching quantities.", "a": "Each drawing matches its numeral."},
+      {"q": "Sam labels eight counters with 9. Correct both possible parts of the mistake.", "a": "Change 9 to 8, or add one counter."},
+      {"q": "Put 10, 6, 9, 7 and 8 in order. Explain how you checked.", "a": "6, 7, 8, 9, 10."},
+      {"q": "Write a numeral greater than 7 but less than 10. Give every answer.", "a": "8 and 9."},
+      {"q": "Create a wrong numeral-and-quantity match for a partner to correct.", "a": "Answers vary; mismatch and correction must be valid."}
+    ],
+    "hook": "Why do we use numerals instead of drawing every object each time?",
+    "tryQuestion": "Count eight counters, choose the numeral, then write it.",
+    "tryAnswer": "Eight counters match numeral 8.",
+    "talkQuestion": "How can a ten frame help you check whether 6 and 9 have been labelled correctly?",
+    "talkAnswer": "The ten frame shows the quantity, so we can count and match the correct numeral.",
+    "exitQuestions": ["Read the numeral 7.", "Write the numeral for nine.", "What should you check after writing 6?"],
+    "exitAnswers": ["Seven.", "9.", "Check the starting point, direction and shape against a model."]
+  },
+  {
+    "week": 2,
+    "day": 3,
+    "slug": "place-numbers-on-a-0-to-10-track",
+    "title": "Place numbers on a 0 to 10 track",
+    "objective": "Place and identify numbers on a number track from 0 to 10.",
+    "vocabulary": ["number track", "before", "after", "between", "position", "order", "zero", "ten"],
+    "successCriteria": ["I can follow the number order from 0 to 10.", "I can place a missing numeral in the correct position.", "I can use before, after and between to explain a position."],
+    "prior": "Children can read numerals from 0 to 10 and say the number sequence in order.",
+    "resources": "Large floor number track, numeral cards, peg number tracks, cubes, mini whiteboards and slides.",
+    "misconception": "A child treats the spaces between marks as numbers. Point to each marked position and place one numeral card directly on each mark.",
+    "warmup": "Count aloud from 0 to 10, then start at 4 and continue to 10 without returning to zero.",
+    "teacherModel": ["Lay numeral cards 0 to 10 in order from left to right.", "Check that each next numeral is one more.", "Remove 7 and use 6 before it and 8 after it to find the missing position.", "Use the sentence: 7 is between 6 and 8."],
+    "guided": "Children place mixed numeral cards on a floor track. Partners check each placement using before, after or between.",
+    "independent": "Lower support completes tracks with one missing number. Expected pupils place several missing numbers. Higher challenge pupils reason about hidden positions and errors.",
+    "plenary": "Show a number track with 8 and 9 swapped. Children find the error and justify the correction using neighbouring numbers.",
+    "preteach": {
+      "focus": "Practise the stable order from 0 to 10 and the words before, after and between.",
+      "steps": ["Walk along a floor track while saying each number.", "Stand on 6 and name the numbers before and after.", "Hide one numeral and use its neighbours to identify it.", "Place 8 between 7 and 9."],
+      "questions": [
+        {"q": "What number comes after 5?", "a": "6."},
+        {"q": "What number comes before 8?", "a": "7."},
+        {"q": "Which number is between 6 and 8?", "a": "7."},
+        {"q": "Where does zero go on a 0 to 10 track?", "a": "At the beginning, before 1."}
+      ]
+    },
+    "lower": [
+      {"q": "Complete: 0, 1, 2, __, 4, 5.", "a": "3."},
+      {"q": "Complete: 5, 6, __, 8.", "a": "7."},
+      {"q": "Circle the number after 7: 6, 8 or 9.", "a": "8."},
+      {"q": "Circle the number before 10: 8 or 9.", "a": "9."},
+      {"q": "Write the number between 8 and 10.", "a": "9."}
+    ],
+    "expected": [
+      {"q": "Fill the gaps: 0, 1, __, 3, __, 5, 6, __, 8, 9, 10.", "a": "2, 4, 7."},
+      {"q": "Place 6, 8 and 10 on a blank 0 to 10 track.", "a": "Each numeral at its ordered position."},
+      {"q": "Write the numbers immediately before and after 7.", "a": "6 and 8."},
+      {"q": "True or false: 9 belongs between 7 and 8. Explain.", "a": "False; 8 is between 7 and 9."},
+      {"q": "A covered number has 4 before it and 6 after it. What is it?", "a": "5."}
+    ],
+    "higher": [
+      {"q": "A number is after 6 and before 8. Prove which number it is.", "a": "7, shown by the number order."},
+      {"q": "Correct this track: 5, 6, 8, 7, 9, 10.", "a": "5, 6, 7, 8, 9, 10."},
+      {"q": "Which number is two positions after 6? Explain each move.", "a": "8."},
+      {"q": "Find every number greater than 6 and less than 10.", "a": "7, 8 and 9."},
+      {"q": "Create a number-track clue whose answer is 9.", "a": "For example: after 8 and before 10."}
+    ],
+    "hook": "What clues help when one number is hidden on a number track?",
+    "tryQuestion": "Place 7 on a track that already shows 6 and 8.",
+    "tryAnswer": "7 belongs between 6 and 8.",
+    "talkQuestion": "How do you know 9 belongs after 8 rather than before it?",
+    "talkAnswer": "The counting sequence increases by one, and 9 is one more than 8.",
+    "exitQuestions": ["What number is before 6?", "What number is between 8 and 10?", "How can neighbouring numbers help with a missing number?"],
+    "exitAnswers": ["5.", "9.", "The number before is one less and the number after is one more."]
+  },
+  {
+    "week": 2,
+    "day": 4,
+    "slug": "find-one-more-within-10",
+    "title": "Find one more within 10",
+    "objective": "Find one more than a number or quantity within 10.",
+    "vocabulary": ["one more", "add", "increase", "next", "total", "number track"],
+    "successCriteria": ["I can add exactly one object.", "I can say the next number in the sequence.", "I can explain that one more makes the total increase by one."],
+    "prior": "Children can count quantities and place numbers in order on a 0 to 10 track.",
+    "resources": "Counters, cubes, ten frames, number tracks, numeral cards, mini whiteboards and slides.",
+    "misconception": "A child recounts inaccurately after adding one. Keep the original quantity organised, add one clearly, then connect to the next number on the track.",
+    "warmup": "Say a number from 0 to 9. Children say the number that comes next on the number track.",
+    "teacherModel": ["Build a set of 6 counters and confirm the total.", "Add exactly one counter while saying one more.", "Count or recognise the new total as 7.", "Show the same change by moving one step from 6 to 7 on a number track."],
+    "guided": "Pairs choose a numeral card, build it, add one counter and complete the sentence: One more than __ is __.",
+    "independent": "Lower support uses concrete objects and number tracks. Expected pupils solve pictorial and numeral questions. Higher challenge pupils reason about unknown starting numbers and errors.",
+    "plenary": "Show 8 counters. Hide one extra counter under a cup. Children predict the new total and explain without recounting from 1.",
+    "preteach": {
+      "focus": "Understand that one more means adding one object or moving one step forwards.",
+      "steps": ["Build 4 with counters.", "Add exactly one counter.", "Say: One more than 4 is 5.", "Repeat with 6, 8 and 9 on a number track."],
+      "questions": [
+        {"q": "What is one more than 4?", "a": "5."},
+        {"q": "Add one counter to 6. How many?", "a": "7."},
+        {"q": "Move one step forwards from 8. Where do you land?", "a": "9."},
+        {"q": "What is one more than 9?", "a": "10."}
+      ]
+    },
+    "lower": [
+      {"q": "Draw one more dot: ● ● ● ●. How many now?", "a": "5."},
+      {"q": "One more than 5 is __.", "a": "6."},
+      {"q": "Move one step forwards from 7. Circle 6, 8 or 9.", "a": "8."},
+      {"q": "Add one counter to a set of 8. Write the new total.", "a": "9."},
+      {"q": "Complete: 9 and one more make __.", "a": "10."}
+    ],
+    "expected": [
+      {"q": "Find one more than 3, 6 and 9.", "a": "4, 7 and 10."},
+      {"q": "Complete: one more than __ is 8.", "a": "7."},
+      {"q": "A ten frame shows 7 counters. Add one and write the total.", "a": "8."},
+      {"q": "True or false: one more than 8 is 7. Explain.", "a": "False; it is 9 because one more increases the number."},
+      {"q": "Write a one-more sentence for 9 and 10.", "a": "One more than 9 is 10."}
+    ],
+    "higher": [
+      {"q": "A number becomes 9 when one is added. What was the number? Explain.", "a": "8."},
+      {"q": "Find the mistake: one more than 6 is 8. Correct it in two ways.", "a": "Change 8 to 7, or change 6 to 7."},
+      {"q": "Write all one-more facts with answers from 7 to 10.", "a": "6 to 7, 7 to 8, 8 to 9, 9 to 10."},
+      {"q": "Does one more always change an even number to an odd number within 10? Explain.", "a": "Yes; consecutive numbers alternate even and odd, though formal parity language is optional."},
+      {"q": "Create a one-more story whose answer is 10.", "a": "A valid story begins with 9 and adds one."}
+    ],
+    "hook": "Can you find one more without counting the whole set again?",
+    "tryQuestion": "A ten frame shows 7 counters. Add one more. What is the new total?",
+    "tryAnswer": "8, because one more than 7 is 8.",
+    "talkQuestion": "How are adding one counter and moving one step forwards on a number track connected?",
+    "talkAnswer": "Both increase the number by exactly one.",
+    "exitQuestions": ["What is one more than 6?", "Which direction do we move for one more?", "One more than which number is 10?"],
+    "exitAnswers": ["7.", "Forwards, towards the larger numbers.", "9."]
+  },
+  {
+    "week": 2,
+    "day": 5,
+    "slug": "find-one-less-within-10",
+    "title": "Find one less within 10",
+    "objective": "Find one less than a number or quantity within 10.",
+    "vocabulary": ["one less", "take away", "decrease", "previous", "total", "number track"],
+    "successCriteria": ["I can remove exactly one object.", "I can say the previous number in the sequence.", "I can explain that one less makes the total decrease by one."],
+    "prior": "Children can find one more within 10 and use a 0 to 10 number track.",
+    "resources": "Counters, cubes, ten frames, number tracks, numeral cards, story props, mini whiteboards and slides.",
+    "misconception": "A child moves forwards because that was practised for one more. Contrast arrows and gestures: one less means one step back towards zero.",
+    "warmup": "Count backwards from 10 to 0 with actions. Pause after a number so children say the next number in the backwards sequence.",
+    "teacherModel": ["Build a set of 8 counters and confirm the total.", "Remove exactly one counter while saying one less.", "Recognise or count the new total as 7.", "Show the same change by moving one step back from 8 to 7 on a number track."],
+    "guided": "Pairs choose a numeral card from 1 to 10, build it, remove one and complete: One less than __ is __.",
+    "independent": "Lower support removes real objects and uses tracks. Expected pupils solve pictorial and numeral questions. Higher challenge pupils reason backwards and compare one-more and one-less relationships.",
+    "plenary": "Show a closed box labelled 9 objects. Remove one object visibly. Children predict the remaining total and explain the number-track move.",
+    "preteach": {
+      "focus": "Understand that one less means removing one object or moving one step backwards.",
+      "steps": ["Build 5 with counters.", "Remove exactly one counter.", "Say: One less than 5 is 4.", "Repeat with 7, 9 and 10 on a number track."],
+      "questions": [
+        {"q": "What is one less than 5?", "a": "4."},
+        {"q": "Take one counter from 7. How many remain?", "a": "6."},
+        {"q": "Move one step back from 9. Where do you land?", "a": "8."},
+        {"q": "What is one less than 10?", "a": "9."}
+      ]
+    },
+    "lower": [
+      {"q": "Cross out one dot: ● ● ● ● ●. How many remain?", "a": "4."},
+      {"q": "One less than 6 is __.", "a": "5."},
+      {"q": "Move one step back from 8. Circle 6, 7 or 9.", "a": "7."},
+      {"q": "Take one counter from a set of 10. Write the new total.", "a": "9."},
+      {"q": "Complete: 7 and one less make __.", "a": "6."}
+    ],
+    "expected": [
+      {"q": "Find one less than 4, 7 and 10.", "a": "3, 6 and 9."},
+      {"q": "Complete: one less than __ is 8.", "a": "9."},
+      {"q": "A ten frame shows 9 counters. Remove one and write the total.", "a": "8."},
+      {"q": "True or false: one less than 6 is 7. Explain.", "a": "False; it is 5 because one less decreases the number."},
+      {"q": "Write a one-less sentence for 10 and 9.", "a": "One less than 10 is 9."}
+    ],
+    "higher": [
+      {"q": "A number becomes 6 when one is removed. What was the number? Explain.", "a": "7."},
+      {"q": "Find the mistake: one less than 9 is 7. Correct it in two ways.", "a": "Change 7 to 8, or change 9 to 8."},
+      {"q": "Write all one-less facts with starting numbers from 7 to 10.", "a": "7 to 6, 8 to 7, 9 to 8, 10 to 9."},
+      {"q": "Explain how one less than 8 and one more than 6 are connected.", "a": "Both equal 7."},
+      {"q": "Create a one-less story whose answer is 8.", "a": "A valid story begins with 9 and removes one."}
+    ],
+    "hook": "What changes when exactly one object leaves a set?",
+    "tryQuestion": "A ten frame shows 9 counters. Remove one. What is the new total?",
+    "tryAnswer": "8, because one less than 9 is 8.",
+    "talkQuestion": "How are removing one counter and moving one step back on a number track connected?",
+    "talkAnswer": "Both decrease the number by exactly one.",
+    "exitQuestions": ["What is one less than 7?", "Which direction do we move for one less?", "One less than which number is 9?"],
+    "exitAnswers": ["6.", "Backwards, towards zero.", "10."]
+  }
+]

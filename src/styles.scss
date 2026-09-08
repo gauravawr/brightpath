@@ -1,17 +1,17 @@
 /* ============================================================
    BrightPath — global design tokens + reset + base
-   Design system: indigo / academic (per webapp-blueprint design-system.md)
+   Design system: warm red / academic
    Rule: components use var(--token) only — never hard-code colors.
    ============================================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap');
 
 :root {
-  /* Brand — indigo/academic */
-  --brand-d: #4f46e5;   /* primary            */
-  --brand-m: #6366f1;   /* hover / mid        */
-  --brand-l: #818cf8;   /* accent / grad end  */
-  --brand-tint: #eef2ff;/* soft brand wash    */
+  /* Brand — confident red with a soft classroom-friendly tint */
+  --brand-d: #b91c1c;   /* primary            */
+  --brand-m: #dc2626;   /* hover / mid        */
+  --brand-l: #f87171;   /* accent / grad end  */
+  --brand-tint: #fef2f2;/* soft brand wash    */
 
   /* Accents (keep the app from reading single-hue) */
   --accent-amber: #f59e0b;
@@ -30,7 +30,7 @@
   --slate-800: #1e293b;
   --slate-900: #0f172a;
   --white: #ffffff;
-  --page-bg: #f8fafc;
+  --page-bg: #fffafa;
 
   /* Semantic */
   --text: var(--slate-800);
@@ -39,7 +39,7 @@
 
   /* Shadows */
   --shadow-card: 0 2px 12px rgba(15, 23, 42, .07);
-  --shadow-hover: 0 12px 32px rgba(79, 70, 229, .16);
+  --shadow-hover: 0 12px 32px rgba(185, 28, 28, .16);
   --shadow-hero: 0 16px 48px rgba(15, 23, 42, .18);
 
   /* Radii */
@@ -90,9 +90,9 @@ ul { margin: 0; padding: 0; list-style: none; }
   color: var(--white); font-weight: 700; font-size: .95rem;
   border-radius: var(--r-pill); padding: 12px 26px;
   transition: transform .18s var(--easing-spring), opacity .18s, box-shadow .18s;
-  box-shadow: 0 6px 18px rgba(79, 70, 229, .28);
+  box-shadow: 0 6px 18px rgba(185, 28, 28, .28);
 }
-.bp-btn:hover { opacity: .94; transform: translateY(-1px); box-shadow: 0 10px 24px rgba(79, 70, 229, .34); color: var(--white); }
+.bp-btn:hover { opacity: .94; transform: translateY(-1px); box-shadow: 0 10px 24px rgba(185, 28, 28, .34); color: var(--white); }
 .bp-btn--ghost {
   background: var(--white); color: var(--brand-d);
   border: 1.5px solid var(--brand-tint); box-shadow: none;
@@ -164,3 +164,19 @@ input:focus, select:focus, textarea:focus {
 .bp-ecard__sub { color: var(--text-muted); font-size: .88rem; margin: 0; flex: 1; }
 .bp-ecard__meta { display: flex; flex-wrap: wrap; gap: .4rem; align-items: center; margin-top: .3rem; }
 .bp-meta-chip { font-size: .72rem; font-weight: 600; color: var(--slate-500); background: var(--slate-100); border-radius: var(--r-pill); padding: 3px 10px; }
+
+/* Featured curriculum planning block */
+.bp-curriculum-feature {
+  display: grid; grid-template-columns: minmax(0, .9fr) minmax(280px, 1.1fr); align-items: center; gap: clamp(1.25rem, 3vw, 2.5rem);
+  margin-bottom: clamp(2rem, 5vw, 3.5rem); padding: clamp(1.25rem, 3vw, 2rem);
+  border: 1px solid color-mix(in srgb, var(--brand-d) 22%, var(--border)); border-radius: var(--r-lg);
+  background: linear-gradient(135deg, var(--brand-tint), var(--white));
+}
+.bp-curriculum-feature h2 { margin: .45rem 0 .65rem; }
+.bp-curriculum-feature > div > p { max-width: 52ch; margin: 0; color: var(--slate-600); }
+.bp-curriculum-feature .bp-ecard__thumb { aspect-ratio: 3 / 1; }
+.bp-list-heading { margin: 0 0 1.2rem; }
+
+@media (max-width: 760px) {
+  .bp-curriculum-feature { grid-template-columns: 1fr; }
+}

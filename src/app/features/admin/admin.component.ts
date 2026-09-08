@@ -101,7 +101,7 @@ import { AdminService, Member, ROLE_ADMIN, ROLE_TEACHER } from '../../core/servi
       flex: 1 1 240px; min-width: 0; padding: .7rem .9rem; font: inherit;
       border: 1px solid var(--border); border-radius: var(--r-sm); background: var(--white);
     }
-    .find__row input:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+    .find__row input:focus-visible { outline: 2px solid var(--brand-d); outline-offset: 1px; }
     .hint { display: block; margin-top: .5rem; color: var(--slate-500); font-size: .82rem; }
 
     .found { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border); display: flex; flex-wrap: wrap; gap: .8rem; align-items: center; justify-content: space-between; }
@@ -110,7 +110,7 @@ import { AdminService, Member, ROLE_ADMIN, ROLE_TEACHER } from '../../core/servi
     .found__roles, .list__roles { display: flex; gap: .35rem; flex-wrap: wrap; }
     .found__acts, .list__acts { display: flex; gap: .5rem; flex-wrap: wrap; }
 
-    .tag { font-size: .74rem; font-weight: 700; padding: .18rem .5rem; border-radius: 999px; background: var(--brand-pale, #eef2ff); color: var(--brand-d); }
+    .tag { font-size: .74rem; font-weight: 700; padding: .18rem .5rem; border-radius: 999px; background: var(--brand-tint); color: var(--brand-d); }
     .tag--none { background: var(--slate-100, #f1f5f9); color: var(--slate-500); }
 
     .list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: .5rem; }
@@ -125,8 +125,8 @@ import { AdminService, Member, ROLE_ADMIN, ROLE_TEACHER } from '../../core/servi
       font: inherit; font-size: .82rem; font-weight: 600; cursor: pointer;
       padding: .5rem .8rem; min-height: 44px; border-radius: var(--r-sm); border: 1px solid var(--border); background: var(--white);
     }
-    .btn-add { border-color: var(--brand); color: var(--brand-d); }
-    .btn-add:hover:not(:disabled) { background: var(--brand-pale, #eef2ff); }
+    .btn-add { border-color: var(--brand-d); color: var(--brand-d); }
+    .btn-add:hover:not(:disabled) { background: var(--brand-tint); }
     .btn-rm { color: #991b1b; border-color: #fecaca; }
     .btn-rm:hover:not(:disabled) { background: #fef2f2; }
     .btn-add:disabled, .btn-rm:disabled { opacity: .55; cursor: default; }
