@@ -122,109 +122,109 @@
   {
     "week": 11,
     "term": "Spring",
-    "unit": "Fractions — simplify, compare and order",
+    "unit": "Fractions - simplify, compare and order",
     "days": [
-      "Introduce and represent: Fractions — simplify, compare and order",
-      "Develop fluency: Fractions — simplify, compare and order",
-      "Compare, connect and explain: Fractions — simplify, compare and order",
-      "Reason and solve problems: Fractions — simplify, compare and order",
-      "Apply, assess and revisit: Fractions — simplify, compare and order"
+      "Generate equivalent fractions",
+      "Simplify fractions",
+      "Compare fractions",
+      "Order fractions",
+      "Reason about fraction size"
     ]
   },
   {
     "week": 12,
     "term": "Spring",
-    "unit": "Fractions — add and subtract",
+    "unit": "Fractions - add and subtract",
     "days": [
-      "Introduce and represent: Fractions — add and subtract",
-      "Develop fluency: Fractions — add and subtract",
-      "Compare, connect and explain: Fractions — add and subtract",
-      "Reason and solve problems: Fractions — add and subtract",
-      "Apply, assess and revisit: Fractions — add and subtract"
+      "Add fractions with different denominators",
+      "Subtract fractions with different denominators",
+      "Add mixed numbers",
+      "Subtract mixed numbers",
+      "Solve fraction addition problems"
     ]
   },
   {
     "week": 13,
     "term": "Spring",
-    "unit": "Fractions — multiply",
+    "unit": "Fractions - multiply",
     "days": [
-      "Introduce and represent: Fractions — multiply",
-      "Develop fluency: Fractions — multiply",
-      "Compare, connect and explain: Fractions — multiply",
-      "Reason and solve problems: Fractions — multiply",
-      "Apply, assess and revisit: Fractions — multiply"
+      "Multiply a fraction by a whole number",
+      "Multiply proper fractions",
+      "Simplify before multiplying",
+      "Multiply mixed numbers",
+      "Solve fraction multiplication problems"
     ]
   },
   {
     "week": 14,
     "term": "Spring",
-    "unit": "Fractions — divide by whole numbers",
+    "unit": "Fractions - divide by whole numbers",
     "days": [
-      "Introduce and represent: Fractions — divide by whole numbers",
-      "Develop fluency: Fractions — divide by whole numbers",
-      "Compare, connect and explain: Fractions — divide by whole numbers",
-      "Reason and solve problems: Fractions — divide by whole numbers",
-      "Apply, assess and revisit: Fractions — divide by whole numbers"
+      "Divide unit fractions",
+      "Divide non-unit fractions",
+      "Use equivalent fractions when dividing",
+      "Divide mixed numbers",
+      "Solve fraction division problems"
     ]
   },
   {
     "week": 15,
     "term": "Spring",
-    "unit": "Decimals — calculate with decimals",
+    "unit": "Decimals - calculate with decimals",
     "days": [
-      "Introduce and represent: Decimals — calculate with decimals",
-      "Develop fluency: Decimals — calculate with decimals",
-      "Compare, connect and explain: Decimals — calculate with decimals",
-      "Reason and solve problems: Decimals — calculate with decimals",
-      "Apply, assess and revisit: Decimals — calculate with decimals"
+      "Add decimals",
+      "Subtract decimals",
+      "Multiply decimals by whole numbers",
+      "Divide decimals by whole numbers",
+      "Solve decimal problems"
     ]
   },
   {
     "week": 16,
     "term": "Spring",
-    "unit": "Number — fractions, decimals and percentages",
+    "unit": "Number - fractions, decimals and percentages",
     "days": [
-      "Introduce and represent: Number — fractions, decimals and percentages",
-      "Develop fluency: Number — fractions, decimals and percentages",
-      "Compare, connect and explain: Number — fractions, decimals and percentages",
-      "Reason and solve problems: Number — fractions, decimals and percentages",
-      "Apply, assess and revisit: Number — fractions, decimals and percentages"
+      "Convert fractions to decimals",
+      "Convert decimals to percentages",
+      "Convert percentages to fractions",
+      "Compare fractions decimals and percentages",
+      "Solve equivalence problems"
     ]
   },
   {
     "week": 17,
     "term": "Spring",
-    "unit": "Percentages — calculate and solve problems",
+    "unit": "Percentages - calculate and solve problems",
     "days": [
-      "Introduce and represent: Percentages — calculate and solve problems",
-      "Develop fluency: Percentages — calculate and solve problems",
-      "Compare, connect and explain: Percentages — calculate and solve problems",
-      "Reason and solve problems: Percentages — calculate and solve problems",
-      "Apply, assess and revisit: Percentages — calculate and solve problems"
+      "Find benchmark percentages",
+      "Find non-benchmark percentages",
+      "Use one per cent",
+      "Solve percentage change problems",
+      "Find the whole from a percentage"
     ]
   },
   {
     "week": 18,
     "term": "Spring",
-    "unit": "Ratio — language and relationships",
+    "unit": "Ratio - language and relationships",
     "days": [
-      "Introduce and represent: Ratio — language and relationships",
-      "Develop fluency: Ratio — language and relationships",
-      "Compare, connect and explain: Ratio — language and relationships",
-      "Reason and solve problems: Ratio — language and relationships",
-      "Apply, assess and revisit: Ratio — language and relationships"
+      "Describe ratio relationships",
+      "Write and interpret ratio notation",
+      "Generate equivalent ratios",
+      "Simplify ratios",
+      "Solve ratio problems"
     ]
   },
   {
     "week": 19,
     "term": "Spring",
-    "unit": "Proportion — scale factors and unequal sharing",
+    "unit": "Proportion - scale factors and unequal sharing",
     "days": [
-      "Introduce and represent: Proportion — scale factors and unequal sharing",
-      "Develop fluency: Proportion — scale factors and unequal sharing",
-      "Compare, connect and explain: Proportion — scale factors and unequal sharing",
-      "Reason and solve problems: Proportion — scale factors and unequal sharing",
-      "Apply, assess and revisit: Proportion — scale factors and unequal sharing"
+      "Use scale factors",
+      "Scale recipes",
+      "Find the value of one ratio part",
+      "Share in a ratio",
+      "Solve multi-step proportion problems"
     ]
   },
   {
@@ -232,107 +232,107 @@
     "term": "Spring",
     "unit": "Spring consolidation and assessment",
     "days": [
-      "Retrieve and revisit: Spring consolidation and assessment",
-      "Diagnose misconceptions: Spring consolidation and assessment",
-      "Targeted fluency: Spring consolidation and assessment",
-      "Reasoning and problem solving: Spring consolidation and assessment",
-      "Assess and plan next steps: Spring consolidation and assessment"
+      "Retrieve fraction methods",
+      "Retrieve decimal and percentage methods",
+      "Diagnose ratio misconceptions",
+      "Apply spring reasoning",
+      "Assess learning and plan next steps"
     ]
   },
   {
     "week": 21,
     "term": "Summer",
-    "unit": "Algebra — sequences, formulae and substitutions",
+    "unit": "Algebra - sequences, formulae and substitutions",
     "days": [
-      "Introduce and represent: Algebra — sequences, formulae and substitutions",
-      "Develop fluency: Algebra — sequences, formulae and substitutions",
-      "Compare, connect and explain: Algebra — sequences, formulae and substitutions",
-      "Reason and solve problems: Algebra — sequences, formulae and substitutions",
-      "Apply, assess and revisit: Algebra — sequences, formulae and substitutions"
+      "Continue and describe sequences",
+      "Find missing terms",
+      "Use simple formulae",
+      "Substitute into formulae",
+      "Generate terms from a position rule"
     ]
   },
   {
     "week": 22,
     "term": "Summer",
-    "unit": "Algebra — equations and missing-number problems",
+    "unit": "Algebra - equations and missing-number problems",
     "days": [
-      "Introduce and represent: Algebra — equations and missing-number problems",
-      "Develop fluency: Algebra — equations and missing-number problems",
-      "Compare, connect and explain: Algebra — equations and missing-number problems",
-      "Reason and solve problems: Algebra — equations and missing-number problems",
-      "Apply, assess and revisit: Algebra — equations and missing-number problems"
+      "Solve one-step equations",
+      "Solve two-step equations",
+      "Solve equations with brackets",
+      "Represent word problems with equations",
+      "Reason about equivalent equations"
     ]
   },
   {
     "week": 23,
     "term": "Summer",
-    "unit": "Measurement — convert units and solve problems",
+    "unit": "Measurement - convert units and solve problems",
     "days": [
-      "Introduce and represent: Measurement — convert units and solve problems",
-      "Develop fluency: Measurement — convert units and solve problems",
-      "Compare, connect and explain: Measurement — convert units and solve problems",
-      "Reason and solve problems: Measurement — convert units and solve problems",
-      "Apply, assess and revisit: Measurement — convert units and solve problems"
+      "Convert metric lengths",
+      "Convert mass and capacity",
+      "Use decimal notation in conversions",
+      "Use approximate imperial conversions",
+      "Solve multi-step measure problems"
     ]
   },
   {
     "week": 24,
     "term": "Summer",
-    "unit": "Measurement — perimeter and area of triangles and parallelograms",
+    "unit": "Measurement - perimeter and area of triangles and parallelograms",
     "days": [
-      "Introduce and represent: Measurement — perimeter and area of triangles and parallelograms",
-      "Develop fluency: Measurement — perimeter and area of triangles and parallelograms",
-      "Compare, connect and explain: Measurement — perimeter and area of triangles and parallelograms",
-      "Reason and solve problems: Measurement — perimeter and area of triangles and parallelograms",
-      "Apply, assess and revisit: Measurement — perimeter and area of triangles and parallelograms"
+      "Distinguish perimeter and area",
+      "Find the area of parallelograms",
+      "Find the area of triangles",
+      "Find missing dimensions",
+      "Solve compound area problems"
     ]
   },
   {
     "week": 25,
     "term": "Summer",
-    "unit": "Measurement — volume of cuboids",
+    "unit": "Measurement - volume of cuboids",
     "days": [
-      "Introduce and represent: Measurement — volume of cuboids",
-      "Develop fluency: Measurement — volume of cuboids",
-      "Compare, connect and explain: Measurement — volume of cuboids",
-      "Reason and solve problems: Measurement — volume of cuboids",
-      "Apply, assess and revisit: Measurement — volume of cuboids"
+      "Build and count cubic units",
+      "Calculate cuboid volume",
+      "Find missing dimensions",
+      "Compare cuboid volumes",
+      "Solve volume problems"
     ]
   },
   {
     "week": 26,
     "term": "Summer",
-    "unit": "Geometry — angles, circles and properties of shapes",
+    "unit": "Geometry - angles, circles and properties of shapes",
     "days": [
-      "Introduce and represent: Geometry — angles, circles and properties of shapes",
-      "Develop fluency: Geometry — angles, circles and properties of shapes",
-      "Compare, connect and explain: Geometry — angles, circles and properties of shapes",
-      "Reason and solve problems: Geometry — angles, circles and properties of shapes",
-      "Apply, assess and revisit: Geometry — angles, circles and properties of shapes"
+      "Use angles on a line and around a point",
+      "Use vertically opposite angles",
+      "Find angles in triangles and quadrilaterals",
+      "Name parts of circles",
+      "Reason from shape properties"
     ]
   },
   {
     "week": 27,
     "term": "Summer",
-    "unit": "Geometry — coordinates, translation and reflection",
+    "unit": "Geometry - coordinates, translation and reflection",
     "days": [
-      "Introduce and represent: Geometry — coordinates, translation and reflection",
-      "Develop fluency: Geometry — coordinates, translation and reflection",
-      "Compare, connect and explain: Geometry — coordinates, translation and reflection",
-      "Reason and solve problems: Geometry — coordinates, translation and reflection",
-      "Apply, assess and revisit: Geometry — coordinates, translation and reflection"
+      "Plot points in four quadrants",
+      "Describe translations",
+      "Translate shapes",
+      "Reflect shapes",
+      "Reason about transformations"
     ]
   },
   {
     "week": 28,
     "term": "Summer",
-    "unit": "Statistics — pie charts, line graphs and mean",
+    "unit": "Statistics - pie charts, line graphs and mean",
     "days": [
-      "Introduce and represent: Statistics — pie charts, line graphs and mean",
-      "Develop fluency: Statistics — pie charts, line graphs and mean",
-      "Compare, connect and explain: Statistics — pie charts, line graphs and mean",
-      "Reason and solve problems: Statistics — pie charts, line graphs and mean",
-      "Apply, assess and revisit: Statistics — pie charts, line graphs and mean"
+      "Interpret line graphs",
+      "Interpret pie charts",
+      "Construct pie chart sectors",
+      "Calculate the mean",
+      "Solve statistical problems"
     ]
   },
   {
@@ -340,11 +340,11 @@
     "term": "Summer",
     "unit": "Mixed reasoning and problem solving",
     "days": [
-      "Introduce and represent: Mixed reasoning and problem solving",
-      "Develop fluency: Mixed reasoning and problem solving",
-      "Compare, connect and explain: Mixed reasoning and problem solving",
-      "Reason and solve problems: Mixed reasoning and problem solving",
-      "Apply, assess and revisit: Mixed reasoning and problem solving"
+      "Choose efficient representations",
+      "Solve multi-step number problems",
+      "Solve mixed measure problems",
+      "Solve geometry and statistics problems",
+      "Create and critique solutions"
     ]
   },
   {
@@ -352,11 +352,11 @@
     "term": "Summer",
     "unit": "Summer assessment and transition to secondary Maths",
     "days": [
-      "Retrieve and revisit: Summer assessment and transition to secondary Maths",
-      "Diagnose misconceptions: Summer assessment and transition to secondary Maths",
-      "Targeted fluency: Summer assessment and transition to secondary Maths",
-      "Reasoning and problem solving: Summer assessment and transition to secondary Maths",
-      "Assess and plan next steps: Summer assessment and transition to secondary Maths"
+      "Retrieve number and ratio",
+      "Retrieve algebra and measure",
+      "Retrieve geometry and statistics",
+      "Apply Year 6 reasoning",
+      "Assess learning and plan transition"
     ]
   }
 ]

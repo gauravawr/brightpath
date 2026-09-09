@@ -19,6 +19,7 @@ from reportlab.pdfgen import canvas
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "public" / "lessons" / "year-6-maths" / "autumn"
 CURRICULUM = ROOT / "public" / "curriculum-plans" / "maths" / "year-6.json"
+TERM = "Autumn"
 
 NAVY = "18324A"
 TEAL = "2C6E73"
@@ -367,7 +368,7 @@ def create_teacher_plan(item):
     meta = doc.add_paragraph()
     meta.alignment = WD_ALIGN_PARAGRAPH.CENTER
     meta.paragraph_format.space_after = Pt(4)
-    run = meta.add_run(f"Year 6 Maths  |  Autumn  |  Week {item['week']}  |  Day {item['day']}  |  Editable teacher plan")
+    run = meta.add_run(f"Year 6 Maths  |  {TERM}  |  Week {item['week']}  |  Day {item['day']}  |  Editable teacher plan")
     run.bold = True
     run.font.name = "Arial"
     run.font.size = Pt(8.5)
@@ -490,7 +491,7 @@ def pdf_header(c, item, label, page_number):
     c.setFillColor(HexColor("#FFFFFF"))
     c.setFont("BPArialBold", 9)
     c.drawString(34, height - 22, "BRIGHTPATH PRIMARY LEARNING")
-    c.drawRightString(width - 34, height - 22, f"YEAR 6 MATHS  |  AUTUMN  |  WEEK {item['week']}  |  DAY {item['day']}")
+    c.drawRightString(width - 34, height - 22, f"YEAR 6 MATHS  |  {TERM.upper()}  |  WEEK {item['week']}  |  DAY {item['day']}")
     c.setFillColor(HexColor("#" + MUTED))
     c.setFont("BPArial", 7.5)
     c.drawString(34, 22, label)
@@ -628,7 +629,7 @@ def update_curriculum(lessons):
 def main():
     lessons = build_lessons()
     OUT.mkdir(parents=True, exist_ok=True)
-    data_path = OUT / "year6-autumn-lessons.json"
+    data_path = OUT / f"year6-{TERM.lower()}-lessons.json"
     data_path.write_text(json.dumps(lessons, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     update_curriculum(lessons)
     plans = []

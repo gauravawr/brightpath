@@ -29,7 +29,7 @@ interface ResourcePreview {
     @if (lesson(); as item) {
       <header class="bp-page-hero lesson-hero"><div class="bp-container">
         <a class="back" [routerLink]="l('/curriculum/maths/year/6')">← Year 6 Maths curriculum map</a>
-        <span class="bp-chip">Year 6 Maths · Autumn · Week {{ item.week }} · Day {{ item.day }}</span>
+        <span class="bp-chip">Year 6 Maths · {{ term }} · Week {{ item.week }} · Day {{ item.day }}</span>
         <h1>{{ item.title }}</h1>
         <p><strong>LI:</strong> {{ item.objective }}</p>
       </div></header>
@@ -109,6 +109,8 @@ export class Year6AutumnLessonComponent {
   private lang = inject(LanguageService);
   readonly week = Number(this.route.snapshot.paramMap.get('week') ?? 1);
   readonly slug = this.route.snapshot.paramMap.get('slug') ?? '';
+  readonly term = this.week <= 10 ? 'Autumn' : this.week <= 20 ? 'Spring' : 'Summer';
+  readonly termSlug = this.term.toLowerCase();
   readonly lesson = signal<YearSixLesson | null>(null);
   readonly notFound = signal(false);
   readonly saved = signal(false);
@@ -117,7 +119,7 @@ export class Year6AutumnLessonComponent {
   draft = { teacher: '', date: '', initials: '', send: '', adaptations: '', assessment: '' };
 
   constructor() {
-    this.http.get<YearSixLesson[]>('/lessons/year-6-maths/autumn/year6-autumn-lessons.json').subscribe({
+    this.http.get<YearSixLesson[]>(`/lessons/year-6-maths/${this.termSlug}/year6-${this.termSlug}-lessons.json`).subscribe({
       next: items => {
         const item = items.find(candidate => candidate.week === this.week && candidate.slug === this.slug) ?? null;
         this.lesson.set(item); this.notFound.set(!item); if (item) this.loadDraft();
@@ -127,15 +129,15 @@ export class Year6AutumnLessonComponent {
   }
 
   l(path: string): string { return this.lang.localise(path); }
-  asset(file: string): string { return `/lessons/year-6-maths/autumn/week-${this.week}/${this.slug}/${file}`; }
-  private key(): string { return `brightpath-year6-autumn-${this.week}-${this.slug}`; }
+  asset(file: string): string { return `/lessons/year-6-maths/${this.termSlug}/week-${this.week}/${this.slug}/${file}`; }
+  private key(): string { return `brightpath-year6-${this.termSlug}-${this.week}-${this.slug}`; }
   private loadDraft(): void { try { const value = localStorage.getItem(this.key()); if (value) this.draft = { ...this.draft, ...JSON.parse(value) }; } catch {} }
   saveDraft(): void { try { localStorage.setItem(this.key(), JSON.stringify(this.draft)); this.saved.set(true); setTimeout(() => this.saved.set(false), 2500); } catch {} }
 
   openPreview(kind: 'plan' | 'slides' | 'preteach' | 'lower' | 'expected' | 'higher'): void {
     const resources: Record<typeof kind, ResourcePreview> = {
       plan: { title: 'Editable teacher plan', kind: 'plan', download: 'editable-teacher-plan.docx', description: 'A one-page, supply-teacher-ready plan with editable class, inclusion, assessment and resource fields.' },
-      slides: { title: 'Teaching PowerPoint', kind: 'slides', download: 'teaching-powerpoint-v1.pptx', description: 'Twelve clear teaching slides using I do, We do and You do. In PowerPoint, teaching points and answers appear one by one on click.', folder: 'preview/powerpoint', start: 1, end: 12 },
+      slides: { title: 'Teaching PowerPoint', kind: 'slides', download: 'teaching-powerpoint-v1.pptx', description: 'Twelve clear teaching slides using I do, We do and You do. In PowerPoint, each worked calculation, mathematical decision and answer appears step by step on click.', folder: 'preview/powerpoint', start: 1, end: 12 },
       preteach: { title: 'Pre-teach resource', kind: 'images', download: 'pre-teach.pdf', description: 'Two-page prior-learning intervention with pupil questions and an adult answer page.', folder: 'preview/preteach', start: 1, end: 2 },
       lower: { title: 'Lower support worksheet', kind: 'images', download: 'differentiated-worksheets.pdf', description: 'Scaffolded questions followed by answers. The download contains all three levels.', folder: 'preview/worksheets', start: 1, end: 2 },
       expected: { title: 'Expected level worksheet', kind: 'images', download: 'differentiated-worksheets.pdf', description: 'Core Year 6 practice followed by answers. The download contains all three levels.', folder: 'preview/worksheets', start: 3, end: 4 },

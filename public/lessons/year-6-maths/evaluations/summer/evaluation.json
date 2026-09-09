@@ -1,0 +1,32 @@
+{
+  "term": "Summer",
+  "totalMarks": 40,
+  "assessmentPages": 5,
+  "recordPages": 2,
+  "bands": [
+    {
+      "name": "Lower",
+      "minimum": 0,
+      "maximum": 15,
+      "guidance": "Immediate structured intervention. Re-teach prerequisite concepts with concrete and visual representations."
+    },
+    {
+      "name": "Cuspy",
+      "minimum": 16,
+      "maximum": 23,
+      "guidance": "Targeted short intervention. Address two or three misconceptions, then reassess within two weeks."
+    },
+    {
+      "name": "Expected",
+      "minimum": 24,
+      "maximum": 31,
+      "guidance": "Secure core understanding. Revisit any domain below half marks and continue mixed retrieval."
+    },
+    {
+      "name": "Higher",
+      "minimum": 32,
+      "maximum": 40,
+      "guidance": "Strong understanding. Use proof, generalisation and unfamiliar multi-step problems for depth."
+    }
+  ]
+}

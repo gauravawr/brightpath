@@ -9,9 +9,11 @@ const SKILL_DIR = "C:/Users/garim/.codex/plugins/cache/openai-primary-runtime/pr
 const { resolvePresentationFont } = await import(pathToFileURL(path.join(SKILL_DIR, "container_tools/artifact_tool_utils.mjs")).href);
 const family = resolvePresentationFont();
 const handwriting = "Segoe Print";
-const lessons = JSON.parse(await fs.readFile(path.join(ROOT, "public/lessons/year-6-maths/autumn/year6-autumn-lessons.json"), "utf8"));
+const term = (process.argv[2] ?? "autumn").toLowerCase();
+if (!["autumn", "spring", "summer"].includes(term)) throw new Error(`Unknown term: ${term}`);
+const lessons = JSON.parse(await fs.readFile(path.join(ROOT, `public/lessons/year-6-maths/${term}/year6-${term}-lessons.json`), "utf8"));
 const characterBytes = await fs.readFile(path.join(ROOT, "public/lessons/year-6-maths/shared/miro-misconception-character.png"));
-const stageRoot = path.join(ROOT, ".qa", "year6-autumn-pptx");
+const stageRoot = path.join(ROOT, ".qa", `year6-${term}-pptx`);
 await fs.mkdir(stageRoot, { recursive: true });
 
 const C = {
@@ -53,6 +55,70 @@ function baseSlide(presentation, item, title, number, phase) {
 
 function note(slide, value) {
   slide.speakerNotes.textFrame.setText(value);
+}
+
+function longDivisionModel(item) {
+  if (!item.unit.toLowerCase().includes("division") || item.unit.toLowerCase().includes("fraction")) return null;
+  const match = item.modelQuestion.match(/([\d,]+)\s*(?:\/|÷|divided by)\s*([\d,]+)/i);
+  if (!match) return null;
+  const dividend = Number(match[1].replaceAll(",", ""));
+  const divisor = Number(match[2].replaceAll(",", ""));
+  if (!Number.isInteger(dividend) || !Number.isInteger(divisor) || divisor <= 0) return null;
+  const digits = String(dividend).split("").map(Number);
+  const stages = [];
+  let remainder = 0;
+  let quotient = "";
+  let started = false;
+  for (let index = 0; index < digits.length; index += 1) {
+    const current = remainder * 10 + digits[index];
+    const digit = Math.floor(current / divisor);
+    remainder = current - digit * divisor;
+    if (!started && digit === 0) continue;
+    started = true;
+    quotient += String(digit);
+    const next = index < digits.length - 1 ? ` Bring down ${digits[index + 1]}.` : "";
+    stages.push(`${current} ÷ ${divisor} = ${digit}. Write ${digit}; subtract ${digit * divisor}; remainder ${remainder}.${next}`);
+  }
+  if (!started) quotient = "0";
+  const sideFacts = [[1, 2, 3], [4, 5, 6], [7, 8, 9]].map(group =>
+    group.map(value => `${value} × ${divisor} = ${value * divisor}`).join("     ")
+  );
+  stages.push(`Quotient ${quotient}${remainder ? ` remainder ${remainder}` : ""}. Check: ${quotient} × ${divisor}${remainder ? ` + ${remainder}` : ""} = ${dividend}.`);
+  return { kind: "division", sideFacts, stages: stages.slice(0, 4) };
+}
+
+function longMultiplicationModel(item) {
+  if (!item.unit.toLowerCase().includes("multiplication")) return null;
+  const match = item.modelQuestion.match(/([\d,]+)\s*[x×]\s*([\d,]+)/i);
+  if (!match) return null;
+  const first = Number(match[1].replaceAll(",", ""));
+  const second = Number(match[2].replaceAll(",", ""));
+  if (!Number.isInteger(first) || !Number.isInteger(second) || second < 10 || second > 99) return null;
+  const ones = second % 10;
+  const tens = Math.floor(second / 10) * 10;
+  return {
+    kind: "multiplication",
+    sideFacts: [`Ones row: ${first} × ${ones} = ${first * ones}`, `Tens row: ${first} × ${tens} = ${first * tens}`, `Estimate first: ${item.modelSteps[0]}`],
+    stages: [
+      `Write ${first} × ${second} in place-value columns.`,
+      `Multiply by ${ones}: first partial product ${first * ones}.`,
+      `Multiply by ${tens}: second partial product ${first * tens}.`,
+      `Add the partial products: ${first * ones} + ${first * tens} = ${first * second}.`,
+    ],
+  };
+}
+
+function workedModel(item) {
+  return longDivisionModel(item) ?? longMultiplicationModel(item) ?? {
+    kind: "general",
+    sideFacts: [],
+    stages: [
+      `Identify the structure: ${item.modelSteps[0]}`,
+      `Set up the method: ${item.modelSteps[1]}`,
+      `Complete the calculation: ${item.modelAnswer}`,
+      `Check the result: ${item.modelSteps[2]}`,
+    ],
+  };
 }
 
 function titleLine(slide, label, value, top) {
@@ -104,14 +170,27 @@ async function buildDeck(item) {
   note(slide, `Teach the mathematical idea before asking pupils to solve. Define the vocabulary in context: ${item.vocabulary.join(", ")}. Reveal the three statements one at a time.`);
 
   slide = baseSlide(presentation, item, "Worked example", 4, "I DO");
-  text(slide, item.modelQuestion, 96, 150, 1088, 92, 31, C.ink, true, "center");
-  item.modelSteps.forEach((step, index) => {
-    text(slide, String(index + 1), 115, 285 + index * 92, 48, 48, 19, C.white, true, "center");
-    box(slide, 115, 285 + index * 92, 48, 48, index === 0 ? C.navy : C.teal, "ellipse", "none", 0);
-    text(slide, String(index + 1), 115, 288 + index * 92, 48, 42, 18, C.white, true, "center");
-    revealText(slide, step, 190, 273 + index * 92, 950, 72, 24, C.ink, index === 0);
-  });
-  note(slide, `I do. Pupils watch and listen before copying. Think aloud without skipping place value or checking. Model question: ${item.modelQuestion} Answer: ${item.modelAnswer}`);
+  const worked = workedModel(item);
+  revealText(slide, item.modelQuestion, 96, 132, 1088, 82, 29, C.ink, true, "center");
+  if (worked.kind === "division") {
+    box(slide, 72, 236, 410, 350, C.white, "roundRect", C.line, 1.3);
+    text(slide, "Useful multiples", 98, 252, 356, 34, 18, C.teal, true, "center");
+    worked.sideFacts.forEach((fact, index) => revealText(slide, fact, 96, 310 + index * 78, 362, 54, 17, C.ink, true, "center"));
+    box(slide, 510, 236, 698, 350, C.tealLight, "roundRect", C.line, 1.3);
+    worked.stages.forEach((step, index) => revealText(slide, `${index + 1}. ${step}`, 540, 252 + index * 77, 640, 62, 18, index === worked.stages.length - 1 ? C.green : C.ink, index === worked.stages.length - 1));
+  } else {
+    if (worked.sideFacts.length) {
+      box(slide, 82, 228, 1116, 64, C.tealLight, "roundRect", C.line, 1.2);
+      worked.sideFacts.forEach((fact, index) => revealText(slide, fact, 100 + index * 360, 238, 340, 44, 15, C.teal, true, "center"));
+    }
+    const startTop = worked.sideFacts.length ? 318 : 236;
+    worked.stages.forEach((step, index) => {
+      box(slide, 105, startTop + index * 78, 50, 50, index === 0 ? C.navy : C.teal, "ellipse", "none", 0);
+      text(slide, String(index + 1), 105, startTop + index * 3 + index * 75 + 3, 50, 44, 18, C.white, true, "center");
+      revealText(slide, step, 180, startTop - 7 + index * 78, 990, 64, 20, index === worked.stages.length - 1 ? C.green : C.ink, index === worked.stages.length - 1);
+    });
+  }
+  note(slide, `I do. Reveal the question, setup and each calculation stage one click at a time. Pupils watch before copying. Model answer: ${item.modelAnswer}`);
 
   slide = baseSlide(presentation, item, "Worked answer and check", 5, "I DO");
   text(slide, "Model answer", 105, 160, 260, 40, 19, C.teal, true);
@@ -183,7 +262,7 @@ async function buildDeck(item) {
   console.log(path.relative(ROOT, candidatePath));
 }
 
-const selector = process.argv[2];
+const selector = process.argv[3];
 const selectedLessons = selector
   ? lessons.filter(item => `${item.week}-${item.day}` === selector)
   : lessons;

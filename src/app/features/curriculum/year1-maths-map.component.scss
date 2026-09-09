@@ -52,6 +52,12 @@
 .week-card li a { display:flex;align-items:center;justify-content:space-between;gap:.75rem;min-width:0;color:var(--slate-800);font-size:.88rem;font-weight:650;border-radius:8px;padding:.45rem .55rem;margin:-.45rem -.55rem; }
 .week-card li a:hover { background:var(--brand-tint);color:var(--brand-d); }
 .week-card li a b { color:var(--brand-d); }
+.term-evaluation { display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:.9rem;margin:0 1.25rem 1.25rem;padding:1rem 1.1rem;border:1px solid var(--brand-l);border-radius:var(--r-md);background:var(--brand-tint);color:var(--slate-900); }
+.term-evaluation>span { display:grid;place-items:center;width:2rem;height:2rem;border-radius:50%;background:var(--brand-d);color:var(--white);font-weight:900; }
+.term-evaluation b,.term-evaluation small { display:block; }
+.term-evaluation small { margin-top:.2rem;color:var(--text-muted);font-size:.8rem; }
+.term-evaluation strong { color:var(--brand-d);font-size:.85rem;white-space:nowrap; }
+.term-evaluation:hover { border-color:var(--brand-d);background:var(--white); }
 
 .planning-note { margin-top: 1.5rem; border-left: 4px solid var(--brand-d); border-radius: 0 var(--r-md) var(--r-md) 0; background: var(--brand-tint); padding: 1rem 1.2rem; }
 .planning-note strong { color: var(--slate-900); }
@@ -65,4 +71,6 @@
   .term-panel__meta { grid-column: 1; padding-left: 1.5rem; }
   .term-panel__toggle { grid-column: 2; grid-row: 1 / span 2; }
   .week-grid { grid-template-columns: 1fr; padding-inline: .8rem; }
+  .term-evaluation { grid-template-columns:auto 1fr;margin-inline:.8rem; }
+  .term-evaluation strong { grid-column:2;white-space:normal; }
 }

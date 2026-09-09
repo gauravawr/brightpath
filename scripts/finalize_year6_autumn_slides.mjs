@@ -7,16 +7,18 @@ const SKILL_DIR = "C:/Users/garim/.codex/plugins/cache/openai-primary-runtime/pr
 const RUNTIME_PYTHON = "C:/Users/garim/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe";
 const { resolvePresentationFont, finalizePresentation } = await import(pathToFileURL(path.join(SKILL_DIR, "container_tools/artifact_tool_utils.mjs")).href);
 const family = resolvePresentationFont();
-const lessons = JSON.parse(await fs.readFile(path.join(ROOT, "public/lessons/year-6-maths/autumn/year6-autumn-lessons.json"), "utf8"));
-const stageRoot = path.join(ROOT, ".qa", "year6-autumn-pptx");
+const term = (process.argv[2] ?? "autumn").toLowerCase();
+if (!["autumn", "spring", "summer"].includes(term)) throw new Error(`Unknown term: ${term}`);
+const lessons = JSON.parse(await fs.readFile(path.join(ROOT, `public/lessons/year-6-maths/${term}/year6-${term}-lessons.json`), "utf8"));
+const stageRoot = path.join(ROOT, ".qa", `year6-${term}-pptx`);
 
 let completed = 0;
 for (const item of lessons) {
   const stageDir = path.join(stageRoot, `week-${item.week}`, `${item.day}-${item.slug}`);
   const candidatePath = path.join(stageDir, "animated-candidate.pptx");
-  const finalDir = path.join(ROOT, "public", "lessons", "year-6-maths", "autumn", `week-${item.week}`, item.slug);
+  const finalDir = path.join(ROOT, "public", "lessons", "year-6-maths", term, `week-${item.week}`, item.slug);
   await fs.mkdir(finalDir, { recursive: true });
-  const finalPath = path.join(finalDir, "teaching-powerpoint-v2.pptx");
+  const finalPath = path.join(finalDir, "teaching-powerpoint-v3.pptx");
   await finalizePresentation({
     explicitTotalSlideCount: 12,
     requiredNativeTableOwnerSlides: [],
@@ -30,8 +32,8 @@ for (const item of lessons) {
     layoutArgs: ["--expected-slide-size-emu", "12192000,6858000", "--validate-heading-fit"],
     fontPolicy: { basis: "design", families: [family, "Segoe Print"] },
     verifyArtifactToolImport: true,
-    receiptPath: path.join(stageDir, "validation-v2.json"),
+    receiptPath: path.join(stageDir, "validation-v3.json"),
   });
   completed += 1;
-  console.log(`${completed}/50 ${path.relative(ROOT, finalPath)}`);
+  console.log(`${completed}/${lessons.length} ${path.relative(ROOT, finalPath)}`);
 }

@@ -98,6 +98,13 @@ interface CurriculumWeek {
                     </article>
                   }
                 </div>
+                @if (subject() === 'maths' && year() === 6) {
+                  <a class="term-evaluation" [routerLink]="evaluationLink(term)">
+                    <span aria-hidden="true">✓</span>
+                    <div><b>{{ term }} term evaluation</b><small>40-mark assessment, score bands and editable intervention record</small></div>
+                    <strong>Open evaluation pack →</strong>
+                  </a>
+                }
               </details>
             }
           </div>
@@ -155,8 +162,8 @@ export class Year1MathsMapComponent {
 
   hasPublishedLesson(week: number): boolean {
     const yearOnePublished = this.year() === 1 && Boolean(this.weekLessonSlugs[week]);
-    const yearSixAutumnPublished = this.year() === 6 && week >= 1 && week <= 10;
-    return this.subject() === 'maths' && (yearOnePublished || yearSixAutumnPublished);
+    const yearSixPublished = this.year() === 6 && week >= 1 && week <= 30;
+    return this.subject() === 'maths' && (yearOnePublished || yearSixPublished);
   }
 
   lessonLink(week: number, dayNumber: number, dayTitle: string): string {
@@ -164,6 +171,10 @@ export class Year1MathsMapComponent {
       return this.l(`/lessons/year-6-maths/week/${week}/${this.slugify(dayTitle)}`);
     }
     return this.l(`/lessons/year-1-maths/week-${week}/${this.weekLessonSlugs[week][dayNumber]}`);
+  }
+
+  evaluationLink(term: CurriculumTerm): string {
+    return this.l(`/lessons/year-6-maths/evaluation/${term.toLowerCase()}`);
   }
 
   l(path: string): string { return this.lang.localise(path); }
