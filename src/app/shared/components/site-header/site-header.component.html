@@ -6,7 +6,19 @@
     </a>
 
     <nav class="nav" [class.nav--open]="menuOpen()">
-      <a [routerLink]="l('/subjects')" routerLinkActive="is-active" (click)="close()">{{ 'nav.subjects' | translate }}</a>
+      <div class="nav__subjects">
+        <a class="nav__subjects-link" [routerLink]="l('/subjects')" routerLinkActive="is-active" (click)="close()">
+          {{ 'nav.subjects' | translate }} <span aria-hidden="true">⌄</span>
+        </a>
+        <div class="nav__subjects-pop" aria-label="Subject links">
+          <a [routerLink]="l('/subjects/english')" (click)="close()">
+            <i aria-hidden="true">Aa</i><span><b>English</b><small>Reading, writing &amp; grammar</small></span>
+          </a>
+          <a [routerLink]="l('/subjects/maths')" (click)="close()">
+            <i aria-hidden="true">÷</i><span><b>Maths</b><small>Number, shape &amp; measure</small></span>
+          </a>
+        </div>
+      </div>
 
       @if (isTeacher()) {
         <a class="nav__teach" [routerLink]="l('/teach')" routerLinkActive="is-active" (click)="close()">{{ 'nav.teach' | translate }}</a>

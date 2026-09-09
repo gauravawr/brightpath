@@ -88,7 +88,7 @@ interface CurriculumWeek {
                           <li>
                             <span>{{ dayNumber + 1 }}</span>
                             @if (hasPublishedLesson(week.week)) {
-                              <a [routerLink]="lessonLink(week.week, dayNumber)">{{ day }} <b aria-hidden="true">→</b></a>
+                              <a [routerLink]="lessonLink(week.week, dayNumber, day)">{{ day }} <b aria-hidden="true">→</b></a>
                             } @else {
                               <p>{{ day }}</p>
                             }
@@ -154,10 +154,15 @@ export class Year1MathsMapComponent {
   }
 
   hasPublishedLesson(week: number): boolean {
-    return this.subject() === 'maths' && this.year() === 1 && Boolean(this.weekLessonSlugs[week]);
+    const yearOnePublished = this.year() === 1 && Boolean(this.weekLessonSlugs[week]);
+    const yearSixAutumnPublished = this.year() === 6 && week >= 1 && week <= 10;
+    return this.subject() === 'maths' && (yearOnePublished || yearSixAutumnPublished);
   }
 
-  lessonLink(week: number, dayNumber: number): string {
+  lessonLink(week: number, dayNumber: number, dayTitle: string): string {
+    if (this.subject() === 'maths' && this.year() === 6) {
+      return this.l(`/lessons/year-6-maths/week/${week}/${this.slugify(dayTitle)}`);
+    }
     return this.l(`/lessons/year-1-maths/week-${week}/${this.weekLessonSlugs[week][dayNumber]}`);
   }
 
@@ -176,5 +181,12 @@ export class Year1MathsMapComponent {
       },
       error: () => this.loading.set(false),
     });
+  }
+
+  private slugify(value: string): string {
+    return value
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-|-$/g, '');
   }
 }

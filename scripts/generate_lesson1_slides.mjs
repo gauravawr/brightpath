@@ -246,26 +246,8 @@ addText(s, "Listen. Repeat your partner’s rule, then ask one helpful question.
 speech(s, "I sorted by ______. I know ______ belongs here because ______.", 190, 465, 900, 74, C.white);
 note(s, "Use four real objects per pair. Encourage precise language. Questions pupils can ask: Does every object follow your rule? Could you use a different rule? Is any object difficult to place?");
 
-// 13 — Differentiated independent practice.
-s = baseSlide(pres, "Independent practice: choose the right support", 13, "PRACTISE");
-const cards = [
-  ["LOWER SUPPORT", "Use real objects. Sort by one shown property. Say the rule with an adult.", C.pale, C.red, "●"],
-  ["EXPECTED", "Sort picture sets independently. Record the groups and explain the rule.", C.sky, C.blue, "● ●"],
-  ["HIGHER / FINISHER", "Find two valid rules. Explain how the groups change and justify your choice.", C.lavender, "#76469A", "● ● ●"],
-];
-cards.forEach(([title, body, fill, accent, dots], i) => {
-  const left = 55 + i * 407;
-  rect(s, left, 155, 370, 420, fill, "roundRect", accent, 2);
-  addText(s, dots, left + 55, 180, 260, 44, 26, accent, true, "center");
-  addText(s, title, left + 30, 245, 310, 54, 22, C.ink, true, "center");
-  addText(s, body, left + 42, 322, 286, 155, 21, C.slate, false, "center");
-  addText(s, "Show your thinking.", left + 45, 505, 280, 34, 18, accent, true, "center");
-});
-addText(s, "The teacher may change your sheet today. That helps everyone learn well.", 220, 610, 840, 36, 18, C.muted, true, "center");
-note(s, "Choose by current learning need, not a fixed pupil label. Lower: concrete objects and reduced item count. Expected: pictures and written rule. Higher: two rules plus explanation. Circulate with the same check: ‘What is your rule? Does every object follow it?’");
-
-// 14 — Extension.
-s = baseSlide(pres, "Challenge: one set, two correct sorts", 14, "DEEPEN");
+// 13 — Extension.
+s = baseSlide(pres, "Challenge: one set, two correct sorts", 13, "DEEPEN");
 addText(s, "Make or draw a set of six objects that can be sorted in two different ways.", 110, 145, 1060, 80, 31, C.ink, true, "center");
 rect(s, 115, 255, 480, 280, C.white, "roundRect", C.line, 2);
 rect(s, 685, 255, 480, 280, C.white, "roundRect", C.line, 2);
@@ -275,6 +257,24 @@ addText(s, "Draw the two groups.\nWrite: I sorted by…", 170, 355, 370, 110, 24
 addText(s, "Use the same objects.\nWhat changes?", 740, 355, 370, 110, 24, C.slate, true, "center");
 speech(s, "Prove both rules work for every object.", 320, 575, 640, 62, C.cream);
 note(s, "Early-finisher reasoning. A suitable set contains at least two colours and two shapes. Ask pupils to compare which rule creates equal groups, if either. Accept other valid properties such as size or type when consistently applied.");
+
+// 14 — Differentiated independent practice, kept at the end of teaching.
+s = baseSlide(pres, "Independent practice", 14, "PRACTISE");
+addText(s, "Your teacher will give you the worksheet that helps you learn best today.", 160, 145, 960, 66, 29, C.ink, true, "center");
+const cards = [
+  ["PRACTISE WITH OBJECTS", "Sort one set using the shown rule. Say the rule aloud.", C.pale, C.red, "●"],
+  ["WORK INDEPENDENTLY", "Sort the picture sets and explain the rule you used.", C.sky, C.blue, "● ●"],
+  ["DEEPER THINKING", "Find two possible rules and explain how the groups change.", C.lavender, "#76469A", "● ● ●"],
+];
+cards.forEach(([title, body, fill, accent, dots], i) => {
+  const left = 55 + i * 407;
+  rect(s, left, 245, 370, 300, fill, "roundRect", accent, 2);
+  addText(s, dots, left + 55, 265, 260, 38, 22, accent, true, "center");
+  addText(s, title, left + 30, 320, 310, 48, 20, C.ink, true, "center");
+  addText(s, body, left + 42, 382, 286, 105, 20, C.slate, false, "center");
+});
+addText(s, "The detailed group choices and adaptations are in the teacher plan.", 220, 600, 840, 36, 18, C.muted, true, "center");
+note(s, "This slide appears only after the teaching sequence. Select the worksheet before the lesson using current learning need, not a fixed pupil label. Keep the detailed lower, expected and higher guidance in the teacher plan. Circulate with: ‘What is your rule? Does every object follow it?’");
 
 // 15 — Exit check.
 s = baseSlide(pres, "Exit check: ready for tomorrow?", 15, "ASSESS");
@@ -289,9 +289,11 @@ note(s, "Expected answers: 1) put objects into groups; 2) colour, shape, size or
 
 const stagingDir = path.join(ROOT, ".qa", "lesson1-finalizer");
 await fs.mkdir(stagingDir, { recursive: true });
-const candidatePath = path.join(stagingDir, "lesson1-candidate.pptx");
+const candidatePath = path.join(stagingDir, "lesson1-v5-candidate.pptx");
 await (await PresentationFile.exportPptx(pres)).save(candidatePath);
-const finalPath = path.join(ROOT, "public/lessons/year-1-maths/week-1/sort-objects-into-groups/teaching-powerpoint-v4.pptx");
+const baseOutputDir = path.join(stagingDir, "base-output");
+await fs.mkdir(baseOutputDir, { recursive: true });
+const finalPath = path.join(baseOutputDir, "lesson1-v5-base.pptx");
 await finalizePresentation({
   explicitTotalSlideCount: 15,
   requiredNativeTableOwnerSlides: [],
@@ -305,7 +307,7 @@ await finalizePresentation({
   layoutArgs: ["--expected-slide-size-emu", "12192000,6858000", "--validate-heading-fit"],
   fontPolicy: { basis: "design", families: [family, handFamily] },
   verifyArtifactToolImport: true,
-  receiptPath: path.join(stagingDir, "lesson1-v4-validation.json"),
+  receiptPath: path.join(stagingDir, "lesson1-v5-base-validation.json"),
 });
 
 console.log(finalPath);

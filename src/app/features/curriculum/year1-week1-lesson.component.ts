@@ -89,7 +89,7 @@ export class Year1Week1LessonComponent {
     const newPack=this.week===1&&this.slug==='sort-objects-into-groups';
     const resources:Record<typeof kind,ResourcePreview>={
       plan:{title:'Editable teacher plan',kind:'pdf',download:newPack?'editable-teacher-plan-one-page.docx':'editable-teacher-plan.docx',preview:newPack?'teacher-plan-preview.pdf':'teacher-plan-preview.pdf',description:'One-page, supply-teacher-ready lesson plan. Download the Word version only when you are ready to edit it.'},
-      slides:{title:'Teaching PowerPoint',kind:'slides',download:newPack?'teaching-powerpoint-v4.pptx':'interactive-teaching-slides.pptx',preview:'preview/powerpoint',slideCount:newPack?15:8,description:'Teaching, worked modelling, selected pupil checkpoints and Pip’s misconception. Use Previous and Next to inspect every slide.'},
+      slides:{title:'Teaching PowerPoint',kind:'slides',download:newPack?'teaching-powerpoint-v5.pptx':'interactive-teaching-slides.pptx',preview:'preview/powerpoint',slideCount:newPack?15:8,description:'Clear teaching, worked modelling and pupil checkpoints, with key ideas revealed one step at a time. Use Previous and Next to inspect every slide.'},
       preteach:{title:'Pre-teach resource',kind:'pdf',download:'pre-teach.pdf',preview:'pre-teach.pdf',description:'Adult guide and pupil quick check for the lower/CUSP group.'},
       lower:{title:'Lower support worksheet',kind:'pdf',download:'lower-worksheet.pdf',preview:'lower-worksheet.pdf',description:'Concrete, visual practice with reduced language and supported recording.'},
       expected:{title:'Expected worksheet',kind:'pdf',download:'expected-worksheet.pdf',preview:'expected-worksheet.pdf',description:'Independent core practice at the expected lesson outcome.'},

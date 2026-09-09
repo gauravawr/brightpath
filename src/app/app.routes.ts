@@ -17,8 +17,8 @@ export const routes: Routes = [
     children: [
       {
         path: '',
-        loadComponent: () => import('./features/subjects/subjects-hub.component').then(m => m.SubjectsHubComponent),
-        data: { title: '', metaDescription: 'Choose English or Maths, then browse BrightPath resources by year group.' },
+        loadComponent: () => import('./features/home/home.component').then(m => m.HomeComponent),
+        data: { title: '', metaDescription: 'BrightPath gives teachers, parents and pupils clear subject knowledge, practical guidance and carefully sequenced primary learning.' },
       },
 
       // Subjects
@@ -63,6 +63,11 @@ export const routes: Routes = [
         path: 'lessons/year-1-maths/week-2/:slug',
         loadComponent: () => import('./features/curriculum/year1-week1-lesson.component').then(m => m.Year1Week1LessonComponent),
         data: { week: 2, title: 'Year 1 Maths lesson', metaDescription: 'A complete Year 1 Maths lesson with editable planning, pre-teach, slides and differentiated worksheets.' },
+      },
+      {
+        path: 'lessons/year-6-maths/week/:week/:slug',
+        loadComponent: () => import('./features/curriculum/year6-autumn-lesson.component').then(m => m.Year6AutumnLessonComponent),
+        data: { title: 'Year 6 Maths lesson', metaDescription: 'A complete Year 6 Maths lesson with an editable plan, pre-teach, animated teaching PowerPoint and differentiated worksheets.' },
       },
       {
         path: 'lessons/:slug',

@@ -1,65 +1,51 @@
-<!-- HERO -->
-<section class="hero">
-  <div class="hero__glow" aria-hidden="true"></div>
-  <div class="bp-container hero__inner bp-reveal">
-    <span class="bp-chip">{{ 'home.badge' | translate }}</span>
-    <h1 class="hero__title">{{ 'home.hero.title' | translate }}</h1>
-    <p class="hero__sub">{{ 'home.hero.sub' | translate }}</p>
-    <div class="hero__cta">
-      <a class="bp-btn" [routerLink]="l('/lessons')">{{ 'home.hero.primary' | translate }}</a>
-      <a class="bp-btn bp-btn--ghost" [routerLink]="l('/practice')">{{ 'home.hero.secondary' | translate }}</a>
-    </div>
-    <p class="hero__note">{{ 'home.hero.note' | translate }}</p>
-  </div>
-</section>
-
-<!-- FEATURES -->
-<section class="bp-section">
-  <div class="bp-container">
-    <div class="sec-head">
-      <span class="bp-label">{{ 'home.why.label' | translate }}</span>
-      <h2>{{ 'home.why.title' | translate }}</h2>
-    </div>
-    <div class="grid grid--4">
-      @for (f of features; track f.titleKey) {
-        <article class="bp-card feat" [attr.data-accent]="f.accent">
-          <div class="feat__icon">{{ f.icon }}</div>
-          <h3>{{ f.titleKey | translate }}</h3>
-          <p>{{ f.bodyKey | translate }}</p>
-        </article>
-      }
-    </div>
-  </div>
-</section>
-
-<!-- HOW IT WORKS -->
-<section class="bp-section how">
-  <div class="bp-container">
-    <div class="sec-head sec-head--center">
-      <span class="bp-label">{{ 'home.how.label' | translate }}</span>
-      <h2>{{ 'home.how.title' | translate }}</h2>
-    </div>
-    <div class="grid grid--3">
-      @for (s of steps; track s.n) {
-        <div class="step">
-          <span class="step__n">{{ s.n }}</span>
-          <h3>{{ s.titleKey | translate }}</h3>
-          <p>{{ s.bodyKey | translate }}</p>
-        </div>
-      }
-    </div>
-  </div>
-</section>
-
-<!-- CTA BAND -->
-<section class="bp-section">
-  <div class="bp-container">
-    <div class="cta bp-card">
-      <div>
-        <h2>{{ 'home.cta.title' | translate }}</h2>
-        <p>{{ 'home.cta.sub' | translate }}</p>
+<main>
+  <section class="welcome">
+    <div class="bp-container welcome__inner">
+      <span class="welcome__label">Welcome to BrightPath</span>
+      <h1>Clear teaching.<br /><span>Confident learning.</span></h1>
+      <p class="welcome__note">
+        BrightPath supports teachers, parents and pupils with clear subject knowledge,
+        practical guidance and carefully ordered primary learning.
+      </p>
+      <div class="welcome__motto">
+        <small>Our motto</small>
+        <p>Make learning clear, so every child can take the next step.</p>
       </div>
-      <a class="bp-btn" [routerLink]="l('/subjects')">{{ 'home.cta.button' | translate }}</a>
+      <a class="welcome__down" href="#subjects">
+        Choose a subject <span aria-hidden="true">↓</span>
+      </a>
     </div>
-  </div>
-</section>
+  </section>
+
+  <section class="subjects" id="subjects">
+    <div class="bp-container">
+      <div class="subjects__heading">
+        <span class="bp-label">Subjects</span>
+        <h2>Where would you like to begin?</h2>
+        <p>Choose English or Maths. More subjects can be added gradually.</p>
+      </div>
+
+      <div class="subjects__grid">
+        <a class="subject-choice" [routerLink]="l('/subjects/english')">
+          <span class="subject-choice__symbol" aria-hidden="true">Aa</span>
+          <span>
+            <small>Subject</small>
+            <strong>English</strong>
+            <em>Reading, writing and grammar from Year 1 to Year 6.</em>
+          </span>
+          <b aria-hidden="true">→</b>
+        </a>
+
+        <a class="subject-choice" [routerLink]="l('/subjects/maths')">
+          <span class="subject-choice__symbol subject-choice__symbol--maths" aria-hidden="true">÷</span>
+          <span>
+            <small>Subject</small>
+            <strong>Maths</strong>
+            <em>Carefully sequenced learning from Year 1 to Year 6.</em>
+          </span>
+          <b aria-hidden="true">→</b>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>

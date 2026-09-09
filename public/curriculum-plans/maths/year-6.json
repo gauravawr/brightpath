@@ -2,109 +2,109 @@
   {
     "week": 1,
     "term": "Autumn",
-    "unit": "Number — place value to 10,000,000 and negative numbers",
+    "unit": "Place value to 10,000,000 and negative numbers",
     "days": [
-      "Introduce and represent: Number — place value to 10,000,000 and negative numbers",
-      "Develop fluency: Number — place value to 10,000,000 and negative numbers",
-      "Compare, connect and explain: Number — place value to 10,000,000 and negative numbers",
-      "Reason and solve problems: Number — place value to 10,000,000 and negative numbers",
-      "Apply, assess and revisit: Number — place value to 10,000,000 and negative numbers"
+      "Read and write numbers to ten million",
+      "Determine the value of each digit",
+      "Compare and order large numbers",
+      "Calculate intervals across zero",
+      "Solve place-value problems"
     ]
   },
   {
     "week": 2,
     "term": "Autumn",
-    "unit": "Number — rounding to required accuracy",
+    "unit": "Rounding to a required degree of accuracy",
     "days": [
-      "Introduce and represent: Number — rounding to required accuracy",
-      "Develop fluency: Number — rounding to required accuracy",
-      "Compare, connect and explain: Number — rounding to required accuracy",
-      "Reason and solve problems: Number — rounding to required accuracy",
-      "Apply, assess and revisit: Number — rounding to required accuracy"
+      "Round to ten, hundred and thousand",
+      "Round to ten thousand, hundred thousand and one million",
+      "Choose the required accuracy",
+      "Estimate calculations by rounding",
+      "Reason about rounding boundaries"
     ]
   },
   {
     "week": 3,
     "term": "Autumn",
-    "unit": "Calculation — long multiplication",
+    "unit": "Formal long multiplication",
     "days": [
-      "Introduce and represent: Calculation — long multiplication",
-      "Develop fluency: Calculation — long multiplication",
-      "Compare, connect and explain: Calculation — long multiplication",
-      "Reason and solve problems: Calculation — long multiplication",
-      "Apply, assess and revisit: Calculation — long multiplication"
+      "Revisit multiplication by one digit",
+      "Multiply two-digit numbers",
+      "Multiply up to four digits by two digits",
+      "Solve long multiplication problems",
+      "Explain and check long multiplication"
     ]
   },
   {
     "week": 4,
     "term": "Autumn",
-    "unit": "Calculation — short and long division",
+    "unit": "Short and long division",
     "days": [
-      "Introduce and represent: Calculation — short and long division",
-      "Develop fluency: Calculation — short and long division",
-      "Compare, connect and explain: Calculation — short and long division",
-      "Reason and solve problems: Calculation — short and long division",
-      "Apply, assess and revisit: Calculation — short and long division"
+      "Estimate quotients using multiples",
+      "Use short division with two-digit divisors",
+      "Use long division with exact answers",
+      "Interpret division remainders",
+      "Solve and check division problems"
     ]
   },
   {
     "week": 5,
     "term": "Autumn",
-    "unit": "Number — common factors, multiples and prime numbers",
+    "unit": "Factors, multiples and prime numbers",
     "days": [
-      "Introduce and represent: Number — common factors, multiples and prime numbers",
-      "Develop fluency: Number — common factors, multiples and prime numbers",
-      "Compare, connect and explain: Number — common factors, multiples and prime numbers",
-      "Reason and solve problems: Number — common factors, multiples and prime numbers",
-      "Apply, assess and revisit: Number — common factors, multiples and prime numbers"
+      "Find factor pairs systematically",
+      "Identify common factors",
+      "Find common multiples",
+      "Classify prime, square and cube numbers",
+      "Reason with number properties"
     ]
   },
   {
     "week": 6,
     "term": "Autumn",
-    "unit": "Calculation — order of operations",
+    "unit": "Order of operations",
     "days": [
-      "Introduce and represent: Calculation — order of operations",
-      "Develop fluency: Calculation — order of operations",
-      "Compare, connect and explain: Calculation — order of operations",
-      "Reason and solve problems: Calculation — order of operations",
-      "Apply, assess and revisit: Calculation — order of operations"
+      "Read and structure expressions",
+      "Use multiplication and division before addition and subtraction",
+      "Use brackets to change the order",
+      "Solve missing-number expressions",
+      "Reason about equivalent expressions"
     ]
   },
   {
     "week": 7,
     "term": "Autumn",
-    "unit": "Calculation — mental strategies, estimation and error checking",
+    "unit": "Mental strategies, estimation and error checking",
     "days": [
-      "Introduce and represent: Calculation — mental strategies, estimation and error checking",
-      "Develop fluency: Calculation — mental strategies, estimation and error checking",
-      "Compare, connect and explain: Calculation — mental strategies, estimation and error checking",
-      "Reason and solve problems: Calculation — mental strategies, estimation and error checking",
-      "Apply, assess and revisit: Calculation — mental strategies, estimation and error checking"
+      "Use mental addition and subtraction strategies",
+      "Use mental multiplication and division strategies",
+      "Estimate the size of answers",
+      "Check with inverse operations",
+      "Choose an efficient calculation method"
     ]
   },
   {
     "week": 8,
     "term": "Autumn",
-    "unit": "Number — multi-step calculation problems",
+    "unit": "Multi-step calculation problems",
     "days": [
-      "Introduce and represent: Number — multi-step calculation problems",
-      "Develop fluency: Number — multi-step calculation problems",
-      "Compare, connect and explain: Number — multi-step calculation problems",
-      "Reason and solve problems: Number — multi-step calculation problems",
-      "Apply, assess and revisit: Number — multi-step calculation problems"
+      "Plan operations in multi-step problems",
+      "Solve multi-step addition and subtraction problems",
+      "Solve multi-step multiplication and division problems",
+      "Solve problems involving money and measures",
+      "Explain and evaluate multi-step solutions"
     ]
   },
   {
     "week": 9,
     "term": "Autumn",
-    "unit": "Number — arithmetic fluency",
+    "unit": "Arithmetic fluency and connections",
     "days": [
-      "Introduce and represent: Number — arithmetic fluency",
-      "Develop fluency: Number — arithmetic fluency",
-      "Compare, connect and explain: Number — arithmetic fluency",
-      "Reason and solve problems: Number — arithmetic fluency",
-      "Apply, assess and revisit: Number — arithmetic fluency"
+      "Fluency with the four operations",
+      "Revisit decimal calculation",
+      "Revisit fraction calculation",
+      "Complete mixed arithmetic efficiently",
+      "Reason about arithmetic relationships"
     ]
   },
   {
@@ -112,11 +112,11 @@
     "term": "Autumn",
     "unit": "Autumn consolidation and assessment",
     "days": [
-      "Retrieve and revisit: Autumn consolidation and assessment",
-      "Diagnose misconceptions: Autumn consolidation and assessment",
-      "Targeted fluency: Autumn consolidation and assessment",
-      "Reasoning and problem solving: Autumn consolidation and assessment",
-      "Assess and plan next steps: Autumn consolidation and assessment"
+      "Retrieve place value and rounding",
+      "Retrieve multiplication and division",
+      "Retrieve factors and order of operations",
+      "Apply autumn reasoning",
+      "Assess learning and plan next steps"
     ]
   },
   {
