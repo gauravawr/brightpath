@@ -87,12 +87,28 @@
     ],
     "expected": [
       {
+        "q": "Read 6,407,215 aloud and write it in words.",
+        "a": "Six million, four hundred and seven thousand, two hundred and fifteen."
+      },
+      {
         "q": "Write 8,030,006 in words.",
         "a": "Eight million, thirty thousand and six."
       },
       {
         "q": "Write in digits: five million, two hundred thousand and nineteen.",
         "a": "5,200,019."
+      },
+      {
+        "q": "Solve this independently and show every stage: Read 6,407,215 aloud and write it in words.",
+        "a": "Six million, four hundred and seven thousand, two hundred and fifteen."
+      },
+      {
+        "q": "Use a second method or representation for: Write 8,030,006 in words.",
+        "a": "Expected result: Eight million, thirty thousand and six. Method or representation may vary."
+      },
+      {
+        "q": "Check this result using an inverse, estimate or known fact: Write in digits: five million, two hundred thousand and nineteen.",
+        "a": "Expected result: 5,200,019. A valid check must be shown."
       },
       {
         "q": "Use 8, 8, 0, 0, 3, 1 and 5 once each to make the smallest seven-digit number.",
@@ -105,12 +121,28 @@
       {
         "q": "Write a complete sentence explaining how you checked one answer.",
         "a": "Answer should name an inverse, estimate, boundary, known fact or equivalent representation."
+      },
+      {
+        "q": "Write and solve a similar question to: Write in digits: five million, two hundred thousand and nineteen.",
+        "a": "Answers vary. The new question must use the same mathematical structure and include a correct solution."
       }
     ],
     "higher": [
       {
         "q": "Use 8, 8, 0, 0, 3, 1 and 5 once each to make the smallest seven-digit number.",
         "a": "1,003,588."
+      },
+      {
+        "q": "Prove the answer to this question, rather than only calculating it: Read 6,407,215 aloud and write it in words.",
+        "a": "Expected result: Six million, four hundred and seven thousand, two hundred and fifteen. Proof or justification must match the lesson structure."
+      },
+      {
+        "q": "Solve this in two different ways and compare them: Write 8,030,006 in words.",
+        "a": "Expected result: Eight million, thirty thousand and six. Two valid methods and a comparison are required."
+      },
+      {
+        "q": "Work backwards from the answer to reconstruct the question: 5,200,019.",
+        "a": "One valid reconstruction is: Write in digits: five million, two hundred thousand and nineteen. Other equivalent questions are acceptable."
       },
       {
         "q": "Explain why this reasoning fails: Miro reads 6,407,215 as six million, forty-seven thousand, two hundred and fifteen.",
@@ -127,6 +159,14 @@
       {
         "q": "Write one always, sometimes or never statement about today's learning and justify it.",
         "a": "Answers vary. A valid example and counterexample should support the classification."
+      },
+      {
+        "q": "Create a believable incorrect solution. Identify the exact step where the reasoning breaks.",
+        "a": "Answers vary. The error must be mathematically relevant and the correction must be precise."
+      },
+      {
+        "q": "Change one value or condition in a question. Explain what changes in the solution and what stays the same.",
+        "a": "Answers vary. The explanation must distinguish the mathematical structure from the changed value."
       }
     ],
     "exitQuestions": [
@@ -228,12 +268,28 @@
     ],
     "expected": [
       {
+        "q": "What is the value of 3 in 8,364,219?",
+        "a": "300,000."
+      },
+      {
         "q": "Partition 5,082,407.",
         "a": "5,000,000 + 80,000 + 2,000 + 400 + 7."
       },
       {
         "q": "What is the value of 7 in 4,271,650?",
         "a": "70,000."
+      },
+      {
+        "q": "Solve this independently and show every stage: What is the value of 3 in 8,364,219?",
+        "a": "300,000."
+      },
+      {
+        "q": "Use a second method or representation for: Partition 5,082,407.",
+        "a": "Expected result: 5,000,000 + 80,000 + 2,000 + 400 + 7. Method or representation may vary."
+      },
+      {
+        "q": "Check this result using an inverse, estimate or known fact: What is the value of 7 in 4,271,650?",
+        "a": "Expected result: 70,000. A valid check must be shown."
       },
       {
         "q": "A number has 6 millions, 4 ten-thousands, 9 hundreds and 2 ones. What is it?",
@@ -246,12 +302,28 @@
       {
         "q": "Write a complete sentence explaining how you checked one answer.",
         "a": "Answer should name an inverse, estimate, boundary, known fact or equivalent representation."
+      },
+      {
+        "q": "Write and solve a similar question to: What is the value of 7 in 4,271,650?",
+        "a": "Answers vary. The new question must use the same mathematical structure and include a correct solution."
       }
     ],
     "higher": [
       {
         "q": "A number has 6 millions, 4 ten-thousands, 9 hundreds and 2 ones. What is it?",
         "a": "6,040,902."
+      },
+      {
+        "q": "Prove the answer to this question, rather than only calculating it: What is the value of 3 in 8,364,219?",
+        "a": "Expected result: 300,000. Proof or justification must match the lesson structure."
+      },
+      {
+        "q": "Solve this in two different ways and compare them: Partition 5,082,407.",
+        "a": "Expected result: 5,000,000 + 80,000 + 2,000 + 400 + 7. Two valid methods and a comparison are required."
+      },
+      {
+        "q": "Work backwards from the answer to reconstruct the question: 70,000.",
+        "a": "One valid reconstruction is: What is the value of 7 in 4,271,650? Other equivalent questions are acceptable."
       },
       {
         "q": "Explain why this reasoning fails: Miro says the 8 in 5,082,407 is worth 8,000.",
@@ -268,6 +340,14 @@
       {
         "q": "Write one always, sometimes or never statement about today's learning and justify it.",
         "a": "Answers vary. A valid example and counterexample should support the classification."
+      },
+      {
+        "q": "Create a believable incorrect solution. Identify the exact step where the reasoning breaks.",
+        "a": "Answers vary. The error must be mathematically relevant and the correction must be precise."
+      },
+      {
+        "q": "Change one value or condition in a question. Explain what changes in the solution and what stays the same.",
+        "a": "Answers vary. The explanation must distinguish the mathematical structure from the changed value."
       }
     ],
     "exitQuestions": [
@@ -369,12 +449,28 @@
     ],
     "expected": [
       {
+        "q": "Compare 5,906,120 and 5,960,102.",
+        "a": "5,906,120 < 5,960,102."
+      },
+      {
         "q": "Order 7,405,090, 7,450,009 and 7,045,900 from least to greatest.",
         "a": "7,045,900, 7,405,090, 7,450,009."
       },
       {
         "q": "Insert <, > or =: 9,099,999 __ 9,100,001.",
         "a": "9,099,999 < 9,100,001."
+      },
+      {
+        "q": "Solve this independently and show every stage: Compare 5,906,120 and 5,960,102.",
+        "a": "5,906,120 < 5,960,102."
+      },
+      {
+        "q": "Use a second method or representation for: Order 7,405,090, 7,450,009 and 7,045,900 from least to greatest.",
+        "a": "Expected result: 7,045,900, 7,405,090, 7,450,009. Method or representation may vary."
+      },
+      {
+        "q": "Check this result using an inverse, estimate or known fact: Insert <, > or =: 9,099,999 __ 9,100,001.",
+        "a": "Expected result: 9,099,999 < 9,100,001. A valid check must be shown."
       },
       {
         "q": "Find a whole number that lies between 6,799,999 and 6,800,010.",
@@ -387,12 +483,28 @@
       {
         "q": "Write a complete sentence explaining how you checked one answer.",
         "a": "Answer should name an inverse, estimate, boundary, known fact or equivalent representation."
+      },
+      {
+        "q": "Write and solve a similar question to: Insert <, > or =: 9,099,999 __ 9,100,001.",
+        "a": "Answers vary. The new question must use the same mathematical structure and include a correct solution."
       }
     ],
     "higher": [
       {
         "q": "Find a whole number that lies between 6,799,999 and 6,800,010.",
         "a": "Any integer from 6,800,000 to 6,800,009, for example 6,800,004."
+      },
+      {
+        "q": "Prove the answer to this question, rather than only calculating it: Compare 5,906,120 and 5,960,102.",
+        "a": "Expected result: 5,906,120 < 5,960,102. Proof or justification must match the lesson structure."
+      },
+      {
+        "q": "Solve this in two different ways and compare them: Order 7,405,090, 7,450,009 and 7,045,900 from least to greatest.",
+        "a": "Expected result: 7,045,900, 7,405,090, 7,450,009. Two valid methods and a comparison are required."
+      },
+      {
+        "q": "Work backwards from the answer to reconstruct the question: 9,099,999 < 9,100,001.",
+        "a": "One valid reconstruction is: Insert <, > or =: 9,099,999 __ 9,100,001. Other equivalent questions are acceptable."
       },
       {
         "q": "Explain why this reasoning fails: Miro compares the final digits first because they are on the right.",
@@ -409,6 +521,14 @@
       {
         "q": "Write one always, sometimes or never statement about today's learning and justify it.",
         "a": "Answers vary. A valid example and counterexample should support the classification."
+      },
+      {
+        "q": "Create a believable incorrect solution. Identify the exact step where the reasoning breaks.",
+        "a": "Answers vary. The error must be mathematically relevant and the correction must be precise."
+      },
+      {
+        "q": "Change one value or condition in a question. Explain what changes in the solution and what stays the same.",
+        "a": "Answers vary. The explanation must distinguish the mathematical structure from the changed value."
       }
     ],
     "exitQuestions": [
@@ -510,12 +630,28 @@
     ],
     "expected": [
       {
+        "q": "What is the difference between -4 and 7?",
+        "a": "11."
+      },
+      {
         "q": "The temperature is -6 C and rises by 9 C. What is it now?",
         "a": "3 C."
       },
       {
         "q": "How far is -12 from 5 on a number line?",
         "a": "17."
+      },
+      {
+        "q": "Solve this independently and show every stage: What is the difference between -4 and 7?",
+        "a": "11."
+      },
+      {
+        "q": "Use a second method or representation for: The temperature is -6 C and rises by 9 C. What is it now?",
+        "a": "Expected result: 3 C. Method or representation may vary."
+      },
+      {
+        "q": "Check this result using an inverse, estimate or known fact: How far is -12 from 5 on a number line?",
+        "a": "Expected result: 17. A valid check must be shown."
       },
       {
         "q": "What number is halfway between -8 and 6?",
@@ -528,12 +664,28 @@
       {
         "q": "Write a complete sentence explaining how you checked one answer.",
         "a": "Answer should name an inverse, estimate, boundary, known fact or equivalent representation."
+      },
+      {
+        "q": "Write and solve a similar question to: How far is -12 from 5 on a number line?",
+        "a": "Answers vary. The new question must use the same mathematical structure and include a correct solution."
       }
     ],
     "higher": [
       {
         "q": "What number is halfway between -8 and 6?",
         "a": "-1."
+      },
+      {
+        "q": "Prove the answer to this question, rather than only calculating it: What is the difference between -4 and 7?",
+        "a": "Expected result: 11. Proof or justification must match the lesson structure."
+      },
+      {
+        "q": "Solve this in two different ways and compare them: The temperature is -6 C and rises by 9 C. What is it now?",
+        "a": "Expected result: 3 C. Two valid methods and a comparison are required."
+      },
+      {
+        "q": "Work backwards from the answer to reconstruct the question: 17.",
+        "a": "One valid reconstruction is: How far is -12 from 5 on a number line? Other equivalent questions are acceptable."
       },
       {
         "q": "Explain why this reasoning fails: Miro counts both zero and the starting number when finding the interval from -4 to 7.",
@@ -550,6 +702,14 @@
       {
         "q": "Write one always, sometimes or never statement about today's learning and justify it.",
         "a": "Answers vary. A valid example and counterexample should support the classification."
+      },
+      {
+        "q": "Create a believable incorrect solution. Identify the exact step where the reasoning breaks.",
+        "a": "Answers vary. The error must be mathematically relevant and the correction must be precise."
+      },
+      {
+        "q": "Change one value or condition in a question. Explain what changes in the solution and what stays the same.",
+        "a": "Answers vary. The explanation must distinguish the mathematical structure from the changed value."
       }
     ],
     "exitQuestions": [
@@ -651,12 +811,28 @@
     ],
     "expected": [
       {
+        "q": "A city has 3,804,215 people. Another has 398,760 fewer. What is the second population?",
+        "a": "3,405,455."
+      },
+      {
         "q": "A lift moves from level -5 to level 18. How many floors does it travel?",
         "a": "23 floors."
       },
       {
         "q": "What is 100,000 more than 6,945,120?",
         "a": "7,045,120."
+      },
+      {
+        "q": "Solve this independently and show every stage: A city has 3,804,215 people. Another has 398,760 fewer. What is the second population?",
+        "a": "3,405,455."
+      },
+      {
+        "q": "Use a second method or representation for: A lift moves from level -5 to level 18. How many floors does it travel?",
+        "a": "Expected result: 23 floors. Method or representation may vary."
+      },
+      {
+        "q": "Check this result using an inverse, estimate or known fact: What is 100,000 more than 6,945,120?",
+        "a": "Expected result: 7,045,120. A valid check must be shown."
       },
       {
         "q": "A number rounds to 4,000,000 to the nearest million. Give the smallest possible whole number.",
@@ -669,12 +845,28 @@
       {
         "q": "Write a complete sentence explaining how you checked one answer.",
         "a": "Answer should name an inverse, estimate, boundary, known fact or equivalent representation."
+      },
+      {
+        "q": "Write and solve a similar question to: What is 100,000 more than 6,945,120?",
+        "a": "Answers vary. The new question must use the same mathematical structure and include a correct solution."
       }
     ],
     "higher": [
       {
         "q": "A number rounds to 4,000,000 to the nearest million. Give the smallest possible whole number.",
         "a": "3,500,000."
+      },
+      {
+        "q": "Prove the answer to this question, rather than only calculating it: A city has 3,804,215 people. Another has 398,760 fewer. What is the second population?",
+        "a": "Expected result: 3,405,455. Proof or justification must match the lesson structure."
+      },
+      {
+        "q": "Solve this in two different ways and compare them: A lift moves from level -5 to level 18. How many floors does it travel?",
+        "a": "Expected result: 23 floors. Two valid methods and a comparison are required."
+      },
+      {
+        "q": "Work backwards from the answer to reconstruct the question: 7,045,120.",
+        "a": "One valid reconstruction is: What is 100,000 more than 6,945,120? Other equivalent questions are acceptable."
       },
       {
         "q": "Explain why this reasoning fails: Miro changes more than one digit when adding 100,000 to 6,945,120.",
@@ -691,6 +883,14 @@
       {
         "q": "Write one always, sometimes or never statement about today's learning and justify it.",
         "a": "Answers vary. A valid example and counterexample should support the classification."
+      },
+      {
+        "q": "Create a believable incorrect solution. Identify the exact step where the reasoning breaks.",
+        "a": "Answers vary. The error must be mathematically relevant and the correction must be precise."
+      },
+      {
+        "q": "Change one value or condition in a question. Explain what changes in the solution and what stays the same.",
+        "a": "Answers vary. The explanation must distinguish the mathematical structure from the changed value."
       }
     ],
     "exitQuestions": [
@@ -792,12 +992,28 @@
     ],
     "expected": [
       {
+        "q": "Round 468,753 to the nearest 10, 100 and 1,000.",
+        "a": "468,750; 468,800; 469,000."
+      },
+      {
         "q": "Round 905,449 to the nearest 100.",
         "a": "905,400."
       },
       {
         "q": "Round 279,650 to the nearest 1,000.",
         "a": "280,000."
+      },
+      {
+        "q": "Solve this independently and show every stage: Round 468,753 to the nearest 10, 100 and 1,000.",
+        "a": "468,750; 468,800; 469,000."
+      },
+      {
+        "q": "Use a second method or representation for: Round 905,449 to the nearest 100.",
+        "a": "Expected result: 905,400. Method or representation may vary."
+      },
+      {
+        "q": "Check this result using an inverse, estimate or known fact: Round 279,650 to the nearest 1,000.",
+        "a": "Expected result: 280,000. A valid check must be shown."
       },
       {
         "q": "Give three numbers that round to 52,000 to the nearest 1,000.",
@@ -810,12 +1026,28 @@
       {
         "q": "Write a complete sentence explaining how you checked one answer.",
         "a": "Answer should name an inverse, estimate, boundary, known fact or equivalent representation."
+      },
+      {
+        "q": "Write and solve a similar question to: Round 279,650 to the nearest 1,000.",
+        "a": "Answers vary. The new question must use the same mathematical structure and include a correct solution."
       }
     ],
     "higher": [
       {
         "q": "Give three numbers that round to 52,000 to the nearest 1,000.",
         "a": "Any three from 51,500 to 52,499."
+      },
+      {
+        "q": "Prove the answer to this question, rather than only calculating it: Round 468,753 to the nearest 10, 100 and 1,000.",
+        "a": "Expected result: 468,750; 468,800; 469,000. Proof or justification must match the lesson structure."
+      },
+      {
+        "q": "Solve this in two different ways and compare them: Round 905,449 to the nearest 100.",
+        "a": "Expected result: 905,400. Two valid methods and a comparison are required."
+      },
+      {
+        "q": "Work backwards from the answer to reconstruct the question: 280,000.",
+        "a": "One valid reconstruction is: Round 279,650 to the nearest 1,000. Other equivalent questions are acceptable."
       },
       {
         "q": "Explain why this reasoning fails: Miro always rounds up when the number contains a 5 anywhere.",
@@ -832,6 +1064,14 @@
       {
         "q": "Write one always, sometimes or never statement about today's learning and justify it.",
         "a": "Answers vary. A valid example and counterexample should support the classification."
+      },
+      {
+        "q": "Create a believable incorrect solution. Identify the exact step where the reasoning breaks.",
+        "a": "Answers vary. The error must be mathematically relevant and the correction must be precise."
+      },
+      {
+        "q": "Change one value or condition in a question. Explain what changes in the solution and what stays the same.",
+        "a": "Answers vary. The explanation must distinguish the mathematical structure from the changed value."
       }
     ],
     "exitQuestions": [
@@ -933,12 +1173,28 @@
     ],
     "expected": [
       {
+        "q": "Round 6,748,219 to the nearest 10,000, 100,000 and 1,000,000.",
+        "a": "6,750,000; 6,700,000; 7,000,000."
+      },
+      {
         "q": "Round 3,451,200 to the nearest 100,000.",
         "a": "3,500,000."
       },
       {
         "q": "Round 8,249,999 to the nearest 1,000,000.",
         "a": "8,000,000."
+      },
+      {
+        "q": "Solve this independently and show every stage: Round 6,748,219 to the nearest 10,000, 100,000 and 1,000,000.",
+        "a": "6,750,000; 6,700,000; 7,000,000."
+      },
+      {
+        "q": "Use a second method or representation for: Round 3,451,200 to the nearest 100,000.",
+        "a": "Expected result: 3,500,000. Method or representation may vary."
+      },
+      {
+        "q": "Check this result using an inverse, estimate or known fact: Round 8,249,999 to the nearest 1,000,000.",
+        "a": "Expected result: 8,000,000. A valid check must be shown."
       },
       {
         "q": "Find the greatest number that rounds to 6,000,000 to the nearest million.",
@@ -951,12 +1207,28 @@
       {
         "q": "Write a complete sentence explaining how you checked one answer.",
         "a": "Answer should name an inverse, estimate, boundary, known fact or equivalent representation."
+      },
+      {
+        "q": "Write and solve a similar question to: Round 8,249,999 to the nearest 1,000,000.",
+        "a": "Answers vary. The new question must use the same mathematical structure and include a correct solution."
       }
     ],
     "higher": [
       {
         "q": "Find the greatest number that rounds to 6,000,000 to the nearest million.",
         "a": "6,499,999."
+      },
+      {
+        "q": "Prove the answer to this question, rather than only calculating it: Round 6,748,219 to the nearest 10,000, 100,000 and 1,000,000.",
+        "a": "Expected result: 6,750,000; 6,700,000; 7,000,000. Proof or justification must match the lesson structure."
+      },
+      {
+        "q": "Solve this in two different ways and compare them: Round 3,451,200 to the nearest 100,000.",
+        "a": "Expected result: 3,500,000. Two valid methods and a comparison are required."
+      },
+      {
+        "q": "Work backwards from the answer to reconstruct the question: 8,000,000.",
+        "a": "One valid reconstruction is: Round 8,249,999 to the nearest 1,000,000. Other equivalent questions are acceptable."
       },
       {
         "q": "Explain why this reasoning fails: Miro keeps all the digits after the rounding place unchanged.",
@@ -973,6 +1245,14 @@
       {
         "q": "Write one always, sometimes or never statement about today's learning and justify it.",
         "a": "Answers vary. A valid example and counterexample should support the classification."
+      },
+      {
+        "q": "Create a believable incorrect solution. Identify the exact step where the reasoning breaks.",
+        "a": "Answers vary. The error must be mathematically relevant and the correction must be precise."
+      },
+      {
+        "q": "Change one value or condition in a question. Explain what changes in the solution and what stays the same.",
+        "a": "Answers vary. The explanation must distinguish the mathematical structure from the changed value."
       }
     ],
     "exitQuestions": [
@@ -1074,12 +1354,28 @@
     ],
     "expected": [
       {
+        "q": "Round 384,650 to the nearest 10,000 and then to the nearest 1,000.",
+        "a": "380,000 and 385,000."
+      },
+      {
         "q": "Round 2,749,501 to the nearest 100,000.",
         "a": "2,700,000."
       },
       {
         "q": "Round 999,499 to the nearest 1,000.",
         "a": "999,000."
+      },
+      {
+        "q": "Solve this independently and show every stage: Round 384,650 to the nearest 10,000 and then to the nearest 1,000.",
+        "a": "380,000 and 385,000."
+      },
+      {
+        "q": "Use a second method or representation for: Round 2,749,501 to the nearest 100,000.",
+        "a": "Expected result: 2,700,000. Method or representation may vary."
+      },
+      {
+        "q": "Check this result using an inverse, estimate or known fact: Round 999,499 to the nearest 1,000.",
+        "a": "Expected result: 999,000. A valid check must be shown."
       },
       {
         "q": "A number rounds to 730,000 to the nearest 10,000. State its full possible range.",
@@ -1092,12 +1388,28 @@
       {
         "q": "Write a complete sentence explaining how you checked one answer.",
         "a": "Answer should name an inverse, estimate, boundary, known fact or equivalent representation."
+      },
+      {
+        "q": "Write and solve a similar question to: Round 999,499 to the nearest 1,000.",
+        "a": "Answers vary. The new question must use the same mathematical structure and include a correct solution."
       }
     ],
     "higher": [
       {
         "q": "A number rounds to 730,000 to the nearest 10,000. State its full possible range.",
         "a": "725,000 to 734,999."
+      },
+      {
+        "q": "Prove the answer to this question, rather than only calculating it: Round 384,650 to the nearest 10,000 and then to the nearest 1,000.",
+        "a": "Expected result: 380,000 and 385,000. Proof or justification must match the lesson structure."
+      },
+      {
+        "q": "Solve this in two different ways and compare them: Round 2,749,501 to the nearest 100,000.",
+        "a": "Expected result: 2,700,000. Two valid methods and a comparison are required."
+      },
+      {
+        "q": "Work backwards from the answer to reconstruct the question: 999,000.",
+        "a": "One valid reconstruction is: Round 999,499 to the nearest 1,000. Other equivalent questions are acceptable."
       },
       {
         "q": "Explain why this reasoning fails: Miro rounds to the largest place value he can see instead of the place named.",
@@ -1114,6 +1426,14 @@
       {
         "q": "Write one always, sometimes or never statement about today's learning and justify it.",
         "a": "Answers vary. A valid example and counterexample should support the classification."
+      },
+      {
+        "q": "Create a believable incorrect solution. Identify the exact step where the reasoning breaks.",
+        "a": "Answers vary. The error must be mathematically relevant and the correction must be precise."
+      },
+      {
+        "q": "Change one value or condition in a question. Explain what changes in the solution and what stays the same.",
+        "a": "Answers vary. The explanation must distinguish the mathematical structure from the changed value."
       }
     ],
     "exitQuestions": [
@@ -1215,12 +1535,28 @@
     ],
     "expected": [
       {
+        "q": "Estimate 398,742 + 203,118 by rounding each number to the nearest 100,000.",
+        "a": "400,000 + 200,000 = 600,000."
+      },
+      {
         "q": "Estimate 8,102 x 49 using convenient rounded numbers.",
         "a": "8,000 x 50 = 400,000."
       },
       {
         "q": "Estimate 623,590 - 188,420 to the nearest 100,000.",
         "a": "600,000 - 200,000 = 400,000."
+      },
+      {
+        "q": "Solve this independently and show every stage: Estimate 398,742 + 203,118 by rounding each number to the nearest 100,000.",
+        "a": "400,000 + 200,000 = 600,000."
+      },
+      {
+        "q": "Use a second method or representation for: Estimate 8,102 x 49 using convenient rounded numbers.",
+        "a": "Expected result: 8,000 x 50 = 400,000. Method or representation may vary."
+      },
+      {
+        "q": "Check this result using an inverse, estimate or known fact: Estimate 623,590 - 188,420 to the nearest 100,000.",
+        "a": "Expected result: 600,000 - 200,000 = 400,000. A valid check must be shown."
       },
       {
         "q": "Choose an efficient estimate for 48,912 x 198 and explain the accuracy.",
@@ -1233,12 +1569,28 @@
       {
         "q": "Write a complete sentence explaining how you checked one answer.",
         "a": "Answer should name an inverse, estimate, boundary, known fact or equivalent representation."
+      },
+      {
+        "q": "Write and solve a similar question to: Estimate 623,590 - 188,420 to the nearest 100,000.",
+        "a": "Answers vary. The new question must use the same mathematical structure and include a correct solution."
       }
     ],
     "higher": [
       {
         "q": "Choose an efficient estimate for 48,912 x 198 and explain the accuracy.",
         "a": "About 50,000 x 200 = 10,000,000. Other justified close estimates are acceptable."
+      },
+      {
+        "q": "Prove the answer to this question, rather than only calculating it: Estimate 398,742 + 203,118 by rounding each number to the nearest 100,000.",
+        "a": "Expected result: 400,000 + 200,000 = 600,000. Proof or justification must match the lesson structure."
+      },
+      {
+        "q": "Solve this in two different ways and compare them: Estimate 8,102 x 49 using convenient rounded numbers.",
+        "a": "Expected result: 8,000 x 50 = 400,000. Two valid methods and a comparison are required."
+      },
+      {
+        "q": "Work backwards from the answer to reconstruct the question: 600,000 - 200,000 = 400,000.",
+        "a": "One valid reconstruction is: Estimate 623,590 - 188,420 to the nearest 100,000. Other equivalent questions are acceptable."
       },
       {
         "q": "Explain why this reasoning fails: Miro believes an estimate must equal the exact answer.",
@@ -1255,6 +1607,14 @@
       {
         "q": "Write one always, sometimes or never statement about today's learning and justify it.",
         "a": "Answers vary. A valid example and counterexample should support the classification."
+      },
+      {
+        "q": "Create a believable incorrect solution. Identify the exact step where the reasoning breaks.",
+        "a": "Answers vary. The error must be mathematically relevant and the correction must be precise."
+      },
+      {
+        "q": "Change one value or condition in a question. Explain what changes in the solution and what stays the same.",
+        "a": "Answers vary. The explanation must distinguish the mathematical structure from the changed value."
       }
     ],
     "exitQuestions": [
@@ -1356,12 +1716,28 @@
     ],
     "expected": [
       {
+        "q": "What is the smallest whole number that rounds to 86,000 to the nearest 1,000?",
+        "a": "85,500."
+      },
+      {
         "q": "A number rounds to 4,300,000 to the nearest 100,000. What is the greatest possible number?",
         "a": "4,349,999."
       },
       {
         "q": "Is 2,650,000 rounded to the nearest million 3,000,000?",
         "a": "Yes."
+      },
+      {
+        "q": "Solve this independently and show every stage: What is the smallest whole number that rounds to 86,000 to the nearest 1,000?",
+        "a": "85,500."
+      },
+      {
+        "q": "Use a second method or representation for: A number rounds to 4,300,000 to the nearest 100,000. What is the greatest possible number?",
+        "a": "Expected result: 4,349,999. Method or representation may vary."
+      },
+      {
+        "q": "Check this result using an inverse, estimate or known fact: Is 2,650,000 rounded to the nearest million 3,000,000?",
+        "a": "Expected result: Yes. A valid check must be shown."
       },
       {
         "q": "Two different numbers both round to 720,000 to the nearest 10,000. What is the greatest possible difference?",
@@ -1374,12 +1750,28 @@
       {
         "q": "Write a complete sentence explaining how you checked one answer.",
         "a": "Answer should name an inverse, estimate, boundary, known fact or equivalent representation."
+      },
+      {
+        "q": "Write and solve a similar question to: Is 2,650,000 rounded to the nearest million 3,000,000?",
+        "a": "Answers vary. The new question must use the same mathematical structure and include a correct solution."
       }
     ],
     "higher": [
       {
         "q": "Two different numbers both round to 720,000 to the nearest 10,000. What is the greatest possible difference?",
         "a": "9,999, using 715,000 and 724,999."
+      },
+      {
+        "q": "Prove the answer to this question, rather than only calculating it: What is the smallest whole number that rounds to 86,000 to the nearest 1,000?",
+        "a": "Expected result: 85,500. Proof or justification must match the lesson structure."
+      },
+      {
+        "q": "Solve this in two different ways and compare them: A number rounds to 4,300,000 to the nearest 100,000. What is the greatest possible number?",
+        "a": "Expected result: 4,349,999. Two valid methods and a comparison are required."
+      },
+      {
+        "q": "Work backwards from the answer to reconstruct the question: Yes.",
+        "a": "One valid reconstruction is: Is 2,650,000 rounded to the nearest million 3,000,000? Other equivalent questions are acceptable."
       },
       {
         "q": "Explain why this reasoning fails: Miro includes 85,499 in the range that rounds to 86,000.",
@@ -1396,6 +1788,14 @@
       {
         "q": "Write one always, sometimes or never statement about today's learning and justify it.",
         "a": "Answers vary. A valid example and counterexample should support the classification."
+      },
+      {
+        "q": "Create a believable incorrect solution. Identify the exact step where the reasoning breaks.",
+        "a": "Answers vary. The error must be mathematically relevant and the correction must be precise."
+      },
+      {
+        "q": "Change one value or condition in a question. Explain what changes in the solution and what stays the same.",
+        "a": "Answers vary. The explanation must distinguish the mathematical structure from the changed value."
       }
     ],
     "exitQuestions": [
@@ -1497,12 +1897,28 @@
     ],
     "expected": [
       {
+        "q": "Calculate 3,482 x 6.",
+        "a": "20,892."
+      },
+      {
         "q": "Calculate 4,706 x 7.",
         "a": "32,942."
       },
       {
         "q": "Calculate 8,035 x 4.",
         "a": "32,140."
+      },
+      {
+        "q": "Solve this independently and show every stage: Calculate 3,482 x 6.",
+        "a": "20,892."
+      },
+      {
+        "q": "Use a second method or representation for: Calculate 4,706 x 7.",
+        "a": "Expected result: 32,942. Method or representation may vary."
+      },
+      {
+        "q": "Check this result using an inverse, estimate or known fact: Calculate 8,035 x 4.",
+        "a": "Expected result: 32,140. A valid check must be shown."
       },
       {
         "q": "A product is 27,648 and one factor is 8. What is the other factor?",
@@ -1515,12 +1931,28 @@
       {
         "q": "Write a complete sentence explaining how you checked one answer.",
         "a": "Answer should name an inverse, estimate, boundary, known fact or equivalent representation."
+      },
+      {
+        "q": "Write and solve a similar question to: Calculate 8,035 x 4.",
+        "a": "Answers vary. The new question must use the same mathematical structure and include a correct solution."
       }
     ],
     "higher": [
       {
         "q": "A product is 27,648 and one factor is 8. What is the other factor?",
         "a": "3,456."
+      },
+      {
+        "q": "Prove the answer to this question, rather than only calculating it: Calculate 3,482 x 6.",
+        "a": "Expected result: 20,892. Proof or justification must match the lesson structure."
+      },
+      {
+        "q": "Solve this in two different ways and compare them: Calculate 4,706 x 7.",
+        "a": "Expected result: 32,942. Two valid methods and a comparison are required."
+      },
+      {
+        "q": "Work backwards from the answer to reconstruct the question: 32,140.",
+        "a": "One valid reconstruction is: Calculate 8,035 x 4. Other equivalent questions are acceptable."
       },
       {
         "q": "Explain why this reasoning fails: Miro forgets to include the exchanged tens when multiplying the next digit.",
@@ -1537,6 +1969,14 @@
       {
         "q": "Write one always, sometimes or never statement about today's learning and justify it.",
         "a": "Answers vary. A valid example and counterexample should support the classification."
+      },
+      {
+        "q": "Create a believable incorrect solution. Identify the exact step where the reasoning breaks.",
+        "a": "Answers vary. The error must be mathematically relevant and the correction must be precise."
+      },
+      {
+        "q": "Change one value or condition in a question. Explain what changes in the solution and what stays the same.",
+        "a": "Answers vary. The explanation must distinguish the mathematical structure from the changed value."
       }
     ],
     "exitQuestions": [
@@ -1638,12 +2078,28 @@
     ],
     "expected": [
       {
+        "q": "Calculate 47 x 36.",
+        "a": "1,692."
+      },
+      {
         "q": "Calculate 68 x 24.",
         "a": "1,632."
       },
       {
         "q": "Calculate 93 x 57.",
         "a": "5,301."
+      },
+      {
+        "q": "Solve this independently and show every stage: Calculate 47 x 36.",
+        "a": "1,692."
+      },
+      {
+        "q": "Use a second method or representation for: Calculate 68 x 24.",
+        "a": "Expected result: 1,632. Method or representation may vary."
+      },
+      {
+        "q": "Check this result using an inverse, estimate or known fact: Calculate 93 x 57.",
+        "a": "Expected result: 5,301. A valid check must be shown."
       },
       {
         "q": "Find the missing factor: __ x 48 = 3,456.",
@@ -1656,12 +2112,28 @@
       {
         "q": "Write a complete sentence explaining how you checked one answer.",
         "a": "Answer should name an inverse, estimate, boundary, known fact or equivalent representation."
+      },
+      {
+        "q": "Write and solve a similar question to: Calculate 93 x 57.",
+        "a": "Answers vary. The new question must use the same mathematical structure and include a correct solution."
       }
     ],
     "higher": [
       {
         "q": "Find the missing factor: __ x 48 = 3,456.",
         "a": "72."
+      },
+      {
+        "q": "Prove the answer to this question, rather than only calculating it: Calculate 47 x 36.",
+        "a": "Expected result: 1,692. Proof or justification must match the lesson structure."
+      },
+      {
+        "q": "Solve this in two different ways and compare them: Calculate 68 x 24.",
+        "a": "Expected result: 1,632. Two valid methods and a comparison are required."
+      },
+      {
+        "q": "Work backwards from the answer to reconstruct the question: 5,301.",
+        "a": "One valid reconstruction is: Calculate 93 x 57. Other equivalent questions are acceptable."
       },
       {
         "q": "Explain why this reasoning fails: Miro writes the second partial product directly under the first without a zero placeholder.",
@@ -1678,6 +2150,14 @@
       {
         "q": "Write one always, sometimes or never statement about today's learning and justify it.",
         "a": "Answers vary. A valid example and counterexample should support the classification."
+      },
+      {
+        "q": "Create a believable incorrect solution. Identify the exact step where the reasoning breaks.",
+        "a": "Answers vary. The error must be mathematically relevant and the correction must be precise."
+      },
+      {
+        "q": "Change one value or condition in a question. Explain what changes in the solution and what stays the same.",
+        "a": "Answers vary. The explanation must distinguish the mathematical structure from the changed value."
       }
     ],
     "exitQuestions": [
@@ -1779,12 +2259,28 @@
     ],
     "expected": [
       {
+        "q": "Calculate 2,304 x 27.",
+        "a": "62,208."
+      },
+      {
         "q": "Calculate 4,216 x 34.",
         "a": "143,344."
       },
       {
         "q": "Calculate 3,075 x 46.",
         "a": "141,450."
+      },
+      {
+        "q": "Solve this independently and show every stage: Calculate 2,304 x 27.",
+        "a": "62,208."
+      },
+      {
+        "q": "Use a second method or representation for: Calculate 4,216 x 34.",
+        "a": "Expected result: 143,344. Method or representation may vary."
+      },
+      {
+        "q": "Check this result using an inverse, estimate or known fact: Calculate 3,075 x 46.",
+        "a": "Expected result: 141,450. A valid check must be shown."
       },
       {
         "q": "Use compensation to calculate 4,999 x 62.",
@@ -1797,12 +2293,28 @@
       {
         "q": "Write a complete sentence explaining how you checked one answer.",
         "a": "Answer should name an inverse, estimate, boundary, known fact or equivalent representation."
+      },
+      {
+        "q": "Write and solve a similar question to: Calculate 3,075 x 46.",
+        "a": "Answers vary. The new question must use the same mathematical structure and include a correct solution."
       }
     ],
     "higher": [
       {
         "q": "Use compensation to calculate 4,999 x 62.",
         "a": "309,938."
+      },
+      {
+        "q": "Prove the answer to this question, rather than only calculating it: Calculate 2,304 x 27.",
+        "a": "Expected result: 62,208. Proof or justification must match the lesson structure."
+      },
+      {
+        "q": "Solve this in two different ways and compare them: Calculate 4,216 x 34.",
+        "a": "Expected result: 143,344. Two valid methods and a comparison are required."
+      },
+      {
+        "q": "Work backwards from the answer to reconstruct the question: 141,450.",
+        "a": "One valid reconstruction is: Calculate 3,075 x 46. Other equivalent questions are acceptable."
       },
       {
         "q": "Explain why this reasoning fails: Miro treats the 2 in 27 as 2 rather than 20.",
@@ -1819,6 +2331,14 @@
       {
         "q": "Write one always, sometimes or never statement about today's learning and justify it.",
         "a": "Answers vary. A valid example and counterexample should support the classification."
+      },
+      {
+        "q": "Create a believable incorrect solution. Identify the exact step where the reasoning breaks.",
+        "a": "Answers vary. The error must be mathematically relevant and the correction must be precise."
+      },
+      {
+        "q": "Change one value or condition in a question. Explain what changes in the solution and what stays the same.",
+        "a": "Answers vary. The explanation must distinguish the mathematical structure from the changed value."
       }
     ],
     "exitQuestions": [
@@ -1920,12 +2440,28 @@
     ],
     "expected": [
       {
+        "q": "A theatre has 1,248 seats in each of 24 identical sections. How many seats are there?",
+        "a": "29,952 seats."
+      },
+      {
         "q": "A factory packs 2,315 items each day for 32 days. How many items?",
         "a": "74,080 items."
       },
       {
         "q": "A school orders 48 boxes of 1,275 pencils. How many pencils?",
         "a": "61,200 pencils."
+      },
+      {
+        "q": "Solve this independently and show every stage: A theatre has 1,248 seats in each of 24 identical sections. How many seats are there?",
+        "a": "29,952 seats."
+      },
+      {
+        "q": "Use a second method or representation for: A factory packs 2,315 items each day for 32 days. How many items?",
+        "a": "Expected result: 74,080 items. Method or representation may vary."
+      },
+      {
+        "q": "Check this result using an inverse, estimate or known fact: A school orders 48 boxes of 1,275 pencils. How many pencils?",
+        "a": "Expected result: 61,200 pencils. A valid check must be shown."
       },
       {
         "q": "The school gives 18 pencils to each of 3,200 pupils. How many remain from 61,200?",
@@ -1938,12 +2474,28 @@
       {
         "q": "Write a complete sentence explaining how you checked one answer.",
         "a": "Answer should name an inverse, estimate, boundary, known fact or equivalent representation."
+      },
+      {
+        "q": "Write and solve a similar question to: A school orders 48 boxes of 1,275 pencils. How many pencils?",
+        "a": "Answers vary. The new question must use the same mathematical structure and include a correct solution."
       }
     ],
     "higher": [
       {
         "q": "The school gives 18 pencils to each of 3,200 pupils. How many remain from 61,200?",
         "a": "3,600 pencils."
+      },
+      {
+        "q": "Prove the answer to this question, rather than only calculating it: A theatre has 1,248 seats in each of 24 identical sections. How many seats are there?",
+        "a": "Expected result: 29,952 seats. Proof or justification must match the lesson structure."
+      },
+      {
+        "q": "Solve this in two different ways and compare them: A factory packs 2,315 items each day for 32 days. How many items?",
+        "a": "Expected result: 74,080 items. Two valid methods and a comparison are required."
+      },
+      {
+        "q": "Work backwards from the answer to reconstruct the question: 61,200 pencils.",
+        "a": "One valid reconstruction is: A school orders 48 boxes of 1,275 pencils. How many pencils? Other equivalent questions are acceptable."
       },
       {
         "q": "Explain why this reasoning fails: Miro calculates correctly but gives a product with no unit or context.",
@@ -1960,6 +2512,14 @@
       {
         "q": "Write one always, sometimes or never statement about today's learning and justify it.",
         "a": "Answers vary. A valid example and counterexample should support the classification."
+      },
+      {
+        "q": "Create a believable incorrect solution. Identify the exact step where the reasoning breaks.",
+        "a": "Answers vary. The error must be mathematically relevant and the correction must be precise."
+      },
+      {
+        "q": "Change one value or condition in a question. Explain what changes in the solution and what stays the same.",
+        "a": "Answers vary. The explanation must distinguish the mathematical structure from the changed value."
       }
     ],
     "exitQuestions": [
@@ -2061,12 +2621,28 @@
     ],
     "expected": [
       {
+        "q": "Miro calculates 326 x 45 as 1,467. Identify the likely place-value error.",
+        "a": "He treated 40 as 4. The correct product is 14,670."
+      },
+      {
         "q": "Which is closer to 4,208 x 29: 120,000 or 1,200,000?",
         "a": "120,000."
       },
       {
         "q": "Calculate and check 6,014 x 38.",
         "a": "228,532."
+      },
+      {
+        "q": "Solve this independently and show every stage: Miro calculates 326 x 45 as 1,467. Identify the likely place-value error.",
+        "a": "He treated 40 as 4. The correct product is 14,670."
+      },
+      {
+        "q": "Use a second method or representation for: Which is closer to 4,208 x 29: 120,000 or 1,200,000?",
+        "a": "Expected result: 120,000. Method or representation may vary."
+      },
+      {
+        "q": "Check this result using an inverse, estimate or known fact: Calculate and check 6,014 x 38.",
+        "a": "Expected result: 228,532. A valid check must be shown."
       },
       {
         "q": "Create a four-digit by two-digit multiplication with a product between 200,000 and 210,000.",
@@ -2079,12 +2655,28 @@
       {
         "q": "Write a complete sentence explaining how you checked one answer.",
         "a": "Answer should name an inverse, estimate, boundary, known fact or equivalent representation."
+      },
+      {
+        "q": "Write and solve a similar question to: Calculate and check 6,014 x 38.",
+        "a": "Answers vary. The new question must use the same mathematical structure and include a correct solution."
       }
     ],
     "higher": [
       {
         "q": "Create a four-digit by two-digit multiplication with a product between 200,000 and 210,000.",
         "a": "Answers vary, for example 5,000 x 41 = 205,000."
+      },
+      {
+        "q": "Prove the answer to this question, rather than only calculating it: Miro calculates 326 x 45 as 1,467. Identify the likely place-value error.",
+        "a": "Expected result: He treated 40 as 4. The correct product is 14,670. Proof or justification must match the lesson structure."
+      },
+      {
+        "q": "Solve this in two different ways and compare them: Which is closer to 4,208 x 29: 120,000 or 1,200,000?",
+        "a": "Expected result: 120,000. Two valid methods and a comparison are required."
+      },
+      {
+        "q": "Work backwards from the answer to reconstruct the question: 228,532.",
+        "a": "One valid reconstruction is: Calculate and check 6,014 x 38. Other equivalent questions are acceptable."
       },
       {
         "q": "Explain why this reasoning fails: Miro trusts a written answer without estimating first.",
@@ -2101,6 +2693,14 @@
       {
         "q": "Write one always, sometimes or never statement about today's learning and justify it.",
         "a": "Answers vary. A valid example and counterexample should support the classification."
+      },
+      {
+        "q": "Create a believable incorrect solution. Identify the exact step where the reasoning breaks.",
+        "a": "Answers vary. The error must be mathematically relevant and the correction must be precise."
+      },
+      {
+        "q": "Change one value or condition in a question. Explain what changes in the solution and what stays the same.",
+        "a": "Answers vary. The explanation must distinguish the mathematical structure from the changed value."
       }
     ],
     "exitQuestions": [
@@ -2202,12 +2802,28 @@
     ],
     "expected": [
       {
+        "q": "Estimate and then calculate 7,392 / 24.",
+        "a": "About 300; exactly 308."
+      },
+      {
         "q": "Estimate 5,985 / 31.",
         "a": "About 200 because 6,000 / 30 is 200."
       },
       {
         "q": "Which is a better estimate for 8,316 / 42: 20, 200 or 2,000?",
         "a": "200."
+      },
+      {
+        "q": "Solve this independently and show every stage: Estimate and then calculate 7,392 / 24.",
+        "a": "About 300; exactly 308."
+      },
+      {
+        "q": "Use a second method or representation for: Estimate 5,985 / 31.",
+        "a": "Expected result: About 200 because 6,000 / 30 is 200. Method or representation may vary."
+      },
+      {
+        "q": "Check this result using an inverse, estimate or known fact: Which is a better estimate for 8,316 / 42: 20, 200 or 2,000?",
+        "a": "Expected result: 200. A valid check must be shown."
       },
       {
         "q": "Find a divisor between 20 and 30 that makes 6,048 divide exactly.",
@@ -2220,12 +2836,28 @@
       {
         "q": "Write a complete sentence explaining how you checked one answer.",
         "a": "Answer should name an inverse, estimate, boundary, known fact or equivalent representation."
+      },
+      {
+        "q": "Write and solve a similar question to: Which is a better estimate for 8,316 / 42: 20, 200 or 2,000?",
+        "a": "Answers vary. The new question must use the same mathematical structure and include a correct solution."
       }
     ],
     "higher": [
       {
         "q": "Find a divisor between 20 and 30 that makes 6,048 divide exactly.",
         "a": "Possible answers include 21, 24 or 28."
+      },
+      {
+        "q": "Prove the answer to this question, rather than only calculating it: Estimate and then calculate 7,392 / 24.",
+        "a": "Expected result: About 300; exactly 308. Proof or justification must match the lesson structure."
+      },
+      {
+        "q": "Solve this in two different ways and compare them: Estimate 5,985 / 31.",
+        "a": "Expected result: About 200 because 6,000 / 30 is 200. Two valid methods and a comparison are required."
+      },
+      {
+        "q": "Work backwards from the answer to reconstruct the question: 200.",
+        "a": "One valid reconstruction is: Which is a better estimate for 8,316 / 42: 20, 200 or 2,000? Other equivalent questions are acceptable."
       },
       {
         "q": "Explain why this reasoning fails: Miro estimates division by rounding only the dividend.",
@@ -2242,6 +2874,14 @@
       {
         "q": "Write one always, sometimes or never statement about today's learning and justify it.",
         "a": "Answers vary. A valid example and counterexample should support the classification."
+      },
+      {
+        "q": "Create a believable incorrect solution. Identify the exact step where the reasoning breaks.",
+        "a": "Answers vary. The error must be mathematically relevant and the correction must be precise."
+      },
+      {
+        "q": "Change one value or condition in a question. Explain what changes in the solution and what stays the same.",
+        "a": "Answers vary. The explanation must distinguish the mathematical structure from the changed value."
       }
     ],
     "exitQuestions": [
@@ -2343,12 +2983,28 @@
     ],
     "expected": [
       {
+        "q": "Calculate 3,744 / 12.",
+        "a": "312."
+      },
+      {
         "q": "Calculate 5,616 / 18.",
         "a": "312."
       },
       {
         "q": "Calculate 8,064 / 21.",
         "a": "384."
+      },
+      {
+        "q": "Solve this independently and show every stage: Calculate 3,744 / 12.",
+        "a": "312."
+      },
+      {
+        "q": "Use a second method or representation for: Calculate 5,616 / 18.",
+        "a": "Expected result: 312. Method or representation may vary."
+      },
+      {
+        "q": "Check this result using an inverse, estimate or known fact: Calculate 8,064 / 21.",
+        "a": "Expected result: 384. A valid check must be shown."
       },
       {
         "q": "Explain why short division is efficient for 9,600 / 24.",
@@ -2361,12 +3017,28 @@
       {
         "q": "Write a complete sentence explaining how you checked one answer.",
         "a": "Answer should name an inverse, estimate, boundary, known fact or equivalent representation."
+      },
+      {
+        "q": "Write and solve a similar question to: Calculate 8,064 / 21.",
+        "a": "Answers vary. The new question must use the same mathematical structure and include a correct solution."
       }
     ],
     "higher": [
       {
         "q": "Explain why short division is efficient for 9,600 / 24.",
         "a": "Known multiples of 24 make each stage manageable; the quotient is 400."
+      },
+      {
+        "q": "Prove the answer to this question, rather than only calculating it: Calculate 3,744 / 12.",
+        "a": "Expected result: 312. Proof or justification must match the lesson structure."
+      },
+      {
+        "q": "Solve this in two different ways and compare them: Calculate 5,616 / 18.",
+        "a": "Expected result: 312. Two valid methods and a comparison are required."
+      },
+      {
+        "q": "Work backwards from the answer to reconstruct the question: 384.",
+        "a": "One valid reconstruction is: Calculate 8,064 / 21. Other equivalent questions are acceptable."
       },
       {
         "q": "Explain why this reasoning fails: Miro uses a one-digit division fact and forgets the full two-digit divisor.",
@@ -2383,6 +3055,14 @@
       {
         "q": "Write one always, sometimes or never statement about today's learning and justify it.",
         "a": "Answers vary. A valid example and counterexample should support the classification."
+      },
+      {
+        "q": "Create a believable incorrect solution. Identify the exact step where the reasoning breaks.",
+        "a": "Answers vary. The error must be mathematically relevant and the correction must be precise."
+      },
+      {
+        "q": "Change one value or condition in a question. Explain what changes in the solution and what stays the same.",
+        "a": "Answers vary. The explanation must distinguish the mathematical structure from the changed value."
       }
     ],
     "exitQuestions": [
@@ -2484,12 +3164,28 @@
     ],
     "expected": [
       {
+        "q": "Calculate 8,736 / 24.",
+        "a": "364."
+      },
+      {
         "q": "Calculate 9,408 / 32.",
         "a": "294."
       },
       {
         "q": "Calculate 7,245 / 35.",
         "a": "207."
+      },
+      {
+        "q": "Solve this independently and show every stage: Calculate 8,736 / 24.",
+        "a": "364."
+      },
+      {
+        "q": "Use a second method or representation for: Calculate 9,408 / 32.",
+        "a": "Expected result: 294. Method or representation may vary."
+      },
+      {
+        "q": "Check this result using an inverse, estimate or known fact: Calculate 7,245 / 35.",
+        "a": "Expected result: 207. A valid check must be shown."
       },
       {
         "q": "Calculate 9,984 / 48 and prove the answer by multiplication.",
@@ -2502,12 +3198,28 @@
       {
         "q": "Write a complete sentence explaining how you checked one answer.",
         "a": "Answer should name an inverse, estimate, boundary, known fact or equivalent representation."
+      },
+      {
+        "q": "Write and solve a similar question to: Calculate 7,245 / 35.",
+        "a": "Answers vary. The new question must use the same mathematical structure and include a correct solution."
       }
     ],
     "higher": [
       {
         "q": "Calculate 9,984 / 48 and prove the answer by multiplication.",
         "a": "208 because 208 x 48 = 9,984."
+      },
+      {
+        "q": "Prove the answer to this question, rather than only calculating it: Calculate 8,736 / 24.",
+        "a": "Expected result: 364. Proof or justification must match the lesson structure."
+      },
+      {
+        "q": "Solve this in two different ways and compare them: Calculate 9,408 / 32.",
+        "a": "Expected result: 294. Two valid methods and a comparison are required."
+      },
+      {
+        "q": "Work backwards from the answer to reconstruct the question: 207.",
+        "a": "One valid reconstruction is: Calculate 7,245 / 35. Other equivalent questions are acceptable."
       },
       {
         "q": "Explain why this reasoning fails: Miro subtracts the multiple correctly but forgets to bring down the next digit.",
@@ -2524,6 +3236,14 @@
       {
         "q": "Write one always, sometimes or never statement about today's learning and justify it.",
         "a": "Answers vary. A valid example and counterexample should support the classification."
+      },
+      {
+        "q": "Create a believable incorrect solution. Identify the exact step where the reasoning breaks.",
+        "a": "Answers vary. The error must be mathematically relevant and the correction must be precise."
+      },
+      {
+        "q": "Change one value or condition in a question. Explain what changes in the solution and what stays the same.",
+        "a": "Answers vary. The explanation must distinguish the mathematical structure from the changed value."
       }
     ],
     "exitQuestions": [
@@ -2625,12 +3345,28 @@
     ],
     "expected": [
       {
+        "q": "Calculate 6,745 / 32 and interpret the answer for 32-seat coaches.",
+        "a": "210 remainder 25, so 211 coaches are needed."
+      },
+      {
         "q": "Calculate 5,126 / 24 and write the remainder as a fraction.",
         "a": "213 remainder 14, or 213 7/12."
       },
       {
         "q": "Share 3,850 stickers equally among 16 classes. How many each and how many left?",
         "a": "240 each with 10 left."
+      },
+      {
+        "q": "Solve this independently and show every stage: Calculate 6,745 / 32 and interpret the answer for 32-seat coaches.",
+        "a": "210 remainder 25, so 211 coaches are needed."
+      },
+      {
+        "q": "Use a second method or representation for: Calculate 5,126 / 24 and write the remainder as a fraction.",
+        "a": "Expected result: 213 remainder 14, or 213 7/12. Method or representation may vary."
+      },
+      {
+        "q": "Check this result using an inverse, estimate or known fact: Share 3,850 stickers equally among 16 classes. How many each and how many left?",
+        "a": "Expected result: 240 each with 10 left. A valid check must be shown."
       },
       {
         "q": "A 2,500 ml drink fills 180 ml cups. How many full cups?",
@@ -2643,12 +3379,28 @@
       {
         "q": "Write a complete sentence explaining how you checked one answer.",
         "a": "Answer should name an inverse, estimate, boundary, known fact or equivalent representation."
+      },
+      {
+        "q": "Write and solve a similar question to: Share 3,850 stickers equally among 16 classes. How many each and how many left?",
+        "a": "Answers vary. The new question must use the same mathematical structure and include a correct solution."
       }
     ],
     "higher": [
       {
         "q": "A 2,500 ml drink fills 180 ml cups. How many full cups?",
         "a": "13 full cups with 160 ml left."
+      },
+      {
+        "q": "Prove the answer to this question, rather than only calculating it: Calculate 6,745 / 32 and interpret the answer for 32-seat coaches.",
+        "a": "Expected result: 210 remainder 25, so 211 coaches are needed. Proof or justification must match the lesson structure."
+      },
+      {
+        "q": "Solve this in two different ways and compare them: Calculate 5,126 / 24 and write the remainder as a fraction.",
+        "a": "Expected result: 213 remainder 14, or 213 7/12. Two valid methods and a comparison are required."
+      },
+      {
+        "q": "Work backwards from the answer to reconstruct the question: 240 each with 10 left.",
+        "a": "One valid reconstruction is: Share 3,850 stickers equally among 16 classes. How many each and how many left? Other equivalent questions are acceptable."
       },
       {
         "q": "Explain why this reasoning fails: Miro always rounds a quotient with a remainder up.",
@@ -2665,6 +3417,14 @@
       {
         "q": "Write one always, sometimes or never statement about today's learning and justify it.",
         "a": "Answers vary. A valid example and counterexample should support the classification."
+      },
+      {
+        "q": "Create a believable incorrect solution. Identify the exact step where the reasoning breaks.",
+        "a": "Answers vary. The error must be mathematically relevant and the correction must be precise."
+      },
+      {
+        "q": "Change one value or condition in a question. Explain what changes in the solution and what stays the same.",
+        "a": "Answers vary. The explanation must distinguish the mathematical structure from the changed value."
       }
     ],
     "exitQuestions": [
@@ -2766,12 +3526,28 @@
     ],
     "expected": [
       {
+        "q": "A charity packs 9,360 tins equally into 36 crates. How many tins per crate?",
+        "a": "260."
+      },
+      {
         "q": "4,725 pupils travel in coaches holding 48. How many coaches are needed?",
         "a": "99 coaches."
       },
       {
         "q": "Calculate 7,488 / 26 and check by multiplication.",
         "a": "288 because 288 x 26 = 7,488."
+      },
+      {
+        "q": "Solve this independently and show every stage: A charity packs 9,360 tins equally into 36 crates. How many tins per crate?",
+        "a": "260."
+      },
+      {
+        "q": "Use a second method or representation for: 4,725 pupils travel in coaches holding 48. How many coaches are needed?",
+        "a": "Expected result: 99 coaches. Method or representation may vary."
+      },
+      {
+        "q": "Check this result using an inverse, estimate or known fact: Calculate 7,488 / 26 and check by multiplication.",
+        "a": "Expected result: 288 because 288 x 26 = 7,488. A valid check must be shown."
       },
       {
         "q": "Create a division with divisor 28, quotient 135 and remainder 7.",
@@ -2784,12 +3560,28 @@
       {
         "q": "Write a complete sentence explaining how you checked one answer.",
         "a": "Answer should name an inverse, estimate, boundary, known fact or equivalent representation."
+      },
+      {
+        "q": "Write and solve a similar question to: Calculate 7,488 / 26 and check by multiplication.",
+        "a": "Answers vary. The new question must use the same mathematical structure and include a correct solution."
       }
     ],
     "higher": [
       {
         "q": "Create a division with divisor 28, quotient 135 and remainder 7.",
         "a": "3,787 / 28 = 135 remainder 7."
+      },
+      {
+        "q": "Prove the answer to this question, rather than only calculating it: A charity packs 9,360 tins equally into 36 crates. How many tins per crate?",
+        "a": "Expected result: 260. Proof or justification must match the lesson structure."
+      },
+      {
+        "q": "Solve this in two different ways and compare them: 4,725 pupils travel in coaches holding 48. How many coaches are needed?",
+        "a": "Expected result: 99 coaches. Two valid methods and a comparison are required."
+      },
+      {
+        "q": "Work backwards from the answer to reconstruct the question: 288 because 288 x 26 = 7,488.",
+        "a": "One valid reconstruction is: Calculate 7,488 / 26 and check by multiplication. Other equivalent questions are acceptable."
       },
       {
         "q": "Explain why this reasoning fails: Miro accepts a remainder that is larger than the divisor.",
@@ -2806,6 +3598,14 @@
       {
         "q": "Write one always, sometimes or never statement about today's learning and justify it.",
         "a": "Answers vary. A valid example and counterexample should support the classification."
+      },
+      {
+        "q": "Create a believable incorrect solution. Identify the exact step where the reasoning breaks.",
+        "a": "Answers vary. The error must be mathematically relevant and the correction must be precise."
+      },
+      {
+        "q": "Change one value or condition in a question. Explain what changes in the solution and what stays the same.",
+        "a": "Answers vary. The explanation must distinguish the mathematical structure from the changed value."
       }
     ],
     "exitQuestions": [
@@ -2908,12 +3708,28 @@
     ],
     "expected": [
       {
+        "q": "List every factor pair of 72.",
+        "a": "1 and 72; 2 and 36; 3 and 24; 4 and 18; 6 and 12; 8 and 9."
+      },
+      {
         "q": "List all factors of 48.",
         "a": "1, 2, 3, 4, 6, 8, 12, 16, 24, 48."
       },
       {
         "q": "How many factors does 36 have?",
         "a": "9 factors."
+      },
+      {
+        "q": "Solve this independently and show every stage: List every factor pair of 72.",
+        "a": "1 and 72; 2 and 36; 3 and 24; 4 and 18; 6 and 12; 8 and 9."
+      },
+      {
+        "q": "Use a second method or representation for: List all factors of 48.",
+        "a": "Expected result: 1, 2, 3, 4, 6, 8, 12, 16, 24, 48. Method or representation may vary."
+      },
+      {
+        "q": "Check this result using an inverse, estimate or known fact: How many factors does 36 have?",
+        "a": "Expected result: 9 factors. A valid check must be shown."
       },
       {
         "q": "Find a number below 100 with exactly 10 factors.",
@@ -2926,12 +3742,28 @@
       {
         "q": "Write a complete sentence explaining how you checked one answer.",
         "a": "Answer should name an inverse, estimate, boundary, known fact or equivalent representation."
+      },
+      {
+        "q": "Write and solve a similar question to: How many factors does 36 have?",
+        "a": "Answers vary. The new question must use the same mathematical structure and include a correct solution."
       }
     ],
     "higher": [
       {
         "q": "Find a number below 100 with exactly 10 factors.",
         "a": "48 is one example."
+      },
+      {
+        "q": "Prove the answer to this question, rather than only calculating it: List every factor pair of 72.",
+        "a": "Expected result: 1 and 72; 2 and 36; 3 and 24; 4 and 18; 6 and 12; 8 and 9. Proof or justification must match the lesson structure."
+      },
+      {
+        "q": "Solve this in two different ways and compare them: List all factors of 48.",
+        "a": "Expected result: 1, 2, 3, 4, 6, 8, 12, 16, 24, 48. Two valid methods and a comparison are required."
+      },
+      {
+        "q": "Work backwards from the answer to reconstruct the question: 9 factors.",
+        "a": "One valid reconstruction is: How many factors does 36 have? Other equivalent questions are acceptable."
       },
       {
         "q": "Explain why this reasoning fails: Miro stops checking factor pairs after reaching 5.",
@@ -2948,6 +3780,14 @@
       {
         "q": "Write one always, sometimes or never statement about today's learning and justify it.",
         "a": "Answers vary. A valid example and counterexample should support the classification."
+      },
+      {
+        "q": "Create a believable incorrect solution. Identify the exact step where the reasoning breaks.",
+        "a": "Answers vary. The error must be mathematically relevant and the correction must be precise."
+      },
+      {
+        "q": "Change one value or condition in a question. Explain what changes in the solution and what stays the same.",
+        "a": "Answers vary. The explanation must distinguish the mathematical structure from the changed value."
       }
     ],
     "exitQuestions": [
@@ -3050,12 +3890,28 @@
     ],
     "expected": [
       {
+        "q": "Find the highest common factor of 84 and 126.",
+        "a": "42."
+      },
+      {
         "q": "List the common factors of 36 and 60.",
         "a": "1, 2, 3, 4, 6 and 12."
       },
       {
         "q": "Find the HCF of 96 and 144.",
         "a": "48."
+      },
+      {
+        "q": "Solve this independently and show every stage: Find the highest common factor of 84 and 126.",
+        "a": "42."
+      },
+      {
+        "q": "Use a second method or representation for: List the common factors of 36 and 60.",
+        "a": "Expected result: 1, 2, 3, 4, 6 and 12. Method or representation may vary."
+      },
+      {
+        "q": "Check this result using an inverse, estimate or known fact: Find the HCF of 96 and 144.",
+        "a": "Expected result: 48. A valid check must be shown."
       },
       {
         "q": "Two numbers have HCF 18. Give a possible pair greater than 50.",
@@ -3068,12 +3924,28 @@
       {
         "q": "Write a complete sentence explaining how you checked one answer.",
         "a": "Answer should name an inverse, estimate, boundary, known fact or equivalent representation."
+      },
+      {
+        "q": "Write and solve a similar question to: Find the HCF of 96 and 144.",
+        "a": "Answers vary. The new question must use the same mathematical structure and include a correct solution."
       }
     ],
     "higher": [
       {
         "q": "Two numbers have HCF 18. Give a possible pair greater than 50.",
         "a": "54 and 72 is one example."
+      },
+      {
+        "q": "Prove the answer to this question, rather than only calculating it: Find the highest common factor of 84 and 126.",
+        "a": "Expected result: 42. Proof or justification must match the lesson structure."
+      },
+      {
+        "q": "Solve this in two different ways and compare them: List the common factors of 36 and 60.",
+        "a": "Expected result: 1, 2, 3, 4, 6 and 12. Two valid methods and a comparison are required."
+      },
+      {
+        "q": "Work backwards from the answer to reconstruct the question: 48.",
+        "a": "One valid reconstruction is: Find the HCF of 96 and 144. Other equivalent questions are acceptable."
       },
       {
         "q": "Explain why this reasoning fails: Miro chooses the largest factor from either list rather than the largest shared factor.",
@@ -3090,6 +3962,14 @@
       {
         "q": "Write one always, sometimes or never statement about today's learning and justify it.",
         "a": "Answers vary. A valid example and counterexample should support the classification."
+      },
+      {
+        "q": "Create a believable incorrect solution. Identify the exact step where the reasoning breaks.",
+        "a": "Answers vary. The error must be mathematically relevant and the correction must be precise."
+      },
+      {
+        "q": "Change one value or condition in a question. Explain what changes in the solution and what stays the same.",
+        "a": "Answers vary. The explanation must distinguish the mathematical structure from the changed value."
       }
     ],
     "exitQuestions": [
@@ -3192,12 +4072,28 @@
     ],
     "expected": [
       {
+        "q": "Find the lowest common multiple of 18 and 24.",
+        "a": "72."
+      },
+      {
         "q": "Write the first three common multiples of 6 and 8.",
         "a": "24, 48 and 72."
       },
       {
         "q": "Find the LCM of 15 and 20.",
         "a": "60."
+      },
+      {
+        "q": "Solve this independently and show every stage: Find the lowest common multiple of 18 and 24.",
+        "a": "72."
+      },
+      {
+        "q": "Use a second method or representation for: Write the first three common multiples of 6 and 8.",
+        "a": "Expected result: 24, 48 and 72. Method or representation may vary."
+      },
+      {
+        "q": "Check this result using an inverse, estimate or known fact: Find the LCM of 15 and 20.",
+        "a": "Expected result: 60. A valid check must be shown."
       },
       {
         "q": "Two traffic lights flash every 12 and 18 seconds. They flash together now. When next?",
@@ -3210,12 +4106,28 @@
       {
         "q": "Write a complete sentence explaining how you checked one answer.",
         "a": "Answer should name an inverse, estimate, boundary, known fact or equivalent representation."
+      },
+      {
+        "q": "Write and solve a similar question to: Find the LCM of 15 and 20.",
+        "a": "Answers vary. The new question must use the same mathematical structure and include a correct solution."
       }
     ],
     "higher": [
       {
         "q": "Two traffic lights flash every 12 and 18 seconds. They flash together now. When next?",
         "a": "After 36 seconds."
+      },
+      {
+        "q": "Prove the answer to this question, rather than only calculating it: Find the lowest common multiple of 18 and 24.",
+        "a": "Expected result: 72. Proof or justification must match the lesson structure."
+      },
+      {
+        "q": "Solve this in two different ways and compare them: Write the first three common multiples of 6 and 8.",
+        "a": "Expected result: 24, 48 and 72. Two valid methods and a comparison are required."
+      },
+      {
+        "q": "Work backwards from the answer to reconstruct the question: 60.",
+        "a": "One valid reconstruction is: Find the LCM of 15 and 20. Other equivalent questions are acceptable."
       },
       {
         "q": "Explain why this reasoning fails: Miro lists factors when the question asks for multiples.",
@@ -3232,6 +4144,14 @@
       {
         "q": "Write one always, sometimes or never statement about today's learning and justify it.",
         "a": "Answers vary. A valid example and counterexample should support the classification."
+      },
+      {
+        "q": "Create a believable incorrect solution. Identify the exact step where the reasoning breaks.",
+        "a": "Answers vary. The error must be mathematically relevant and the correction must be precise."
+      },
+      {
+        "q": "Change one value or condition in a question. Explain what changes in the solution and what stays the same.",
+        "a": "Answers vary. The explanation must distinguish the mathematical structure from the changed value."
       }
     ],
     "exitQuestions": [
@@ -3334,12 +4254,28 @@
     ],
     "expected": [
       {
+        "q": "Classify 97, 144 and 125.",
+        "a": "97 is prime; 144 is square; 125 is cube."
+      },
+      {
         "q": "Is 91 prime? Explain.",
         "a": "No, because 91 = 7 x 13."
       },
       {
         "q": "Write the square numbers between 50 and 150.",
         "a": "64, 81, 100, 121 and 144."
+      },
+      {
+        "q": "Solve this independently and show every stage: Classify 97, 144 and 125.",
+        "a": "97 is prime; 144 is square; 125 is cube."
+      },
+      {
+        "q": "Use a second method or representation for: Is 91 prime? Explain.",
+        "a": "Expected result: No, because 91 = 7 x 13. Method or representation may vary."
+      },
+      {
+        "q": "Check this result using an inverse, estimate or known fact: Write the square numbers between 50 and 150.",
+        "a": "Expected result: 64, 81, 100, 121 and 144. A valid check must be shown."
       },
       {
         "q": "Find a number below 200 that is both a square and a cube.",
@@ -3352,12 +4288,28 @@
       {
         "q": "Write a complete sentence explaining how you checked one answer.",
         "a": "Answer should name an inverse, estimate, boundary, known fact or equivalent representation."
+      },
+      {
+        "q": "Write and solve a similar question to: Write the square numbers between 50 and 150.",
+        "a": "Answers vary. The new question must use the same mathematical structure and include a correct solution."
       }
     ],
     "higher": [
       {
         "q": "Find a number below 200 that is both a square and a cube.",
         "a": "64."
+      },
+      {
+        "q": "Prove the answer to this question, rather than only calculating it: Classify 97, 144 and 125.",
+        "a": "Expected result: 97 is prime; 144 is square; 125 is cube. Proof or justification must match the lesson structure."
+      },
+      {
+        "q": "Solve this in two different ways and compare them: Is 91 prime? Explain.",
+        "a": "Expected result: No, because 91 = 7 x 13. Two valid methods and a comparison are required."
+      },
+      {
+        "q": "Work backwards from the answer to reconstruct the question: 64, 81, 100, 121 and 144.",
+        "a": "One valid reconstruction is: Write the square numbers between 50 and 150. Other equivalent questions are acceptable."
       },
       {
         "q": "Explain why this reasoning fails: Miro says 1 is prime because it has no factor pairs apart from itself.",
@@ -3374,6 +4326,14 @@
       {
         "q": "Write one always, sometimes or never statement about today's learning and justify it.",
         "a": "Answers vary. A valid example and counterexample should support the classification."
+      },
+      {
+        "q": "Create a believable incorrect solution. Identify the exact step where the reasoning breaks.",
+        "a": "Answers vary. The error must be mathematically relevant and the correction must be precise."
+      },
+      {
+        "q": "Change one value or condition in a question. Explain what changes in the solution and what stays the same.",
+        "a": "Answers vary. The explanation must distinguish the mathematical structure from the changed value."
       }
     ],
     "exitQuestions": [
@@ -3476,12 +4436,28 @@
     ],
     "expected": [
       {
+        "q": "Find the smallest number divisible by 6, 8 and 9.",
+        "a": "72."
+      },
+      {
         "q": "A rectangle has area 96 square units and whole-number sides. Give every possible side pair.",
         "a": "1 x 96, 2 x 48, 3 x 32, 4 x 24, 6 x 16 and 8 x 12."
       },
       {
         "q": "Which prime factors make 84?",
         "a": "2 x 2 x 3 x 7."
+      },
+      {
+        "q": "Solve this independently and show every stage: Find the smallest number divisible by 6, 8 and 9.",
+        "a": "72."
+      },
+      {
+        "q": "Use a second method or representation for: A rectangle has area 96 square units and whole-number sides. Give every possible side pair.",
+        "a": "Expected result: 1 x 96, 2 x 48, 3 x 32, 4 x 24, 6 x 16 and 8 x 12. Method or representation may vary."
+      },
+      {
+        "q": "Check this result using an inverse, estimate or known fact: Which prime factors make 84?",
+        "a": "Expected result: 2 x 2 x 3 x 7. A valid check must be shown."
       },
       {
         "q": "Find two prime numbers with a sum of 60 and a difference of 14.",
@@ -3494,12 +4470,28 @@
       {
         "q": "Write a complete sentence explaining how you checked one answer.",
         "a": "Answer should name an inverse, estimate, boundary, known fact or equivalent representation."
+      },
+      {
+        "q": "Write and solve a similar question to: Which prime factors make 84?",
+        "a": "Answers vary. The new question must use the same mathematical structure and include a correct solution."
       }
     ],
     "higher": [
       {
         "q": "Find two prime numbers with a sum of 60 and a difference of 14.",
         "a": "23 and 37."
+      },
+      {
+        "q": "Prove the answer to this question, rather than only calculating it: Find the smallest number divisible by 6, 8 and 9.",
+        "a": "Expected result: 72. Proof or justification must match the lesson structure."
+      },
+      {
+        "q": "Solve this in two different ways and compare them: A rectangle has area 96 square units and whole-number sides. Give every possible side pair.",
+        "a": "Expected result: 1 x 96, 2 x 48, 3 x 32, 4 x 24, 6 x 16 and 8 x 12. Two valid methods and a comparison are required."
+      },
+      {
+        "q": "Work backwards from the answer to reconstruct the question: 2 x 2 x 3 x 7.",
+        "a": "One valid reconstruction is: Which prime factors make 84? Other equivalent questions are acceptable."
       },
       {
         "q": "Explain why this reasoning fails: Miro assumes every odd number is prime.",
@@ -3516,6 +4508,14 @@
       {
         "q": "Write one always, sometimes or never statement about today's learning and justify it.",
         "a": "Answers vary. A valid example and counterexample should support the classification."
+      },
+      {
+        "q": "Create a believable incorrect solution. Identify the exact step where the reasoning breaks.",
+        "a": "Answers vary. The error must be mathematically relevant and the correction must be precise."
+      },
+      {
+        "q": "Change one value or condition in a question. Explain what changes in the solution and what stays the same.",
+        "a": "Answers vary. The explanation must distinguish the mathematical structure from the changed value."
       }
     ],
     "exitQuestions": [
@@ -3617,12 +4617,28 @@
     ],
     "expected": [
       {
+        "q": "Describe the calculation 48 - 6 x 5 without solving it.",
+        "a": "Multiply 6 by 5, then subtract the product from 48."
+      },
+      {
         "q": "Which operation happens first in 72 / 8 + 4?",
         "a": "Division."
       },
       {
         "q": "Write an expression for subtract 7 from the product of 9 and 6.",
         "a": "9 x 6 - 7."
+      },
+      {
+        "q": "Solve this independently and show every stage: Describe the calculation 48 - 6 x 5 without solving it.",
+        "a": "Multiply 6 by 5, then subtract the product from 48."
+      },
+      {
+        "q": "Use a second method or representation for: Which operation happens first in 72 / 8 + 4?",
+        "a": "Expected result: Division. Method or representation may vary."
+      },
+      {
+        "q": "Check this result using an inverse, estimate or known fact: Write an expression for subtract 7 from the product of 9 and 6.",
+        "a": "Expected result: 9 x 6 - 7. A valid check must be shown."
       },
       {
         "q": "Insert brackets into 8 + 4 x 3 to make the answer 36.",
@@ -3635,12 +4651,28 @@
       {
         "q": "Write a complete sentence explaining how you checked one answer.",
         "a": "Answer should name an inverse, estimate, boundary, known fact or equivalent representation."
+      },
+      {
+        "q": "Write and solve a similar question to: Write an expression for subtract 7 from the product of 9 and 6.",
+        "a": "Answers vary. The new question must use the same mathematical structure and include a correct solution."
       }
     ],
     "higher": [
       {
         "q": "Insert brackets into 8 + 4 x 3 to make the answer 36.",
         "a": "(8 + 4) x 3 = 36."
+      },
+      {
+        "q": "Prove the answer to this question, rather than only calculating it: Describe the calculation 48 - 6 x 5 without solving it.",
+        "a": "Expected result: Multiply 6 by 5, then subtract the product from 48. Proof or justification must match the lesson structure."
+      },
+      {
+        "q": "Solve this in two different ways and compare them: Which operation happens first in 72 / 8 + 4?",
+        "a": "Expected result: Division. Two valid methods and a comparison are required."
+      },
+      {
+        "q": "Work backwards from the answer to reconstruct the question: 9 x 6 - 7.",
+        "a": "One valid reconstruction is: Write an expression for subtract 7 from the product of 9 and 6. Other equivalent questions are acceptable."
       },
       {
         "q": "Explain why this reasoning fails: Miro reads every expression strictly from left to right.",
@@ -3657,6 +4689,14 @@
       {
         "q": "Write one always, sometimes or never statement about today's learning and justify it.",
         "a": "Answers vary. A valid example and counterexample should support the classification."
+      },
+      {
+        "q": "Create a believable incorrect solution. Identify the exact step where the reasoning breaks.",
+        "a": "Answers vary. The error must be mathematically relevant and the correction must be precise."
+      },
+      {
+        "q": "Change one value or condition in a question. Explain what changes in the solution and what stays the same.",
+        "a": "Answers vary. The explanation must distinguish the mathematical structure from the changed value."
       }
     ],
     "exitQuestions": [
@@ -3758,12 +4798,28 @@
     ],
     "expected": [
       {
+        "q": "Calculate 18 + 6 x 7.",
+        "a": "60."
+      },
+      {
         "q": "Calculate 90 - 36 / 6.",
         "a": "84."
       },
       {
         "q": "Calculate 120 / 5 + 8 x 3.",
         "a": "48."
+      },
+      {
+        "q": "Solve this independently and show every stage: Calculate 18 + 6 x 7.",
+        "a": "60."
+      },
+      {
+        "q": "Use a second method or representation for: Calculate 90 - 36 / 6.",
+        "a": "Expected result: 84. Method or representation may vary."
+      },
+      {
+        "q": "Check this result using an inverse, estimate or known fact: Calculate 120 / 5 + 8 x 3.",
+        "a": "Expected result: 48. A valid check must be shown."
       },
       {
         "q": "Use the digits 2, 4 and 8 once to make an expression with answer 34.",
@@ -3776,12 +4832,28 @@
       {
         "q": "Write a complete sentence explaining how you checked one answer.",
         "a": "Answer should name an inverse, estimate, boundary, known fact or equivalent representation."
+      },
+      {
+        "q": "Write and solve a similar question to: Calculate 120 / 5 + 8 x 3.",
+        "a": "Answers vary. The new question must use the same mathematical structure and include a correct solution."
       }
     ],
     "higher": [
       {
         "q": "Use the digits 2, 4 and 8 once to make an expression with answer 34.",
         "a": "One answer is 2 + 4 x 8 = 34."
+      },
+      {
+        "q": "Prove the answer to this question, rather than only calculating it: Calculate 18 + 6 x 7.",
+        "a": "Expected result: 60. Proof or justification must match the lesson structure."
+      },
+      {
+        "q": "Solve this in two different ways and compare them: Calculate 90 - 36 / 6.",
+        "a": "Expected result: 84. Two valid methods and a comparison are required."
+      },
+      {
+        "q": "Work backwards from the answer to reconstruct the question: 48.",
+        "a": "One valid reconstruction is: Calculate 120 / 5 + 8 x 3. Other equivalent questions are acceptable."
       },
       {
         "q": "Explain why this reasoning fails: Miro adds 18 and 6 before multiplying by 7.",
@@ -3798,6 +4870,14 @@
       {
         "q": "Write one always, sometimes or never statement about today's learning and justify it.",
         "a": "Answers vary. A valid example and counterexample should support the classification."
+      },
+      {
+        "q": "Create a believable incorrect solution. Identify the exact step where the reasoning breaks.",
+        "a": "Answers vary. The error must be mathematically relevant and the correction must be precise."
+      },
+      {
+        "q": "Change one value or condition in a question. Explain what changes in the solution and what stays the same.",
+        "a": "Answers vary. The explanation must distinguish the mathematical structure from the changed value."
       }
     ],
     "exitQuestions": [
@@ -3899,12 +4979,28 @@
     ],
     "expected": [
       {
+        "q": "Calculate 240 / (8 + 4).",
+        "a": "20."
+      },
+      {
         "q": "Calculate (75 - 27) x 6.",
         "a": "288."
       },
       {
         "q": "Compare 16 + 8 x 5 with (16 + 8) x 5.",
         "a": "56 and 120."
+      },
+      {
+        "q": "Solve this independently and show every stage: Calculate 240 / (8 + 4).",
+        "a": "20."
+      },
+      {
+        "q": "Use a second method or representation for: Calculate (75 - 27) x 6.",
+        "a": "Expected result: 288. Method or representation may vary."
+      },
+      {
+        "q": "Check this result using an inverse, estimate or known fact: Compare 16 + 8 x 5 with (16 + 8) x 5.",
+        "a": "Expected result: 56 and 120. A valid check must be shown."
       },
       {
         "q": "Place one pair of brackets in 100 - 20 / 4 + 1 to make the answer 21.",
@@ -3917,12 +5013,28 @@
       {
         "q": "Write a complete sentence explaining how you checked one answer.",
         "a": "Answer should name an inverse, estimate, boundary, known fact or equivalent representation."
+      },
+      {
+        "q": "Write and solve a similar question to: Compare 16 + 8 x 5 with (16 + 8) x 5.",
+        "a": "Answers vary. The new question must use the same mathematical structure and include a correct solution."
       }
     ],
     "higher": [
       {
         "q": "Place one pair of brackets in 100 - 20 / 4 + 1 to make the answer 21.",
         "a": "(100 - 20) / 4 + 1 = 21."
+      },
+      {
+        "q": "Prove the answer to this question, rather than only calculating it: Calculate 240 / (8 + 4).",
+        "a": "Expected result: 20. Proof or justification must match the lesson structure."
+      },
+      {
+        "q": "Solve this in two different ways and compare them: Calculate (75 - 27) x 6.",
+        "a": "Expected result: 288. Two valid methods and a comparison are required."
+      },
+      {
+        "q": "Work backwards from the answer to reconstruct the question: 56 and 120.",
+        "a": "One valid reconstruction is: Compare 16 + 8 x 5 with (16 + 8) x 5. Other equivalent questions are acceptable."
       },
       {
         "q": "Explain why this reasoning fails: Miro ignores brackets because division normally comes first.",
@@ -3939,6 +5051,14 @@
       {
         "q": "Write one always, sometimes or never statement about today's learning and justify it.",
         "a": "Answers vary. A valid example and counterexample should support the classification."
+      },
+      {
+        "q": "Create a believable incorrect solution. Identify the exact step where the reasoning breaks.",
+        "a": "Answers vary. The error must be mathematically relevant and the correction must be precise."
+      },
+      {
+        "q": "Change one value or condition in a question. Explain what changes in the solution and what stays the same.",
+        "a": "Answers vary. The explanation must distinguish the mathematical structure from the changed value."
       }
     ],
     "exitQuestions": [
@@ -4040,12 +5160,28 @@
     ],
     "expected": [
       {
+        "q": "Solve 6 x (n + 5) = 72.",
+        "a": "n = 7."
+      },
+      {
         "q": "Solve 180 / (n - 2) = 30.",
         "a": "n = 8."
       },
       {
         "q": "Find n: 14 + n x 5 = 64.",
         "a": "n = 10."
+      },
+      {
+        "q": "Solve this independently and show every stage: Solve 6 x (n + 5) = 72.",
+        "a": "n = 7."
+      },
+      {
+        "q": "Use a second method or representation for: Solve 180 / (n - 2) = 30.",
+        "a": "Expected result: n = 8. Method or representation may vary."
+      },
+      {
+        "q": "Check this result using an inverse, estimate or known fact: Find n: 14 + n x 5 = 64.",
+        "a": "Expected result: n = 10. A valid check must be shown."
       },
       {
         "q": "Create two different expressions using n = 4 that both equal 36.",
@@ -4058,12 +5194,28 @@
       {
         "q": "Write a complete sentence explaining how you checked one answer.",
         "a": "Answer should name an inverse, estimate, boundary, known fact or equivalent representation."
+      },
+      {
+        "q": "Write and solve a similar question to: Find n: 14 + n x 5 = 64.",
+        "a": "Answers vary. The new question must use the same mathematical structure and include a correct solution."
       }
     ],
     "higher": [
       {
         "q": "Create two different expressions using n = 4 that both equal 36.",
         "a": "Examples include 5 x (4 + 3) + 1 and 40 - 4."
+      },
+      {
+        "q": "Prove the answer to this question, rather than only calculating it: Solve 6 x (n + 5) = 72.",
+        "a": "Expected result: n = 7. Proof or justification must match the lesson structure."
+      },
+      {
+        "q": "Solve this in two different ways and compare them: Solve 180 / (n - 2) = 30.",
+        "a": "Expected result: n = 8. Two valid methods and a comparison are required."
+      },
+      {
+        "q": "Work backwards from the answer to reconstruct the question: n = 10.",
+        "a": "One valid reconstruction is: Find n: 14 + n x 5 = 64. Other equivalent questions are acceptable."
       },
       {
         "q": "Explain why this reasoning fails: Miro divides 72 by 6 but forgets to subtract the 5 inside the brackets.",
@@ -4080,6 +5232,14 @@
       {
         "q": "Write one always, sometimes or never statement about today's learning and justify it.",
         "a": "Answers vary. A valid example and counterexample should support the classification."
+      },
+      {
+        "q": "Create a believable incorrect solution. Identify the exact step where the reasoning breaks.",
+        "a": "Answers vary. The error must be mathematically relevant and the correction must be precise."
+      },
+      {
+        "q": "Change one value or condition in a question. Explain what changes in the solution and what stays the same.",
+        "a": "Answers vary. The explanation must distinguish the mathematical structure from the changed value."
       }
     ],
     "exitQuestions": [
@@ -4181,12 +5341,28 @@
     ],
     "expected": [
       {
+        "q": "Are 7 x (20 + 3) and 7 x 20 + 7 x 3 equivalent?",
+        "a": "Yes, both equal 161."
+      },
+      {
         "q": "Which is greater: 100 - 8 x 9 or (100 - 8) x 9?",
         "a": "(100 - 8) x 9 is greater: 828 compared with 28."
       },
       {
         "q": "Insert operations between 6, 5 and 4 to make 26.",
         "a": "6 x 5 - 4 = 26."
+      },
+      {
+        "q": "Solve this independently and show every stage: Are 7 x (20 + 3) and 7 x 20 + 7 x 3 equivalent?",
+        "a": "Yes, both equal 161."
+      },
+      {
+        "q": "Use a second method or representation for: Which is greater: 100 - 8 x 9 or (100 - 8) x 9?",
+        "a": "Expected result: (100 - 8) x 9 is greater: 828 compared with 28. Method or representation may vary."
+      },
+      {
+        "q": "Check this result using an inverse, estimate or known fact: Insert operations between 6, 5 and 4 to make 26.",
+        "a": "Expected result: 6 x 5 - 4 = 26. A valid check must be shown."
       },
       {
         "q": "Find three expressions with answer 50 using at least two different operations.",
@@ -4199,12 +5375,28 @@
       {
         "q": "Write a complete sentence explaining how you checked one answer.",
         "a": "Answer should name an inverse, estimate, boundary, known fact or equivalent representation."
+      },
+      {
+        "q": "Write and solve a similar question to: Insert operations between 6, 5 and 4 to make 26.",
+        "a": "Answers vary. The new question must use the same mathematical structure and include a correct solution."
       }
     ],
     "higher": [
       {
         "q": "Find three expressions with answer 50 using at least two different operations.",
         "a": "Answers vary, for example 8 x 6 + 2; 100 / 2; (15 - 5) x 5."
+      },
+      {
+        "q": "Prove the answer to this question, rather than only calculating it: Are 7 x (20 + 3) and 7 x 20 + 7 x 3 equivalent?",
+        "a": "Expected result: Yes, both equal 161. Proof or justification must match the lesson structure."
+      },
+      {
+        "q": "Solve this in two different ways and compare them: Which is greater: 100 - 8 x 9 or (100 - 8) x 9?",
+        "a": "Expected result: (100 - 8) x 9 is greater: 828 compared with 28. Two valid methods and a comparison are required."
+      },
+      {
+        "q": "Work backwards from the answer to reconstruct the question: 6 x 5 - 4 = 26.",
+        "a": "One valid reconstruction is: Insert operations between 6, 5 and 4 to make 26. Other equivalent questions are acceptable."
       },
       {
         "q": "Explain why this reasoning fails: Miro thinks changing brackets never changes an answer.",
@@ -4221,6 +5413,14 @@
       {
         "q": "Write one always, sometimes or never statement about today's learning and justify it.",
         "a": "Answers vary. A valid example and counterexample should support the classification."
+      },
+      {
+        "q": "Create a believable incorrect solution. Identify the exact step where the reasoning breaks.",
+        "a": "Answers vary. The error must be mathematically relevant and the correction must be precise."
+      },
+      {
+        "q": "Change one value or condition in a question. Explain what changes in the solution and what stays the same.",
+        "a": "Answers vary. The explanation must distinguish the mathematical structure from the changed value."
       }
     ],
     "exitQuestions": [
@@ -4322,12 +5522,28 @@
     ],
     "expected": [
       {
+        "q": "Calculate 499,999 + 235,678 mentally.",
+        "a": "735,677."
+      },
+      {
         "q": "Calculate 802,000 - 399,998 mentally.",
         "a": "402,002."
       },
       {
         "q": "Calculate 675,450 + 99,999.",
         "a": "775,449."
+      },
+      {
+        "q": "Solve this independently and show every stage: Calculate 499,999 + 235,678 mentally.",
+        "a": "735,677."
+      },
+      {
+        "q": "Use a second method or representation for: Calculate 802,000 - 399,998 mentally.",
+        "a": "Expected result: 402,002. Method or representation may vary."
+      },
+      {
+        "q": "Check this result using an inverse, estimate or known fact: Calculate 675,450 + 99,999.",
+        "a": "Expected result: 775,449. A valid check must be shown."
       },
       {
         "q": "Explain two mental methods for 1,000,000 - 456,789.",
@@ -4340,12 +5556,28 @@
       {
         "q": "Write a complete sentence explaining how you checked one answer.",
         "a": "Answer should name an inverse, estimate, boundary, known fact or equivalent representation."
+      },
+      {
+        "q": "Write and solve a similar question to: Calculate 675,450 + 99,999.",
+        "a": "Answers vary. The new question must use the same mathematical structure and include a correct solution."
       }
     ],
     "higher": [
       {
         "q": "Explain two mental methods for 1,000,000 - 456,789.",
         "a": "543,211. Methods may include complementing or partitioning."
+      },
+      {
+        "q": "Prove the answer to this question, rather than only calculating it: Calculate 499,999 + 235,678 mentally.",
+        "a": "Expected result: 735,677. Proof or justification must match the lesson structure."
+      },
+      {
+        "q": "Solve this in two different ways and compare them: Calculate 802,000 - 399,998 mentally.",
+        "a": "Expected result: 402,002. Two valid methods and a comparison are required."
+      },
+      {
+        "q": "Work backwards from the answer to reconstruct the question: 775,449.",
+        "a": "One valid reconstruction is: Calculate 675,450 + 99,999. Other equivalent questions are acceptable."
       },
       {
         "q": "Explain why this reasoning fails: Miro adds 500,000 instead of 499,999 and forgets to adjust.",
@@ -4362,6 +5594,14 @@
       {
         "q": "Write one always, sometimes or never statement about today's learning and justify it.",
         "a": "Answers vary. A valid example and counterexample should support the classification."
+      },
+      {
+        "q": "Create a believable incorrect solution. Identify the exact step where the reasoning breaks.",
+        "a": "Answers vary. The error must be mathematically relevant and the correction must be precise."
+      },
+      {
+        "q": "Change one value or condition in a question. Explain what changes in the solution and what stays the same.",
+        "a": "Answers vary. The explanation must distinguish the mathematical structure from the changed value."
       }
     ],
     "exitQuestions": [
@@ -4463,12 +5703,28 @@
     ],
     "expected": [
       {
+        "q": "Calculate 25 x 3,600 mentally.",
+        "a": "90,000."
+      },
+      {
         "q": "Calculate 4,800 / 16 mentally.",
         "a": "300."
       },
       {
         "q": "Calculate 125 x 64 using factors.",
         "a": "8,000."
+      },
+      {
+        "q": "Solve this independently and show every stage: Calculate 25 x 3,600 mentally.",
+        "a": "90,000."
+      },
+      {
+        "q": "Use a second method or representation for: Calculate 4,800 / 16 mentally.",
+        "a": "Expected result: 300. Method or representation may vary."
+      },
+      {
+        "q": "Check this result using an inverse, estimate or known fact: Calculate 125 x 64 using factors.",
+        "a": "Expected result: 8,000. A valid check must be shown."
       },
       {
         "q": "Find three efficient mental methods for 48 x 250.",
@@ -4481,12 +5737,28 @@
       {
         "q": "Write a complete sentence explaining how you checked one answer.",
         "a": "Answer should name an inverse, estimate, boundary, known fact or equivalent representation."
+      },
+      {
+        "q": "Write and solve a similar question to: Calculate 125 x 64 using factors.",
+        "a": "Answers vary. The new question must use the same mathematical structure and include a correct solution."
       }
     ],
     "higher": [
       {
         "q": "Find three efficient mental methods for 48 x 250.",
         "a": "12,000. Methods may use 250 = 1,000 / 4 or 48 / 4 x 1,000."
+      },
+      {
+        "q": "Prove the answer to this question, rather than only calculating it: Calculate 25 x 3,600 mentally.",
+        "a": "Expected result: 90,000. Proof or justification must match the lesson structure."
+      },
+      {
+        "q": "Solve this in two different ways and compare them: Calculate 4,800 / 16 mentally.",
+        "a": "Expected result: 300. Two valid methods and a comparison are required."
+      },
+      {
+        "q": "Work backwards from the answer to reconstruct the question: 8,000.",
+        "a": "One valid reconstruction is: Calculate 125 x 64 using factors. Other equivalent questions are acceptable."
       },
       {
         "q": "Explain why this reasoning fails: Miro divides by 4 when multiplying by 25 but forgets to multiply by 100.",
@@ -4503,6 +5775,14 @@
       {
         "q": "Write one always, sometimes or never statement about today's learning and justify it.",
         "a": "Answers vary. A valid example and counterexample should support the classification."
+      },
+      {
+        "q": "Create a believable incorrect solution. Identify the exact step where the reasoning breaks.",
+        "a": "Answers vary. The error must be mathematically relevant and the correction must be precise."
+      },
+      {
+        "q": "Change one value or condition in a question. Explain what changes in the solution and what stays the same.",
+        "a": "Answers vary. The explanation must distinguish the mathematical structure from the changed value."
       }
     ],
     "exitQuestions": [
@@ -4604,12 +5884,28 @@
     ],
     "expected": [
       {
+        "q": "Estimate 6,782 x 49.",
+        "a": "About 6,800 x 50 = 340,000."
+      },
+      {
         "q": "Estimate 92,410 / 31.",
         "a": "About 90,000 / 30 = 3,000."
       },
       {
         "q": "Estimate 487,205 + 218,770 - 96,420.",
         "a": "About 490,000 + 220,000 - 100,000 = 610,000."
+      },
+      {
+        "q": "Solve this independently and show every stage: Estimate 6,782 x 49.",
+        "a": "About 6,800 x 50 = 340,000."
+      },
+      {
+        "q": "Use a second method or representation for: Estimate 92,410 / 31.",
+        "a": "Expected result: About 90,000 / 30 = 3,000. Method or representation may vary."
+      },
+      {
+        "q": "Check this result using an inverse, estimate or known fact: Estimate 487,205 + 218,770 - 96,420.",
+        "a": "Expected result: About 490,000 + 220,000 - 100,000 = 610,000. A valid check must be shown."
       },
       {
         "q": "A calculator shows 7,204 x 58 = 41,783. Explain without exact calculation why it is wrong.",
@@ -4622,12 +5918,28 @@
       {
         "q": "Write a complete sentence explaining how you checked one answer.",
         "a": "Answer should name an inverse, estimate, boundary, known fact or equivalent representation."
+      },
+      {
+        "q": "Write and solve a similar question to: Estimate 487,205 + 218,770 - 96,420.",
+        "a": "Answers vary. The new question must use the same mathematical structure and include a correct solution."
       }
     ],
     "higher": [
       {
         "q": "A calculator shows 7,204 x 58 = 41,783. Explain without exact calculation why it is wrong.",
         "a": "The product should be about 7,200 x 60 = 432,000, so the displayed answer is far too small."
+      },
+      {
+        "q": "Prove the answer to this question, rather than only calculating it: Estimate 6,782 x 49.",
+        "a": "Expected result: About 6,800 x 50 = 340,000. Proof or justification must match the lesson structure."
+      },
+      {
+        "q": "Solve this in two different ways and compare them: Estimate 92,410 / 31.",
+        "a": "Expected result: About 90,000 / 30 = 3,000. Two valid methods and a comparison are required."
+      },
+      {
+        "q": "Work backwards from the answer to reconstruct the question: About 490,000 + 220,000 - 100,000 = 610,000.",
+        "a": "One valid reconstruction is: Estimate 487,205 + 218,770 - 96,420. Other equivalent questions are acceptable."
       },
       {
         "q": "Explain why this reasoning fails: Miro rounds every number to one significant digit even when this gives a poor estimate.",
@@ -4644,6 +5956,14 @@
       {
         "q": "Write one always, sometimes or never statement about today's learning and justify it.",
         "a": "Answers vary. A valid example and counterexample should support the classification."
+      },
+      {
+        "q": "Create a believable incorrect solution. Identify the exact step where the reasoning breaks.",
+        "a": "Answers vary. The error must be mathematically relevant and the correction must be precise."
+      },
+      {
+        "q": "Change one value or condition in a question. Explain what changes in the solution and what stays the same.",
+        "a": "Answers vary. The explanation must distinguish the mathematical structure from the changed value."
       }
     ],
     "exitQuestions": [
@@ -4745,12 +6065,28 @@
     ],
     "expected": [
       {
+        "q": "Check 7,056 / 24 = 294.",
+        "a": "294 x 24 = 7,056, so the quotient is correct."
+      },
+      {
         "q": "Check 4,398 + 6,725 = 11,123.",
         "a": "11,123 - 6,725 = 4,398."
       },
       {
         "q": "Check 8,402 - 3,765 = 4,637.",
         "a": "4,637 + 3,765 = 8,402."
+      },
+      {
+        "q": "Solve this independently and show every stage: Check 7,056 / 24 = 294.",
+        "a": "294 x 24 = 7,056, so the quotient is correct."
+      },
+      {
+        "q": "Use a second method or representation for: Check 4,398 + 6,725 = 11,123.",
+        "a": "Expected result: 11,123 - 6,725 = 4,398. Method or representation may vary."
+      },
+      {
+        "q": "Check this result using an inverse, estimate or known fact: Check 8,402 - 3,765 = 4,637.",
+        "a": "Expected result: 4,637 + 3,765 = 8,402. A valid check must be shown."
       },
       {
         "q": "A division has quotient 318 remainder 7 and divisor 29. Find the dividend.",
@@ -4763,12 +6099,28 @@
       {
         "q": "Write a complete sentence explaining how you checked one answer.",
         "a": "Answer should name an inverse, estimate, boundary, known fact or equivalent representation."
+      },
+      {
+        "q": "Write and solve a similar question to: Check 8,402 - 3,765 = 4,637.",
+        "a": "Answers vary. The new question must use the same mathematical structure and include a correct solution."
       }
     ],
     "higher": [
       {
         "q": "A division has quotient 318 remainder 7 and divisor 29. Find the dividend.",
         "a": "9,229 because 318 x 29 + 7 = 9,229."
+      },
+      {
+        "q": "Prove the answer to this question, rather than only calculating it: Check 7,056 / 24 = 294.",
+        "a": "Expected result: 294 x 24 = 7,056, so the quotient is correct. Proof or justification must match the lesson structure."
+      },
+      {
+        "q": "Solve this in two different ways and compare them: Check 4,398 + 6,725 = 11,123.",
+        "a": "Expected result: 11,123 - 6,725 = 4,398. Two valid methods and a comparison are required."
+      },
+      {
+        "q": "Work backwards from the answer to reconstruct the question: 4,637 + 3,765 = 8,402.",
+        "a": "One valid reconstruction is: Check 8,402 - 3,765 = 4,637. Other equivalent questions are acceptable."
       },
       {
         "q": "Explain why this reasoning fails: Miro repeats the same operation and calls it an inverse check.",
@@ -4785,6 +6137,14 @@
       {
         "q": "Write one always, sometimes or never statement about today's learning and justify it.",
         "a": "Answers vary. A valid example and counterexample should support the classification."
+      },
+      {
+        "q": "Create a believable incorrect solution. Identify the exact step where the reasoning breaks.",
+        "a": "Answers vary. The error must be mathematically relevant and the correction must be precise."
+      },
+      {
+        "q": "Change one value or condition in a question. Explain what changes in the solution and what stays the same.",
+        "a": "Answers vary. The explanation must distinguish the mathematical structure from the changed value."
       }
     ],
     "exitQuestions": [
@@ -4886,12 +6246,28 @@
     ],
     "expected": [
       {
+        "q": "Choose an efficient method for 3,998 + 2,507 and calculate.",
+        "a": "Compensation: 4,000 + 2,507 - 2 = 6,505."
+      },
+      {
         "q": "Choose an efficient method for 6,300 / 25.",
         "a": "Multiply by 4 then divide by 100, or use known multiples: 252."
       },
       {
         "q": "Would you use mental or written calculation for 7,382 x 46? Explain and solve.",
         "a": "A written method is efficient; the product is 339,572."
+      },
+      {
+        "q": "Solve this independently and show every stage: Choose an efficient method for 3,998 + 2,507 and calculate.",
+        "a": "Compensation: 4,000 + 2,507 - 2 = 6,505."
+      },
+      {
+        "q": "Use a second method or representation for: Choose an efficient method for 6,300 / 25.",
+        "a": "Expected result: Multiply by 4 then divide by 100, or use known multiples: 252. Method or representation may vary."
+      },
+      {
+        "q": "Check this result using an inverse, estimate or known fact: Would you use mental or written calculation for 7,382 x 46? Explain and solve.",
+        "a": "Expected result: A written method is efficient; the product is 339,572. A valid check must be shown."
       },
       {
         "q": "Create one calculation best solved mentally and one best solved using a written method. Justify both choices.",
@@ -4904,12 +6280,28 @@
       {
         "q": "Write a complete sentence explaining how you checked one answer.",
         "a": "Answer should name an inverse, estimate, boundary, known fact or equivalent representation."
+      },
+      {
+        "q": "Write and solve a similar question to: Would you use mental or written calculation for 7,382 x 46? Explain and solve.",
+        "a": "Answers vary. The new question must use the same mathematical structure and include a correct solution."
       }
     ],
     "higher": [
       {
         "q": "Create one calculation best solved mentally and one best solved using a written method. Justify both choices.",
         "a": "Answers vary. The justification should refer to number structure and accuracy."
+      },
+      {
+        "q": "Prove the answer to this question, rather than only calculating it: Choose an efficient method for 3,998 + 2,507 and calculate.",
+        "a": "Expected result: Compensation: 4,000 + 2,507 - 2 = 6,505. Proof or justification must match the lesson structure."
+      },
+      {
+        "q": "Solve this in two different ways and compare them: Choose an efficient method for 6,300 / 25.",
+        "a": "Expected result: Multiply by 4 then divide by 100, or use known multiples: 252. Two valid methods and a comparison are required."
+      },
+      {
+        "q": "Work backwards from the answer to reconstruct the question: A written method is efficient; the product is 339,572.",
+        "a": "One valid reconstruction is: Would you use mental or written calculation for 7,382 x 46? Explain and solve. Other equivalent questions are acceptable."
       },
       {
         "q": "Explain why this reasoning fails: Miro believes the longest written method is always the safest choice.",
@@ -4926,6 +6318,14 @@
       {
         "q": "Write one always, sometimes or never statement about today's learning and justify it.",
         "a": "Answers vary. A valid example and counterexample should support the classification."
+      },
+      {
+        "q": "Create a believable incorrect solution. Identify the exact step where the reasoning breaks.",
+        "a": "Answers vary. The error must be mathematically relevant and the correction must be precise."
+      },
+      {
+        "q": "Change one value or condition in a question. Explain what changes in the solution and what stays the same.",
+        "a": "Answers vary. The explanation must distinguish the mathematical structure from the changed value."
       }
     ],
     "exitQuestions": [
@@ -5027,12 +6427,28 @@
     ],
     "expected": [
       {
+        "q": "A shop receives 48 boxes of 125 books and sells 3,760 books. How many remain?",
+        "a": "48 x 125, then subtract 3,760. The answer is 2,240."
+      },
+      {
         "q": "A club collects £18 from each of 236 members, then spends £1,875. How much remains?",
         "a": "£2,373."
       },
       {
         "q": "Write an operation plan for sharing 9,450 items into 35 equal groups and adding 12 spare items to each group.",
         "a": "Divide 9,450 by 35, then add 12. Each group has 282 items."
+      },
+      {
+        "q": "Solve this independently and show every stage: A shop receives 48 boxes of 125 books and sells 3,760 books. How many remain?",
+        "a": "48 x 125, then subtract 3,760. The answer is 2,240."
+      },
+      {
+        "q": "Use a second method or representation for: A club collects £18 from each of 236 members, then spends £1,875. How much remains?",
+        "a": "Expected result: £2,373. Method or representation may vary."
+      },
+      {
+        "q": "Check this result using an inverse, estimate or known fact: Write an operation plan for sharing 9,450 items into 35 equal groups and adding 12 spare items to each group.",
+        "a": "Expected result: Divide 9,450 by 35, then add 12. Each group has 282 items. A valid check must be shown."
       },
       {
         "q": "Write a two-step problem represented by (64 x 28) - 950.",
@@ -5045,12 +6461,28 @@
       {
         "q": "Write a complete sentence explaining how you checked one answer.",
         "a": "Answer should name an inverse, estimate, boundary, known fact or equivalent representation."
+      },
+      {
+        "q": "Write and solve a similar question to: Write an operation plan for sharing 9,450 items into 35 equal groups and adding 12 spare items to each group.",
+        "a": "Answers vary. The new question must use the same mathematical structure and include a correct solution."
       }
     ],
     "higher": [
       {
         "q": "Write a two-step problem represented by (64 x 28) - 950.",
         "a": "Answers vary. The final answer to the expression is 842."
+      },
+      {
+        "q": "Prove the answer to this question, rather than only calculating it: A shop receives 48 boxes of 125 books and sells 3,760 books. How many remain?",
+        "a": "Expected result: 48 x 125, then subtract 3,760. The answer is 2,240. Proof or justification must match the lesson structure."
+      },
+      {
+        "q": "Solve this in two different ways and compare them: A club collects £18 from each of 236 members, then spends £1,875. How much remains?",
+        "a": "Expected result: £2,373. Two valid methods and a comparison are required."
+      },
+      {
+        "q": "Work backwards from the answer to reconstruct the question: Divide 9,450 by 35, then add 12. Each group has 282 items.",
+        "a": "One valid reconstruction is: Write an operation plan for sharing 9,450 items into 35 equal groups and adding 12 spare items to each group. Other equivalent questions are acceptable."
       },
       {
         "q": "Explain why this reasoning fails: Miro begins calculating every number in the order it appears.",
@@ -5067,6 +6499,14 @@
       {
         "q": "Write one always, sometimes or never statement about today's learning and justify it.",
         "a": "Answers vary. A valid example and counterexample should support the classification."
+      },
+      {
+        "q": "Create a believable incorrect solution. Identify the exact step where the reasoning breaks.",
+        "a": "Answers vary. The error must be mathematically relevant and the correction must be precise."
+      },
+      {
+        "q": "Change one value or condition in a question. Explain what changes in the solution and what stays the same.",
+        "a": "Answers vary. The explanation must distinguish the mathematical structure from the changed value."
       }
     ],
     "exitQuestions": [
@@ -5168,12 +6608,28 @@
     ],
     "expected": [
       {
+        "q": "A venue has 125,000 seats. It sells 48,675 morning tickets and 39,890 evening tickets. How many remain?",
+        "a": "36,435 seats."
+      },
+      {
         "q": "A charity target is £500,000. It raises £187,650 then £204,875. How much more is needed?",
         "a": "£107,475."
       },
       {
         "q": "A reservoir holds 2,500,000 litres. It loses 384,750 litres and gains 275,600 litres. New volume?",
         "a": "2,390,850 litres."
+      },
+      {
+        "q": "Solve this independently and show every stage: A venue has 125,000 seats. It sells 48,675 morning tickets and 39,890 evening tickets. How many remain?",
+        "a": "36,435 seats."
+      },
+      {
+        "q": "Use a second method or representation for: A charity target is £500,000. It raises £187,650 then £204,875. How much more is needed?",
+        "a": "Expected result: £107,475. Method or representation may vary."
+      },
+      {
+        "q": "Check this result using an inverse, estimate or known fact: A reservoir holds 2,500,000 litres. It loses 384,750 litres and gains 275,600 litres. New volume?",
+        "a": "Expected result: 2,390,850 litres. A valid check must be shown."
       },
       {
         "q": "Create a three-step addition and subtraction problem with final answer 250,000.",
@@ -5186,12 +6642,28 @@
       {
         "q": "Write a complete sentence explaining how you checked one answer.",
         "a": "Answer should name an inverse, estimate, boundary, known fact or equivalent representation."
+      },
+      {
+        "q": "Write and solve a similar question to: A reservoir holds 2,500,000 litres. It loses 384,750 litres and gains 275,600 litres. New volume?",
+        "a": "Answers vary. The new question must use the same mathematical structure and include a correct solution."
       }
     ],
     "higher": [
       {
         "q": "Create a three-step addition and subtraction problem with final answer 250,000.",
         "a": "Answers vary. Every step must be labelled and accurate."
+      },
+      {
+        "q": "Prove the answer to this question, rather than only calculating it: A venue has 125,000 seats. It sells 48,675 morning tickets and 39,890 evening tickets. How many remain?",
+        "a": "Expected result: 36,435 seats. Proof or justification must match the lesson structure."
+      },
+      {
+        "q": "Solve this in two different ways and compare them: A charity target is £500,000. It raises £187,650 then £204,875. How much more is needed?",
+        "a": "Expected result: £107,475. Two valid methods and a comparison are required."
+      },
+      {
+        "q": "Work backwards from the answer to reconstruct the question: 2,390,850 litres.",
+        "a": "One valid reconstruction is: A reservoir holds 2,500,000 litres. It loses 384,750 litres and gains 275,600 litres. New volume? Other equivalent questions are acceptable."
       },
       {
         "q": "Explain why this reasoning fails: Miro subtracts the two ticket sales separately from the original but loses track of the first subtotal.",
@@ -5208,6 +6680,14 @@
       {
         "q": "Write one always, sometimes or never statement about today's learning and justify it.",
         "a": "Answers vary. A valid example and counterexample should support the classification."
+      },
+      {
+        "q": "Create a believable incorrect solution. Identify the exact step where the reasoning breaks.",
+        "a": "Answers vary. The error must be mathematically relevant and the correction must be precise."
+      },
+      {
+        "q": "Change one value or condition in a question. Explain what changes in the solution and what stays the same.",
+        "a": "Answers vary. The explanation must distinguish the mathematical structure from the changed value."
       }
     ],
     "exitQuestions": [
@@ -5309,12 +6789,28 @@
     ],
     "expected": [
       {
+        "q": "A warehouse has 36 pallets with 24 boxes each. It shares all boxes equally among 18 shops. Boxes per shop?",
+        "a": "48 boxes."
+      },
+      {
         "q": "A printer makes 1,250 leaflets per hour for 28 hours and packs them in bundles of 50. How many bundles?",
         "a": "700 bundles."
       },
       {
         "q": "A farmer packs 9,216 apples in trays of 24, then places 16 trays on each trolley. How many trolleys?",
         "a": "24 trolleys."
+      },
+      {
+        "q": "Solve this independently and show every stage: A warehouse has 36 pallets with 24 boxes each. It shares all boxes equally among 18 shops. Boxes per shop?",
+        "a": "48 boxes."
+      },
+      {
+        "q": "Use a second method or representation for: A printer makes 1,250 leaflets per hour for 28 hours and packs them in bundles of 50. How many bundles?",
+        "a": "Expected result: 700 bundles. Method or representation may vary."
+      },
+      {
+        "q": "Check this result using an inverse, estimate or known fact: A farmer packs 9,216 apples in trays of 24, then places 16 trays on each trolley. How many trolleys?",
+        "a": "Expected result: 24 trolleys. A valid check must be shown."
       },
       {
         "q": "A result is 315 after a two-step multiply-then-divide calculation. Create a valid problem.",
@@ -5327,12 +6823,28 @@
       {
         "q": "Write a complete sentence explaining how you checked one answer.",
         "a": "Answer should name an inverse, estimate, boundary, known fact or equivalent representation."
+      },
+      {
+        "q": "Write and solve a similar question to: A farmer packs 9,216 apples in trays of 24, then places 16 trays on each trolley. How many trolleys?",
+        "a": "Answers vary. The new question must use the same mathematical structure and include a correct solution."
       }
     ],
     "higher": [
       {
         "q": "A result is 315 after a two-step multiply-then-divide calculation. Create a valid problem.",
         "a": "Answers vary, for example 45 x 21 / 3 = 315."
+      },
+      {
+        "q": "Prove the answer to this question, rather than only calculating it: A warehouse has 36 pallets with 24 boxes each. It shares all boxes equally among 18 shops. Boxes per shop?",
+        "a": "Expected result: 48 boxes. Proof or justification must match the lesson structure."
+      },
+      {
+        "q": "Solve this in two different ways and compare them: A printer makes 1,250 leaflets per hour for 28 hours and packs them in bundles of 50. How many bundles?",
+        "a": "Expected result: 700 bundles. Two valid methods and a comparison are required."
+      },
+      {
+        "q": "Work backwards from the answer to reconstruct the question: 24 trolleys.",
+        "a": "One valid reconstruction is: A farmer packs 9,216 apples in trays of 24, then places 16 trays on each trolley. How many trolleys? Other equivalent questions are acceptable."
       },
       {
         "q": "Explain why this reasoning fails: Miro rounds an intermediate exact answer before completing the second step.",
@@ -5349,6 +6861,14 @@
       {
         "q": "Write one always, sometimes or never statement about today's learning and justify it.",
         "a": "Answers vary. A valid example and counterexample should support the classification."
+      },
+      {
+        "q": "Create a believable incorrect solution. Identify the exact step where the reasoning breaks.",
+        "a": "Answers vary. The error must be mathematically relevant and the correction must be precise."
+      },
+      {
+        "q": "Change one value or condition in a question. Explain what changes in the solution and what stays the same.",
+        "a": "Answers vary. The explanation must distinguish the mathematical structure from the changed value."
       }
     ],
     "exitQuestions": [
@@ -5450,12 +6970,28 @@
     ],
     "expected": [
       {
+        "q": "A class has a £2,500 budget and buys 18 tablets cases at £76 each. How much remains?",
+        "a": "£1,132."
+      },
+      {
         "q": "A 12 km route is split into 8 equal stages. How many metres per stage?",
         "a": "1,500 m."
       },
       {
         "q": "A tank contains 4,500 litres. It fills 28 containers of 125 litres. How much remains?",
         "a": "1,000 litres."
+      },
+      {
+        "q": "Solve this independently and show every stage: A class has a £2,500 budget and buys 18 tablets cases at £76 each. How much remains?",
+        "a": "£1,132."
+      },
+      {
+        "q": "Use a second method or representation for: A 12 km route is split into 8 equal stages. How many metres per stage?",
+        "a": "Expected result: 1,500 m. Method or representation may vary."
+      },
+      {
+        "q": "Check this result using an inverse, estimate or known fact: A tank contains 4,500 litres. It fills 28 containers of 125 litres. How much remains?",
+        "a": "Expected result: 1,000 litres. A valid check must be shown."
       },
       {
         "q": "A £6,000 budget must cover 48 identical items and leave at least £720. What is the greatest whole-pound price per item?",
@@ -5468,12 +7004,28 @@
       {
         "q": "Write a complete sentence explaining how you checked one answer.",
         "a": "Answer should name an inverse, estimate, boundary, known fact or equivalent representation."
+      },
+      {
+        "q": "Write and solve a similar question to: A tank contains 4,500 litres. It fills 28 containers of 125 litres. How much remains?",
+        "a": "Answers vary. The new question must use the same mathematical structure and include a correct solution."
       }
     ],
     "higher": [
       {
         "q": "A £6,000 budget must cover 48 identical items and leave at least £720. What is the greatest whole-pound price per item?",
         "a": "£110."
+      },
+      {
+        "q": "Prove the answer to this question, rather than only calculating it: A class has a £2,500 budget and buys 18 tablets cases at £76 each. How much remains?",
+        "a": "Expected result: £1,132. Proof or justification must match the lesson structure."
+      },
+      {
+        "q": "Solve this in two different ways and compare them: A 12 km route is split into 8 equal stages. How many metres per stage?",
+        "a": "Expected result: 1,500 m. Two valid methods and a comparison are required."
+      },
+      {
+        "q": "Work backwards from the answer to reconstruct the question: 1,000 litres.",
+        "a": "One valid reconstruction is: A tank contains 4,500 litres. It fills 28 containers of 125 litres. How much remains? Other equivalent questions are acceptable."
       },
       {
         "q": "Explain why this reasoning fails: Miro mixes pounds and pence or kilometres and metres in one calculation.",
@@ -5490,6 +7042,14 @@
       {
         "q": "Write one always, sometimes or never statement about today's learning and justify it.",
         "a": "Answers vary. A valid example and counterexample should support the classification."
+      },
+      {
+        "q": "Create a believable incorrect solution. Identify the exact step where the reasoning breaks.",
+        "a": "Answers vary. The error must be mathematically relevant and the correction must be precise."
+      },
+      {
+        "q": "Change one value or condition in a question. Explain what changes in the solution and what stays the same.",
+        "a": "Answers vary. The explanation must distinguish the mathematical structure from the changed value."
       }
     ],
     "exitQuestions": [
@@ -5591,12 +7151,28 @@
     ],
     "expected": [
       {
+        "q": "Two methods solve 48 x 125 - 3,760. One multiplies first; one subtracts first. Which is valid?",
+        "a": "Multiplication must represent the total books first, so multiply first. The answer is 2,240."
+      },
+      {
         "q": "A solution to 3,840 / 24 x 15 gives 10. Find the error and correct it.",
         "a": "3,840 / 24 = 160, then 160 x 15 = 2,400."
       },
       {
         "q": "Solve 96 x 45 + 8,640 / 32.",
         "a": "4,590."
+      },
+      {
+        "q": "Solve this independently and show every stage: Two methods solve 48 x 125 - 3,760. One multiplies first; one subtracts first. Which is valid?",
+        "a": "Multiplication must represent the total books first, so multiply first. The answer is 2,240."
+      },
+      {
+        "q": "Use a second method or representation for: A solution to 3,840 / 24 x 15 gives 10. Find the error and correct it.",
+        "a": "Expected result: 3,840 / 24 = 160, then 160 x 15 = 2,400. Method or representation may vary."
+      },
+      {
+        "q": "Check this result using an inverse, estimate or known fact: Solve 96 x 45 + 8,640 / 32.",
+        "a": "Expected result: 4,590. A valid check must be shown."
       },
       {
         "q": "Write a multi-step problem with an unnecessary piece of information and explain why it is unnecessary.",
@@ -5609,12 +7185,28 @@
       {
         "q": "Write a complete sentence explaining how you checked one answer.",
         "a": "Answer should name an inverse, estimate, boundary, known fact or equivalent representation."
+      },
+      {
+        "q": "Write and solve a similar question to: Solve 96 x 45 + 8,640 / 32.",
+        "a": "Answers vary. The new question must use the same mathematical structure and include a correct solution."
       }
     ],
     "higher": [
       {
         "q": "Write a multi-step problem with an unnecessary piece of information and explain why it is unnecessary.",
         "a": "Answers vary. The unused information must not affect the required calculation."
+      },
+      {
+        "q": "Prove the answer to this question, rather than only calculating it: Two methods solve 48 x 125 - 3,760. One multiplies first; one subtracts first. Which is valid?",
+        "a": "Expected result: Multiplication must represent the total books first, so multiply first. The answer is 2,240. Proof or justification must match the lesson structure."
+      },
+      {
+        "q": "Solve this in two different ways and compare them: A solution to 3,840 / 24 x 15 gives 10. Find the error and correct it.",
+        "a": "Expected result: 3,840 / 24 = 160, then 160 x 15 = 2,400. Two valid methods and a comparison are required."
+      },
+      {
+        "q": "Work backwards from the answer to reconstruct the question: 4,590.",
+        "a": "One valid reconstruction is: Solve 96 x 45 + 8,640 / 32. Other equivalent questions are acceptable."
       },
       {
         "q": "Explain why this reasoning fails: Miro assumes every number in a word problem must be used.",
@@ -5631,6 +7223,14 @@
       {
         "q": "Write one always, sometimes or never statement about today's learning and justify it.",
         "a": "Answers vary. A valid example and counterexample should support the classification."
+      },
+      {
+        "q": "Create a believable incorrect solution. Identify the exact step where the reasoning breaks.",
+        "a": "Answers vary. The error must be mathematically relevant and the correction must be precise."
+      },
+      {
+        "q": "Change one value or condition in a question. Explain what changes in the solution and what stays the same.",
+        "a": "Answers vary. The explanation must distinguish the mathematical structure from the changed value."
       }
     ],
     "exitQuestions": [
@@ -5733,12 +7333,28 @@
     ],
     "expected": [
       {
+        "q": "Calculate 638,475 + 274,806 and 902,140 - 386,759.",
+        "a": "913,281 and 515,381."
+      },
+      {
         "q": "Calculate 6,304 x 27.",
         "a": "170,208."
       },
       {
         "q": "Calculate 8,736 / 24.",
         "a": "364."
+      },
+      {
+        "q": "Solve this independently and show every stage: Calculate 638,475 + 274,806 and 902,140 - 386,759.",
+        "a": "913,281 and 515,381."
+      },
+      {
+        "q": "Use a second method or representation for: Calculate 6,304 x 27.",
+        "a": "Expected result: 170,208. Method or representation may vary."
+      },
+      {
+        "q": "Check this result using an inverse, estimate or known fact: Calculate 8,736 / 24.",
+        "a": "Expected result: 364. A valid check must be shown."
       },
       {
         "q": "Choose operations to make a true equation using 48, 12 and 4.",
@@ -5751,12 +7367,28 @@
       {
         "q": "Write a complete sentence explaining how you checked one answer.",
         "a": "Answer should name an inverse, estimate, boundary, known fact or equivalent representation."
+      },
+      {
+        "q": "Write and solve a similar question to: Calculate 8,736 / 24.",
+        "a": "Answers vary. The new question must use the same mathematical structure and include a correct solution."
       }
     ],
     "higher": [
       {
         "q": "Choose operations to make a true equation using 48, 12 and 4.",
         "a": "Examples include 48 / 12 = 4 and 12 x 4 = 48."
+      },
+      {
+        "q": "Prove the answer to this question, rather than only calculating it: Calculate 638,475 + 274,806 and 902,140 - 386,759.",
+        "a": "Expected result: 913,281 and 515,381. Proof or justification must match the lesson structure."
+      },
+      {
+        "q": "Solve this in two different ways and compare them: Calculate 6,304 x 27.",
+        "a": "Expected result: 170,208. Two valid methods and a comparison are required."
+      },
+      {
+        "q": "Work backwards from the answer to reconstruct the question: 364.",
+        "a": "One valid reconstruction is: Calculate 8,736 / 24. Other equivalent questions are acceptable."
       },
       {
         "q": "Explain why this reasoning fails: Miro switches methods without checking which operation the question uses.",
@@ -5773,6 +7405,14 @@
       {
         "q": "Write one always, sometimes or never statement about today's learning and justify it.",
         "a": "Answers vary. A valid example and counterexample should support the classification."
+      },
+      {
+        "q": "Create a believable incorrect solution. Identify the exact step where the reasoning breaks.",
+        "a": "Answers vary. The error must be mathematically relevant and the correction must be precise."
+      },
+      {
+        "q": "Change one value or condition in a question. Explain what changes in the solution and what stays the same.",
+        "a": "Answers vary. The explanation must distinguish the mathematical structure from the changed value."
       }
     ],
     "exitQuestions": [
@@ -5875,12 +7515,28 @@
     ],
     "expected": [
       {
+        "q": "Calculate 34.75 + 8.906.",
+        "a": "43.656."
+      },
+      {
         "q": "Calculate 50 - 17.485.",
         "a": "32.515."
       },
       {
         "q": "Calculate 6.4 x 7.",
         "a": "44.8."
+      },
+      {
+        "q": "Solve this independently and show every stage: Calculate 34.75 + 8.906.",
+        "a": "43.656."
+      },
+      {
+        "q": "Use a second method or representation for: Calculate 50 - 17.485.",
+        "a": "Expected result: 32.515. Method or representation may vary."
+      },
+      {
+        "q": "Check this result using an inverse, estimate or known fact: Calculate 6.4 x 7.",
+        "a": "Expected result: 44.8. A valid check must be shown."
       },
       {
         "q": "A number divided by 8 is 3.75. What is the number?",
@@ -5893,12 +7549,28 @@
       {
         "q": "Write a complete sentence explaining how you checked one answer.",
         "a": "Answer should name an inverse, estimate, boundary, known fact or equivalent representation."
+      },
+      {
+        "q": "Write and solve a similar question to: Calculate 6.4 x 7.",
+        "a": "Answers vary. The new question must use the same mathematical structure and include a correct solution."
       }
     ],
     "higher": [
       {
         "q": "A number divided by 8 is 3.75. What is the number?",
         "a": "30."
+      },
+      {
+        "q": "Prove the answer to this question, rather than only calculating it: Calculate 34.75 + 8.906.",
+        "a": "Expected result: 43.656. Proof or justification must match the lesson structure."
+      },
+      {
+        "q": "Solve this in two different ways and compare them: Calculate 50 - 17.485.",
+        "a": "Expected result: 32.515. Two valid methods and a comparison are required."
+      },
+      {
+        "q": "Work backwards from the answer to reconstruct the question: 44.8.",
+        "a": "One valid reconstruction is: Calculate 6.4 x 7. Other equivalent questions are acceptable."
       },
       {
         "q": "Explain why this reasoning fails: Miro lines up the final digits rather than the decimal points.",
@@ -5915,6 +7587,14 @@
       {
         "q": "Write one always, sometimes or never statement about today's learning and justify it.",
         "a": "Answers vary. A valid example and counterexample should support the classification."
+      },
+      {
+        "q": "Create a believable incorrect solution. Identify the exact step where the reasoning breaks.",
+        "a": "Answers vary. The error must be mathematically relevant and the correction must be precise."
+      },
+      {
+        "q": "Change one value or condition in a question. Explain what changes in the solution and what stays the same.",
+        "a": "Answers vary. The explanation must distinguish the mathematical structure from the changed value."
       }
     ],
     "exitQuestions": [
@@ -6017,12 +7697,28 @@
     ],
     "expected": [
       {
+        "q": "Calculate 3/4 + 5/8.",
+        "a": "11/8 or 1 3/8."
+      },
+      {
         "q": "Calculate 2 1/3 - 5/6.",
         "a": "1 1/2."
       },
       {
         "q": "Find 7/12 of 360.",
         "a": "210."
+      },
+      {
+        "q": "Solve this independently and show every stage: Calculate 3/4 + 5/8.",
+        "a": "11/8 or 1 3/8."
+      },
+      {
+        "q": "Use a second method or representation for: Calculate 2 1/3 - 5/6.",
+        "a": "Expected result: 1 1/2. Method or representation may vary."
+      },
+      {
+        "q": "Check this result using an inverse, estimate or known fact: Find 7/12 of 360.",
+        "a": "Expected result: 210. A valid check must be shown."
       },
       {
         "q": "Create two different fractions greater than 1 whose sum is 3.",
@@ -6035,12 +7731,28 @@
       {
         "q": "Write a complete sentence explaining how you checked one answer.",
         "a": "Answer should name an inverse, estimate, boundary, known fact or equivalent representation."
+      },
+      {
+        "q": "Write and solve a similar question to: Find 7/12 of 360.",
+        "a": "Answers vary. The new question must use the same mathematical structure and include a correct solution."
       }
     ],
     "higher": [
       {
         "q": "Create two different fractions greater than 1 whose sum is 3.",
         "a": "Answers vary, for example 3/2 + 3/2 = 3."
+      },
+      {
+        "q": "Prove the answer to this question, rather than only calculating it: Calculate 3/4 + 5/8.",
+        "a": "Expected result: 11/8 or 1 3/8. Proof or justification must match the lesson structure."
+      },
+      {
+        "q": "Solve this in two different ways and compare them: Calculate 2 1/3 - 5/6.",
+        "a": "Expected result: 1 1/2. Two valid methods and a comparison are required."
+      },
+      {
+        "q": "Work backwards from the answer to reconstruct the question: 210.",
+        "a": "One valid reconstruction is: Find 7/12 of 360. Other equivalent questions are acceptable."
       },
       {
         "q": "Explain why this reasoning fails: Miro adds both numerators and denominators when adding unlike fractions.",
@@ -6057,6 +7769,14 @@
       {
         "q": "Write one always, sometimes or never statement about today's learning and justify it.",
         "a": "Answers vary. A valid example and counterexample should support the classification."
+      },
+      {
+        "q": "Create a believable incorrect solution. Identify the exact step where the reasoning breaks.",
+        "a": "Answers vary. The error must be mathematically relevant and the correction must be precise."
+      },
+      {
+        "q": "Change one value or condition in a question. Explain what changes in the solution and what stays the same.",
+        "a": "Answers vary. The explanation must distinguish the mathematical structure from the changed value."
       }
     ],
     "exitQuestions": [
@@ -6159,12 +7879,28 @@
     ],
     "expected": [
       {
+        "q": "Calculate 3,250 / 25 + 4.8 x 6.",
+        "a": "158.8."
+      },
+      {
         "q": "Calculate 2/3 of 450, then subtract 75.",
         "a": "225."
       },
       {
         "q": "Calculate 6,000 - 48 x 75.",
         "a": "2,400."
+      },
+      {
+        "q": "Solve this independently and show every stage: Calculate 3,250 / 25 + 4.8 x 6.",
+        "a": "158.8."
+      },
+      {
+        "q": "Use a second method or representation for: Calculate 2/3 of 450, then subtract 75.",
+        "a": "Expected result: 225. Method or representation may vary."
+      },
+      {
+        "q": "Check this result using an inverse, estimate or known fact: Calculate 6,000 - 48 x 75.",
+        "a": "Expected result: 2,400. A valid check must be shown."
       },
       {
         "q": "Write a mixed calculation with answer 100 using a fraction and a whole-number operation.",
@@ -6177,12 +7913,28 @@
       {
         "q": "Write a complete sentence explaining how you checked one answer.",
         "a": "Answer should name an inverse, estimate, boundary, known fact or equivalent representation."
+      },
+      {
+        "q": "Write and solve a similar question to: Calculate 6,000 - 48 x 75.",
+        "a": "Answers vary. The new question must use the same mathematical structure and include a correct solution."
       }
     ],
     "higher": [
       {
         "q": "Write a mixed calculation with answer 100 using a fraction and a whole-number operation.",
         "a": "Answers vary, for example 1/2 of 240 - 20 = 100."
+      },
+      {
+        "q": "Prove the answer to this question, rather than only calculating it: Calculate 3,250 / 25 + 4.8 x 6.",
+        "a": "Expected result: 158.8. Proof or justification must match the lesson structure."
+      },
+      {
+        "q": "Solve this in two different ways and compare them: Calculate 2/3 of 450, then subtract 75.",
+        "a": "Expected result: 225. Two valid methods and a comparison are required."
+      },
+      {
+        "q": "Work backwards from the answer to reconstruct the question: 2,400.",
+        "a": "One valid reconstruction is: Calculate 6,000 - 48 x 75. Other equivalent questions are acceptable."
       },
       {
         "q": "Explain why this reasoning fails: Miro carries a method from one number type into the next without checking place value or equivalence.",
@@ -6199,6 +7951,14 @@
       {
         "q": "Write one always, sometimes or never statement about today's learning and justify it.",
         "a": "Answers vary. A valid example and counterexample should support the classification."
+      },
+      {
+        "q": "Create a believable incorrect solution. Identify the exact step where the reasoning breaks.",
+        "a": "Answers vary. The error must be mathematically relevant and the correction must be precise."
+      },
+      {
+        "q": "Change one value or condition in a question. Explain what changes in the solution and what stays the same.",
+        "a": "Answers vary. The explanation must distinguish the mathematical structure from the changed value."
       }
     ],
     "exitQuestions": [
@@ -6301,12 +8061,28 @@
     ],
     "expected": [
       {
+        "q": "If 4,725 / 35 = 135, find 4,725 / 350.",
+        "a": "13.5."
+      },
+      {
         "q": "If 48 x 125 = 6,000, find 4.8 x 125.",
         "a": "600."
       },
       {
         "q": "Which is greater: 5/6 of 420 or 0.82 of 420?",
         "a": "5/6 of 420 = 350; 0.82 of 420 = 344.4, so 5/6 is greater."
+      },
+      {
+        "q": "Solve this independently and show every stage: If 4,725 / 35 = 135, find 4,725 / 350.",
+        "a": "13.5."
+      },
+      {
+        "q": "Use a second method or representation for: If 48 x 125 = 6,000, find 4.8 x 125.",
+        "a": "Expected result: 600. Method or representation may vary."
+      },
+      {
+        "q": "Check this result using an inverse, estimate or known fact: Which is greater: 5/6 of 420 or 0.82 of 420?",
+        "a": "Expected result: 5/6 of 420 = 350; 0.82 of 420 = 344.4, so 5/6 is greater. A valid check must be shown."
       },
       {
         "q": "Create a chain of three related facts from 2,304 x 27 = 62,208.",
@@ -6319,12 +8095,28 @@
       {
         "q": "Write a complete sentence explaining how you checked one answer.",
         "a": "Answer should name an inverse, estimate, boundary, known fact or equivalent representation."
+      },
+      {
+        "q": "Write and solve a similar question to: Which is greater: 5/6 of 420 or 0.82 of 420?",
+        "a": "Answers vary. The new question must use the same mathematical structure and include a correct solution."
       }
     ],
     "higher": [
       {
         "q": "Create a chain of three related facts from 2,304 x 27 = 62,208.",
         "a": "Answers vary, for example 62,208 / 27 = 2,304 and 230.4 x 27 = 6,220.8."
+      },
+      {
+        "q": "Prove the answer to this question, rather than only calculating it: If 4,725 / 35 = 135, find 4,725 / 350.",
+        "a": "Expected result: 13.5. Proof or justification must match the lesson structure."
+      },
+      {
+        "q": "Solve this in two different ways and compare them: If 48 x 125 = 6,000, find 4.8 x 125.",
+        "a": "Expected result: 600. Two valid methods and a comparison are required."
+      },
+      {
+        "q": "Work backwards from the answer to reconstruct the question: 5/6 of 420 = 350; 0.82 of 420 = 344.4, so 5/6 is greater.",
+        "a": "One valid reconstruction is: Which is greater: 5/6 of 420 or 0.82 of 420? Other equivalent questions are acceptable."
       },
       {
         "q": "Explain why this reasoning fails: Miro changes one factor by ten but expects the product to stay unchanged.",
@@ -6341,6 +8133,14 @@
       {
         "q": "Write one always, sometimes or never statement about today's learning and justify it.",
         "a": "Answers vary. A valid example and counterexample should support the classification."
+      },
+      {
+        "q": "Create a believable incorrect solution. Identify the exact step where the reasoning breaks.",
+        "a": "Answers vary. The error must be mathematically relevant and the correction must be precise."
+      },
+      {
+        "q": "Change one value or condition in a question. Explain what changes in the solution and what stays the same.",
+        "a": "Answers vary. The explanation must distinguish the mathematical structure from the changed value."
       }
     ],
     "exitQuestions": [
@@ -6442,12 +8242,28 @@
     ],
     "expected": [
       {
+        "q": "Order 6,908,210, 6,890,201 and 6,980,120, then round each to the nearest 100,000.",
+        "a": "Order: 6,890,201; 6,908,210; 6,980,120. Rounded: 6,900,000; 6,900,000; 7,000,000."
+      },
+      {
         "q": "Find the interval from -18 to 27.",
         "a": "45."
       },
       {
         "q": "Give the range of whole numbers that round to 3,600,000 to the nearest 100,000.",
         "a": "3,550,000 to 3,649,999."
+      },
+      {
+        "q": "Solve this independently and show every stage: Order 6,908,210, 6,890,201 and 6,980,120, then round each to the nearest 100,000.",
+        "a": "Order: 6,890,201; 6,908,210; 6,980,120. Rounded: 6,900,000; 6,900,000; 7,000,000."
+      },
+      {
+        "q": "Use a second method or representation for: Find the interval from -18 to 27.",
+        "a": "Expected result: 45. Method or representation may vary."
+      },
+      {
+        "q": "Check this result using an inverse, estimate or known fact: Give the range of whole numbers that round to 3,600,000 to the nearest 100,000.",
+        "a": "Expected result: 3,550,000 to 3,649,999. A valid check must be shown."
       },
       {
         "q": "Create a seven-digit number that rounds down to 5,000,000 to the nearest million and up to 5,400,000 to the nearest 100,000.",
@@ -6460,12 +8276,28 @@
       {
         "q": "Write a complete sentence explaining how you checked one answer.",
         "a": "Answer should name an inverse, estimate, boundary, known fact or equivalent representation."
+      },
+      {
+        "q": "Write and solve a similar question to: Give the range of whole numbers that round to 3,600,000 to the nearest 100,000.",
+        "a": "Answers vary. The new question must use the same mathematical structure and include a correct solution."
       }
     ],
     "higher": [
       {
         "q": "Create a seven-digit number that rounds down to 5,000,000 to the nearest million and up to 5,400,000 to the nearest 100,000.",
         "a": "Answers vary, for example 5,360,000."
+      },
+      {
+        "q": "Prove the answer to this question, rather than only calculating it: Order 6,908,210, 6,890,201 and 6,980,120, then round each to the nearest 100,000.",
+        "a": "Expected result: Order: 6,890,201; 6,908,210; 6,980,120. Rounded: 6,900,000; 6,900,000; 7,000,000. Proof or justification must match the lesson structure."
+      },
+      {
+        "q": "Solve this in two different ways and compare them: Find the interval from -18 to 27.",
+        "a": "Expected result: 45. Two valid methods and a comparison are required."
+      },
+      {
+        "q": "Work backwards from the answer to reconstruct the question: 3,550,000 to 3,649,999.",
+        "a": "One valid reconstruction is: Give the range of whole numbers that round to 3,600,000 to the nearest 100,000. Other equivalent questions are acceptable."
       },
       {
         "q": "Explain why this reasoning fails: Miro applies one rounding rule to every requested place.",
@@ -6482,6 +8314,14 @@
       {
         "q": "Write one always, sometimes or never statement about today's learning and justify it.",
         "a": "Answers vary. A valid example and counterexample should support the classification."
+      },
+      {
+        "q": "Create a believable incorrect solution. Identify the exact step where the reasoning breaks.",
+        "a": "Answers vary. The error must be mathematically relevant and the correction must be precise."
+      },
+      {
+        "q": "Change one value or condition in a question. Explain what changes in the solution and what stays the same.",
+        "a": "Answers vary. The explanation must distinguish the mathematical structure from the changed value."
       }
     ],
     "exitQuestions": [
@@ -6583,12 +8423,28 @@
     ],
     "expected": [
       {
+        "q": "Calculate 4,308 x 36 and check using estimation.",
+        "a": "155,088; estimate about 4,300 x 40 = 172,000."
+      },
+      {
         "q": "Calculate 9,072 / 28.",
         "a": "324."
       },
       {
         "q": "A coach holds 46 people. How many coaches are needed for 4,375 people?",
         "a": "96 coaches."
+      },
+      {
+        "q": "Solve this independently and show every stage: Calculate 4,308 x 36 and check using estimation.",
+        "a": "155,088; estimate about 4,300 x 40 = 172,000."
+      },
+      {
+        "q": "Use a second method or representation for: Calculate 9,072 / 28.",
+        "a": "Expected result: 324. Method or representation may vary."
+      },
+      {
+        "q": "Check this result using an inverse, estimate or known fact: A coach holds 46 people. How many coaches are needed for 4,375 people?",
+        "a": "Expected result: 96 coaches. A valid check must be shown."
       },
       {
         "q": "Find a four-digit number that divided by 32 gives quotient 125 remainder 9.",
@@ -6601,12 +8457,28 @@
       {
         "q": "Write a complete sentence explaining how you checked one answer.",
         "a": "Answer should name an inverse, estimate, boundary, known fact or equivalent representation."
+      },
+      {
+        "q": "Write and solve a similar question to: A coach holds 46 people. How many coaches are needed for 4,375 people?",
+        "a": "Answers vary. The new question must use the same mathematical structure and include a correct solution."
       }
     ],
     "higher": [
       {
         "q": "Find a four-digit number that divided by 32 gives quotient 125 remainder 9.",
         "a": "4,009."
+      },
+      {
+        "q": "Prove the answer to this question, rather than only calculating it: Calculate 4,308 x 36 and check using estimation.",
+        "a": "Expected result: 155,088; estimate about 4,300 x 40 = 172,000. Proof or justification must match the lesson structure."
+      },
+      {
+        "q": "Solve this in two different ways and compare them: Calculate 9,072 / 28.",
+        "a": "Expected result: 324. Two valid methods and a comparison are required."
+      },
+      {
+        "q": "Work backwards from the answer to reconstruct the question: 96 coaches.",
+        "a": "One valid reconstruction is: A coach holds 46 people. How many coaches are needed for 4,375 people? Other equivalent questions are acceptable."
       },
       {
         "q": "Explain why this reasoning fails: Miro treats a remainder as the final answer without reading the context.",
@@ -6623,6 +8495,14 @@
       {
         "q": "Write one always, sometimes or never statement about today's learning and justify it.",
         "a": "Answers vary. A valid example and counterexample should support the classification."
+      },
+      {
+        "q": "Create a believable incorrect solution. Identify the exact step where the reasoning breaks.",
+        "a": "Answers vary. The error must be mathematically relevant and the correction must be precise."
+      },
+      {
+        "q": "Change one value or condition in a question. Explain what changes in the solution and what stays the same.",
+        "a": "Answers vary. The explanation must distinguish the mathematical structure from the changed value."
       }
     ],
     "exitQuestions": [
@@ -6724,12 +8604,28 @@
     ],
     "expected": [
       {
+        "q": "Find the HCF and LCM of 24 and 36.",
+        "a": "HCF 12; LCM 72."
+      },
+      {
         "q": "Calculate 100 - 6 x (8 + 3).",
         "a": "34."
       },
       {
         "q": "Is 221 prime?",
         "a": "No, 221 = 13 x 17."
+      },
+      {
+        "q": "Solve this independently and show every stage: Find the HCF and LCM of 24 and 36.",
+        "a": "HCF 12; LCM 72."
+      },
+      {
+        "q": "Use a second method or representation for: Calculate 100 - 6 x (8 + 3).",
+        "a": "Expected result: 34. Method or representation may vary."
+      },
+      {
+        "q": "Check this result using an inverse, estimate or known fact: Is 221 prime?",
+        "a": "Expected result: No, 221 = 13 x 17. A valid check must be shown."
       },
       {
         "q": "Insert brackets and operations between 8, 6, 4 and 2 to make 40.",
@@ -6742,12 +8638,28 @@
       {
         "q": "Write a complete sentence explaining how you checked one answer.",
         "a": "Answer should name an inverse, estimate, boundary, known fact or equivalent representation."
+      },
+      {
+        "q": "Write and solve a similar question to: Is 221 prime?",
+        "a": "Answers vary. The new question must use the same mathematical structure and include a correct solution."
       }
     ],
     "higher": [
       {
         "q": "Insert brackets and operations between 8, 6, 4 and 2 to make 40.",
         "a": "8 x 6 - 4 x 2 = 40. Other correct expressions are acceptable."
+      },
+      {
+        "q": "Prove the answer to this question, rather than only calculating it: Find the HCF and LCM of 24 and 36.",
+        "a": "Expected result: HCF 12; LCM 72. Proof or justification must match the lesson structure."
+      },
+      {
+        "q": "Solve this in two different ways and compare them: Calculate 100 - 6 x (8 + 3).",
+        "a": "Expected result: 34. Two valid methods and a comparison are required."
+      },
+      {
+        "q": "Work backwards from the answer to reconstruct the question: No, 221 = 13 x 17.",
+        "a": "One valid reconstruction is: Is 221 prime? Other equivalent questions are acceptable."
       },
       {
         "q": "Explain why this reasoning fails: Miro assumes brackets always make an expression larger.",
@@ -6764,6 +8676,14 @@
       {
         "q": "Write one always, sometimes or never statement about today's learning and justify it.",
         "a": "Answers vary. A valid example and counterexample should support the classification."
+      },
+      {
+        "q": "Create a believable incorrect solution. Identify the exact step where the reasoning breaks.",
+        "a": "Answers vary. The error must be mathematically relevant and the correction must be precise."
+      },
+      {
+        "q": "Change one value or condition in a question. Explain what changes in the solution and what stays the same.",
+        "a": "Answers vary. The explanation must distinguish the mathematical structure from the changed value."
       }
     ],
     "exitQuestions": [
@@ -6865,12 +8785,28 @@
     ],
     "expected": [
       {
+        "q": "A school buys 32 packs of 145 books and gives 18 books to each of 240 pupils. How many books remain?",
+        "a": "320 books."
+      },
+      {
         "q": "A journey starts at -12 m, rises 37 m, then drops 18 m. Final position?",
         "a": "7 m."
       },
       {
         "q": "A budget of £20,000 pays for 48 items at £375 each. How much remains?",
         "a": "£2,000."
+      },
+      {
+        "q": "Solve this independently and show every stage: A school buys 32 packs of 145 books and gives 18 books to each of 240 pupils. How many books remain?",
+        "a": "320 books."
+      },
+      {
+        "q": "Use a second method or representation for: A journey starts at -12 m, rises 37 m, then drops 18 m. Final position?",
+        "a": "Expected result: 7 m. Method or representation may vary."
+      },
+      {
+        "q": "Check this result using an inverse, estimate or known fact: A budget of £20,000 pays for 48 items at £375 each. How much remains?",
+        "a": "Expected result: £2,000. A valid check must be shown."
       },
       {
         "q": "Write a mixed problem using rounding, multiplication and subtraction, then solve it.",
@@ -6883,12 +8819,28 @@
       {
         "q": "Write a complete sentence explaining how you checked one answer.",
         "a": "Answer should name an inverse, estimate, boundary, known fact or equivalent representation."
+      },
+      {
+        "q": "Write and solve a similar question to: A budget of £20,000 pays for 48 items at £375 each. How much remains?",
+        "a": "Answers vary. The new question must use the same mathematical structure and include a correct solution."
       }
     ],
     "higher": [
       {
         "q": "Write a mixed problem using rounding, multiplication and subtraction, then solve it.",
         "a": "Answers vary. The calculation and rounding decision must be justified."
+      },
+      {
+        "q": "Prove the answer to this question, rather than only calculating it: A school buys 32 packs of 145 books and gives 18 books to each of 240 pupils. How many books remain?",
+        "a": "Expected result: 320 books. Proof or justification must match the lesson structure."
+      },
+      {
+        "q": "Solve this in two different ways and compare them: A journey starts at -12 m, rises 37 m, then drops 18 m. Final position?",
+        "a": "Expected result: 7 m. Two valid methods and a comparison are required."
+      },
+      {
+        "q": "Work backwards from the answer to reconstruct the question: £2,000.",
+        "a": "One valid reconstruction is: A budget of £20,000 pays for 48 items at £375 each. How much remains? Other equivalent questions are acceptable."
       },
       {
         "q": "Explain why this reasoning fails: Miro completes correct calculations but answers a different question from the one asked.",
@@ -6905,6 +8857,14 @@
       {
         "q": "Write one always, sometimes or never statement about today's learning and justify it.",
         "a": "Answers vary. A valid example and counterexample should support the classification."
+      },
+      {
+        "q": "Create a believable incorrect solution. Identify the exact step where the reasoning breaks.",
+        "a": "Answers vary. The error must be mathematically relevant and the correction must be precise."
+      },
+      {
+        "q": "Change one value or condition in a question. Explain what changes in the solution and what stays the same.",
+        "a": "Answers vary. The explanation must distinguish the mathematical structure from the changed value."
       }
     ],
     "exitQuestions": [
@@ -7006,12 +8966,28 @@
     ],
     "expected": [
       {
+        "q": "Complete: 7,305,019 rounded to 100,000; 2,407 x 38; 7,488 / 26.",
+        "a": "7,300,000; 91,466; 288."
+      },
+      {
         "q": "Find the HCF of 72 and 120, then calculate 18 + 6 x 7.",
         "a": "HCF 24; result 60."
       },
       {
         "q": "Solve: 25 boxes hold 144 items each. 1,275 items are used. How many remain?",
         "a": "2,325 items."
+      },
+      {
+        "q": "Solve this independently and show every stage: Complete: 7,305,019 rounded to 100,000; 2,407 x 38; 7,488 / 26.",
+        "a": "7,300,000; 91,466; 288."
+      },
+      {
+        "q": "Use a second method or representation for: Find the HCF of 72 and 120, then calculate 18 + 6 x 7.",
+        "a": "Expected result: HCF 24; result 60. Method or representation may vary."
+      },
+      {
+        "q": "Check this result using an inverse, estimate or known fact: Solve: 25 boxes hold 144 items each. 1,275 items are used. How many remain?",
+        "a": "Expected result: 2,325 items. A valid check must be shown."
       },
       {
         "q": "Choose one autumn objective and create a diagnostic question that would reveal a common misconception.",
@@ -7024,12 +9000,28 @@
       {
         "q": "Write a complete sentence explaining how you checked one answer.",
         "a": "Answer should name an inverse, estimate, boundary, known fact or equivalent representation."
+      },
+      {
+        "q": "Write and solve a similar question to: Solve: 25 boxes hold 144 items each. 1,275 items are used. How many remain?",
+        "a": "Answers vary. The new question must use the same mathematical structure and include a correct solution."
       }
     ],
     "higher": [
       {
         "q": "Choose one autumn objective and create a diagnostic question that would reveal a common misconception.",
         "a": "Answers vary. The question must target a specific objective and explain the likely error."
+      },
+      {
+        "q": "Prove the answer to this question, rather than only calculating it: Complete: 7,305,019 rounded to 100,000; 2,407 x 38; 7,488 / 26.",
+        "a": "Expected result: 7,300,000; 91,466; 288. Proof or justification must match the lesson structure."
+      },
+      {
+        "q": "Solve this in two different ways and compare them: Find the HCF of 72 and 120, then calculate 18 + 6 x 7.",
+        "a": "Expected result: HCF 24; result 60. Two valid methods and a comparison are required."
+      },
+      {
+        "q": "Work backwards from the answer to reconstruct the question: 2,325 items.",
+        "a": "One valid reconstruction is: Solve: 25 boxes hold 144 items each. 1,275 items are used. How many remain? Other equivalent questions are acceptable."
       },
       {
         "q": "Explain why this reasoning fails: Miro writes 'more practice' as a next step without naming the knowledge needed.",
@@ -7046,6 +9038,14 @@
       {
         "q": "Write one always, sometimes or never statement about today's learning and justify it.",
         "a": "Answers vary. A valid example and counterexample should support the classification."
+      },
+      {
+        "q": "Create a believable incorrect solution. Identify the exact step where the reasoning breaks.",
+        "a": "Answers vary. The error must be mathematically relevant and the correction must be precise."
+      },
+      {
+        "q": "Change one value or condition in a question. Explain what changes in the solution and what stays the same.",
+        "a": "Answers vary. The explanation must distinguish the mathematical structure from the changed value."
       }
     ],
     "exitQuestions": [

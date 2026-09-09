@@ -39,7 +39,6 @@ function baseSlide(presentation, item, title, number, phase) {
   const slide = presentation.slides.add();
   slide.background.fill = C.cream;
   box(slide, 0, 0, 1280, 14, C.teal, "rect", C.teal, 0);
-  text(slide, `YEAR 6 MATHS  |  AUTUMN  |  WEEK ${item.week}  |  DAY ${item.day}`, 58, 30, 760, 28, 14, C.teal, true);
   text(slide, phase, 58, 65, 150, 40, 15, C.white, true, "center");
   box(slide, 58, 65, 150, 40, phase === "I DO" ? C.navy : phase === "WE DO" ? C.teal : phase === "YOU DO" ? C.green : C.red, "roundRect", "none", 0);
   // Re-add the phase text above the coloured label.
@@ -79,7 +78,6 @@ async function buildDeck(item) {
   text(slide, "BRIGHTPATH PRIMARY LEARNING", 64, 44, 570, 30, 15, C.teal, true);
   box(slide, 900, 40, 310, 72, C.white, "roundRect", C.navy, 1.5);
   text(slide, "Date:  ____ / ____ / ______", 930, 55, 250, 42, 22, C.ink, false, "center", handwriting);
-  text(slide, `Year 6 Maths  |  Autumn  |  Week ${item.week}  |  Day ${item.day}`, 64, 112, 760, 35, 17, C.muted, true);
   text(slide, item.title, 64, 168, 900, 110, 46, C.ink, true);
   box(slide, 64, 312, 850, 150, C.white, "roundRect", C.navy, 2);
   text(slide, "L.I.", 92, 332, 100, 38, 25, C.red, true, "left", handwriting);
@@ -161,22 +159,17 @@ async function buildDeck(item) {
   revealText(slide, `Teacher check: ${item.challengeAnswer}`, 150, 540, 980, 62, 22, C.green, true, "center");
   note(slide, `Use after secure fluency or as the higher worksheet route. Accept different correct approaches when fully justified. Expected response: ${item.challengeAnswer}`);
 
-  slide = baseSlide(presentation, item, "Independent practice routes", 11, "PRACTISE");
-  const columns = [85, 450, 815];
-  const routeData = [
-    ["Lower support", "Worked first line, smaller step, vocabulary prompt and adult check."],
-    ["Expected", "Independent core calculation, complete method and reasonableness check."],
-    ["Higher", "Reasoning, proof, comparison, creation or generalisation."],
-  ];
-  routeData.forEach(([label, body], index) => {
-    text(slide, `${index + 1}`, columns[index], 175, 55, 55, 22, C.white, true, "center");
-    box(slide, columns[index], 175, 55, 55, index === 0 ? C.navy : index === 1 ? C.teal : C.green, "ellipse", "none", 0);
-    text(slide, `${index + 1}`, columns[index], 180, 55, 45, 20, C.white, true, "center");
-    text(slide, label, columns[index] - 5, 260, 300, 52, 25, C.ink, true);
-    text(slide, body, columns[index] - 5, 332, 300, 135, 22, C.muted, false);
-  });
-  text(slide, "The teacher selects today's route from current evidence. The full questions are in the worksheet pack.", 130, 555, 1020, 66, 22, C.teal, true, "center");
-  note(slide, `This slide comes after teaching. Select a route by current learning need, not a fixed pupil label. Lower: ${item.lower[1].q} Expected: ${item.expected[1].q} Higher: ${item.higher[0].q}`);
+  slide = baseSlide(presentation, item, "Independent practice", 11, "PRACTISE");
+  text(slide, "Try this example independently", 82, 155, 700, 42, 20, C.teal, true);
+  box(slide, 82, 215, 720, 300, C.white, "roundRect", C.line, 1.5);
+  text(slide, item.practiceQuestion, 120, 252, 642, 150, 31, C.ink, true, "center");
+  text(slide, "Show your method and check your answer.", 135, 430, 610, 42, 20, C.muted, false, "center");
+  text(slide, "Answer", 862, 175, 275, 40, 20, C.teal, true, "center");
+  box(slide, 840, 230, 320, 285, C.tealLight, "roundRect", C.teal, 1.5);
+  revealText(slide, item.practiceAnswer, 875, 275, 250, 130, 34, C.green, true, "center");
+  revealText(slide, "Explain how you know.", 875, 420, 250, 46, 19, C.navy, true, "center");
+  text(slide, "The answer appears on click after pupils have committed.", 230, 560, 820, 48, 20, C.teal, true, "center");
+  note(slide, `Show only the core independent-practice example. Give pupils time to solve and check before revealing the answer at the side. Answer: ${item.practiceAnswer}`);
 
   slide = baseSlide(presentation, item, "Exit check", 12, "ASSESS");
   item.exitQuestions.forEach((question, index) => questionRow(slide, index + 1, question, 150 + index * 135, index === 1 ? C.tealLight : C.white, true));

@@ -23,4 +23,3 @@ for (const item of lessons) {
   completed += 1;
   console.log(`${completed}/50 ${item.slug}`);
 }
-

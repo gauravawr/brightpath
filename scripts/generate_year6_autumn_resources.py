@@ -10,7 +10,7 @@ from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
 from docx.shared import Inches, Pt, RGBColor
 from reportlab.lib.colors import HexColor
-from reportlab.lib.pagesizes import LETTER
+from reportlab.lib.pagesizes import A4
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.pdfgen import canvas
@@ -264,18 +264,28 @@ def build_lessons():
                 {"q": f"Miro says: {item['misconception']} Is this correct? Explain.", "a": item["correction"]},
             ]
             item["expected"] = [
+                {"q": item["modelQuestion"], "a": item["modelAnswer"]},
                 {"q": item["guidedQuestion"], "a": item["guidedAnswer"]},
                 {"q": item["practiceQuestion"], "a": item["practiceAnswer"]},
+                {"q": f"Solve this independently and show every stage: {item['modelQuestion']}", "a": item["modelAnswer"]},
+                {"q": f"Use a second method or representation for: {item['guidedQuestion']}", "a": f"Expected result: {item['guidedAnswer']} Method or representation may vary."},
+                {"q": f"Check this result using an inverse, estimate or known fact: {item['practiceQuestion']}", "a": f"Expected result: {item['practiceAnswer']} A valid check must be shown."},
                 {"q": item["challengeQuestion"], "a": item["challengeAnswer"]},
                 {"q": f"Identify and correct this misconception: {item['misconception']}", "a": item["correction"]},
                 {"q": "Write a complete sentence explaining how you checked one answer.", "a": "Answer should name an inverse, estimate, boundary, known fact or equivalent representation."},
+                {"q": f"Write and solve a similar question to: {item['practiceQuestion']}", "a": "Answers vary. The new question must use the same mathematical structure and include a correct solution."},
             ]
             item["higher"] = [
                 {"q": item["challengeQuestion"], "a": item["challengeAnswer"]},
+                {"q": f"Prove the answer to this question, rather than only calculating it: {item['modelQuestion']}", "a": f"Expected result: {item['modelAnswer']} Proof or justification must match the lesson structure."},
+                {"q": f"Solve this in two different ways and compare them: {item['guidedQuestion']}", "a": f"Expected result: {item['guidedAnswer']} Two valid methods and a comparison are required."},
+                {"q": f"Work backwards from the answer to reconstruct the question: {item['practiceAnswer']}", "a": f"One valid reconstruction is: {item['practiceQuestion']} Other equivalent questions are acceptable."},
                 {"q": f"Explain why this reasoning fails: {item['misconception']}", "a": item["correction"]},
                 {"q": f"Create a new example that tests the same idea as: {item['practiceQuestion']}", "a": "Answers vary. The example and solution must preserve the mathematical structure."},
                 {"q": "Find a second method or representation. Compare its efficiency with your first method.", "a": "Answers vary. Comparison should refer to accuracy, number structure and clarity."},
                 {"q": "Write one always, sometimes or never statement about today's learning and justify it.", "a": "Answers vary. A valid example and counterexample should support the classification."},
+                {"q": "Create a believable incorrect solution. Identify the exact step where the reasoning breaks.", "a": "Answers vary. The error must be mathematically relevant and the correction must be precise."},
+                {"q": "Change one value or condition in a question. Explain what changes in the solution and what stays the same.", "a": "Answers vary. The explanation must distinguish the mathematical structure from the changed value."},
             ]
             item["exitQuestions"] = [item["practiceQuestion"], f"What should Miro correct? {item['misconception']}", "Name the check you used today." ]
             item["exitAnswers"] = [item["practiceAnswer"], item["correction"], "A relevant inverse, estimate, boundary, known fact or equivalent representation."]
@@ -474,7 +484,7 @@ def draw_wrapped(c, text, x, y, width, font="BPArial", size=10, leading=14, max_
 
 
 def pdf_header(c, item, label, page_number):
-    width, height = LETTER
+    width, height = A4
     c.setFillColor(HexColor("#" + NAVY))
     c.rect(0, height - 34, width, 34, fill=1, stroke=0)
     c.setFillColor(HexColor("#FFFFFF"))
@@ -488,7 +498,7 @@ def pdf_header(c, item, label, page_number):
 
 
 def question_page(c, item, label, questions, page_number, instruction):
-    width, height = LETTER
+    width, height = A4
     pdf_header(c, item, label, page_number)
     c.setFillColor(HexColor("#" + INK))
     c.setFont("BPArialBold", 19)
@@ -502,48 +512,81 @@ def question_page(c, item, label, questions, page_number, instruction):
     c.drawString(47, height - 121, "Name: ____________________________________________    Date: __________________")
     top = height - 155
     available = top - 46
-    box_height = min(112, available / max(1, len(questions)))
-    for idx, question in enumerate(questions, 1):
-        bottom = top - box_height
-        c.setFillColor(HexColor("#FFFFFF" if idx % 2 else "#" + PALE))
-        c.setStrokeColor(HexColor("#" + LINE))
-        c.roundRect(38, bottom + 4, width - 76, box_height - 8, 6, fill=1, stroke=1)
-        c.setFillColor(HexColor("#" + TEAL))
-        c.setFont("BPArialBold", 10)
-        c.drawString(48, top - 18, f"{idx}.")
-        draw_wrapped(c, question["q"], 72, top - 18, width - 126, size=9.2, leading=12, max_lines=3)
-        top = bottom
+    if len(questions) >= 8:
+        rows = (len(questions) + 1) // 2
+        gap = 12
+        column_width = (width - 76 - gap) / 2
+        box_height = available / rows
+        for position, question in enumerate(questions):
+            column = position // rows
+            row = position % rows
+            x = 38 + column * (column_width + gap)
+            row_top = top - row * box_height
+            bottom = row_top - box_height
+            c.setFillColor(HexColor("#FFFFFF" if position % 2 == 0 else "#" + PALE))
+            c.setStrokeColor(HexColor("#" + LINE))
+            c.roundRect(x, bottom + 4, column_width, box_height - 8, 5, fill=1, stroke=1)
+            c.setFillColor(HexColor("#" + TEAL))
+            c.setFont("BPArialBold", 8.5)
+            c.drawString(x + 9, row_top - 17, f"{position + 1}.")
+            draw_wrapped(c, question["q"], x + 30, row_top - 17, column_width - 40, size=7.8, leading=10, max_lines=6)
+    else:
+        box_height = min(112, available / max(1, len(questions)))
+        for idx, question in enumerate(questions, 1):
+            bottom = top - box_height
+            c.setFillColor(HexColor("#FFFFFF" if idx % 2 else "#" + PALE))
+            c.setStrokeColor(HexColor("#" + LINE))
+            c.roundRect(38, bottom + 4, width - 76, box_height - 8, 6, fill=1, stroke=1)
+            c.setFillColor(HexColor("#" + TEAL))
+            c.setFont("BPArialBold", 10)
+            c.drawString(48, top - 18, f"{idx}.")
+            draw_wrapped(c, question["q"], 72, top - 18, width - 126, size=9.2, leading=12, max_lines=3)
+            top = bottom
     c.showPage()
 
 
 def answer_page(c, item, label, questions, page_number):
-    width, height = LETTER
+    width, height = A4
     pdf_header(c, item, label, page_number)
     c.setFillColor(HexColor("#" + INK))
     c.setFont("BPArialBold", 19)
     c.drawString(38, height - 72, "Teacher answers and checking prompts")
-    y = height - 108
-    for idx, question in enumerate(questions, 1):
-        c.setFont("BPArialBold", 9.2)
-        c.setFillColor(HexColor("#" + TEAL))
-        c.drawString(42, y, f"{idx}.")
-        y = draw_wrapped(c, question["q"], 68, y, width - 116, size=8.5, leading=11, max_lines=2)
-        c.setFillColor(HexColor("#" + INK))
-        c.setFont("BPArialBold", 8.4)
-        c.drawString(68, y - 2, "Answer")
-        y = draw_wrapped(c, question["a"], 112, y - 2, width - 160, size=8.4, leading=11, max_lines=3) - 13
-        if y < 55:
-            c.showPage()
-            page_number += 1
-            pdf_header(c, item, label, page_number)
-            y = height - 72
+    if len(questions) >= 8:
+        rows = (len(questions) + 1) // 2
+        gap = 16
+        column_width = (width - 76 - gap) / 2
+        row_height = (height - 145) / rows
+        for position, question in enumerate(questions):
+            column = position // rows
+            row = position % rows
+            x = 38 + column * (column_width + gap)
+            y = height - 105 - row * row_height
+            c.setFillColor(HexColor("#" + TEAL))
+            c.setFont("BPArialBold", 8)
+            c.drawString(x, y, f"{position + 1}.")
+            next_y = draw_wrapped(c, question["q"], x + 20, y, column_width - 20, size=7.1, leading=8.5, max_lines=4)
+            c.setFillColor(HexColor("#" + INK))
+            c.setFont("BPArialBold", 7.1)
+            c.drawString(x + 20, next_y - 1, "Answer")
+            draw_wrapped(c, question["a"], x + 55, next_y - 1, column_width - 55, size=7.1, leading=8.5, max_lines=4)
+    else:
+        y = height - 108
+        for idx, question in enumerate(questions, 1):
+            c.setFont("BPArialBold", 9.2)
+            c.setFillColor(HexColor("#" + TEAL))
+            c.drawString(42, y, f"{idx}.")
+            y = draw_wrapped(c, question["q"], 68, y, width - 116, size=8.5, leading=11, max_lines=2)
+            c.setFillColor(HexColor("#" + INK))
+            c.setFont("BPArialBold", 8.4)
+            c.drawString(68, y - 2, "Answer")
+            y = draw_wrapped(c, question["a"], 112, y - 2, width - 160, size=8.4, leading=11, max_lines=3) - 13
     c.showPage()
 
 
 def create_preteach(item):
     folder = OUT / f"week-{item['week']}" / item["slug"]
     path = folder / "pre-teach.pdf"
-    c = canvas.Canvas(str(path), pagesize=LETTER)
+    c = canvas.Canvas(str(path), pagesize=A4)
     questions = item["preteach"]["questions"]
     question_page(c, item, "Pre-teach", questions, 1, "Adult-led preparation before the main lesson. Use precise vocabulary and one step at a time.")
     answer_page(c, item, "Pre-teach answers", questions, 2)
@@ -554,7 +597,7 @@ def create_preteach(item):
 def create_worksheet_pack(item):
     folder = OUT / f"week-{item['week']}" / item["slug"]
     path = folder / "differentiated-worksheets.pdf"
-    c = canvas.Canvas(str(path), pagesize=LETTER)
+    c = canvas.Canvas(str(path), pagesize=A4)
     sections = [
         ("Lower support", item["lower"], "Use the scaffold, show each step and ask for an adult check when marked."),
         ("Expected", item["expected"], "Work independently. Show a complete method and check at least one answer."),

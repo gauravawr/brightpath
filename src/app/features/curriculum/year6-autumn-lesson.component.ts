@@ -135,7 +135,7 @@ export class Year6AutumnLessonComponent {
   openPreview(kind: 'plan' | 'slides' | 'preteach' | 'lower' | 'expected' | 'higher'): void {
     const resources: Record<typeof kind, ResourcePreview> = {
       plan: { title: 'Editable teacher plan', kind: 'plan', download: 'editable-teacher-plan.docx', description: 'A one-page, supply-teacher-ready plan with editable class, inclusion, assessment and resource fields.' },
-      slides: { title: 'Teaching PowerPoint', kind: 'slides', download: 'teaching-powerpoint-v1.pptx', description: 'Twelve clear teaching slides using I do, We do and You do. In PowerPoint, teaching points appear one by one on click.', folder: 'preview/powerpoint', start: 1, end: 12 },
+      slides: { title: 'Teaching PowerPoint', kind: 'slides', download: 'teaching-powerpoint-v1.pptx', description: 'Twelve clear teaching slides using I do, We do and You do. In PowerPoint, teaching points and answers appear one by one on click.', folder: 'preview/powerpoint', start: 1, end: 12 },
       preteach: { title: 'Pre-teach resource', kind: 'images', download: 'pre-teach.pdf', description: 'Two-page prior-learning intervention with pupil questions and an adult answer page.', folder: 'preview/preteach', start: 1, end: 2 },
       lower: { title: 'Lower support worksheet', kind: 'images', download: 'differentiated-worksheets.pdf', description: 'Scaffolded questions followed by answers. The download contains all three levels.', folder: 'preview/worksheets', start: 1, end: 2 },
       expected: { title: 'Expected level worksheet', kind: 'images', download: 'differentiated-worksheets.pdf', description: 'Core Year 6 practice followed by answers. The download contains all three levels.', folder: 'preview/worksheets', start: 3, end: 4 },
