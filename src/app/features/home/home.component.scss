@@ -8,8 +8,8 @@
   padding: clamp(4rem, 10vw, 8rem) 0;
   overflow: hidden;
   background:
-    radial-gradient(circle at 50% 8%, rgba(180, 35, 43, .07), transparent 24rem),
-    linear-gradient(180deg, #fffdfa, #fff);
+    radial-gradient(circle at 50% 8%, rgba(29, 78, 216, .07), transparent 24rem),
+    linear-gradient(180deg, var(--brand-tint), #fff);
   text-align: center;
 }
 
@@ -112,7 +112,7 @@
 }
 .subject-choice:hover {
   color: var(--slate-800);
-  border-color: rgba(180, 35, 43, .32);
+  border-color: rgba(29, 78, 216, .32);
   transform: translateY(-2px);
   box-shadow: 0 12px 28px rgba(30, 41, 59, .07);
 }

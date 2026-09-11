@@ -1,17 +1,17 @@
 /* ============================================================
    BrightPath — global design tokens + reset + base
-   Design system: warm red / academic
+   Design system: blue / academic
    Rule: components use var(--token) only — never hard-code colors.
    ============================================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap');
 
 :root {
-  /* Brand — confident red with a soft classroom-friendly tint */
-  --brand-d: #b91c1c;   /* primary            */
-  --brand-m: #dc2626;   /* hover / mid        */
-  --brand-l: #f87171;   /* accent / grad end  */
-  --brand-tint: #fef2f2;/* soft brand wash    */
+  /* Brand — confident blue with a soft classroom-friendly tint */
+  --brand-d: #1d4ed8;   /* primary            */
+  --brand-m: #2563eb;   /* hover / mid        */
+  --brand-l: #2563eb;   /* accent / grad end  */
+  --brand-tint: #eff6ff;/* soft brand wash    */
 
   /* Accents (keep the app from reading single-hue) */
   --accent-amber: #f59e0b;
@@ -30,7 +30,7 @@
   --slate-800: #1e293b;
   --slate-900: #0f172a;
   --white: #ffffff;
-  --page-bg: #fffafa;
+  --page-bg: #f8fbff;
 
   /* Semantic */
   --text: var(--slate-800);
@@ -39,7 +39,7 @@
 
   /* Shadows */
   --shadow-card: 0 2px 12px rgba(15, 23, 42, .07);
-  --shadow-hover: 0 12px 32px rgba(185, 28, 28, .16);
+  --shadow-hover: 0 12px 32px rgba(29, 78, 216, .16);
   --shadow-hero: 0 16px 48px rgba(15, 23, 42, .18);
 
   /* Radii */
@@ -90,9 +90,9 @@ ul { margin: 0; padding: 0; list-style: none; }
   color: var(--white); font-weight: 700; font-size: .95rem;
   border-radius: var(--r-pill); padding: 12px 26px;
   transition: transform .18s var(--easing-spring), opacity .18s, box-shadow .18s;
-  box-shadow: 0 6px 18px rgba(185, 28, 28, .28);
+  box-shadow: 0 6px 18px rgba(29, 78, 216, .28);
 }
-.bp-btn:hover { opacity: .94; transform: translateY(-1px); box-shadow: 0 10px 24px rgba(185, 28, 28, .34); color: var(--white); }
+.bp-btn:hover { opacity: .94; transform: translateY(-1px); box-shadow: 0 10px 24px rgba(29, 78, 216, .34); color: var(--white); }
 .bp-btn--ghost {
   background: var(--white); color: var(--brand-d);
   border: 1.5px solid var(--brand-tint); box-shadow: none;

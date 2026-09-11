@@ -54,7 +54,7 @@ export class SupportComponent {
       this.stripe = window.Stripe(cfg.publishableKey);
 
       const intent = await firstValue(this.donation.createIntent({ amount: amt, currency: 'usd', note: 'BrightPath donation' }));
-      this.elements = this.stripe.elements({ clientSecret: intent.clientSecret, appearance: { theme: 'flat', variables: { colorPrimary: '#b91c1c' } } });
+      this.elements = this.stripe.elements({ clientSecret: intent.clientSecret, appearance: { theme: 'flat', variables: { colorPrimary: '#1d4ed8' } } });
       this.phase.set('paying');
       // wait a tick for the container to render, then mount
       setTimeout(() => this.elements.create('payment').mount(this.payEl()!.nativeElement), 0);
