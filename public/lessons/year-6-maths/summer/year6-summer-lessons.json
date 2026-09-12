@@ -7248,7 +7248,7 @@
     "title": "Choose efficient representations",
     "objective": "To select a diagram, table, equation or written method for a problem.",
     "modelQuestion": "A quantity increases from 240 by 15%, then decreases by 20%. Find the final quantity.",
-    "modelAnswer": "244.8.",
+    "modelAnswer": "220.8.",
     "guidedQuestion": "Three fifths of a number is 84. Find 35% of the number.",
     "guidedAnswer": "49.",
     "practiceQuestion": "A cuboid is 12 cm by 8 cm by 5 cm. A third of its volume is filled. What volume remains empty?",
@@ -7315,7 +7315,7 @@
     "lower": [
       {
         "q": "Read the model: A quantity increases from 240 by 15%, then decreases by 20%. Find the final quantity. Copy or complete the first step.",
-        "a": "244.8."
+        "a": "220.8."
       },
       {
         "q": "Three fifths of a number is 84. Find 35% of the number.",
@@ -7333,7 +7333,7 @@
     "expected": [
       {
         "q": "A quantity increases from 240 by 15%, then decreases by 20%. Find the final quantity.",
-        "a": "244.8."
+        "a": "220.8."
       },
       {
         "q": "Three fifths of a number is 84. Find 35% of the number.",
@@ -7345,7 +7345,7 @@
       },
       {
         "q": "Solve this independently and show every stage: A quantity increases from 240 by 15%, then decreases by 20%. Find the final quantity.",
-        "a": "244.8."
+        "a": "220.8."
       },
       {
         "q": "Use a second method or representation for: Three fifths of a number is 84. Find 35% of the number.",
@@ -7379,7 +7379,7 @@
       },
       {
         "q": "Prove the answer to this question, rather than only calculating it: A quantity increases from 240 by 15%, then decreases by 20%. Find the final quantity.",
-        "a": "Expected result: 244.8. Proof or justification must match the lesson structure."
+        "a": "Expected result: 220.8. Proof or justification must match the lesson structure."
       },
       {
         "q": "Solve this in two different ways and compare them: Three fifths of a number is 84. Find 35% of the number.",
@@ -7616,7 +7616,7 @@
     "practiceQuestion": "Create two different calculations using 3/4, 0.6 and 25% that both give 30.",
     "practiceAnswer": "Answers vary and must preserve the stated values and give 30.",
     "challengeQuestion": "Prove or explain your reasoning: A quantity increases from 240 by 15%, then decreases by 20%. Find the final quantity.",
-    "challengeAnswer": "244.8. The explanation must show why the method works.",
+    "challengeAnswer": "220.8. The explanation must show why the method works.",
     "misconception": "Miro starts calculating before deciding what the problem asks and which information matters.",
     "correction": "Represent the relationships first, label each subtotal and test the final answer against every condition.",
     "prior": "Select and connect Year 6 methods in unfamiliar and multi-step problems.",
@@ -7719,7 +7719,7 @@
       },
       {
         "q": "Prove or explain your reasoning: A quantity increases from 240 by 15%, then decreases by 20%. Find the final quantity.",
-        "a": "244.8. The explanation must show why the method works."
+        "a": "220.8. The explanation must show why the method works."
       },
       {
         "q": "Identify and correct this misconception: Miro starts calculating before deciding what the problem asks and which information matters.",
@@ -7737,7 +7737,7 @@
     "higher": [
       {
         "q": "Prove or explain your reasoning: A quantity increases from 240 by 15%, then decreases by 20%. Find the final quantity.",
-        "a": "244.8. The explanation must show why the method works."
+        "a": "220.8. The explanation must show why the method works."
       },
       {
         "q": "Prove the answer to this question, rather than only calculating it: A cuboid is 12 cm by 8 cm by 5 cm. A third of its volume is filled. What volume remains empty?",
@@ -7795,7 +7795,7 @@
     "guidedQuestion": "Create two different calculations using 3/4, 0.6 and 25% that both give 30.",
     "guidedAnswer": "Answers vary and must preserve the stated values and give 30.",
     "practiceQuestion": "A quantity increases from 240 by 15%, then decreases by 20%. Find the final quantity.",
-    "practiceAnswer": "244.8.",
+    "practiceAnswer": "220.8.",
     "challengeQuestion": "Prove or explain your reasoning: Three fifths of a number is 84. Find 35% of the number.",
     "challengeAnswer": "49. The explanation must show why the method works.",
     "misconception": "Miro starts calculating before deciding what the problem asks and which information matters.",
@@ -7827,7 +7827,7 @@
     "warmup": "Retrieve this prerequisite: Select and connect Year 6 methods in unfamiliar and multi-step problems.",
     "guided": "We do: Create two different calculations using 3/4, 0.6 and 25% that both give 30. Discuss the method, then reveal Answers vary and must preserve the stated values and give 30.",
     "independent": "Use the lower, expected or higher section selected from today's evidence. Every pupil completes a check and an explanation.",
-    "plenary": "Exit check: A quantity increases from 240 by 15%, then decreases by 20%. Find the final quantity. Expected answer: 244.8.",
+    "plenary": "Exit check: A quantity increases from 240 by 15%, then decreases by 20%. Find the final quantity. Expected answer: 220.8.",
     "preteach": {
       "focus": "Secure the vocabulary and prerequisite knowledge needed for solve geometry and statistics problems.",
       "steps": [
@@ -7866,7 +7866,7 @@
       },
       {
         "q": "A quantity increases from 240 by 15%, then decreases by 20%. Find the final quantity.",
-        "a": "244.8."
+        "a": "220.8."
       },
       {
         "q": "Miro says: Miro starts calculating before deciding what the problem asks and which information matters. Is this correct? Explain.",
@@ -7884,7 +7884,7 @@
       },
       {
         "q": "A quantity increases from 240 by 15%, then decreases by 20%. Find the final quantity.",
-        "a": "244.8."
+        "a": "220.8."
       },
       {
         "q": "Solve this independently and show every stage: A pie-chart sector is 126 degrees and represents 42 pupils. How many pupils are in the survey?",
@@ -7896,7 +7896,7 @@
       },
       {
         "q": "Check this result using an inverse, estimate or known fact: A quantity increases from 240 by 15%, then decreases by 20%. Find the final quantity.",
-        "a": "Expected result: 244.8. A valid check must be shown."
+        "a": "Expected result: 220.8. A valid check must be shown."
       },
       {
         "q": "Prove or explain your reasoning: Three fifths of a number is 84. Find 35% of the number.",
@@ -7929,7 +7929,7 @@
         "a": "Expected result: Answers vary and must preserve the stated values and give 30. Two valid methods and a comparison are required."
       },
       {
-        "q": "Work backwards from the answer to reconstruct the question: 244.8.",
+        "q": "Work backwards from the answer to reconstruct the question: 220.8.",
         "a": "One valid reconstruction is: A quantity increases from 240 by 15%, then decreases by 20%. Find the final quantity. Other equivalent questions are acceptable."
       },
       {
@@ -7963,7 +7963,7 @@
       "Name the check you used today."
     ],
     "exitAnswers": [
-      "244.8.",
+      "220.8.",
       "Represent the relationships first, label each subtotal and test the final answer against every condition.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
     ]
@@ -7974,7 +7974,7 @@
     "modelQuestion": "Create two different calculations using 3/4, 0.6 and 25% that both give 30.",
     "modelAnswer": "Answers vary and must preserve the stated values and give 30.",
     "guidedQuestion": "A quantity increases from 240 by 15%, then decreases by 20%. Find the final quantity.",
-    "guidedAnswer": "244.8.",
+    "guidedAnswer": "220.8.",
     "practiceQuestion": "Three fifths of a number is 84. Find 35% of the number.",
     "practiceAnswer": "49.",
     "challengeQuestion": "Prove or explain your reasoning: A cuboid is 12 cm by 8 cm by 5 cm. A third of its volume is filled. What volume remains empty?",
@@ -8006,7 +8006,7 @@
       "I can check my result and explain why it is reasonable."
     ],
     "warmup": "Retrieve this prerequisite: Select and connect Year 6 methods in unfamiliar and multi-step problems.",
-    "guided": "We do: A quantity increases from 240 by 15%, then decreases by 20%. Find the final quantity. Discuss the method, then reveal 244.8.",
+    "guided": "We do: A quantity increases from 240 by 15%, then decreases by 20%. Find the final quantity. Discuss the method, then reveal 220.8.",
     "independent": "Use the lower, expected or higher section selected from today's evidence. Every pupil completes a check and an explanation.",
     "plenary": "Exit check: Three fifths of a number is 84. Find 35% of the number. Expected answer: 49.",
     "preteach": {
@@ -8024,7 +8024,7 @@
         },
         {
           "q": "A quantity increases from 240 by 15%, then decreases by 20%. Find the final quantity.",
-          "a": "244.8."
+          "a": "220.8."
         },
         {
           "q": "Explain the first step you would take for: Create two different calculations using 3/4, 0.6 and 25% that both give 30.",
@@ -8043,7 +8043,7 @@
       },
       {
         "q": "A quantity increases from 240 by 15%, then decreases by 20%. Find the final quantity.",
-        "a": "244.8."
+        "a": "220.8."
       },
       {
         "q": "Three fifths of a number is 84. Find 35% of the number.",
@@ -8061,7 +8061,7 @@
       },
       {
         "q": "A quantity increases from 240 by 15%, then decreases by 20%. Find the final quantity.",
-        "a": "244.8."
+        "a": "220.8."
       },
       {
         "q": "Three fifths of a number is 84. Find 35% of the number.",
@@ -8073,7 +8073,7 @@
       },
       {
         "q": "Use a second method or representation for: A quantity increases from 240 by 15%, then decreases by 20%. Find the final quantity.",
-        "a": "Expected result: 244.8. Method or representation may vary."
+        "a": "Expected result: 220.8. Method or representation may vary."
       },
       {
         "q": "Check this result using an inverse, estimate or known fact: Three fifths of a number is 84. Find 35% of the number.",
@@ -8107,7 +8107,7 @@
       },
       {
         "q": "Solve this in two different ways and compare them: A quantity increases from 240 by 15%, then decreases by 20%. Find the final quantity.",
-        "a": "Expected result: 244.8. Two valid methods and a comparison are required."
+        "a": "Expected result: 220.8. Two valid methods and a comparison are required."
       },
       {
         "q": "Work backwards from the answer to reconstruct the question: 49.",

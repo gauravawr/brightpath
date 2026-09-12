@@ -18,7 +18,7 @@ for (const item of lessons) {
   const candidatePath = path.join(stageDir, "animated-candidate.pptx");
   const finalDir = path.join(ROOT, "public", "lessons", "year-6-maths", term, `week-${item.week}`, item.slug);
   await fs.mkdir(finalDir, { recursive: true });
-  const finalPath = path.join(finalDir, "teaching-powerpoint-v3.pptx");
+  const finalPath = path.join(finalDir, "teaching-powerpoint-v4.pptx");
   await finalizePresentation({
     explicitTotalSlideCount: 12,
     requiredNativeTableOwnerSlides: [],
@@ -32,7 +32,7 @@ for (const item of lessons) {
     layoutArgs: ["--expected-slide-size-emu", "12192000,6858000", "--validate-heading-fit"],
     fontPolicy: { basis: "design", families: [family, "Segoe Print"] },
     verifyArtifactToolImport: true,
-    receiptPath: path.join(stageDir, "validation-v3.json"),
+    receiptPath: path.join(stageDir, "validation-v4.json"),
   });
   completed += 1;
   console.log(`${completed}/${lessons.length} ${path.relative(ROOT, finalPath)}`);

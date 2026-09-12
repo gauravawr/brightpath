@@ -372,7 +372,7 @@ WEEKS = [
           ("Solve mixed measure problems", "To combine conversion, area and volume reasoning."),
           ("Solve geometry and statistics problems", "To connect geometric and statistical information."),
           ("Create and critique solutions", "To create, compare and improve mathematical solutions.")],
-         [pair("A quantity increases from 240 by 15%, then decreases by 20%. Find the final quantity.", "244.8."),
+         [pair("A quantity increases from 240 by 15%, then decreases by 20%. Find the final quantity.", "220.8."),
           pair("Three fifths of a number is 84. Find 35% of the number.", "49."),
           pair("A cuboid is 12 cm by 8 cm by 5 cm. A third of its volume is filled. What volume remains empty?", "320 cm3."),
           pair("A pie-chart sector is 126 degrees and represents 42 pupils. How many pupils are in the survey?", "120 pupils."),

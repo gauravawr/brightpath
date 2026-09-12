@@ -13,7 +13,7 @@ const lessons = JSON.parse(await fs.readFile(path.join(ROOT, `public/lessons/yea
 let completed = 0;
 for (const item of lessons) {
   const lessonDir = path.join(ROOT, "public", "lessons", "year-6-maths", term, `week-${item.week}`, item.slug);
-  const input = path.join(lessonDir, "teaching-powerpoint-v3.pptx");
+  const input = path.join(lessonDir, "teaching-powerpoint-v4.pptx");
   const outputDir = path.join(lessonDir, "preview", "powerpoint");
   await fs.mkdir(outputDir, { recursive: true });
   const presentation = await PresentationFile.importPptx(await FileBlob.load(input));

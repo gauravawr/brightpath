@@ -27,8 +27,10 @@ def inspect_pptx(path):
         slide4 = archive.read("ppt/slides/slide4.xml")
         slide4_clicks = slide4.count(b'nodeType="clickEffect"')
         check(click_effects >= 25, f"too few click animations in {path}: {click_effects}")
-        detailed_division = b"Useful multiples" in slide4
+        detailed_division = b"times table:" in slide4
         check(slide4_clicks >= (7 if detailed_division else 5), f"worked model is not sufficiently staged in {path}: {slide4_clicks}")
+        for generic_step in (b"Identify the structure", b"Set up the method", b"Complete the calculation"):
+            check(generic_step not in slide4, f"generic worked-model wording remains in {path}")
 
 
 def inspect_docx(path, expected_tables, required_text):
@@ -48,7 +50,9 @@ def inspect_term(term):
     check(len(lessons) == 50, f"{term} has {len(lessons)} lesson records")
     for item in lessons:
         folder = root / f"week-{item['week']}" / item["slug"]
-        powerpoint = folder / "teaching-powerpoint-v3.pptx"
+        powerpoint = folder / "teaching-powerpoint-v4.pptx"
+        if not powerpoint.exists():
+            powerpoint = folder / "teaching-powerpoint-v3.pptx"
         if not powerpoint.exists():
             powerpoint = folder / "teaching-powerpoint-v1.pptx"
         inspect_pptx(powerpoint)

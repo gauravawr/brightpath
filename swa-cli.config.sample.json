@@ -5,7 +5,7 @@
       "appLocation": ".",
       "outputLocation": "dist/brightpath/browser",
       "appBuildCommand": "npm run build",
-      "deploymentToken": "PASTE-YOUR-OWN-DEPLOYMENT-TOKEN-HERE"
+      "deploymentToken": "PASTE_YOUR_DEPLOYMENT_TOKEN_HERE"
     }
   }
 }

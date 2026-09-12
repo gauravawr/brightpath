@@ -5,6 +5,7 @@ import { pathToFileURL } from "node:url";
 const artifactToolPath = "C:/Users/garim/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/@oai/artifact-tool/dist/artifact_tool.mjs";
 const { Presentation, PresentationFile } = await import(pathToFileURL(artifactToolPath).href);
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname.replace(/^\/(.:)/, "$1")), "..");
+const { explicitWorkedSteps } = await import(pathToFileURL(path.join(ROOT, "scripts", "year6_explicit_worked_steps.mjs")).href);
 const SKILL_DIR = "C:/Users/garim/.codex/plugins/cache/openai-primary-runtime/presentations/26.905.11957/skills/presentations";
 const { resolvePresentationFont } = await import(pathToFileURL(path.join(SKILL_DIR, "container_tools/artifact_tool_utils.mjs")).href);
 const family = resolvePresentationFont();
@@ -170,27 +171,17 @@ async function buildDeck(item) {
   note(slide, `Teach the mathematical idea before asking pupils to solve. Define the vocabulary in context: ${item.vocabulary.join(", ")}. Reveal the three statements one at a time.`);
 
   slide = baseSlide(presentation, item, "Worked example", 4, "I DO");
-  const worked = workedModel(item);
-  revealText(slide, item.modelQuestion, 96, 132, 1088, 82, 29, C.ink, true, "center");
-  if (worked.kind === "division") {
-    box(slide, 72, 236, 410, 350, C.white, "roundRect", C.line, 1.3);
-    text(slide, "Useful multiples", 98, 252, 356, 34, 18, C.teal, true, "center");
-    worked.sideFacts.forEach((fact, index) => revealText(slide, fact, 96, 310 + index * 78, 362, 54, 17, C.ink, true, "center"));
-    box(slide, 510, 236, 698, 350, C.tealLight, "roundRect", C.line, 1.3);
-    worked.stages.forEach((step, index) => revealText(slide, `${index + 1}. ${step}`, 540, 252 + index * 77, 640, 62, 18, index === worked.stages.length - 1 ? C.green : C.ink, index === worked.stages.length - 1));
-  } else {
-    if (worked.sideFacts.length) {
-      box(slide, 82, 228, 1116, 64, C.tealLight, "roundRect", C.line, 1.2);
-      worked.sideFacts.forEach((fact, index) => revealText(slide, fact, 100 + index * 360, 238, 340, 44, 15, C.teal, true, "center"));
-    }
-    const startTop = worked.sideFacts.length ? 318 : 236;
-    worked.stages.forEach((step, index) => {
-      box(slide, 105, startTop + index * 78, 50, 50, index === 0 ? C.navy : C.teal, "ellipse", "none", 0);
-      text(slide, String(index + 1), 105, startTop + index * 3 + index * 75 + 3, 50, 44, 18, C.white, true, "center");
-      revealText(slide, step, 180, startTop - 7 + index * 78, 990, 64, 20, index === worked.stages.length - 1 ? C.green : C.ink, index === worked.stages.length - 1);
-    });
-  }
-  note(slide, `I do. Reveal the question, setup and each calculation stage one click at a time. Pupils watch before copying. Model answer: ${item.modelAnswer}`);
+  const workedSteps = explicitWorkedSteps(item);
+  revealText(slide, item.modelQuestion, 90, 128, 1100, 78, 28, C.ink, true, "center");
+  box(slide, 102, 223, 4, 370, C.teal, "rect", C.teal, 0);
+  const rowHeight = Math.floor(370 / workedSteps.length);
+  workedSteps.forEach((step, index) => {
+    const top = 222 + index * rowHeight;
+    text(slide, String(index + 1), 122, top + 9, 42, 42, 15, index === workedSteps.length - 1 ? C.green : C.teal, true, "center");
+    revealText(slide, step, 180, top, 1000, rowHeight - 7, workedSteps.length >= 6 ? 18 : workedSteps.length === 5 ? 21 : 23, index === workedSteps.length - 1 ? C.green : C.ink, index === workedSteps.length - 1);
+    if (index < workedSteps.length - 1) box(slide, 180, top + rowHeight - 5, 980, 1, C.line, "rect", C.line, 0);
+  });
+  note(slide, `I do. Reveal the question, then reveal each mathematical change one click at a time. Point to the numbers and operation that changed before moving to the next line. Final answer: ${item.modelAnswer}`);
 
   slide = baseSlide(presentation, item, "Worked answer and check", 5, "I DO");
   text(slide, "Model answer", 105, 160, 260, 40, 19, C.teal, true);

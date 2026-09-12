@@ -48,3 +48,5 @@ swa-cli.config.json
 .env
 .env.local
 _swa*.log
+
+brightpath-blob.config.json
