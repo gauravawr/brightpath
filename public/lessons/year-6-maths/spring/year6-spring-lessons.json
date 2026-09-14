@@ -178,7 +178,10 @@
       "5/8 because 7/12 = 14/24 and 5/8 = 15/24.",
       "Convert the fractions to equivalent forms or use a shared benchmark before comparing.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Simplify fractions",
@@ -359,7 +362,10 @@
       "2/3, 3/4, 5/6.",
       "Convert the fractions to equivalent forms or use a shared benchmark before comparing.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 11
+    }
   },
   {
     "title": "Compare fractions",
@@ -540,7 +546,10 @@
       "5/8 is one possible answer.",
       "Convert the fractions to equivalent forms or use a shared benchmark before comparing.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Order fractions",
@@ -721,7 +730,10 @@
       "20/24.",
       "Convert the fractions to equivalent forms or use a shared benchmark before comparing.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Reason about fraction size",
@@ -902,7 +914,10 @@
       "3/4.",
       "Convert the fractions to equivalent forms or use a shared benchmark before comparing.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Add fractions with different denominators",
@@ -1083,7 +1098,10 @@
       "4 1/6.",
       "Use equivalent fractions with a common denominator, then operate on the numerators only.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 10
+    }
   },
   {
     "title": "Subtract fractions with different denominators",
@@ -1264,7 +1282,10 @@
       "2 7/12.",
       "Use equivalent fractions with a common denominator, then operate on the numerators only.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 10
+    }
   },
   {
     "title": "Add mixed numbers",
@@ -1445,7 +1466,10 @@
       "2 5/12 litres.",
       "Use equivalent fractions with a common denominator, then operate on the numerators only.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 11
+    }
   },
   {
     "title": "Subtract mixed numbers",
@@ -1626,7 +1650,10 @@
       "1 7/12.",
       "Use equivalent fractions with a common denominator, then operate on the numerators only.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 11
+    }
   },
   {
     "title": "Solve fraction addition problems",
@@ -1807,7 +1834,10 @@
       "11/24.",
       "Use equivalent fractions with a common denominator, then operate on the numerators only.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 19
+    }
   },
   {
     "title": "Multiply a fraction by a whole number",
@@ -1988,7 +2018,10 @@
       "3/5.",
       "Multiplying by a proper fraction finds a part, so the result can be smaller than the starting number.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Multiply proper fractions",
@@ -2169,7 +2202,10 @@
       "1 7/8.",
       "Multiplying by a proper fraction finds a part, so the result can be smaller than the starting number.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 10
+    }
   },
   {
     "title": "Simplify before multiplying",
@@ -2350,7 +2386,10 @@
       "2/5 m.",
       "Multiplying by a proper fraction finds a part, so the result can be smaller than the starting number.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 14
+    }
   },
   {
     "title": "Multiply mixed numbers",
@@ -2531,7 +2570,10 @@
       "12.",
       "Multiplying by a proper fraction finds a part, so the result can be smaller than the starting number.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 11
+    }
   },
   {
     "title": "Solve fraction multiplication problems",
@@ -2712,7 +2754,10 @@
       "3/20.",
       "Multiplying by a proper fraction finds a part, so the result can be smaller than the starting number.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 10
+    }
   },
   {
     "title": "Divide unit fractions",
@@ -2893,7 +2938,10 @@
       "5/18.",
       "Division changes the size of each share. Use a bar model or multiply by the unit fraction, then simplify.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 11
+    }
   },
   {
     "title": "Divide non-unit fractions",
@@ -3074,7 +3122,10 @@
       "3/4.",
       "Division changes the size of each share. Use a bar model or multiply by the unit fraction, then simplify.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 11
+    }
   },
   {
     "title": "Use equivalent fractions when dividing",
@@ -3255,7 +3306,10 @@
       "7/24 litre.",
       "Division changes the size of each share. Use a bar model or multiply by the unit fraction, then simplify.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 11
+    }
   },
   {
     "title": "Divide mixed numbers",
@@ -3436,7 +3490,10 @@
       "1/12.",
       "Division changes the size of each share. Use a bar model or multiply by the unit fraction, then simplify.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 11
+    }
   },
   {
     "title": "Solve fraction division problems",
@@ -3617,7 +3674,10 @@
       "3/8.",
       "Division changes the size of each share. Use a bar model or multiply by the unit fraction, then simplify.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 11
+    }
   },
   {
     "title": "Add decimals",
@@ -3798,7 +3858,10 @@
       "44.856.",
       "Align ones with ones and decimal points vertically so each place-value column stays correct.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Subtract decimals",
@@ -3979,7 +4042,10 @@
       "3.57.",
       "Align ones with ones and decimal points vertically so each place-value column stays correct.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Multiply decimals by whole numbers",
@@ -4160,7 +4226,10 @@
       "8.975 km.",
       "Align ones with ones and decimal points vertically so each place-value column stays correct.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Divide decimals by whole numbers",
@@ -4341,7 +4410,10 @@
       "43.656.",
       "Align ones with ones and decimal points vertically so each place-value column stays correct.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Solve decimal problems",
@@ -4522,7 +4594,10 @@
       "32.515.",
       "Align ones with ones and decimal points vertically so each place-value column stays correct.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Convert fractions to decimals",
@@ -4703,7 +4778,10 @@
       "7/20.",
       "Use a hundred-square model or multiplication and division by 100, then check against a known benchmark.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Convert decimals to percentages",
@@ -4884,7 +4962,10 @@
       "0.58, 3/5, 62%.",
       "Use a hundred-square model or multiplication and division by 100, then check against a known benchmark.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Convert percentages to fractions",
@@ -5065,7 +5146,10 @@
       "0.36 and 36%.",
       "Use a hundred-square model or multiplication and division by 100, then check against a known benchmark.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Compare fractions decimals and percentages",
@@ -5246,7 +5330,10 @@
       "0.35.",
       "Use a hundred-square model or multiplication and division by 100, then check against a known benchmark.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Solve equivalence problems",
@@ -5427,7 +5514,10 @@
       "62.5%.",
       "Use a hundred-square model or multiplication and division by 100, then check against a known benchmark.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Find benchmark percentages",
@@ -5608,7 +5698,10 @@
       "110.5.",
       "Calculate the percentage of the original amount first, then apply that change in the context.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Find non-benchmark percentages",
@@ -5789,7 +5882,10 @@
       "£204.",
       "Calculate the percentage of the original amount first, then apply that change in the context.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Use one per cent",
@@ -5970,7 +6066,10 @@
       "240.",
       "Calculate the percentage of the original amount first, then apply that change in the context.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Solve percentage change problems",
@@ -6151,7 +6250,10 @@
       "90.",
       "Calculate the percentage of the original amount first, then apply that change in the context.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Find the whole from a percentage",
@@ -6332,7 +6434,10 @@
       "168.",
       "Calculate the percentage of the original amount first, then apply that change in the context.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Describe ratio relationships",
@@ -6513,7 +6618,10 @@
       "16.",
       "Equivalent ratios come from multiplying or dividing both parts by the same factor.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Write and interpret ratio notation",
@@ -6694,7 +6802,10 @@
       "3:4.",
       "Equivalent ratios come from multiplying or dividing both parts by the same factor.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Generate equivalent ratios",
@@ -6875,7 +6986,10 @@
       "30 ml.",
       "Equivalent ratios come from multiplying or dividing both parts by the same factor.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Simplify ratios",
@@ -7056,7 +7170,10 @@
       "8:12, which simplifies to 2:3.",
       "Equivalent ratios come from multiplying or dividing both parts by the same factor.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Solve ratio problems",
@@ -7237,7 +7354,10 @@
       "For every 5 of the first quantity, there are 2 of the second.",
       "Equivalent ratios come from multiplying or dividing both parts by the same factor.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Use scale factors",
@@ -7418,7 +7538,10 @@
       "35.",
       "Apply the same multiplicative relationship to every corresponding measure or ratio part.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Scale recipes",
@@ -7599,7 +7722,10 @@
       "£180 and £240.",
       "Apply the same multiplicative relationship to every corresponding measure or ratio part.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Find the value of one ratio part",
@@ -7780,7 +7906,10 @@
       "52 km.",
       "Apply the same multiplicative relationship to every corresponding measure or ratio part.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Share in a ratio",
@@ -7961,7 +8090,10 @@
       "24.5 cm.",
       "Apply the same multiplicative relationship to every corresponding measure or ratio part.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Solve multi-step proportion problems",
@@ -8142,7 +8274,10 @@
       "1,050 g.",
       "Apply the same multiplicative relationship to every corresponding measure or ratio part.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Retrieve fraction methods",
@@ -8323,7 +8458,10 @@
       "3:4 and 12:16.",
       "Name the domain first, represent the relationship, then choose and check the calculation.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 10
+    }
   },
   {
     "title": "Retrieve decimal and percentage methods",
@@ -8504,7 +8642,10 @@
       "1 3/4 kg.",
       "Name the domain first, represent the relationship, then choose and check the calculation.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Diagnose ratio misconceptions",
@@ -8685,7 +8826,10 @@
       "7/10, 0.72, 73%.",
       "Name the domain first, represent the relationship, then choose and check the calculation.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Apply spring reasoning",
@@ -8866,7 +9010,10 @@
       "1 5/12.",
       "Name the domain first, represent the relationship, then choose and check the calculation.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Assess learning and plan next steps",
@@ -9047,6 +9194,9 @@
       "240.",
       "Name the domain first, represent the relationship, then choose and check the calculation.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   }
 ]

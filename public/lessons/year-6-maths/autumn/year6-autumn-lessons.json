@@ -178,7 +178,10 @@
       "5,200,019.",
       "The zero holds the ten-thousands place, so the middle period is four hundred and seven thousand.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Determine the value of each digit",
@@ -359,7 +362,10 @@
       "70,000.",
       "The 8 sits in the ten-thousands column, so it is worth 80,000.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Compare and order large numbers",
@@ -540,7 +546,10 @@
       "9,099,999 < 9,100,001.",
       "Compare from the greatest place value on the left and stop at the first different digit.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Calculate intervals across zero",
@@ -721,7 +730,10 @@
       "17.",
       "Count the jumps between numbers: 4 jumps to zero and 7 more to reach 7, giving 11.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Solve place-value problems",
@@ -902,7 +914,10 @@
       "7,045,120.",
       "Add one hundred-thousand and regroup only when needed. The answer is 7,045,120.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Round to ten, hundred and thousand",
@@ -1083,7 +1098,10 @@
       "280,000.",
       "Only the digit immediately to the right of the rounding place decides the direction.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Round to ten thousand, hundred thousand and one million",
@@ -1264,7 +1282,10 @@
       "8,000,000.",
       "After rounding, every digit to the right becomes zero.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Choose the required accuracy",
@@ -1445,7 +1466,10 @@
       "999,000.",
       "The question controls the accuracy. Mark that place before deciding.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Estimate calculations by rounding",
@@ -1626,7 +1650,10 @@
       "600,000 - 200,000 = 400,000.",
       "An estimate is deliberately approximate and should show the likely size of the exact answer.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Reason about rounding boundaries",
@@ -1807,7 +1834,10 @@
       "Yes.",
       "85,499 is nearer 85,000. The lower boundary is 85,500.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Revisit multiplication by one digit",
@@ -1988,7 +2018,10 @@
       "32,140.",
       "Record each exchange clearly and add it to the next place-value product.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Multiply two-digit numbers",
@@ -2169,7 +2202,10 @@
       "5,301.",
       "Multiplying by 30 gives tens, so the second row begins in the tens column.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 11
+    }
   },
   {
     "title": "Multiply up to four digits by two digits",
@@ -2350,7 +2386,10 @@
       "141,450.",
       "The 2 represents two tens, so its partial product is twenty times the first factor.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 11
+    }
   },
   {
     "title": "Solve long multiplication problems",
@@ -2531,7 +2570,10 @@
       "61,200 pencils.",
       "Return to the question, label the answer and complete every step in the context.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 11
+    }
   },
   {
     "title": "Explain and check long multiplication",
@@ -2712,7 +2754,10 @@
       "228,532.",
       "An estimate reveals place-value errors before the exact calculation is accepted.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 11
+    }
   },
   {
     "title": "Estimate quotients using multiples",
@@ -2893,7 +2938,10 @@
       "200.",
       "Round both numbers to compatible values that are easy to divide.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Use short division with two-digit divisors",
@@ -3074,7 +3122,10 @@
       "384.",
       "Each quotient digit must represent a multiple of the complete divisor.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Use long division with exact answers",
@@ -3255,7 +3306,10 @@
       "207.",
       "After each subtraction, bring down exactly one next place-value digit.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Interpret division remainders",
@@ -3436,7 +3490,10 @@
       "240 each with 10 left.",
       "The context decides whether to round up, round down, keep the remainder or express it as a fraction.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Solve and check division problems",
@@ -3617,7 +3674,10 @@
       "288 because 288 x 26 = 7,488.",
       "A valid remainder must be smaller than the divisor.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Find factor pairs systematically",
@@ -3799,7 +3859,10 @@
       "9 factors.",
       "Continue until the first factor meets or passes its paired factor.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Identify common factors",
@@ -3981,7 +4044,10 @@
       "48.",
       "A common factor must divide both numbers exactly.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Find common multiples",
@@ -4163,7 +4229,10 @@
       "60.",
       "Multiples continue from repeated multiplication. Factors divide the number exactly.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Classify prime, square and cube numbers",
@@ -4345,7 +4414,10 @@
       "64, 81, 100, 121 and 144.",
       "A prime number has exactly two factors. The number 1 has only one factor.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Reason with number properties",
@@ -4527,7 +4599,10 @@
       "2 x 2 x 3 x 7.",
       "Odd composite numbers have factors other than 1 and themselves, for example 9 and 15.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Read and structure expressions",
@@ -4708,7 +4783,10 @@
       "9 x 6 - 7.",
       "The structure of the expression determines the order, not reading direction alone.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Use multiplication and division before addition and subtraction",
@@ -4889,7 +4967,10 @@
       "48.",
       "Multiplication has priority, so calculate 6 x 7 first.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Use brackets to change the order",
@@ -5070,7 +5151,10 @@
       "56 and 120.",
       "Brackets override the usual priority and must be completed first.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Solve missing-number expressions",
@@ -5251,7 +5335,10 @@
       "n = 10.",
       "Undo the outer multiplication first, then undo the addition inside the brackets.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Reason about equivalent expressions",
@@ -5432,7 +5519,10 @@
       "6 x 5 - 4 = 26.",
       "Brackets can change which values combine first, producing a different result.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Use mental addition and subtraction strategies",
@@ -5613,7 +5703,10 @@
       "775,449.",
       "Compensate by subtracting 1 after adding 500,000.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Use mental multiplication and division strategies",
@@ -5794,7 +5887,10 @@
       "8,000.",
       "Since 25 = 100 / 4, divide by 4 and then multiply by 100.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 11
+    }
   },
   {
     "title": "Estimate the size of answers",
@@ -5975,7 +6071,10 @@
       "About 490,000 + 220,000 - 100,000 = 610,000.",
       "Choose compatible rounded values that keep the calculation easy and reasonably close.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Check with inverse operations",
@@ -6156,7 +6255,10 @@
       "4,637 + 3,765 = 8,402.",
       "Use the opposite operation so the result returns to the starting value.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Choose an efficient calculation method",
@@ -6337,7 +6439,10 @@
       "A written method is efficient; the product is 339,572.",
       "An efficient method fits the numbers and still allows a reliable check.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Plan operations in multi-step problems",
@@ -6518,7 +6623,10 @@
       "Divide 9,450 by 35, then add 12. Each group has 282 items.",
       "Plan the relationships first. The order of numbers in the text may not match the calculation order.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Solve multi-step addition and subtraction problems",
@@ -6699,7 +6807,10 @@
       "2,390,850 litres.",
       "Combine the tickets first or label each new subtotal before continuing.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Solve multi-step multiplication and division problems",
@@ -6880,7 +6991,10 @@
       "24 trolleys.",
       "Keep exact sub-totals unless the context or question asks for rounding.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Solve problems involving money and measures",
@@ -7061,7 +7175,10 @@
       "1,000 litres.",
       "Convert to one unit before calculating and label the final unit.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Explain and evaluate multi-step solutions",
@@ -7242,7 +7359,10 @@
       "4,590.",
       "Use only information that changes the quantity asked for.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Fluency with the four operations",
@@ -7424,7 +7544,10 @@
       "364.",
       "Mark the operation and estimate before beginning the exact method.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Revisit decimal calculation",
@@ -7606,7 +7729,10 @@
       "44.8.",
       "Align decimal points so ones, tenths, hundredths and thousandths stay in their columns.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Revisit fraction calculation",
@@ -7788,7 +7914,10 @@
       "210.",
       "Find equivalent fractions with a common denominator, then add the numerators.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 10
+    }
   },
   {
     "title": "Complete mixed arithmetic efficiently",
@@ -7970,7 +8099,10 @@
       "2,400.",
       "Pause at each operation and identify the number representation before choosing the method.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Reason about arithmetic relationships",
@@ -8152,7 +8284,10 @@
       "5/6 of 420 = 350; 0.82 of 420 = 344.4, so 5/6 is greater.",
       "Changing a factor by a power of ten changes the product by the same scale unless another factor compensates.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Retrieve place value and rounding",
@@ -8333,7 +8468,10 @@
       "3,550,000 to 3,649,999.",
       "Mark each rounding place separately and reconsider the deciding digit each time.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Retrieve multiplication and division",
@@ -8514,7 +8652,10 @@
       "96 coaches.",
       "Interpret the remainder as the context requires after the written division is complete.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 11
+    }
   },
   {
     "title": "Retrieve factors and order of operations",
@@ -8695,7 +8836,10 @@
       "No, 221 = 13 x 17.",
       "Brackets change the order. The result may increase, decrease or stay the same.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Apply autumn reasoning",
@@ -8876,7 +9020,10 @@
       "£2,000.",
       "Return to the final question, label the answer and test whether it is reasonable in context.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Assess learning and plan next steps",
@@ -9057,6 +9204,9 @@
       "2,325 items.",
       "A useful next step names the exact concept, example and support required.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 11
+    }
   }
 ]

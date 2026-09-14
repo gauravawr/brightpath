@@ -178,7 +178,10 @@
       "C = 6n + 4.",
       "State what the variable represents, substitute its value and preserve the operation structure.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Find missing terms",
@@ -359,7 +362,10 @@
       "31.",
       "State what the variable represents, substitute its value and preserve the operation structure.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Use simple formulae",
@@ -540,7 +546,10 @@
       "3, 7, 11, 15, 19.",
       "State what the variable represents, substitute its value and preserve the operation structure.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Substitute into formulae",
@@ -721,7 +730,10 @@
       "27, 32; add 5.",
       "State what the variable represents, substitute its value and preserve the operation structure.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Generate terms from a position rule",
@@ -902,7 +914,10 @@
       "73 and 51.",
       "State what the variable represents, substitute its value and preserve the operation structure.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Solve one-step equations",
@@ -1083,7 +1098,10 @@
       "x = 8.",
       "Use an inverse operation on the whole equation and check by substitution.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Solve two-step equations",
@@ -1264,7 +1282,10 @@
       "17.",
       "Use an inverse operation on the whole equation and check by substitution.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Solve equations with brackets",
@@ -1445,7 +1466,10 @@
       "Yes, both give x = 7.",
       "Use an inverse operation on the whole equation and check by substitution.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Represent word problems with equations",
@@ -1626,7 +1650,10 @@
       "x = 53.",
       "Use an inverse operation on the whole equation and check by substitution.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Reason about equivalent equations",
@@ -1807,7 +1834,10 @@
       "x = 11.",
       "Use an inverse operation on the whole equation and check by substitution.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Convert metric lengths",
@@ -1988,7 +2018,10 @@
       "0.845 m.",
       "Use the size of the target unit to decide the direction, then check whether the numerical value should grow or shrink.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Convert mass and capacity",
@@ -2169,7 +2202,10 @@
       "About 48 km.",
       "Use the size of the target unit to decide the direction, then check whether the numerical value should grow or shrink.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Use decimal notation in conversions",
@@ -2350,7 +2386,10 @@
       "31 complete pieces, with 10 cm left.",
       "Use the size of the target unit to decide the direction, then check whether the numerical value should grow or shrink.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Use approximate imperial conversions",
@@ -2531,7 +2570,10 @@
       "4,375 m.",
       "Use the size of the target unit to decide the direction, then check whether the numerical value should grow or shrink.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Solve multi-step measure problems",
@@ -2712,7 +2754,10 @@
       "2,650 g and 3.75 litres.",
       "Use the size of the target unit to decide the direction, then check whether the numerical value should grow or shrink.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Distinguish perimeter and area",
@@ -2893,7 +2938,10 @@
       "60 cm2.",
       "Mark the perpendicular height, use base times height, and divide by two only for a triangle.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Find the area of parallelograms",
@@ -3074,7 +3122,10 @@
       "9 cm.",
       "Mark the perpendicular height, use base times height, and divide by two only for a triangle.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Find the area of triangles",
@@ -3255,7 +3306,10 @@
       "80 cm2.",
       "Mark the perpendicular height, use base times height, and divide by two only for a triangle.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Find missing dimensions",
@@ -3436,7 +3490,10 @@
       "Area 126 cm2; perimeter 46 cm.",
       "Mark the perpendicular height, use base times height, and divide by two only for a triangle.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Solve compound area problems",
@@ -3617,7 +3674,10 @@
       "84 cm2.",
       "Mark the perpendicular height, use base times height, and divide by two only for a triangle.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Build and count cubic units",
@@ -3799,7 +3859,10 @@
       "6 cm.",
       "Volume measures space inside a solid, so multiply all three perpendicular dimensions and use cubic units.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Calculate cuboid volume",
@@ -3981,7 +4044,10 @@
       "Both are 240 cm3.",
       "Volume measures space inside a solid, so multiply all three perpendicular dimensions and use cubic units.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Find missing dimensions",
@@ -4163,7 +4229,10 @@
       "240 cubes.",
       "Volume measures space inside a solid, so multiply all three perpendicular dimensions and use cubic units.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Compare cuboid volumes",
@@ -4345,7 +4414,10 @@
       "120 cubic units.",
       "Volume measures space inside a solid, so multiply all three perpendicular dimensions and use cubic units.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Solve volume problems",
@@ -4527,7 +4599,10 @@
       "420 cm3.",
       "Volume measures space inside a solid, so multiply all three perpendicular dimensions and use cubic units.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Use angles on a line and around a point",
@@ -4708,7 +4783,10 @@
       "65 degrees.",
       "Use labelled values and known geometric facts, then check the total angle relationship.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Use vertically opposite angles",
@@ -4889,7 +4967,10 @@
       "9 cm.",
       "Use labelled values and known geometric facts, then check the total angle relationship.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Find angles in triangles and quadrilaterals",
@@ -5070,7 +5151,10 @@
       "75 degrees.",
       "Use labelled values and known geometric facts, then check the total angle relationship.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Name parts of circles",
@@ -5251,7 +5335,10 @@
       "135 degrees.",
       "Use labelled values and known geometric facts, then check the total angle relationship.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Reason from shape properties",
@@ -5432,7 +5519,10 @@
       "68 degrees.",
       "Use labelled values and known geometric facts, then check the total angle relationship.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Plot points in four quadrants",
@@ -5613,7 +5703,10 @@
       "(1, 3).",
       "Track horizontal and vertical changes separately and apply the exact transformation to every point.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Describe translations",
@@ -5794,7 +5887,10 @@
       "(6, 2).",
       "Track horizontal and vertical changes separately and apply the exact transformation to every point.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Translate shapes",
@@ -5975,7 +6071,10 @@
       "(-2, -1).",
       "Track horizontal and vertical changes separately and apply the exact transformation to every point.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Reflect shapes",
@@ -6156,7 +6255,10 @@
       "Quadrant II.",
       "Track horizontal and vertical changes separately and apply the exact transformation to every point.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Reason about transformations",
@@ -6337,7 +6439,10 @@
       "5 left and 6 up.",
       "Track horizontal and vertical changes separately and apply the exact transformation to every point.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Interpret line graphs",
@@ -6518,7 +6623,10 @@
       "90 degrees.",
       "Add every value, count how many values there are, then divide the total by that count.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Interpret pie charts",
@@ -6699,7 +6807,10 @@
       "15.",
       "Add every value, count how many values there are, then divide the total by that count.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Construct pie chart sectors",
@@ -6880,7 +6991,10 @@
       "Dataset A: 24; Dataset B: 23, so A is greater.",
       "Add every value, count how many values there are, then divide the total by that count.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Calculate the mean",
@@ -7061,7 +7175,10 @@
       "28.",
       "Add every value, count how many values there are, then divide the total by that count.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Solve statistical problems",
@@ -7242,7 +7359,10 @@
       "60 pupils.",
       "Add every value, count how many values there are, then divide the total by that count.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Choose efficient representations",
@@ -7423,7 +7543,10 @@
       "320 cm3.",
       "Represent the relationships first, label each subtotal and test the final answer against every condition.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 11
+    }
   },
   {
     "title": "Solve multi-step number problems",
@@ -7604,7 +7727,10 @@
       "120 pupils.",
       "Represent the relationships first, label each subtotal and test the final answer against every condition.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Solve mixed measure problems",
@@ -7785,7 +7911,10 @@
       "Answers vary and must preserve the stated values and give 30.",
       "Represent the relationships first, label each subtotal and test the final answer against every condition.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Solve geometry and statistics problems",
@@ -7966,7 +8095,10 @@
       "220.8.",
       "Represent the relationships first, label each subtotal and test the final answer against every condition.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Create and critique solutions",
@@ -8147,7 +8279,10 @@
       "49.",
       "Represent the relationships first, label each subtotal and test the final answer against every condition.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Retrieve number and ratio",
@@ -8328,7 +8463,10 @@
       "99 cm2 and 20.",
       "Use assessment evidence to name the exact concept, method, example and support required next.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 11
+    }
   },
   {
     "title": "Retrieve algebra and measure",
@@ -8509,7 +8647,10 @@
       "£560.",
       "Use assessment evidence to name the exact concept, method, example and support required next.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Retrieve geometry and statistics",
@@ -8690,7 +8831,10 @@
       "9 cm.",
       "Use assessment evidence to name the exact concept, method, example and support required next.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Apply Year 6 reasoning",
@@ -8871,7 +9015,10 @@
       "3/4 or 0.75.",
       "Use assessment evidence to name the exact concept, method, example and support required next.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   },
   {
     "title": "Assess learning and plan transition",
@@ -9052,6 +9199,9 @@
       "x = 13 and 3,450 m.",
       "Use assessment evidence to name the exact concept, method, example and support required next.",
       "A relevant inverse, estimate, boundary, known fact or equivalent representation."
-    ]
+    ],
+    "teachingSlides": {
+      "count": 7
+    }
   }
 ]

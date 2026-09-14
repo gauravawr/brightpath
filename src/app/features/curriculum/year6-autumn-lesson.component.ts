@@ -6,6 +6,7 @@ import { LanguageService } from '../../core/services/language.service';
 
 interface Question { q: string; a: string; }
 interface YearSixLesson {
+  teachingSlides?: { count: number };
   week: number; day: number; unit: string; slug: string; title: string; objective: string;
   modelQuestion: string; modelAnswer: string; guidedQuestion: string; guidedAnswer: string;
   practiceQuestion: string; practiceAnswer: string; challengeQuestion: string; challengeAnswer: string;
@@ -41,7 +42,7 @@ interface ResourcePreview {
           <p class="intro">Nothing downloads until you choose the download button inside a preview.</p>
           <div class="downloads">
             <button class="download" type="button" (click)="openPreview('plan')"><span>📝</span><b>Editable teacher plan</b><small>One-page, supply-ready Word plan</small></button>
-            <button class="download" type="button" (click)="openPreview('slides')"><span>📽️</span><b>Teaching PowerPoint</b><small>12 slides · click-to-reveal animation</small></button>
+            <button class="download" type="button" (click)="openPreview('slides')"><span>📽️</span><b>Teaching PowerPoint</b><small>{{ item.teachingSlides?.count ?? 12 }} slides · I do / You do</small></button>
             <button class="download" type="button" (click)="openPreview('preteach')"><span>🌱</span><b>Pre-teach</b><small>Prior learning and adult guide</small></button>
             <button class="download" type="button" (click)="openPreview('lower')"><span>●</span><b>Lower support</b><small>Scaffolded practice and answers</small></button>
             <button class="download" type="button" (click)="openPreview('expected')"><span>●●</span><b>Expected level</b><small>Core practice and answers</small></button>
@@ -137,7 +138,7 @@ export class Year6AutumnLessonComponent {
   openPreview(kind: 'plan' | 'slides' | 'preteach' | 'lower' | 'expected' | 'higher'): void {
     const resources: Record<typeof kind, ResourcePreview> = {
       plan: { title: 'Editable teacher plan', kind: 'plan', download: 'editable-teacher-plan.docx', description: 'A one-page, supply-teacher-ready plan with editable class, inclusion, assessment and resource fields.' },
-      slides: { title: 'Teaching PowerPoint', kind: 'slides', download: 'teaching-powerpoint-v1.pptx', description: 'Twelve clear teaching slides using I do, We do and You do. In PowerPoint, each worked calculation, mathematical decision and answer appears step by step on click.', folder: 'preview/powerpoint', start: 1, end: 12 },
+      slides: { title: 'Teaching PowerPoint', kind: 'slides', download: 'teaching-powerpoint-v1.pptx', description: 'I do and You do examples with visual working, followed by the expected-level activity and answers. These previews show completed slides. Download and open PowerPoint Slide Show to play the animations.', folder: 'preview/powerpoint', start: 1, end: this.lesson()?.teachingSlides?.count ?? 12 },
       preteach: { title: 'Pre-teach resource', kind: 'images', download: 'pre-teach.pdf', description: 'Two-page prior-learning intervention with pupil questions and an adult answer page.', folder: 'preview/preteach', start: 1, end: 2 },
       lower: { title: 'Lower support worksheet', kind: 'images', download: 'differentiated-worksheets.pdf', description: 'Scaffolded questions followed by answers. The download contains all three levels.', folder: 'preview/worksheets', start: 1, end: 2 },
       expected: { title: 'Expected level worksheet', kind: 'images', download: 'differentiated-worksheets.pdf', description: 'Core Year 6 practice followed by answers. The download contains all three levels.', folder: 'preview/worksheets', start: 3, end: 4 },

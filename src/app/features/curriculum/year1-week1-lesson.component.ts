@@ -7,6 +7,7 @@ import { LanguageService } from '../../core/services/language.service';
 
 interface Question { q: string; a: string; }
 interface WeekLesson {
+  teachingSlides?: { count: number };
   week?:number; day:number; slug:string; title:string; objective:string; vocabulary:string[]; successCriteria:string[]; prior:string; resources:string; misconception:string;
   warmup:string; teacherModel:string[]; guided:string; independent:string; plenary:string;
   preteach:{focus:string;steps:string[];questions:Question[]}; lower:Question[]; expected:Question[]; higher:Question[];
@@ -27,7 +28,7 @@ interface ResourcePreview { title:string; kind:'slides'|'pdf'; download:string; 
           <span class="bp-label">Complete lesson pack</span><h2>Open and adapt every resource</h2>
           <div class="downloads">
             <button class="download" type="button" (click)="openPreview('plan')"><span>📝</span><b>Editable teacher plan</b><small>Preview first · one-page Word plan</small></button>
-            <button class="download" type="button" (click)="openPreview('slides')"><span>📽️</span><b>Teaching PowerPoint</b><small>Preview all slides first</small></button>
+            <button class="download" type="button" (click)="openPreview('slides')"><span>📽️</span><b>Teaching PowerPoint</b><small>{{ item.teachingSlides?.count ?? 8 }} slides · I do / You do</small></button>
             <button class="download" type="button" (click)="openPreview('preteach')"><span>🌱</span><b>Pre-teach</b><small>Preview before printing</small></button>
             <button class="download" type="button" (click)="openPreview('lower')"><span>●</span><b>Lower worksheet</b><small>Preview before printing</small></button>
             <button class="download" type="button" (click)="openPreview('expected')"><span>●●</span><b>Expected worksheet</b><small>Preview before printing</small></button>
@@ -89,7 +90,7 @@ export class Year1Week1LessonComponent {
     const newPack=this.week===1&&this.slug==='sort-objects-into-groups';
     const resources:Record<typeof kind,ResourcePreview>={
       plan:{title:'Editable teacher plan',kind:'pdf',download:newPack?'editable-teacher-plan-one-page.docx':'editable-teacher-plan.docx',preview:newPack?'teacher-plan-preview.pdf':'teacher-plan-preview.pdf',description:'One-page, supply-teacher-ready lesson plan. Download the Word version only when you are ready to edit it.'},
-      slides:{title:'Teaching PowerPoint',kind:'slides',download:newPack?'teaching-powerpoint-v5.pptx':'interactive-teaching-slides.pptx',preview:'preview/powerpoint',slideCount:newPack?15:8,description:'Clear teaching, worked modelling and pupil checkpoints, with key ideas revealed one step at a time. Use Previous and Next to inspect every slide.'},
+      slides:{title:'Teaching PowerPoint',kind:'slides',download:newPack?'teaching-powerpoint-v5.pptx':'interactive-teaching-slides.pptx',preview:'preview/powerpoint',slideCount:this.lesson()?.teachingSlides?.count ?? (newPack?15:8),description:'I do and You do examples with visual working, followed by the expected-level activity and answers. These previews show completed slides. Download and open PowerPoint Slide Show to play the animations.'},
       preteach:{title:'Pre-teach resource',kind:'pdf',download:'pre-teach.pdf',preview:'pre-teach.pdf',description:'Adult guide and pupil quick check for the lower/CUSP group.'},
       lower:{title:'Lower support worksheet',kind:'pdf',download:'lower-worksheet.pdf',preview:'lower-worksheet.pdf',description:'Concrete, visual practice with reduced language and supported recording.'},
       expected:{title:'Expected worksheet',kind:'pdf',download:'expected-worksheet.pdf',preview:'expected-worksheet.pdf',description:'Independent core practice at the expected lesson outcome.'},
