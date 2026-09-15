@@ -18,7 +18,12 @@ try {
      $positions=@{}
     foreach($ev in $entry.events){
      $shape=$s.Shapes.Item([string]$ev.name)
-     if($ev.type -eq 'move'){
+     if($ev.type -eq 'rotate'){
+      $fx=$s.TimeLine.MainSequence.AddEffect($shape,61,0,[int]$ev.trigger)
+      $fx.Behaviors.Item(1).RotationEffect.By=[double]$ev.angle
+      $fx.Timing.Duration=[double]$ev.duration
+     } elseif($ev.type -eq 'move'){
+      $shape.ZOrder(0)
       $fx=$s.TimeLine.MainSequence.AddEffect($shape,149,0,[int]$ev.trigger)
       $prior=$positions[[string]$ev.name]; if(-not $prior){$prior=@(0.0,0.0)}
       $sx=($prior[0]/1280).ToString('0.########',[Globalization.CultureInfo]::InvariantCulture)
@@ -44,6 +49,7 @@ try {
     foreach($ev in $entry.events){
      $shape=$s.Shapes.Item([string]$ev.name)
      if($ev.type -eq 'move'){$shape.Left += [double]$ev.dx*0.9375;$shape.Top += [double]$ev.dy*0.9375}
+     elseif($ev.type -eq 'rotate'){$shape.Rotation += [double]$ev.angle}
      elseif($ev.type -eq 'exit'){$shape.Visible=0}
      else{$shape.Visible=-1}
     }

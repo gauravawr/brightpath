@@ -10,9 +10,16 @@ const answerFraction=(a,b)=>{[a,b]=reduced(a,b);return b===1?String(a):a>b?`${Ma
 export class Board {
  constructor(presentation,item){this.p=presentation;this.item=item;this.manifest=[];this.counter=0;this.mathChecks=[];}
  slide(role,question,notes=''){
-  this.s=this.p.slides.add();this.s.background.fill=C.white;this.id=0;this.ev=[];this.counter++;
+  this.s=this.p.slides.add();this.s.background.fill=this.item.year===1?'#FFFDF6':this.item.year===2?'#F8FAFF':C.white;this.id=0;this.ev=[];this.counter++;
   this.manifest.push({slide:this.counter,role,events:this.ev});
   const cover=this.counter===1;
+  if(this.item.year<=2){
+   const phase=role==='I do'?['#DBEAFE','#2563EB']:role==='We do'?['#FEF3C7','#B45309']:role==='You do'?['#F3E8FF','#7C3AED']:role==='Answers'?['#D1FAE5','#047857']:['#DBEAFE','#2563EB'];
+   this.rect(42,20,1196,cover?140:74,this.item.year===1?phase[0]:'#EAF0FA');
+   this.rect(42,20,9,cover?140:74,phase[1]);
+   this.rect(55,cover?170:105,1170,cover?90:100,C.white,'#DCE6F4',1);
+   if(this.item.year===1){this.rect(55,658,290,5,'#60A5FA');this.rect(348,658,290,5,'#FBBF24');this.rect(641,658,290,5,'#A78BFA');this.rect(934,658,291,5,'#34D399');}
+  }
   this.text(role,55,30,1170,cover?130:60,cover&&role.length>45?35:44,C.blue,true);
   if(role==='You do')this.text('You try.',960,40,265,46,28,C.grey,false,'right');
   this.text(question,55,cover?170:105,1170,cover?85:100,28,C.ink,true);
@@ -388,7 +395,7 @@ renderers.createExpressions=(b,p,r)=>{b.slide(r,'Make two calculations using 3/4
 
 renderers.sort=(b,p,r)=>{b.slide(r,`Sort these objects by ${p.mode}.`,'State one rule. Move each object into its matching group. Check every object against the same rule.');b.rect(105,400,450,180,'none',C.blue,3);b.rect(725,400,450,180,'none',C.blue,3);b.text(p.mode==='colour'?'red':'circles',105,600,450,50,31,C.ink,true,'center');b.text(p.mode==='colour'?'blue':'squares',725,600,450,50,31,C.ink,true,'center');let leftCount=0,rightCount=0;for(let i=0;i<6;i++){const red=i%2===0,circle=i%3===0;const x=175+i*170,t=b.rect(x,250,70,70,red?C.red:C.blue,C.ink,2,circle?'ellipse':'rect');const left=p.mode==='colour'?red:circle;const dest=(left?140:760)+(left?leftCount++:rightCount++)*95;b.move(t,dest-x,200);} };
 function frame(b){for(let i=0;i<10;i++)b.rect(190+(i%5)*165,420+Math.floor(i/5)*92,165,92,C.white,C.blue,2);}
-renderers.count=(b,p,r)=>{b.slide(r,`How many objects are there?${p.frame?' Show the amount in the frame.':''}`,'Touch and move each object exactly once. The last number tells the total. Zero means the frame stays empty.');if(p.frame)frame(b);for(let i=0;i<p.n;i++){const x=95+i*110,y=245+(i%2)*35,t=b.dot(x,y,C.blue,48);b.move(t,(p.frame?240+(i%5)*165:130+i*104)-x,(p.frame?443+Math.floor(i/5)*92:453)-y);b.show(b.text(i+1,80+i*112,340,110,55,30,C.grey,true,'center'),3);}b.result(`${p.n} altogether`,612);};
+renderers.count=(b,p,r)=>{b.slide(r,`How many objects are there?${p.frame?' Show the amount in the frame.':''}`,'Touch and move each object exactly once. The last number tells the total. Zero means the frame stays empty.');if(p.frame)frame(b);for(let i=0;i<p.n;i++){const x=95+i*110,y=245+(i%2)*35,t=b.dot(x,y,i<5?C.blue:C.green,48);b.move(t,(p.frame?240+(i%5)*165:130+i*104)-x,(p.frame?443+Math.floor(i/5)*92:453)-y);b.show(b.text(i+1,80+i*112,340,110,55,30,C.grey,true,'center'),3);}b.result(`${p.n} altogether`,612);};
 renderers.match=(b,p,r)=>{b.slide(r,'Count the objects. Which numeral matches?','Move the matching numeral to the set after counting one object at a time.');for(let i=0;i<p.n;i++)b.dot(130+(i%5)*130,250+Math.floor(i/5)*85,C.blue,48);[p.n-1,p.n,p.n+1].forEach((n,i)=>{const t=b.text(n,800+i*120,250,110,85,58,C.blue,true,'center');if(n===p.n)b.move(t,-240,220);});b.result(`${p.n} objects match the numeral ${p.n}.`);};
 renderers.sets=(b,p,r)=>{b.slide(r,'Which set has more, fewer, or the same number?','Pair one object from each set. Any unpaired objects show which set has more.');for(let i=0;i<p.a;i++)b.dot(150+i*132,255,C.red);for(let i=0;i<p.b;i++){const t=b.dot(150+i*132,440,C.blue);if(i<Math.min(p.a,p.b))b.move(t,0,-85);}b.result(p.a===p.b?`${p.a} = ${p.b}: the sets are equal.`:`${Math.max(p.a,p.b)} > ${Math.min(p.a,p.b)}: ${Math.abs(p.a-p.b)} more.`);};
 renderers.track=(b,p,r)=>{b.slide(r,`Where does ${p.n} belong on the number track?`,'The numbers increase by one. Find the neighbours and move the missing numeral between them.');for(let i=0;i<=10;i++){b.rect(80+i*104,355,104,95,C.pale,C.blue,2);if(i!==p.n)b.text(i,80+i*104,365,104,70,38,C.blue,true,'center');}const t=b.text(p.n,520,230,104,70,46,C.green,true,'center');b.move(t,80+p.n*104-520,135);b.result(`${p.n-1}, ${p.n}, ${p.n+1}`);};
