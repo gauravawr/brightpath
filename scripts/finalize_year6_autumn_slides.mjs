@@ -9,14 +9,14 @@ const { resolvePresentationFont, finalizePresentation } = await import(pathToFil
 const family = resolvePresentationFont();
 const term = (process.argv[2] ?? "autumn").toLowerCase();
 if (!["autumn", "spring", "summer"].includes(term)) throw new Error(`Unknown term: ${term}`);
-const lessons = JSON.parse(await fs.readFile(path.join(ROOT, `public/lessons/year-6-maths/${term}/year6-${term}-lessons.json`), "utf8"));
+const lessons = JSON.parse(await fs.readFile(path.join(ROOT, `lessons/year-6-maths/${term}/year6-${term}-lessons.json`), "utf8"));
 const stageRoot = path.join(ROOT, ".qa", `year6-${term}-pptx`);
 
 let completed = 0;
 for (const item of lessons) {
   const stageDir = path.join(stageRoot, `week-${item.week}`, `${item.day}-${item.slug}`);
   const candidatePath = path.join(stageDir, "animated-candidate.pptx");
-  const finalDir = path.join(ROOT, "public", "lessons", "year-6-maths", term, `week-${item.week}`, item.slug);
+  const finalDir = path.join(ROOT, "lessons", "year-6-maths", term, `week-${item.week}`, item.slug);
   await fs.mkdir(finalDir, { recursive: true });
   const finalPath = path.join(finalDir, "teaching-powerpoint-v4.pptx");
   await finalizePresentation({

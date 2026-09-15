@@ -65,6 +65,11 @@ export const routes: Routes = [
         data: { week: 2, title: 'Year 1 Maths lesson', metaDescription: 'A complete Year 1 Maths lesson with editable planning, pre-teach, slides and differentiated worksheets.' },
       },
       {
+        path: 'lessons/year-1-maths/:week/:slug',
+        loadComponent: () => import('./features/curriculum/year1-week1-lesson.component').then(m => m.Year1Week1LessonComponent),
+        data: { title: 'Year 1 Maths lesson' },
+      },
+      {
         path: 'lessons/year-6-maths/evaluation/:term',
         loadComponent: () => import('./features/curriculum/year6-term-evaluation.component').then(m => m.Year6TermEvaluationComponent),
         data: { title: 'Year 6 Maths term evaluation', metaDescription: 'A 40-mark Year 6 Maths term assessment with score bands, editable pupil evaluation and intervention planning.' },

@@ -1,7 +1,7 @@
 $ErrorActionPreference = 'Stop'
 
 $projectRoot = (Resolve-Path -LiteralPath (Join-Path $PSScriptRoot '..')).Path
-$lessonRoot = Join-Path $projectRoot 'public\lessons\year-6-maths\autumn'
+$lessonRoot = Join-Path $projectRoot 'lessons\year-6-maths\autumn'
 $outputRoot = Join-Path $projectRoot '.qa\year6-teacher-plan-render'
 New-Item -ItemType Directory -Path $outputRoot -Force | Out-Null
 $plans = Get-ChildItem -LiteralPath $lessonRoot -Filter 'editable-teacher-plan.docx' -Recurse | Sort-Object FullName
@@ -49,4 +49,3 @@ if ($bad.Count) {
   throw "$($bad.Count) teacher plans are not one page."
 }
 Write-Output "Rendered and checked $($summary.Count) one-page teacher plans."
-

@@ -50,3 +50,6 @@ swa-cli.config.json
 _swa*.log
 
 brightpath-blob.config.json
+
+# Lesson binaries live in Azure Blob Storage
+/lessons/

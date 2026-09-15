@@ -14,7 +14,7 @@ from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.pdfgen import canvas
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "public/lessons/year-1-maths/week-1/sort-objects-into-groups"
+OUT = ROOT / "lessons/year-1-maths/week-1/sort-objects-into-groups"
 OUT.mkdir(parents=True, exist_ok=True)
 
 RED = "B4232B"

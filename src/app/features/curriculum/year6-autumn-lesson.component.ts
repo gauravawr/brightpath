@@ -1,3 +1,4 @@
+import { lessonFileUrl, downloadFile } from '../../shared/lesson-files';
 import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute, RouterLink } from '@angular/router';
@@ -67,7 +68,7 @@ interface ResourcePreview {
                 <div class="image-preview"><img [src]="previewImageSrc()" [alt]="resource.title + ', page ' + previewPage()" /></div>
                 <div class="preview-controls"><button type="button" (click)="changePage(-1)" [disabled]="previewPage() === (resource.start ?? 1)">← Previous</button><b>{{ resource.kind === 'slides' ? 'Slide' : 'Page' }} {{ displayPage() }} of {{ pageTotal() }}</b><button type="button" (click)="changePage(1)" [disabled]="previewPage() === (resource.end ?? 1)">Next →</button></div>
               }
-              <div class="preview__actions"><span>Happy with the preview?</span><a class="bp-btn" [href]="asset(resource.download)" download>Download {{ resource.title }}</a></div>
+              <div class="preview__actions"><span>Happy with the preview?</span><a class="bp-btn" [href]="asset(resource.download)" (click)="$event.preventDefault(); downloadFile(asset(resource.download))">Download {{ resource.title }}</a></div>
             </section>
           }
         </nav>
@@ -93,7 +94,7 @@ interface ResourcePreview {
         </section>
 
         <aside class="preteach bp-card"><div><span class="bp-label">Before the lesson</span><h2>Pre-teach and previous learning</h2><p>{{ item.preteach.focus }}</p></div><ul>@for (step of item.preteach.steps; track step) { <li>✓ {{ step }}</li> }</ul></aside>
-        <aside class="miro bp-card"><img src="/lessons/year-6-maths/shared/miro-misconception-character.png" alt="Miro, BrightPath's Year 6 misconception character" /><div><span class="bp-label">Miro’s misconception</span><h2>Can pupils correct Miro?</h2><p>{{ item.misconception }}</p><p><b>Teaching correction:</b> {{ item.correction }}</p></div></aside>
+        <aside class="miro bp-card"><img [src]="lessonFileUrl('year-6-maths/shared/miro-misconception-character.png')" alt="Miro, BrightPath's Year 6 misconception character" /><div><span class="bp-label">Miro’s misconception</span><h2>Can pupils correct Miro?</h2><p>{{ item.misconception }}</p><p><b>Teaching correction:</b> {{ item.correction }}</p></div></aside>
         <aside class="overview bp-card"><div><b>Success criteria</b><ul>@for (point of item.successCriteria; track point) { <li>{{ point }}</li> }</ul></div><div><b>Key vocabulary</b><p>{{ item.vocabulary.join(' · ') }}</p></div><div><b>Resources</b><p>{{ item.resources }}</p></div></aside>
       </div></main>
     } @else if (notFound()) {
@@ -105,6 +106,8 @@ interface ResourcePreview {
   `],
 })
 export class Year6AutumnLessonComponent {
+  readonly lessonFileUrl = lessonFileUrl;
+  readonly downloadFile = downloadFile;
   private http = inject(HttpClient);
   private route = inject(ActivatedRoute);
   private lang = inject(LanguageService);
@@ -120,7 +123,7 @@ export class Year6AutumnLessonComponent {
   draft = { teacher: '', date: '', initials: '', send: '', adaptations: '', assessment: '' };
 
   constructor() {
-    this.http.get<YearSixLesson[]>(`/lessons/year-6-maths/${this.termSlug}/year6-${this.termSlug}-lessons.json`).subscribe({
+    this.http.get<YearSixLesson[]>(lessonFileUrl(`year-6-maths/${this.termSlug}/year6-${this.termSlug}-lessons.json`)).subscribe({
       next: items => {
         const item = items.find(candidate => candidate.week === this.week && candidate.slug === this.slug) ?? null;
         this.lesson.set(item); this.notFound.set(!item); if (item) this.loadDraft();
@@ -130,7 +133,7 @@ export class Year6AutumnLessonComponent {
   }
 
   l(path: string): string { return this.lang.localise(path); }
-  asset(file: string): string { return `/lessons/year-6-maths/${this.termSlug}/week-${this.week}/${this.slug}/${file}`; }
+  asset(file: string): string { return lessonFileUrl(`year-6-maths/${this.termSlug}/week-${this.week}/${this.slug}/${file}`); }
   private key(): string { return `brightpath-year6-${this.termSlug}-${this.week}-${this.slug}`; }
   private loadDraft(): void { try { const value = localStorage.getItem(this.key()); if (value) this.draft = { ...this.draft, ...JSON.parse(value) }; } catch {} }
   saveDraft(): void { try { localStorage.setItem(this.key(), JSON.stringify(this.draft)); this.saved.set(true); setTimeout(() => this.saved.set(false), 2500); } catch {} }

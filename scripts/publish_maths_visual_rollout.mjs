@@ -14,7 +14,7 @@ for(const dir of await fs.readdir(path.join(root,'build'))){
  const fits=JSON.parse(await fs.readFile(path.join(source,'text-fit.json'),'utf8'));
  if(fits.length)throw new Error('Text does not fit '+m.id);
  const destination=path.resolve(repo,m.dir);
- if(!destination.startsWith(path.join(repo,'public','lessons')+path.sep))throw new Error('Unexpected destination');
+ if(!destination.startsWith(path.join(repo,'lessons')+path.sep))throw new Error('Unexpected destination');
  await fs.copyFile(path.join(root,'final-'+finalizedRevision,dir+'.pptx'),path.join(destination,m.file));changed.push(path.join(m.dir,m.file));
  const previews=path.join(destination,'preview','powerpoint');await fs.mkdir(previews,{recursive:true});
  for(const filename of await fs.readdir(previews))if(/^slide-\d+\.png$/.test(filename)){await fs.unlink(path.join(previews,filename));changed.push(path.join(m.dir,'preview','powerpoint',filename));}

@@ -1,0 +1,4 @@
+{
+  "containerUrl": "https://eshoppingstorage.blob.core.windows.net/brightpath",
+  "sasToken": "sp=racwdli&st=2026-09-15T12:30:35Z&se=2032-09-15T20:45:35Z&spr=https&sv=2026-02-06&sr=c&sig=bfa7Ai477ITaFB4k6PG1VXsH9iUOGVRrZPS%2BATuOUq0%3D"
+}

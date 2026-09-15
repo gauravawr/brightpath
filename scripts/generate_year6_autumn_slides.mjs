@@ -12,8 +12,8 @@ const family = resolvePresentationFont();
 const handwriting = "Segoe Print";
 const term = (process.argv[2] ?? "autumn").toLowerCase();
 if (!["autumn", "spring", "summer"].includes(term)) throw new Error(`Unknown term: ${term}`);
-const lessons = JSON.parse(await fs.readFile(path.join(ROOT, `public/lessons/year-6-maths/${term}/year6-${term}-lessons.json`), "utf8"));
-const characterBytes = await fs.readFile(path.join(ROOT, "public/lessons/year-6-maths/shared/miro-misconception-character.png"));
+const lessons = JSON.parse(await fs.readFile(path.join(ROOT, `lessons/year-6-maths/${term}/year6-${term}-lessons.json`), "utf8"));
+const characterBytes = await fs.readFile(path.join(ROOT, "lessons/year-6-maths/shared/miro-misconception-character.png"));
 const stageRoot = path.join(ROOT, ".qa", `year6-${term}-pptx`);
 await fs.mkdir(stageRoot, { recursive: true });
 

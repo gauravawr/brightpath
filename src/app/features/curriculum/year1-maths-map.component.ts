@@ -1,3 +1,4 @@
+import { lessonFileUrl, downloadFile } from '../../shared/lesson-files';
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute, RouterLink } from '@angular/router';
@@ -27,7 +28,7 @@ interface CurriculumWeek {
         <p>Five carefully sequenced {{ subjectName() }} lessons for every teaching week, organised across Autumn, Spring and Summer.</p>
         <div class="map-hero__actions">
           @if (subject() === 'maths' && year() === 1) {
-            <a class="bp-btn" href="/lessons/year-1-maths/brightpath-year-1-maths-30-week-curriculum-map.pdf" download>
+            <a class="bp-btn" href="#" (click)="$event.preventDefault(); downloadFile(lessonFileUrl('year-1-maths/brightpath-year-1-maths-30-week-curriculum-map.pdf'))">
               Download the full PDF
             </a>
           }
@@ -121,6 +122,8 @@ interface CurriculumWeek {
   styleUrl: './year1-maths-map.component.scss',
 })
 export class Year1MathsMapComponent {
+  readonly lessonFileUrl = lessonFileUrl;
+  readonly downloadFile = downloadFile;
   private http = inject(HttpClient);
   private route = inject(ActivatedRoute);
   private lang = inject(LanguageService);
@@ -144,6 +147,34 @@ export class Year1MathsMapComponent {
   readonly weekLessonSlugs: Record<number, string[]> = {
     1: ['sort-objects-into-groups', 'count-objects-one-to-one', 'represent-numbers-0-to-5', 'match-numerals-to-quantities-0-to-5', 'compare-sets-more-fewer-equal'],
     2: ['count-and-represent-6-to-10', 'read-and-write-numerals-6-to-10', 'place-numbers-on-a-0-to-10-track', 'find-one-more-within-10', 'find-one-less-within-10'],
+    3: ["compare-quantities-within-10", "compare-numerals-within-10", "use-greater-than-less-than-and-equal-to-language", "order-numbers-from-smallest-to-greatest", "find-missing-numbers-in-sequences"],
+    4: ["find-number-bonds-within-5", "find-bonds-systematically", "use-part-whole-models", "find-number-bonds-to-10", "solve-place-value-and-bond-problems"],
+    5: ["combine-two-groups", "understand-the-plus-and-equals-signs", "add-by-counting-all", "add-by-counting-on", "represent-addition-stories"],
+    6: ["take-away-from-a-group", "understand-the-minus-and-equals-signs", "subtract-by-crossing-out", "subtract-by-counting-back", "represent-subtraction-stories"],
+    7: ["build-addition-fact-families", "connect-addition-and-subtraction", "find-a-missing-part", "compare-addition-statements", "compare-subtraction-statements"],
+    8: ["choose-addition-or-subtraction", "complete-missing-number-calculations", "solve-one-step-word-problems", "spot-and-explain-calculation-errors", "end-of-unit-assessment"],
+    9: ["name-common-3d-shapes", "describe-and-sort-3d-shapes", "name-common-2d-shapes", "describe-and-sort-2d-shapes", "make-repeating-patterns-with-shapes"],
+    10: ["review-place-value-within-10", "review-comparing-one-more-and-one-less", "review-addition-within-10", "review-subtraction-within-10", "autumn-problem-solving-check"],
+    11: ["count-from-10-to-20", "build-teen-numbers-with-one-ten-and-ones", "represent-numbers-11-to-20", "read-and-write-numerals-11-to-20", "compare-teen-numbers"],
+    12: ["order-numbers-to-20", "find-one-more-and-one-less", "use-a-0-to-20-number-line", "complete-missing-number-sequences", "place-value-assessment-and-application"],
+    13: ["recall-number-bonds-to-10", "find-number-bonds-to-20-with-objects", "find-doubles-within-20", "use-near-doubles", "add-ones-by-counting-on"],
+    14: ["add-by-bridging-through-10", "subtract-without-crossing-10", "subtract-by-bridging-through-10", "build-fact-families-within-20", "complete-missing-number-calculations"],
+    15: ["solve-addition-word-problems", "solve-subtraction-word-problems", "choose-the-correct-operation", "explain-and-correct-errors", "end-of-unit-assessment"],
+    16: ["count-groups-of-ten", "identify-tens-and-ones", "represent-numbers-21-to-50", "count-forwards-and-backwards-to-50", "place-numbers-on-a-0-to-50-line"],
+    17: ["find-one-more-and-one-less-within-50", "compare-numbers-within-50", "order-numbers-within-50", "count-in-twos-and-fives", "place-value-assessment-and-application"],
+    18: ["compare-lengths", "measure-length-with-non-standard-units", "measure-and-record-length-in-centimetres", "compare-heights", "solve-length-and-height-problems"],
+    19: ["compare-mass", "measure-mass-with-non-standard-units", "explore-full-empty-and-capacity", "compare-volume-and-capacity", "solve-mass-and-capacity-problems"],
+    20: ["review-place-value-within-20", "review-addition-and-subtraction-within-20", "review-place-value-within-50", "review-length-height-mass-and-capacity", "spring-problem-solving-check"],
+    21: ["count-in-twos", "make-equal-groups", "write-repeated-addition", "build-and-describe-arrays", "find-doubles-by-making-two-equal-groups"],
+    22: ["count-in-fives-and-tens", "share-objects-equally", "group-objects-equally", "solve-grouping-and-sharing-problems", "end-of-unit-assessment"],
+    23: ["recognise-a-whole-and-a-half", "find-half-of-a-set-of-objects", "find-half-of-a-shape", "find-half-of-a-quantity", "explain-that-two-halves-make-a-whole"],
+    24: ["recognise-a-quarter-of-a-shape", "find-a-quarter-of-objects", "find-a-quarter-of-a-quantity", "decide-whether-parts-are-equal", "fractions-assessment-and-application"],
+    25: ["use-positional-language", "use-ordinal-numbers", "make-whole-half-and-quarter-turns", "describe-direction-and-position", "follow-and-create-simple-routes"],
+    26: ["count-forwards-and-backwards-to-100", "make-groups-of-ten", "represent-two-digit-numbers", "read-and-write-numerals-to-100", "use-a-0-to-100-number-line"],
+    27: ["find-one-more-and-one-less-within-100", "compare-two-digit-numbers", "order-two-digit-numbers", "count-in-twos-fives-and-tens", "place-value-assessment-and-application"],
+    28: ["recognise-and-name-coins", "recognise-and-name-notes", "compare-coin-values", "make-the-same-amount-in-different-ways", "solve-simple-money-problems"],
+    29: ["use-before-after-earlier-and-later", "sequence-days-weeks-and-months", "compare-and-measure-hours-and-minutes", "tell-the-time-to-the-hour", "tell-the-time-to-the-half-hour"],
+    30: ["review-place-value-within-100", "review-addition-and-subtraction", "review-multiplication-division-and-fractions", "review-measurement-money-and-time", "final-assessment-and-pupil-reflection"],
   };
 
   constructor() {
@@ -183,7 +214,7 @@ export class Year1MathsMapComponent {
     this.loading.set(true);
     this.plan.set([]);
     const url = this.subject() === 'maths' && this.year() === 1
-      ? '/lessons/year-1-maths/year1-maths-plan.json'
+      ? lessonFileUrl('year-1-maths/year1-maths-plan.json')
       : `/curriculum-plans/${this.subject()}/year-${this.year()}.json`;
     this.http.get<CurriculumWeek[]>(url).subscribe({
       next: weeks => {

@@ -8,11 +8,11 @@ const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname.replace
 const term = (process.argv[2] ?? "autumn").toLowerCase();
 const workedOnly = process.argv[3] === "worked";
 if (!["autumn", "spring", "summer"].includes(term)) throw new Error(`Unknown term: ${term}`);
-const lessons = JSON.parse(await fs.readFile(path.join(ROOT, `public/lessons/year-6-maths/${term}/year6-${term}-lessons.json`), "utf8"));
+const lessons = JSON.parse(await fs.readFile(path.join(ROOT, `lessons/year-6-maths/${term}/year6-${term}-lessons.json`), "utf8"));
 
 let completed = 0;
 for (const item of lessons) {
-  const lessonDir = path.join(ROOT, "public", "lessons", "year-6-maths", term, `week-${item.week}`, item.slug);
+  const lessonDir = path.join(ROOT, "lessons", "year-6-maths", term, `week-${item.week}`, item.slug);
   const input = path.join(lessonDir, "teaching-powerpoint-v4.pptx");
   const outputDir = path.join(lessonDir, "preview", "powerpoint");
   await fs.mkdir(outputDir, { recursive: true });

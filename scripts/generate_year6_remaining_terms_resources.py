@@ -16,7 +16,7 @@ import generate_year6_autumn_resources as base
 
 
 ROOT = Path(__file__).resolve().parents[1]
-EVALUATION_ROOT = ROOT / "public" / "lessons" / "year-6-maths" / "evaluations"
+EVALUATION_ROOT = ROOT / "lessons" / "year-6-maths" / "evaluations"
 
 
 def pair(question, answer):
@@ -635,7 +635,7 @@ def create_term_assessment(term, lessons):
 def build_term(term):
     term_weeks = [item for item in WEEKS if item["term"] == term]
     base.TERM = term
-    base.OUT = ROOT / "public" / "lessons" / "year-6-maths" / term.lower()
+    base.OUT = ROOT / "lessons" / "year-6-maths" / term.lower()
     base.WEEKS = term_weeks
     lessons = base.build_lessons()
     base.OUT.mkdir(parents=True, exist_ok=True)
@@ -654,7 +654,7 @@ def main():
     for term in ("Spring", "Summer"):
         all_terms[term] = build_term(term)
         print(f"Created {len(all_terms[term])} {term} lesson records, plans and PDF packs")
-    autumn = json.loads((ROOT / "public" / "lessons" / "year-6-maths" / "autumn" / "year6-autumn-lessons.json").read_text(encoding="utf-8"))
+    autumn = json.loads((ROOT / "lessons" / "year-6-maths" / "autumn" / "year6-autumn-lessons.json").read_text(encoding="utf-8"))
     for term, lessons in (("Autumn", autumn), ("Spring", all_terms["Spring"]), ("Summer", all_terms["Summer"])):
         create_evaluation_record(term)
         create_term_assessment(term, lessons)

@@ -7,7 +7,7 @@ from pypdf import PdfReader
 
 
 ROOT = Path(__file__).resolve().parents[1]
-LESSON_ROOT = ROOT / "public" / "lessons" / "year-6-maths" / "autumn"
+LESSON_ROOT = ROOT / "lessons" / "year-6-maths" / "autumn"
 
 
 def main():

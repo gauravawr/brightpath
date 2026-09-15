@@ -17,7 +17,7 @@ from reportlab.pdfgen import canvas
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "public" / "lessons" / "year-6-maths" / "autumn"
+OUT = ROOT / "lessons" / "year-6-maths" / "autumn"
 CURRICULUM = ROOT / "public" / "curriculum-plans" / "maths" / "year-6.json"
 TERM = "Autumn"
 

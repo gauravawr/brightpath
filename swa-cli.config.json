@@ -1,0 +1,11 @@
+{
+  "$schema": "https://aka.ms/azure/static-web-apps-cli/schema",
+  "configurations": {
+    "brightpath": {
+      "appLocation": ".",
+      "outputLocation": "dist/brightpath/browser",
+      "appBuildCommand": "npm run build",
+      "deploymentToken": "a33096ff535eef95d7b5039c5c848099a833b93ef10e8797dfe54f33cc4c570303-da16a62e-d660-4dd7-b5aa-7c4855322b9d01017260f5893110"
+    }
+  }
+}

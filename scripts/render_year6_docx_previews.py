@@ -28,7 +28,7 @@ def main():
     if term not in {"autumn", "spring", "summer"}:
         raise RuntimeError("Choose Autumn, Spring or Summer.")
     evaluation_only = len(sys.argv) > 2 and sys.argv[2] == "evaluation"
-    lesson_root = ROOT / "public" / "lessons" / "year-6-maths" / term
+    lesson_root = ROOT / "lessons" / "year-6-maths" / term
     if not evaluation_only:
         plans = sorted(lesson_root.rglob("editable-teacher-plan.docx"))
         if len(plans) != 50:
@@ -39,7 +39,7 @@ def main():
             render(source, qa_root / relative, 1)
             print(f"teacher plan {index}/50")
 
-    evaluation_root = ROOT / "public" / "lessons" / "year-6-maths" / "evaluations" / term
+    evaluation_root = ROOT / "lessons" / "year-6-maths" / "evaluations" / term
     record = evaluation_root / "editable-teacher-evaluation-record.docx"
     evaluation_qa = ROOT / ".qa" / f"year6-{term}-evaluation-record"
     pages = render(record, evaluation_qa, 2)

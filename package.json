@@ -9,7 +9,9 @@
     "test": "ng test",
     "deploy": "ng build && swa deploy brightpath --env production",
     "deploy:only": "swa deploy brightpath --env production",
-    "start:local-api": "ng serve --configuration local-api"
+    "start:local-api": "ng serve --configuration local-api",
+    "publish:lessons": "node scripts/blob-lessons.mjs",
+    "pull:lessons": "node scripts/blob-lessons.mjs --pull"
   },
   "private": true,
   "packageManager": "npm@11.9.0",
@@ -23,6 +25,7 @@
     "@ngx-translate/core": "^17.0.0",
     "@ngx-translate/http-loader": "^17.0.0",
     "oidc-client-ts": "^3.5.0",
+    "pdfjs-dist": "^6.3.289",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
   },
@@ -30,6 +33,7 @@
     "@angular/build": "^21.2.23",
     "@angular/cli": "^21.2.23",
     "@angular/compiler-cli": "^21.2.0",
+    "@azure/static-web-apps-cli": "^2.0.10",
     "jsdom": "^28.0.0",
     "prettier": "^3.8.1",
     "typescript": "~5.9.2",

@@ -21,7 +21,7 @@ def main():
     if term not in {"autumn", "spring", "summer"}:
         raise RuntimeError(f"Unknown term: {term}")
     evaluation_only = len(sys.argv) > 2 and sys.argv[2] == "evaluation"
-    lesson_root = ROOT / "public" / "lessons" / "year-6-maths" / term
+    lesson_root = ROOT / "lessons" / "year-6-maths" / term
     if not evaluation_only:
         preteach = sorted(lesson_root.rglob("pre-teach.pdf"))
         worksheets = sorted(lesson_root.rglob("differentiated-worksheets.pdf"))
@@ -34,7 +34,7 @@ def main():
             render(source, source.parent / "preview" / "worksheets", 6)
             print(f"worksheets {index}/50")
 
-    evaluation_root = ROOT / "public" / "lessons" / "year-6-maths" / "evaluations" / term
+    evaluation_root = ROOT / "lessons" / "year-6-maths" / "evaluations" / term
     assessment = evaluation_root / "term-assessment-and-mark-scheme.pdf"
     if assessment.exists():
         render(assessment, evaluation_root / "preview" / "assessment", 5)

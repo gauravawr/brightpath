@@ -9,7 +9,7 @@ const SKILL_DIR = "C:/Users/garim/.codex/plugins/cache/openai-primary-runtime/pr
 const RUNTIME_PYTHON = "C:/Users/garim/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe";
 const { resolvePresentationFont, finalizePresentation } = await import(pathToFileURL(path.join(SKILL_DIR, "container_tools/artifact_tool_utils.mjs")).href);
 const family = resolvePresentationFont();
-const lessons = JSON.parse(await fs.readFile(path.join(ROOT, `public/lessons/year-1-maths/week-${WEEK}/week${WEEK}-lessons.json`), "utf8"));
+const lessons = JSON.parse(await fs.readFile(path.join(ROOT, `lessons/year-1-maths/week-${WEEK}/week${WEEK}-lessons.json`), "utf8"));
 const stageRoot = path.join(ROOT, `.week${WEEK}-pptx-staging`);
 await fs.mkdir(stageRoot, { recursive: true });
 
@@ -127,7 +127,7 @@ async function build(lesson) {
   await fs.mkdir(deckStage, { recursive: true });
   const candidatePath = path.join(deckStage, "candidate.pptx");
   await (await PresentationFile.exportPptx(pres)).save(candidatePath);
-  const finalPath = path.join(ROOT, `public/lessons/year-1-maths/week-${WEEK}`, lesson.slug, "interactive-teaching-slides.pptx");
+  const finalPath = path.join(ROOT, `lessons/year-1-maths/week-${WEEK}`, lesson.slug, "interactive-teaching-slides.pptx");
   await finalizePresentation({
     explicitTotalSlideCount: 8,
     requiredNativeTableOwnerSlides: [], requiredNativeChartOwnerSlides: [],

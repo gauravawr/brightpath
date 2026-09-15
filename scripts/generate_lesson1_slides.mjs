@@ -12,8 +12,8 @@ const { resolvePresentationFont, finalizePresentation } = await import(pathToFil
 
 const family = resolvePresentationFont();
 const handFamily = "Segoe Print";
-const lesson = JSON.parse(await fs.readFile(path.join(ROOT, "public/lessons/year-1-maths/week-1/week1-lessons.json"), "utf8"))[0];
-const assetRoot = path.join(ROOT, "public/lessons/year-1-maths/shared");
+const lesson = JSON.parse(await fs.readFile(path.join(ROOT, "lessons/year-1-maths/week-1/week1-lessons.json"), "utf8"))[0];
+const assetRoot = path.join(ROOT, "lessons/year-1-maths/shared");
 const mascotBytes = await fs.readFile(path.join(assetRoot, "pip-maths-mascot.png"));
 const backgroundBytes = await fs.readFile(path.join(assetRoot, "sorting-lesson-background.png"));
 

@@ -12,12 +12,12 @@ const runtime=process.env.ARTIFACT_TOOL_PATH??'C:/Users/garim/.cache/codex-runti
 const {Presentation,PresentationFile}=await import(pathToFileURL(runtime).href);
 const all=[];
 for(const term of ['autumn','spring','summer']){
- const rel=`public/lessons/year-6-maths/${term}/year6-${term}-lessons.json`;
- for(const item of JSON.parse(await fs.readFile(path.join(ROOT,rel),'utf8')))all.push({...item,year:6,term,source:rel,dir:`public/lessons/year-6-maths/${term}/week-${item.week}/${item.slug}`,file:'teaching-powerpoint-v1.pptx'});
+ const rel=`lessons/year-6-maths/${term}/year6-${term}-lessons.json`;
+ for(const item of JSON.parse(await fs.readFile(path.join(ROOT,rel),'utf8')))all.push({...item,year:6,term,source:rel,dir:`lessons/year-6-maths/${term}/week-${item.week}/${item.slug}`,file:'teaching-powerpoint-v1.pptx'});
 }
 for(const week of [1,2]){
- const rel=`public/lessons/year-1-maths/week-${week}/week${week}-lessons.json`;
- for(const item of JSON.parse(await fs.readFile(path.join(ROOT,rel),'utf8')))all.push({...item,week,year:1,term:'autumn',source:rel,dir:`public/lessons/year-1-maths/week-${week}/${item.slug}`,file:week===1&&item.day===1?'teaching-powerpoint-v5.pptx':'interactive-teaching-slides.pptx'});
+ const rel=`lessons/year-1-maths/week-${week}/week${week}-lessons.json`;
+ for(const item of JSON.parse(await fs.readFile(path.join(ROOT,rel),'utf8')))all.push({...item,week,year:1,term:'autumn',source:rel,dir:`lessons/year-1-maths/week-${week}/${item.slug}`,file:week===1&&item.day===1?'teaching-powerpoint-v5.pptx':'interactive-teaching-slides.pptx'});
 }
 await fs.mkdir(out,{recursive:true});
 let completed=0;

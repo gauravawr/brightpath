@@ -1,3 +1,5 @@
+import { PdfPreviewComponent } from '../../shared/pdf-preview.component';
+import { lessonFileUrl, downloadFile } from '../../shared/lesson-files';
 import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute, RouterLink } from '@angular/router';
@@ -15,19 +17,19 @@ interface WeekLesson {
 interface ResourcePreview { title:string; kind:'slides'|'pdf'; download:string; preview?:string; slideCount?:number; description:string; }
 
 @Component({
-  selector:'bp-year1-week1-lesson', standalone:true, imports:[RouterLink, FormsModule], changeDetection:ChangeDetectionStrategy.OnPush,
+  selector:'bp-year1-week1-lesson', standalone:true, imports:[RouterLink, FormsModule, PdfPreviewComponent], changeDetection:ChangeDetectionStrategy.OnPush,
   template:`
     @if (lesson(); as item) {
       <header class="bp-page-hero"><div class="bp-container">
-        <a class="back" [routerLink]="l('/lessons/year-1-maths-map')">← Autumn curriculum map</a>
-        <span class="bp-chip">Year 1 Maths · Autumn · Week {{ week }} · Day {{ item.day }}</span>
+        <a class="back" [routerLink]="l('/lessons/year-1-maths-map')">← Curriculum map</a>
+        <span class="bp-chip">Year 1 Maths · {{ week <= 10 ? 'Autumn' : week <= 20 ? 'Spring' : 'Summer' }} · Week {{ week }} · Day {{ item.day }}</span>
         <h1>{{ item.title }}</h1><p>{{ item.objective }}</p>
       </div></header>
       <main class="bp-section"><div class="bp-container lesson-layout">
         <nav class="resource-card bp-card" aria-label="Lesson downloads">
           <span class="bp-label">Complete lesson pack</span><h2>Open and adapt every resource</h2>
           <div class="downloads">
-            <button class="download" type="button" (click)="openPreview('plan')"><span>📝</span><b>Editable teacher plan</b><small>Preview first · one-page Word plan</small></button>
+            <button class="download" type="button" (click)="openPreview('plan')"><span>📝</span><b>Editable teacher plan</b><small>Preview first · editable Word plan</small></button>
             <button class="download" type="button" (click)="openPreview('slides')"><span>📽️</span><b>Teaching PowerPoint</b><small>{{ item.teachingSlides?.count ?? 8 }} slides · I do / You do</small></button>
             <button class="download" type="button" (click)="openPreview('preteach')"><span>🌱</span><b>Pre-teach</b><small>Preview before printing</small></button>
             <button class="download" type="button" (click)="openPreview('lower')"><span>●</span><b>Lower worksheet</b><small>Preview before printing</small></button>
@@ -41,9 +43,9 @@ interface ResourcePreview { title:string; kind:'slides'|'pdf'; download:string; 
                 <div class="slide-preview"><img [src]="slidePreviewSrc()" [alt]="resource.title + ', slide ' + previewSlide()" /></div>
                 <div class="slide-controls"><button type="button" (click)="changeSlide(-1)" [disabled]="previewSlide() === 1">← Previous</button><b>Slide {{ previewSlide() }} of {{ resource.slideCount }}</b><button type="button" (click)="changeSlide(1)" [disabled]="previewSlide() === resource.slideCount">Next →</button></div>
               } @else if (previewUrl()) {
-                <iframe class="document-preview" [src]="previewUrl()" [title]="resource.title + ' preview'"></iframe>
+                <bp-pdf-preview [url]="asset(resource.preview!)" />
               }
-              <div class="preview__actions"><span>Happy with the preview?</span><a class="bp-btn" [href]="asset(resource.download)" download>Download {{ resource.title }}</a></div>
+              <div class="preview__actions"><span>Happy with the preview?</span><a class="bp-btn" [href]="asset(resource.download)" (click)="$event.preventDefault(); downloadFile(asset(resource.download))">Download {{ resource.title }}</a></div>
             </section>
           }
         </nav>
@@ -79,17 +81,19 @@ interface ResourcePreview { title:string; kind:'slides'|'pdf'; download:string; 
   `]
 })
 export class Year1Week1LessonComponent {
+  readonly lessonFileUrl = lessonFileUrl;
+  readonly downloadFile = downloadFile;
   private http=inject(HttpClient); private route=inject(ActivatedRoute); private lang=inject(LanguageService); private sanitizer=inject(DomSanitizer);
-  readonly slug=this.route.snapshot.paramMap.get('slug') ?? ''; readonly week=Number(this.route.snapshot.data['week'] ?? 1); readonly lesson=signal<WeekLesson|null>(null); readonly saved=signal(false); readonly preview=signal<ResourcePreview|null>(null); readonly previewUrl=signal<SafeResourceUrl|null>(null); readonly previewSlide=signal(1);
+  readonly slug=this.route.snapshot.paramMap.get('slug') ?? ''; readonly week=Number(this.route.snapshot.paramMap.get('week')?.replace('week-', '') ?? this.route.snapshot.data['week'] ?? 1); readonly lesson=signal<WeekLesson|null>(null); readonly saved=signal(false); readonly preview=signal<ResourcePreview|null>(null); readonly previewUrl=signal<SafeResourceUrl|null>(null); readonly previewSlide=signal(1);
   draft={teacher:'',date:'',initials:'',send:'',adaptations:'',assessment:''};
-  constructor(){ this.http.get<WeekLesson[]>(`/lessons/year-1-maths/week-${this.week}/week${this.week}-lessons.json`).subscribe(items=>{this.lesson.set(items.find(item=>item.slug===this.slug)??null);this.loadDraft();}); }
-  asset(file:string):string{return `/lessons/year-1-maths/week-${this.week}/${this.slug}/${file}`;} l(path:string):string{return this.lang.localise(path);}
+  constructor(){ this.http.get<WeekLesson[]>(lessonFileUrl(`year-1-maths/week-${this.week}/week${this.week}-lessons.json`)).subscribe(items=>{this.lesson.set(items.find(item=>item.slug===this.slug)??null);this.loadDraft();}); }
+  asset(file:string):string{return lessonFileUrl(`year-1-maths/week-${this.week}/${this.slug}/${file}`);} l(path:string):string{return this.lang.localise(path);}
   private key():string{return `brightpath-plan-week-${this.week}-${this.slug}`;} private loadDraft():void{try{const value=localStorage.getItem(this.key());if(value)this.draft={...this.draft,...JSON.parse(value)};}catch{}}
   saveDraft():void{try{localStorage.setItem(this.key(),JSON.stringify(this.draft));this.saved.set(true);setTimeout(()=>this.saved.set(false),2500);}catch{}}
   openPreview(kind:'plan'|'slides'|'preteach'|'lower'|'expected'|'higher'):void{
     const newPack=this.week===1&&this.slug==='sort-objects-into-groups';
     const resources:Record<typeof kind,ResourcePreview>={
-      plan:{title:'Editable teacher plan',kind:'pdf',download:newPack?'editable-teacher-plan-one-page.docx':'editable-teacher-plan.docx',preview:newPack?'teacher-plan-preview.pdf':'teacher-plan-preview.pdf',description:'One-page, supply-teacher-ready lesson plan. Download the Word version only when you are ready to edit it.'},
+      plan:{title:'Editable teacher plan',kind:'pdf',download:newPack?'editable-teacher-plan-one-page.docx':'editable-teacher-plan.docx',preview:this.week>2?'preview/teacher-plan.pdf':'teacher-plan-preview.pdf',description:'Complete lesson sequence and answer guide. Download the Word version only when you are ready to edit it.'},
       slides:{title:'Teaching PowerPoint',kind:'slides',download:newPack?'teaching-powerpoint-v5.pptx':'interactive-teaching-slides.pptx',preview:'preview/powerpoint',slideCount:this.lesson()?.teachingSlides?.count ?? (newPack?15:8),description:'I do and You do examples with visual working, followed by the expected-level activity and answers. These previews show completed slides. Download and open PowerPoint Slide Show to play the animations.'},
       preteach:{title:'Pre-teach resource',kind:'pdf',download:'pre-teach.pdf',preview:'pre-teach.pdf',description:'Adult guide and pupil quick check for the lower/CUSP group.'},
       lower:{title:'Lower support worksheet',kind:'pdf',download:'lower-worksheet.pdf',preview:'lower-worksheet.pdf',description:'Concrete, visual practice with reduced language and supported recording.'},

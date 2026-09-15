@@ -7,7 +7,7 @@ const { FileBlob, PresentationFile } = await import(pathToFileURL(artifactToolPa
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname.replace(/^\/(.:)/, "$1")), "..");
 const term = (process.argv[2] ?? "autumn").toLowerCase();
 if (!["autumn", "spring", "summer"].includes(term)) throw new Error(`Unknown term: ${term}`);
-const lessons = JSON.parse(await fs.readFile(path.join(ROOT, `public/lessons/year-6-maths/${term}/year6-${term}-lessons.json`), "utf8"));
+const lessons = JSON.parse(await fs.readFile(path.join(ROOT, `lessons/year-6-maths/${term}/year6-${term}-lessons.json`), "utf8"));
 const selected = process.argv[3] ?? "all";
 const stageRoot = path.join(ROOT, ".qa", `year6-${term}-pptx`);
 

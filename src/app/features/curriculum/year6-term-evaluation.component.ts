@@ -1,3 +1,4 @@
+import { lessonFileUrl, downloadFile } from '../../shared/lesson-files';
 import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute, RouterLink } from '@angular/router';
@@ -66,7 +67,7 @@ interface EvaluationPreview {
               <div class="preview-head"><div><span class="bp-label">Preview</span><h3>{{ resource.title }}</h3><p>{{ resource.description }}</p></div><button class="close" type="button" (click)="closePreview()" aria-label="Close preview">×</button></div>
               <div class="image-preview"><img [src]="previewImageSrc()" [alt]="resource.title + ', page ' + displayPage()" /></div>
               <div class="preview-controls"><button type="button" (click)="changePage(-1)" [disabled]="previewPage() === resource.start">← Previous</button><b>Page {{ displayPage() }} of {{ pageTotal() }}</b><button type="button" (click)="changePage(1)" [disabled]="previewPage() === resource.end">Next →</button></div>
-              <div class="preview-actions"><span>Happy with the preview?</span><a class="bp-btn" [href]="asset(resource.download)" download>Download {{ resource.title }}</a></div>
+              <div class="preview-actions"><span>Happy with the preview?</span><a class="bp-btn" [href]="asset(resource.download)" (click)="$event.preventDefault(); downloadFile(asset(resource.download))">Download {{ resource.title }}</a></div>
             </section>
           }
         </section>
@@ -125,6 +126,8 @@ interface EvaluationPreview {
   `],
 })
 export class Year6TermEvaluationComponent {
+  readonly lessonFileUrl = lessonFileUrl;
+  readonly downloadFile = downloadFile;
   private http = inject(HttpClient);
   private route = inject(ActivatedRoute);
   private lang = inject(LanguageService);
@@ -144,14 +147,14 @@ export class Year6TermEvaluationComponent {
       this.notFound.set(true);
       return;
     }
-    this.http.get<EvaluationMetadata>(`/lessons/year-6-maths/evaluations/${this.termSlug}/evaluation.json`).subscribe({
+    this.http.get<EvaluationMetadata>(lessonFileUrl(`year-6-maths/evaluations/${this.termSlug}/evaluation.json`)).subscribe({
       next: data => { this.metadata.set(data); this.load(); },
       error: () => this.notFound.set(true),
     });
   }
 
   l(path: string): string { return this.lang.localise(path); }
-  asset(file: string): string { return `/lessons/year-6-maths/evaluations/${this.termSlug}/${file}`; }
+  asset(file: string): string { return lessonFileUrl(`year-6-maths/evaluations/${this.termSlug}/${file}`); }
   scoreBand(score: number | null): string {
     if (score === null || score === undefined || Number.isNaN(Number(score))) return '';
     const value = Math.max(0, Math.min(40, Number(score)));

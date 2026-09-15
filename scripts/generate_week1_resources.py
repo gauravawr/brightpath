@@ -20,7 +20,7 @@ from reportlab.platypus import KeepTogether, Paragraph, SimpleDocTemplate, Space
 
 ROOT = Path(__file__).resolve().parents[1]
 WEEK = int(sys.argv[1]) if len(sys.argv) > 1 else 1
-DATA = ROOT / f"public/lessons/year-1-maths/week-{WEEK}/week{WEEK}-lessons.json"
+DATA = ROOT / f"lessons/year-1-maths/week-{WEEK}/week{WEEK}-lessons.json"
 OUT = DATA.parent
 RED = "B91C1C"
 RED_MID = "DC2626"

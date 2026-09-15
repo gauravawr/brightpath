@@ -120,7 +120,7 @@ def main():
     term = (sys.argv[1] if len(sys.argv) > 1 else "spring").lower()
     if term not in {"autumn", "spring", "summer"}:
         raise RuntimeError("Choose autumn, spring or summer.")
-    lessons_root = ROOT / "public" / "lessons" / "year-6-maths" / term
+    lessons_root = ROOT / "lessons" / "year-6-maths" / term
     lessons = json.loads((lessons_root / f"year6-{term}-lessons.json").read_text(encoding="utf-8"))
     stage_root = ROOT / ".qa" / f"year6-{term}-pptx"
     for index, item in enumerate(lessons, 1):

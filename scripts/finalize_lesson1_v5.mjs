@@ -10,7 +10,7 @@ const { resolvePresentationFont, finalizePresentation } = await import(
 
 const stagingDir = path.join(ROOT, ".qa", "lesson1-finalizer");
 const candidatePath = path.join(stagingDir, "lesson1-v5-animated-candidate.pptx");
-const finalDir = path.join(ROOT, "public", "lessons", "year-1-maths", "week-1", "sort-objects-into-groups");
+const finalDir = path.join(ROOT, "lessons", "year-1-maths", "week-1", "sort-objects-into-groups");
 const finalPath = path.join(finalDir, "teaching-powerpoint-v5.pptx");
 
 await finalizePresentation({

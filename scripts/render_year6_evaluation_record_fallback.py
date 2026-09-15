@@ -94,7 +94,7 @@ def make_preview(term):
     c.save()
 
     subprocess.run([str(POPPLER), "-png", "-r", "110", str(pdf), str(qa / "page")], check=True)
-    public = ROOT / "public" / "lessons" / "year-6-maths" / "evaluations" / term.lower() / "preview" / "teacher-record"
+    public = ROOT / "lessons" / "year-6-maths" / "evaluations" / term.lower() / "preview" / "teacher-record"
     public.mkdir(parents=True, exist_ok=True)
     pages = sorted(qa.glob("page-*.png"))
     if len(pages) != 2:

@@ -7,7 +7,7 @@ from pypdf import PdfReader
 
 
 ROOT = Path(__file__).resolve().parents[1]
-PUBLIC = ROOT / "public" / "lessons" / "year-6-maths"
+PUBLIC = ROOT / "lessons" / "year-6-maths"
 
 
 def check(condition, message):
