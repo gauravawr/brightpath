@@ -30,7 +30,7 @@ interface ResourcePreview { title:string; kind:'slides'|'pdf'; download:string; 
           <span class="bp-label">Complete lesson pack</span><h2>Open and adapt every resource</h2>
           <div class="downloads">
             <button class="download" type="button" (click)="openPreview('plan')"><span>📝</span><b>Editable teacher plan</b><small>Preview first · editable Word plan</small></button>
-            <button class="download" type="button" (click)="openPreview('slides')"><span>📽️</span><b>Teaching PowerPoint</b><small>{{ item.teachingSlides?.count ?? 8 }} slides · I do / You do</small></button>
+            <button class="download" type="button" (click)="openPreview('slides')"><span>📽️</span><b>Teaching PowerPoint</b><small>{{ item.teachingSlides?.count ?? 9 }} slides · animated teaching and discussion</small></button>
             <button class="download" type="button" (click)="openPreview('preteach')"><span>🌱</span><b>Pre-teach</b><small>Preview before printing</small></button>
             <button class="download" type="button" (click)="openPreview('lower')"><span>●</span><b>Lower worksheet</b><small>Preview before printing</small></button>
             <button class="download" type="button" (click)="openPreview('expected')"><span>●●</span><b>Expected worksheet</b><small>Preview before printing</small></button>
@@ -94,11 +94,11 @@ export class Year1Week1LessonComponent {
     const newPack=this.week===1&&this.slug==='sort-objects-into-groups';
     const resources:Record<typeof kind,ResourcePreview>={
       plan:{title:'Editable teacher plan',kind:'pdf',download:newPack?'editable-teacher-plan-one-page.docx':'editable-teacher-plan.docx',preview:this.week>2?'preview/teacher-plan.pdf':'teacher-plan-preview.pdf',description:'Complete lesson sequence and answer guide. Download the Word version only when you are ready to edit it.'},
-      slides:{title:'Teaching PowerPoint',kind:'slides',download:newPack?'teaching-powerpoint-v5.pptx':'interactive-teaching-slides.pptx',preview:'preview/powerpoint',slideCount:this.lesson()?.teachingSlides?.count ?? (newPack?15:8),description:'I do and You do examples with visual working, followed by the expected-level activity and answers. These previews show completed slides. Download and open PowerPoint Slide Show to play the animations.'},
+      slides:{title:'Teaching PowerPoint',kind:'slides',download:'interactive-teaching-slides.pptx',preview:'preview/powerpoint',slideCount:this.lesson()?.teachingSlides?.count ?? 9,description:'Step-by-step visual teaching, one Pip reasoning discussion, one shared picture question sheet and one picture answer sheet. These previews show completed slides. Download and open PowerPoint Slide Show to play the animations.'},
       preteach:{title:'Pre-teach resource',kind:'pdf',download:'pre-teach.pdf',preview:'pre-teach.pdf',description:'Adult guide and pupil quick check for the lower/CUSP group.'},
-      lower:{title:'Lower support worksheet',kind:'pdf',download:'lower-worksheet.pdf',preview:'lower-worksheet.pdf',description:'Concrete, visual practice with reduced language and supported recording.'},
-      expected:{title:'Expected worksheet',kind:'pdf',download:'expected-worksheet.pdf',preview:'expected-worksheet.pdf',description:'Independent core practice at the expected lesson outcome.'},
-      higher:{title:'Higher challenge worksheet',kind:'pdf',download:'higher-worksheet.pdf',preview:'higher-worksheet.pdf',description:'Reasoning, two-rule sorting and early-finisher extension.'},
+      lower:{title:'Lower support worksheet',kind:'pdf',download:'lower-worksheet.pdf',preview:'lower-worksheet.pdf',description:'Picture-supported practice with objects to count, models to complete and space to record. Answers are on the final page.'},
+      expected:{title:'Expected worksheet',kind:'pdf',download:'expected-worksheet.pdf',preview:'expected-worksheet.pdf',description:'The five expected questions with pictures and maths models to work on independently. Answers are on the final page.'},
+      higher:{title:'Higher challenge worksheet',kind:'pdf',download:'higher-worksheet.pdf',preview:'higher-worksheet.pdf',description:'Visual reasoning with space to draw, check and explain. Answers and example explanations are on the final page.'},
     };
     const resource=resources[kind]; this.preview.set(resource); this.previewSlide.set(1);
     this.previewUrl.set(resource.kind==='pdf'&&resource.preview?this.sanitizer.bypassSecurityTrustResourceUrl(this.asset(resource.preview)):null);

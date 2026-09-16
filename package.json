@@ -10,6 +10,7 @@
     "deploy": "ng build && swa deploy brightpath --env production",
     "deploy:only": "swa deploy brightpath --env production",
     "start:local-api": "ng serve --configuration local-api",
+    "start:local-lessons": "ng serve --configuration local-lessons",
     "publish:lessons": "node scripts/blob-lessons.mjs",
     "pull:lessons": "node scripts/blob-lessons.mjs --pull"
   },
