@@ -114,14 +114,14 @@ renderers.column=(b,p,r)=>{
   }else{
    if(working[i]<bd[i]){
     let j=i-1;while(working[j]===0)j--;
-    working[j]--;b.show(b.text(working[j],x(j),210,70,40,25,C.amber,true,'center'),2);
+    working[j]--;b.show(b.text(working[j],x(j),210,70,40,25,C.amber,true,'center'),p.pauseBeforeExchange?1:2);
     for(let k=j+1;k<i;k++){working[k]=9;b.show(b.text('9',x(k),210,70,40,25,C.amber,true,'center'),2);}
     working[i]+=10;const ten=b.text('10',x(j),215,70,38,25,C.amber,true,'center');b.show(ten,2);b.move(ten,(i-j)*dx,0,3);
    }
    result=working[i]-bd[i];explanation=`${working[i]} − ${bd[i]} = ${result}`;
   }
-  oldStatus=b.text(explanation,100,544,1080,60,31,C.ink,true,'center');b.show(oldStatus,2);
-  b.show(b.text(result,x(i),438,70,70,49,C.green,true,'center'),3);b.hide(box,2);
+  oldStatus=b.text(explanation,100,544,1080,60,31,C.ink,true,'center');b.show(oldStatus,p.pauseBeforeExchange?1:2);
+  b.show(b.text(result,x(i),438,70,70,49,C.green,true,'center'),p.pauseBeforeExchange?1:3);b.hide(box,2);
  }
  b.check(total/scale,p.op==='+'?p.a+p.b:p.a-p.b,'column result');
  b.result(`${fmt(p.a)} ${p.op} ${fmt(p.b)} = ${fmt(total/scale)}`,610);

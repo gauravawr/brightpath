@@ -4,7 +4,8 @@ import { environment } from '../../environments/environment';
 export function lessonFileUrl(path: string): string {
   const relative = path.replace(/^\/?lessons\//, '').replace(/^\/+/, '');
   if (relative.split('/').some(part => part === '..')) throw new Error('Invalid lesson path');
-  return `${environment.blobContentBaseUrl}/lessons/${relative.split('/').map(encodeURIComponent).join('/')}`;
+  const version = /^year-[123]-maths\//.test(relative) ? '?v=20260918-reviewed' : '';
+  return `${environment.blobContentBaseUrl}/lessons/${relative.split('/').map(encodeURIComponent).join('/')}${version}`;
 }
 
 /** Cross-origin download attributes are ignored by browsers; download a fetched blob. */

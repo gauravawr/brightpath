@@ -31,9 +31,12 @@ if(pull){
  console.log(`Pulled ${count} missing files. Existing local work was preserved.`);
 }else{
  const approved = !dry ? new Map(JSON.parse(await fs.readFile('tmp/lesson-dry-run.json','utf8')).changes.map(e=>[e.file,e.sha256])) : null;
- const list=(await files(local)).filter(f=>!approved||approved.has(path.relative(local,f).split(path.sep).join('/'))),changes=[],errors=[];let index=0;
+ const releaseIndex=args.indexOf('--release');
+ const release=releaseIndex>=0?new Map(JSON.parse(await fs.readFile(args[releaseIndex+1],'utf8')).files.map(f=>[f.file.replace(/^lessons\//,''),f.sha256])):null;
+ const list=(await files(local)).filter(f=>{const name=path.relative(local,f).split(path.sep).join('/');return (!approved||approved.has(name))&&(!release||release.has(name));}),changes=[],errors=[];let index=0;
  await Promise.all(Array.from({length:8},async()=>{while(index<list.length){const file=list[index++],name=path.relative(local,file).split(path.sep).join('/');try{
   const bytes=await fs.readFile(file),md5=crypto.createHash('md5').update(bytes).digest('base64'),sha=crypto.createHash('sha256').update(bytes).digest('hex');
+  if(release&&release.get(name)!==sha)throw Error('Local file does not match the release manifest');
   if(approved && approved.get(name)!==sha)throw Error('Local file changed since approved dry-run');
   const head=await fetch(url(prefix+name),{method:'HEAD',signal:AbortSignal.timeout(30000)});
   if(head.ok&&(head.headers.get('content-md5')===md5||head.headers.get('x-ms-meta-sha256')===sha))continue;

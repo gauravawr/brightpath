@@ -65,9 +65,40 @@ export const routes: Routes = [
         data: { week: 2, title: 'Year 1 Maths lesson', metaDescription: 'A complete Year 1 Maths lesson with editable planning, pre-teach, slides and differentiated worksheets.' },
       },
       {
+        path: 'lessons/year-1-maths/evaluation/:term',
+        loadComponent: () => import('./features/curriculum/primary-term-evaluation.component').then(m => m.PrimaryTermEvaluationComponent),
+        data: { year: 1, title: 'Year 1 Maths term assessment' },
+      },
+      {
+        path: 'lessons/year-2-maths/evaluation/:term',
+        loadComponent: () => import('./features/curriculum/primary-term-evaluation.component').then(m => m.PrimaryTermEvaluationComponent),
+        data: { year: 2, title: 'Year 2 Maths term assessment' },
+      },
+      {
+        path: 'lessons/year-4-maths/evaluation/:term',
+        loadComponent: () => import('./features/curriculum/primary-term-evaluation.component').then(m => m.PrimaryTermEvaluationComponent),
+        data: { year: 4, title: 'Year 4 Maths term assessment' },
+      },
+      {
         path: 'lessons/year-1-maths/:week/:slug',
         loadComponent: () => import('./features/curriculum/year1-week1-lesson.component').then(m => m.Year1Week1LessonComponent),
         data: { title: 'Year 1 Maths lesson' },
+      },
+      {
+        path: 'lessons/year-3-maths/evaluation/:term',
+        data: { year: 3 },
+        loadComponent: () => import('./features/curriculum/primary-term-evaluation.component').then(m => m.PrimaryTermEvaluationComponent),
+        title: 'Year 3 Maths term assessment · BrightPath',
+      },
+      {
+        path: 'lessons/year-3-maths/:week/:slug',
+        loadComponent: () => import('./features/curriculum/year3-maths-lesson.component').then(m => m.Year3MathsLessonComponent),
+        title: 'Year 3 Maths lesson · BrightPath',
+      },
+      {
+        path: 'lessons/year-2-maths/:week/:slug',
+        loadComponent: () => import('./features/curriculum/year2-maths-lesson.component').then(m => m.Year2MathsLessonComponent),
+        data: { title: 'Year 2 Maths lesson' },
       },
       {
         path: 'lessons/year-6-maths/evaluation/:term',

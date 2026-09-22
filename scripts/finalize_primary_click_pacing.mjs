@@ -1,0 +1,3 @@
+import fs from 'node:fs/promises';import {spawn} from 'node:child_process';
+const root='.qa/primary-click-pacing',checks=JSON.parse(await fs.readFile(root+'/content-preservation.json','utf8'));let next=0;
+await Promise.all(Array.from({length:3},async()=>{while(next<checks.length){const c=checks[next++];await new Promise((resolve,reject)=>{const p=spawn(process.execPath,['scripts/finalize_maths_visual_rollout.mjs',root,'click-v1',c.id],{windowsHide:true});let out='';p.stdout.on('data',s=>out+=s);p.stderr.on('data',s=>out+=s);p.on('error',reject);p.on('exit',code=>code===0?resolve():reject(Error(out)));});console.log('FINALIZED '+c.id);}}));
