@@ -1,0 +1,49 @@
+{
+  "files": [
+    {
+      "file": "lessons/year-1-maths/week-1/count-objects-one-to-one/teacher-plan-preview.pdf",
+      "bytes": 221565,
+      "sha256": "3fa3766f9e133860653f2f8b7513297a8e1f38af6fda0b2c3b4786eb213ec73c"
+    },
+    {
+      "file": "lessons/year-1-maths/week-1/represent-numbers-0-to-5/teacher-plan-preview.pdf",
+      "bytes": 222629,
+      "sha256": "6be802e441fd59996fe30667ff8a8e4e89fdb44289f3e232ecc3368904bee678"
+    },
+    {
+      "file": "lessons/year-1-maths/week-1/match-numerals-to-quantities-0-to-5/teacher-plan-preview.pdf",
+      "bytes": 230705,
+      "sha256": "26a2be2e6d54d2aec0b936bf0a89a116e2be01290a61b3067ad35ef7125332cc"
+    },
+    {
+      "file": "lessons/year-1-maths/week-1/compare-sets-more-fewer-equal/teacher-plan-preview.pdf",
+      "bytes": 231732,
+      "sha256": "8078feaf13f53960614a2a02b12b95c696bd1d26bd2e69306810426084bae605"
+    },
+    {
+      "file": "lessons/year-1-maths/week-2/count-and-represent-6-to-10/teacher-plan-preview.pdf",
+      "bytes": 224884,
+      "sha256": "32cefce78bf043137e253a9ac7105c438fa370ebd24c6830aea8f0c73d896a00"
+    },
+    {
+      "file": "lessons/year-1-maths/week-2/read-and-write-numerals-6-to-10/teacher-plan-preview.pdf",
+      "bytes": 223708,
+      "sha256": "d759478c8ca735172286ea948011d076de7c3e47abf7a921bc7e6ad0b913cb23"
+    },
+    {
+      "file": "lessons/year-1-maths/week-2/place-numbers-on-a-0-to-10-track/teacher-plan-preview.pdf",
+      "bytes": 224147,
+      "sha256": "4b22e20e4a9e0d6d6dd4c551b1cf22a7b228321cc0b4ed11cfb0a75dd92e5a3e"
+    },
+    {
+      "file": "lessons/year-1-maths/week-2/find-one-more-within-10/teacher-plan-preview.pdf",
+      "bytes": 224271,
+      "sha256": "271d79807a596d81112ecca7a6d0313a623471e65edd47107837425c7211e91b"
+    },
+    {
+      "file": "lessons/year-1-maths/week-2/find-one-less-within-10/teacher-plan-preview.pdf",
+      "bytes": 224524,
+      "sha256": "297b3015fa34c5b6fd06fedeb71c676f1750806dba0da29fa8c51a8e481288f7"
+    }
+  ]
+}
