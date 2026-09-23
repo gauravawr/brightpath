@@ -36,9 +36,26 @@ function teach(b,q,role){
  }
  else if(['groups','double','division'].includes(t)){
   const total=t==='division'?m.a:m.groups*m.size,count=t==='division'?m.b:m.groups,per=t==='division'?Math.floor(total/count):m.size;
-  const ds=dots(b,total,100,235,20,16,25,C.blue);const columns=Math.min(count,6),rows=Math.ceil(count/columns),gw=1060/columns,gh=160/rows;
-  for(let g=0;g<count;g++)b.rect(100+g%columns*gw,400+Math.floor(g/columns)*gh,gw-10,gh-8,C.white,C.line,1);
-  ds.forEach((o,i)=>{const g=i%count,k=Math.floor(i/count),remainder=t==='division'&&i>=per*count;const xx=remainder?1090:115+g%columns*gw+k%Math.max(1,Math.floor((gw-25)/21))*21;const yy=remainder?540+(i-per*count)*22:412+Math.floor(g/columns)*gh+Math.floor(k/Math.max(1,Math.floor((gw-25)/21)))*22;b.move(o.s,xx-o.x,yy-o.y,i%count?2:1);});
+  if(t==='division'&&q.mode==='remainderStory'){
+   const cars=per+(m.remainder?1:0),columns=6,rows=Math.ceil(cars/columns),gw=1060/columns,gh=250/rows;
+   // Each outlined car shows its seats. The final amber car makes the
+   // remainder visible and shows why one more car is required.
+   for(let g=0;g<cars;g++){
+    const x=100+g%columns*gw,y=350+Math.floor(g/columns)*gh,partial=g===cars-1&&m.remainder;
+    b.rect(x+5,y,gw-20,Math.min(48,gh-15),partial?'#FFF7E6':C.white,partial?C.amber:C.line,1.5,'roundRect');
+    b.dot(x+30,y+Math.min(43,gh-20),C.grey,11);b.dot(x+gw-48,y+Math.min(43,gh-20),C.grey,11);
+    for(let seat=0;seat<count;seat++)b.rect(x+32+seat*27,y+14,17,17,C.white,C.line,1,'ellipse');
+   }
+   const ds=dots(b,total,100,235,20,16,25,C.blue);
+   ds.forEach((o,i)=>{const g=Math.min(Math.floor(i/count),cars-1),seat=i%count,xx=132+g%columns*gw+seat*27,yy=364+Math.floor(g/columns)*gh;b.move(o.s,xx-o.x,yy-o.y,i?2:1);});
+  }else{
+   const columns=Math.min(count,6),rows=Math.ceil(count/columns),gw=1060/columns,gh=160/rows;
+   for(let g=0;g<count;g++)b.rect(100+g%columns*gw,400+Math.floor(g/columns)*gh,gw-10,gh-8,C.white,C.line,1);
+   // Keep the group outlines behind the counters. PowerPoint preserves creation
+   // order as z-order, so creating the white boxes after the counters hid them.
+   const ds=dots(b,total,100,235,20,16,25,C.blue);
+   ds.forEach((o,i)=>{const g=i%count,k=Math.floor(i/count),remainder=t==='division'&&i>=per*count;const xx=remainder?1090:115+g%columns*gw+k%Math.max(1,Math.floor((gw-25)/21))*21;const yy=remainder?540+(i-per*count)*22:412+Math.floor(g/columns)*gh+Math.floor(k/Math.max(1,Math.floor((gw-25)/21)))*22;b.move(o.s,xx-o.x,yy-o.y,i%count?2:1);});
+  }
   if(t==='double')b.show(b.text(`Double ${m.groups*4}: ${m.groups*4} + ${m.groups*4}`,160,560,960,45,28,C.green,true,'center'));
  }
  else if(['fraction','equivalent','fractionCalc','fractionOf','fractionCompare'].includes(t)){

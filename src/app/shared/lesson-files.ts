@@ -4,7 +4,11 @@ import { environment } from '../../environments/environment';
 export function lessonFileUrl(path: string): string {
   const relative = path.replace(/^\/?lessons\//, '').replace(/^\/+/, '');
   if (relative.split('/').some(part => part === '..')) throw new Error('Invalid lesson path');
-  const version = /^year-[123]-maths\//.test(relative) ? '?v=20260918-reviewed' : '';
+  const version = /^year-3-maths\//.test(relative)
+    ? '?v=20260923-remainder-fix'
+    : /^year-[12]-maths\//.test(relative)
+      ? '?v=20260918-reviewed'
+      : '';
   return `${environment.blobContentBaseUrl}/lessons/${relative.split('/').map(encodeURIComponent).join('/')}${version}`;
 }
 
