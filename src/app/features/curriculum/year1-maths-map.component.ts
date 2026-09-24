@@ -194,14 +194,14 @@ export class Year1MathsMapComponent {
   hasPublishedLesson(week: number): boolean {
     const yearOnePublished = this.year() === 1 && Boolean(this.weekLessonSlugs[week]);
     const yearSixPublished = this.year() === 6 && week >= 1 && week <= 30;
-    return this.subject() === 'maths' && (yearOnePublished || yearSixPublished || [2, 3].includes(this.year()) && week >= 1 && week <= 30);
+    return this.subject() === 'maths' && (yearOnePublished || yearSixPublished || [2, 3, 4].includes(this.year()) && week >= 1 && week <= 30);
   }
 
   lessonLink(week: number, dayNumber: number, dayTitle: string): string {
     if (this.subject() === 'maths' && this.year() === 6) {
       return this.l(`/lessons/year-6-maths/week/${week}/${this.slugify(dayTitle)}`);
     }
-    if ([2, 3].includes(this.year())) return this.l(`/lessons/year-${this.year()}-maths/week-${week}/${this.slugify(dayTitle)}`);
+    if ([2, 3, 4].includes(this.year())) return this.l(`/lessons/year-${this.year()}-maths/week-${week}/${this.slugify(dayTitle)}`);
     return this.l(`/lessons/year-1-maths/week-${week}/${this.weekLessonSlugs[week][dayNumber]}`);
   }
 

@@ -2,361 +2,361 @@
   {
     "week": 1,
     "term": "Autumn",
-    "unit": "Number — place value within 10,000",
+    "unit": "Place value to 10,000",
     "days": [
-      "Introduce and represent: Number — place value within 10,000",
-      "Develop fluency: Number — place value within 10,000",
-      "Compare, connect and explain: Number — place value within 10,000",
-      "Reason and solve problems: Number — place value within 10,000",
-      "Apply, assess and revisit: Number — place value within 10,000"
+      "Thousands hundreds tens and ones",
+      "Read and write four-digit numbers",
+      "Partition four-digit numbers",
+      "Find the value of each digit",
+      "One thousand more and less"
     ]
   },
   {
     "week": 2,
     "term": "Autumn",
-    "unit": "Number — compare, order, negative numbers and Roman numerals",
+    "unit": "Compare order and represent numbers",
     "days": [
-      "Introduce and represent: Number — compare, order, negative numbers and Roman numerals",
-      "Develop fluency: Number — compare, order, negative numbers and Roman numerals",
-      "Compare, connect and explain: Number — compare, order, negative numbers and Roman numerals",
-      "Reason and solve problems: Number — compare, order, negative numbers and Roman numerals",
-      "Apply, assess and revisit: Number — compare, order, negative numbers and Roman numerals"
+      "Compare numbers beyond 1,000",
+      "Order four-digit numbers",
+      "Estimate on a number line",
+      "Count through zero",
+      "Read Roman numerals to 100"
     ]
   },
   {
     "week": 3,
     "term": "Autumn",
-    "unit": "Number — round to the nearest 10, 100 and 1,000",
+    "unit": "Rounding and place-value reasoning",
     "days": [
-      "Introduce and represent: Number — round to the nearest 10, 100 and 1,000",
-      "Develop fluency: Number — round to the nearest 10, 100 and 1,000",
-      "Compare, connect and explain: Number — round to the nearest 10, 100 and 1,000",
-      "Reason and solve problems: Number — round to the nearest 10, 100 and 1,000",
-      "Apply, assess and revisit: Number — round to the nearest 10, 100 and 1,000"
+      "Round to the nearest 10",
+      "Round to the nearest 100",
+      "Round to the nearest 1,000",
+      "Choose a useful rounding point",
+      "Solve place-value problems"
     ]
   },
   {
     "week": 4,
     "term": "Autumn",
-    "unit": "Calculation — formal addition and subtraction",
+    "unit": "Four-digit addition",
     "days": [
-      "Introduce and represent: Calculation — formal addition and subtraction",
-      "Develop fluency: Calculation — formal addition and subtraction",
-      "Compare, connect and explain: Calculation — formal addition and subtraction",
-      "Reason and solve problems: Calculation — formal addition and subtraction",
-      "Apply, assess and revisit: Calculation — formal addition and subtraction"
+      "Add without exchange",
+      "Exchange ones and tens",
+      "Add with several exchanges",
+      "Estimate and check a sum",
+      "Solve two-step addition problems"
     ]
   },
   {
     "week": 5,
     "term": "Autumn",
-    "unit": "Calculation — estimate and use inverse operations",
+    "unit": "Four-digit subtraction",
     "days": [
-      "Introduce and represent: Calculation — estimate and use inverse operations",
-      "Develop fluency: Calculation — estimate and use inverse operations",
-      "Compare, connect and explain: Calculation — estimate and use inverse operations",
-      "Reason and solve problems: Calculation — estimate and use inverse operations",
-      "Apply, assess and revisit: Calculation — estimate and use inverse operations"
+      "Subtract without exchange",
+      "Exchange across one place",
+      "Exchange across more than one place",
+      "Estimate and check a difference",
+      "Solve two-step subtraction problems"
     ]
   },
   {
     "week": 6,
     "term": "Autumn",
-    "unit": "Calculation — multiplication facts to 12 × 12",
+    "unit": "Multiplication tables to 12 × 12",
     "days": [
-      "Introduce and represent: Calculation — multiplication facts to 12 × 12",
-      "Develop fluency: Calculation — multiplication facts to 12 × 12",
-      "Compare, connect and explain: Calculation — multiplication facts to 12 × 12",
-      "Reason and solve problems: Calculation — multiplication facts to 12 × 12",
-      "Apply, assess and revisit: Calculation — multiplication facts to 12 × 12"
+      "Six times table",
+      "Seven times table",
+      "Nine times table",
+      "Eleven times table",
+      "Twelve times table"
     ]
   },
   {
     "week": 7,
     "term": "Autumn",
-    "unit": "Calculation — factor pairs and efficient multiplication",
+    "unit": "Multiplicative reasoning",
     "days": [
-      "Introduce and represent: Calculation — factor pairs and efficient multiplication",
-      "Develop fluency: Calculation — factor pairs and efficient multiplication",
-      "Compare, connect and explain: Calculation — factor pairs and efficient multiplication",
-      "Reason and solve problems: Calculation — factor pairs and efficient multiplication",
-      "Apply, assess and revisit: Calculation — factor pairs and efficient multiplication"
+      "Use related division facts",
+      "Find factor pairs",
+      "Use commutativity",
+      "Multiply three numbers",
+      "Use the distributive law"
     ]
   },
   {
     "week": 8,
     "term": "Autumn",
-    "unit": "Calculation — multiply two- and three-digit numbers by one digit",
+    "unit": "Written multiplication",
     "days": [
-      "Introduce and represent: Calculation — multiply two- and three-digit numbers by one digit",
-      "Develop fluency: Calculation — multiply two- and three-digit numbers by one digit",
-      "Compare, connect and explain: Calculation — multiply two- and three-digit numbers by one digit",
-      "Reason and solve problems: Calculation — multiply two- and three-digit numbers by one digit",
-      "Apply, assess and revisit: Calculation — multiply two- and three-digit numbers by one digit"
+      "Multiply two digits by one digit",
+      "Multiply with an exchange",
+      "Multiply three digits by one digit",
+      "Use short multiplication",
+      "Solve multiplication problems"
     ]
   },
   {
     "week": 9,
     "term": "Autumn",
-    "unit": "Calculation — divide two- and three-digit numbers",
+    "unit": "Division and correspondence",
     "days": [
-      "Introduce and represent: Calculation — divide two- and three-digit numbers",
-      "Develop fluency: Calculation — divide two- and three-digit numbers",
-      "Compare, connect and explain: Calculation — divide two- and three-digit numbers",
-      "Reason and solve problems: Calculation — divide two- and three-digit numbers",
-      "Apply, assess and revisit: Calculation — divide two- and three-digit numbers"
+      "Divide two digits exactly",
+      "Divide three digits exactly",
+      "Use short division",
+      "Solve integer scaling problems",
+      "Solve correspondence problems"
     ]
   },
   {
     "week": 10,
     "term": "Autumn",
-    "unit": "Autumn consolidation and assessment",
+    "unit": "Autumn consolidation",
     "days": [
-      "Retrieve and revisit: Autumn consolidation and assessment",
-      "Diagnose misconceptions: Autumn consolidation and assessment",
-      "Targeted fluency: Autumn consolidation and assessment",
-      "Reasoning and problem solving: Autumn consolidation and assessment",
-      "Assess and plan next steps: Autumn consolidation and assessment"
+      "Place value review",
+      "Addition and subtraction review",
+      "Times-table review",
+      "Multiplication and division review",
+      "Autumn reasoning challenge"
     ]
   },
   {
     "week": 11,
     "term": "Spring",
-    "unit": "Measurement — convert units of length",
+    "unit": "Length and unit conversion",
     "days": [
-      "Introduce and represent: Measurement — convert units of length",
-      "Develop fluency: Measurement — convert units of length",
-      "Compare, connect and explain: Measurement — convert units of length",
-      "Reason and solve problems: Measurement — convert units of length",
-      "Apply, assess and revisit: Measurement — convert units of length"
+      "Convert kilometres and metres",
+      "Convert metres and centimetres",
+      "Convert centimetres and millimetres",
+      "Compare mixed lengths",
+      "Solve length conversion problems"
     ]
   },
   {
     "week": 12,
     "term": "Spring",
-    "unit": "Measurement — perimeter of rectilinear shapes",
+    "unit": "Perimeter",
     "days": [
-      "Introduce and represent: Measurement — perimeter of rectilinear shapes",
-      "Develop fluency: Measurement — perimeter of rectilinear shapes",
-      "Compare, connect and explain: Measurement — perimeter of rectilinear shapes",
-      "Reason and solve problems: Measurement — perimeter of rectilinear shapes",
-      "Apply, assess and revisit: Measurement — perimeter of rectilinear shapes"
+      "Measure perimeter",
+      "Perimeter of rectangles",
+      "Perimeter of rectilinear shapes",
+      "Find a missing side",
+      "Solve perimeter problems"
     ]
   },
   {
     "week": 13,
     "term": "Spring",
-    "unit": "Measurement — area by counting squares",
+    "unit": "Area",
     "days": [
-      "Introduce and represent: Measurement — area by counting squares",
-      "Develop fluency: Measurement — area by counting squares",
-      "Compare, connect and explain: Measurement — area by counting squares",
-      "Reason and solve problems: Measurement — area by counting squares",
-      "Apply, assess and revisit: Measurement — area by counting squares"
+      "Count squares for area",
+      "Compare areas",
+      "Make shapes with a given area",
+      "Connect arrays and area",
+      "Solve area problems"
     ]
   },
   {
     "week": 14,
     "term": "Spring",
-    "unit": "Fractions — equivalent fractions and families",
+    "unit": "Equivalent fractions",
     "days": [
-      "Introduce and represent: Fractions — equivalent fractions and families",
-      "Develop fluency: Fractions — equivalent fractions and families",
-      "Compare, connect and explain: Fractions — equivalent fractions and families",
-      "Reason and solve problems: Fractions — equivalent fractions and families",
-      "Apply, assess and revisit: Fractions — equivalent fractions and families"
+      "Recognise equivalent fractions",
+      "Build equivalent fraction families",
+      "Use multiplication to find equivalents",
+      "Simplify using common factors",
+      "Explain fraction equivalence"
     ]
   },
   {
     "week": 15,
     "term": "Spring",
-    "unit": "Fractions — add and subtract fractions with the same denominator",
+    "unit": "Fractions of quantities",
     "days": [
-      "Introduce and represent: Fractions — add and subtract fractions with the same denominator",
-      "Develop fluency: Fractions — add and subtract fractions with the same denominator",
-      "Compare, connect and explain: Fractions — add and subtract fractions with the same denominator",
-      "Reason and solve problems: Fractions — add and subtract fractions with the same denominator",
-      "Apply, assess and revisit: Fractions — add and subtract fractions with the same denominator"
+      "Find a unit fraction of a quantity",
+      "Find a non-unit fraction",
+      "Divide a quantity using fractions",
+      "Find a fraction of a measure",
+      "Solve fraction-of-quantity problems"
     ]
   },
   {
     "week": 16,
     "term": "Spring",
-    "unit": "Decimals — tenths and hundredths",
+    "unit": "Add and subtract fractions",
     "days": [
-      "Introduce and represent: Decimals — tenths and hundredths",
-      "Develop fluency: Decimals — tenths and hundredths",
-      "Compare, connect and explain: Decimals — tenths and hundredths",
-      "Reason and solve problems: Decimals — tenths and hundredths",
-      "Apply, assess and revisit: Decimals — tenths and hundredths"
+      "Add fractions with the same denominator",
+      "Subtract fractions with the same denominator",
+      "Complete a whole",
+      "Calculate beyond one whole",
+      "Solve fraction calculation problems"
     ]
   },
   {
     "week": 17,
     "term": "Spring",
-    "unit": "Decimals — compare, order and round decimals",
+    "unit": "Tenths hundredths and decimals",
     "days": [
-      "Introduce and represent: Decimals — compare, order and round decimals",
-      "Develop fluency: Decimals — compare, order and round decimals",
-      "Compare, connect and explain: Decimals — compare, order and round decimals",
-      "Reason and solve problems: Decimals — compare, order and round decimals",
-      "Apply, assess and revisit: Decimals — compare, order and round decimals"
+      "Make tenths",
+      "Make hundredths",
+      "Write decimal equivalents",
+      "Count in hundredths",
+      "Connect fractions and decimals"
     ]
   },
   {
     "week": 18,
     "term": "Spring",
-    "unit": "Decimals — divide by 10 and 100",
+    "unit": "Decimal place value",
     "days": [
-      "Introduce and represent: Decimals — divide by 10 and 100",
-      "Develop fluency: Decimals — divide by 10 and 100",
-      "Compare, connect and explain: Decimals — divide by 10 and 100",
-      "Reason and solve problems: Decimals — divide by 10 and 100",
-      "Apply, assess and revisit: Decimals — divide by 10 and 100"
+      "Divide by 10",
+      "Divide by 100",
+      "Compare decimals to two places",
+      "Round one-place decimals",
+      "Solve decimal place-value problems"
     ]
   },
   {
     "week": 19,
     "term": "Spring",
-    "unit": "Fractions and decimals — problem solving",
+    "unit": "Money and decimal measures",
     "days": [
-      "Introduce and represent: Fractions and decimals — problem solving",
-      "Develop fluency: Fractions and decimals — problem solving",
-      "Compare, connect and explain: Fractions and decimals — problem solving",
-      "Reason and solve problems: Fractions and decimals — problem solving",
-      "Apply, assess and revisit: Fractions and decimals — problem solving"
+      "Write money as decimals",
+      "Compare money amounts",
+      "Calculate with pounds and pence",
+      "Use decimals in measure",
+      "Solve money and measure problems"
     ]
   },
   {
     "week": 20,
     "term": "Spring",
-    "unit": "Spring consolidation and assessment",
+    "unit": "Spring consolidation",
     "days": [
-      "Retrieve and revisit: Spring consolidation and assessment",
-      "Diagnose misconceptions: Spring consolidation and assessment",
-      "Targeted fluency: Spring consolidation and assessment",
-      "Reasoning and problem solving: Spring consolidation and assessment",
-      "Assess and plan next steps: Spring consolidation and assessment"
+      "Length and perimeter review",
+      "Area review",
+      "Fraction review",
+      "Decimal review",
+      "Spring reasoning challenge"
     ]
   },
   {
     "week": 21,
     "term": "Summer",
-    "unit": "Measurement — money with decimals",
+    "unit": "Time and duration",
     "days": [
-      "Introduce and represent: Measurement — money with decimals",
-      "Develop fluency: Measurement — money with decimals",
-      "Compare, connect and explain: Measurement — money with decimals",
-      "Reason and solve problems: Measurement — money with decimals",
-      "Apply, assess and revisit: Measurement — money with decimals"
+      "Read analogue and digital time",
+      "Convert 12-hour and 24-hour time",
+      "Convert hours and minutes",
+      "Convert minutes and seconds",
+      "Solve duration problems"
     ]
   },
   {
     "week": 22,
     "term": "Summer",
-    "unit": "Measurement — time and 12/24-hour conversion",
+    "unit": "Angles",
     "days": [
-      "Introduce and represent: Measurement — time and 12/24-hour conversion",
-      "Develop fluency: Measurement — time and 12/24-hour conversion",
-      "Compare, connect and explain: Measurement — time and 12/24-hour conversion",
-      "Reason and solve problems: Measurement — time and 12/24-hour conversion",
-      "Apply, assess and revisit: Measurement — time and 12/24-hour conversion"
+      "Identify acute and obtuse angles",
+      "Compare angles with a right angle",
+      "Order angles by size",
+      "Recognise two right angles",
+      "Solve angle reasoning problems"
     ]
   },
   {
     "week": 23,
     "term": "Summer",
-    "unit": "Geometry — angles, triangles and quadrilaterals",
+    "unit": "Triangles and quadrilaterals",
     "days": [
-      "Introduce and represent: Geometry — angles, triangles and quadrilaterals",
-      "Develop fluency: Geometry — angles, triangles and quadrilaterals",
-      "Compare, connect and explain: Geometry — angles, triangles and quadrilaterals",
-      "Reason and solve problems: Geometry — angles, triangles and quadrilaterals",
-      "Apply, assess and revisit: Geometry — angles, triangles and quadrilaterals"
+      "Classify triangles",
+      "Compare triangle properties",
+      "Classify quadrilaterals",
+      "Compare quadrilateral properties",
+      "Solve shape classification problems"
     ]
   },
   {
     "week": 24,
     "term": "Summer",
-    "unit": "Geometry — symmetry in 2-D shapes",
+    "unit": "Symmetry",
     "days": [
-      "Introduce and represent: Geometry — symmetry in 2-D shapes",
-      "Develop fluency: Geometry — symmetry in 2-D shapes",
-      "Compare, connect and explain: Geometry — symmetry in 2-D shapes",
-      "Reason and solve problems: Geometry — symmetry in 2-D shapes",
-      "Apply, assess and revisit: Geometry — symmetry in 2-D shapes"
+      "Find vertical lines of symmetry",
+      "Find horizontal lines of symmetry",
+      "Find symmetry in different orientations",
+      "Complete a symmetric figure",
+      "Create and explain a symmetric pattern"
     ]
   },
   {
     "week": 25,
     "term": "Summer",
-    "unit": "Geometry — coordinates and translation",
+    "unit": "Coordinates",
     "days": [
-      "Introduce and represent: Geometry — coordinates and translation",
-      "Develop fluency: Geometry — coordinates and translation",
-      "Compare, connect and explain: Geometry — coordinates and translation",
-      "Reason and solve problems: Geometry — coordinates and translation",
-      "Apply, assess and revisit: Geometry — coordinates and translation"
+      "Read coordinates in the first quadrant",
+      "Plot coordinates",
+      "Complete a rectangle on a grid",
+      "Complete a polygon on a grid",
+      "Solve coordinate problems"
     ]
   },
   {
     "week": 26,
     "term": "Summer",
-    "unit": "Statistics — charts, tables and time graphs",
+    "unit": "Translation",
     "days": [
-      "Introduce and represent: Statistics — charts, tables and time graphs",
-      "Develop fluency: Statistics — charts, tables and time graphs",
-      "Compare, connect and explain: Statistics — charts, tables and time graphs",
-      "Reason and solve problems: Statistics — charts, tables and time graphs",
-      "Apply, assess and revisit: Statistics — charts, tables and time graphs"
+      "Translate left and right",
+      "Translate up and down",
+      "Describe a translation",
+      "Translate a polygon",
+      "Solve translation problems"
     ]
   },
   {
     "week": 27,
     "term": "Summer",
-    "unit": "Calculation — arithmetic fluency",
+    "unit": "Bar charts and pictograms",
     "days": [
-      "Introduce and represent: Calculation — arithmetic fluency",
-      "Develop fluency: Calculation — arithmetic fluency",
-      "Compare, connect and explain: Calculation — arithmetic fluency",
-      "Reason and solve problems: Calculation — arithmetic fluency",
-      "Apply, assess and revisit: Calculation — arithmetic fluency"
+      "Read a scaled pictogram",
+      "Read a bar chart",
+      "Choose a suitable scale",
+      "Complete a bar chart",
+      "Solve comparison problems"
     ]
   },
   {
     "week": 28,
     "term": "Summer",
-    "unit": "Number — multi-step problem solving",
+    "unit": "Tables and time graphs",
     "days": [
-      "Introduce and represent: Number — multi-step problem solving",
-      "Develop fluency: Number — multi-step problem solving",
-      "Compare, connect and explain: Number — multi-step problem solving",
-      "Reason and solve problems: Number — multi-step problem solving",
-      "Apply, assess and revisit: Number — multi-step problem solving"
+      "Read a table",
+      "Read a time graph",
+      "Describe change over time",
+      "Solve sum and difference questions",
+      "Solve two-step data problems"
     ]
   },
   {
     "week": 29,
     "term": "Summer",
-    "unit": "Geometry and measure — reasoning investigations",
+    "unit": "Arithmetic and problem solving",
     "days": [
-      "Introduce and represent: Geometry and measure — reasoning investigations",
-      "Develop fluency: Geometry and measure — reasoning investigations",
-      "Compare, connect and explain: Geometry and measure — reasoning investigations",
-      "Reason and solve problems: Geometry and measure — reasoning investigations",
-      "Apply, assess and revisit: Geometry and measure — reasoning investigations"
+      "Choose an efficient mental method",
+      "Solve mixed written calculations",
+      "Solve two-step word problems",
+      "Check and explain an answer",
+      "Investigate a number pattern"
     ]
   },
   {
     "week": 30,
     "term": "Summer",
-    "unit": "Summer assessment and transition to Year 5",
+    "unit": "Summer consolidation",
     "days": [
-      "Retrieve and revisit: Summer assessment and transition to Year 5",
-      "Diagnose misconceptions: Summer assessment and transition to Year 5",
-      "Targeted fluency: Summer assessment and transition to Year 5",
-      "Reasoning and problem solving: Summer assessment and transition to Year 5",
-      "Assess and plan next steps: Summer assessment and transition to Year 5"
+      "Number and calculation review",
+      "Fractions and decimals review",
+      "Measure and time review",
+      "Geometry and statistics review",
+      "Ready for Year Five"
     ]
   }
 ]
