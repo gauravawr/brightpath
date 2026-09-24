@@ -5,7 +5,7 @@ export function lessonFileUrl(path: string): string {
   const relative = path.replace(/^\/?lessons\//, '').replace(/^\/+/, '');
   if (relative.split('/').some(part => part === '..')) throw new Error('Invalid lesson path');
   const version = /^year-4-maths\//.test(relative)
-    ? '?v=20260923-year4-complete'
+    ? '?v=20260924-year4-complete'
     : /^year-3-maths\//.test(relative)
     ? '?v=20260923-remainder-fix'
     : /^year-[12]-maths\//.test(relative)

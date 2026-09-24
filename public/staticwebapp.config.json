@@ -4,7 +4,19 @@
     "exclude": ["/i18n/*", "/*.{js,css,ico,png,jpg,jpeg,webp,svg,json,txt,xml,woff,woff2}"]
   },
   "routes": [
-    { "route": "/", "redirect": "/en", "statusCode": 302 }
+    { "route": "/", "redirect": "/en", "statusCode": 302 },
+    {
+      "route": "/index.html",
+      "headers": { "Cache-Control": "no-cache, no-store, must-revalidate" }
+    },
+    {
+      "route": "/en/*",
+      "headers": { "Cache-Control": "no-cache, no-store, must-revalidate" }
+    },
+    {
+      "route": "/curriculum-plans/*",
+      "headers": { "Cache-Control": "no-cache, no-store, must-revalidate" }
+    }
   ],
   "responseOverrides": {
     "404": { "rewrite": "/index.html", "statusCode": 200 }
