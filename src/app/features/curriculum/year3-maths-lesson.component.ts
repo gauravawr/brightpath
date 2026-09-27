@@ -6,6 +6,7 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { LanguageService } from '../../core/services/language.service';
+import { RetrievalStarterComponent } from './retrieval-starter.component';
 
 interface Question { q: string; a: string; }
 interface WeekLesson {
@@ -17,7 +18,7 @@ interface WeekLesson {
 interface ResourcePreview { title:string; kind:'slides'|'pdf'; download:string; preview?:string; slideCount?:number; description:string; }
 
 @Component({
-  selector:'bp-year3-maths-lesson', standalone:true, imports:[RouterLink, FormsModule, PdfPreviewComponent], changeDetection:ChangeDetectionStrategy.OnPush,
+  selector:'bp-year3-maths-lesson', standalone:true, imports:[RouterLink, FormsModule, PdfPreviewComponent, RetrievalStarterComponent], changeDetection:ChangeDetectionStrategy.OnPush,
   template:`
     @if (lesson(); as item) {
       <header class="bp-page-hero"><div class="bp-container">
@@ -61,6 +62,7 @@ interface ResourcePreview { title:string; kind:'slides'|'pdf'; download:string; 
           @if (saved()) { <p class="saved" role="status">✓ Saved on this device</p> }
         </section>
 
+        <bp-retrieval-starter [year]="3" [week]="week" [day]="item.day" />
         <section class="sequence"><span class="bp-label">60-minute teaching sequence</span><h2>Lesson at a glance</h2>
           <div class="sequence-grid">
             <article class="bp-card"><b>1 · Revisit</b><p>{{ item.warmup }}</p><small>5 minutes</small></article>

@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { LanguageService } from '../../core/services/language.service';
+import { RetrievalStarterComponent } from './retrieval-starter.component';
 
 interface Question { q: string; a: string; }
 interface YearSixLesson {
@@ -25,7 +26,7 @@ interface ResourcePreview {
 @Component({
   selector: 'bp-year6-autumn-lesson',
   standalone: true,
-  imports: [RouterLink, FormsModule],
+  imports: [RouterLink, FormsModule, RetrievalStarterComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     @if (lesson(); as item) {
@@ -84,6 +85,7 @@ interface ResourcePreview {
           @if (saved()) { <p class="saved" role="status">✓ Saved on this device</p> }
         </section>
 
+        <bp-retrieval-starter [year]="6" [week]="item.week" [day]="item.day" />
         <section class="sequence">
           <span class="bp-label">Teaching before independent work</span><h2>I do · We do · You do</h2>
           <div class="sequence-grid">

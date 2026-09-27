@@ -28,6 +28,11 @@ export const routes: Routes = [
         data: { title: 'Subjects', metaDescription: 'Browse every subject on BrightPath — lessons and practice papers grouped by topic.' },
       },
       {
+        path: 'subjects/maths/times-tables',
+        loadComponent: () => import('./features/subjects/times-tables.component').then(m => m.TimesTablesComponent),
+        data: { title: 'Times Tables', metaDescription: 'Printable five-minute mixed times-table practice sheets for Year 1 to Year 6.' },
+      },
+      {
         path: 'subjects/:slug',
         loadComponent: () => import('./features/subjects/subject-detail.component').then(m => m.SubjectDetailComponent),
         data: { title: 'Subject', metaDescription: 'Lessons and practice papers for this subject on BrightPath.' },
