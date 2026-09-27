@@ -1,0 +1,51 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import {pathToFileURL} from 'node:url';
+import {Board,C} from './maths_visual_renderer.mjs';
+
+const {Presentation,PresentationFile}=await import(pathToFileURL('C:/Users/garim/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/@oai/artifact-tool/dist/artifact_tool.mjs').href);
+const plan=JSON.parse(await fs.readFile('public/curriculum-plans/maths/year-5.json','utf8'));
+const slugify=value=>value.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+const pairs=value=>{const out=[];for(let i=1;i<=Math.sqrt(value);i++)if(value%i===0)out.push(`${i} × ${value/i}`);return out.join(', ')};
+const vocabulary=unit=>{const u=unit.toLowerCase();if(u.includes('fraction'))return['numerator','denominator','equivalent','improper fraction','mixed number'];if(u.includes('decimal')||u.includes('percent'))return['decimal place','thousandth','percent','equivalent','round'];if(u.includes('multiply')||u.includes('factor')||u.includes('square'))return['factor','multiple','product','prime','composite'];if(u.includes('division'))return['dividend','divisor','quotient','remainder','inverse'];if(u.includes('measurement')||u.includes('perimeter')||u.includes('volume'))return['convert','unit','perimeter','area','volume'];if(u.includes('geometry'))return['angle','parallel','coordinate','translate','reflect'];if(u.includes('statistics'))return['axis','scale','interval','data','difference'];if(u.includes('financial'))return['pounds','pence','total','change','estimate'];return['place value','digit','partition','round','compare'];};
+function questions(week,day,level){const hard=level==='higher',low=level==='lower',s=week*17+day*11,n=low?100+s%80:hard?10000+s*37:1000+s*19,ex=q=>hard?`${q} Explain or prove your answer.`:q,list=f=>Array.from({length:5},(_,i)=>f(i));
+ if(week===1)return list(i=>{const x=n+i*1111;return{q:ex(`Partition ${x.toLocaleString('en-GB')} and state the value of every non-zero digit.`),a:`${x.toLocaleString('en-GB')} partitioned by place value.`}});
+ if(week===2)return list(i=>{const x=(i+2)*10**(low?2:hard?5:4);return{q:ex(`${x.toLocaleString('en-GB')} ÷ 10 = ?`),a:(x/10).toLocaleString('en-GB')}});
+ if(week===3)return list(i=>{const x=n+i*137,u=low?10:hard?10000:1000;return{q:ex(`Round ${x.toLocaleString('en-GB')} to the nearest ${u.toLocaleString('en-GB')}.`),a:(Math.round(x/u)*u).toLocaleString('en-GB')}});
+ if(week===4)return list(i=>{const a=n+i*143,b=(low?80:hard?4827:827)+i*39,op=i%2?'−':'+';return{q:ex(`Calculate ${a.toLocaleString('en-GB')} ${op} ${b.toLocaleString('en-GB')}.`),a:(op==='+'?a+b:a-b).toLocaleString('en-GB')}});
+ if(week===5)return list(i=>{const a=(low?23:hard?2345:345)+i*7,b=2+(i+day)%8;return{q:ex(`${a} × ${b} =`),a:String(a*b)}});
+ if(week===6)return list(i=>{const d=2+(i+day)%7,q=(low?12:hard?1203:123)+i*9;return{q:ex(`${d*q} ÷ ${d} =`),a:String(q)}});
+ if(week===7)return list(i=>{const x=[24,36,48,60,72][i]+(hard?12:0);return{q:ex(`Write every factor pair of ${x}.`),a:pairs(x)}});
+ if(week===8)return list(i=>{const x=2+i;return{q:ex(`Calculate ${x}³ + ${i+1}².`),a:String(x**3+(i+1)**2)}});
+ if(week===9)return list(i=>{const x=(low?3.4:hard?.347:34.7)+i*.1,m=[10,100,1000][i%3];return{q:ex(`${+x.toFixed(3)} × ${m} =`),a:String(+(x*m).toFixed(3))}});
+ if(week>=11&&week<=14)return list(i=>{const d=low?8:12,a=1+(i+day)%5,b=1+i*2%5;if(week===14)return{q:ex(`${a}/${d} × ${i+2} =`),a:`${a*(i+2)}/${d}`};return{q:ex(`${a}/${d} + ${b}/${d} =`),a:`${a+b}/${d}`}});
+ if(week===15||week===16)return list(i=>{const x=+((low?1.2:hard?12.345:3.456)+i*.137).toFixed(3);return{q:ex(week===16?`Round ${x} to 2 decimal places.`:`Partition ${x} into ones, tenths, hundredths and thousandths.`),a:week===16?x.toFixed(2):'Correct decimal place-value partition.'}});
+ if(week===17)return list(i=>{const p=[10,20,25,50,75][i],t=(low?40:hard?360:120)+i*20;return{q:ex(`Find ${p}% of ${t}.`),a:String(t*p/100)}});
+ if(week===18||week===19)return list(i=>{const p=[10,20,25,50,75][i];return{q:ex(`Write ${p}% as a decimal and a fraction.`),a:`${p/100} and ${p}/100`}});
+ if(week===21)return list(i=>{const km=(low?2:hard?3.75:2.5)+i*.25;return{q:ex(`Convert ${km} km to metres.`),a:`${km*1000} m`}});
+ if(week===22)return list(i=>{const a=(low?4:hard?14:8)+i,b=3+i%4;return{q:ex(`A rectangle is ${a} cm by ${b} cm. Find its perimeter and area.`),a:`Perimeter ${2*(a+b)} cm; area ${a*b} cm²`}});
+ if(week===23)return list(i=>{const a=2+i,b=3+i%3,c=4+i%2;return{q:ex(`Find the volume of a cuboid ${a} cm × ${b} cm × ${c} cm.`),a:`${a*b*c} cm³`}});
+ if(week===24)return list(i=>{const a=35+i*10,b=90+i*5;return{q:ex(`Angles on a straight line are ${a}° and ${b}°. Find the missing angle.`),a:`${180-a-b}°`}});
+ if(week===25)return list(i=>({q:ex(`Name a quadrilateral with ${i%2?'one pair':'two pairs'} of parallel sides and state another property.`),a:i%2?'Trapezium; accept a correct property.':'Accept a correct parallelogram family shape and property.'}));
+ if(week===26)return list(i=>{const x=1+i,y=2+i%3,dx=2+day%2,dy=1+i%2;return{q:ex(`Translate (${x}, ${y}) ${dx} right and ${dy} up.`),a:`(${x+dx}, ${y+dy})`}});
+ if(week===27)return list(i=>{const v=[12+i,18+i*2,15+i,21+i,24+i];return{q:ex(`Values: ${v.join(', ')}. Find the total and range.`),a:`Total ${v.reduce((a,b)=>a+b,0)}; range ${Math.max(...v)-Math.min(...v)}`}});
+ if(week===28)return list(i=>{const p=(125+i*37)/100,c=2+i;return{q:ex(`${c} items cost £${p.toFixed(2)} each. Find the total.`),a:`£${(p*c).toFixed(2)}`}});
+ if(week===29)return list(i=>{const x=3+i;return{q:ex(`Is ${x}² + ${x+1}² odd? Test and explain.`),a:`${x*x+(x+1)*(x+1)}; consecutive squares have opposite parity.`}});
+ return list(i=>{const a=(low?120:hard?12000:1200)+s+i*47,b=3+i;return{q:ex(`Calculate ${a.toLocaleString('en-GB')} ÷ ${b}, then check.`),a:a%b?`${Math.floor(a/b)} r ${a%b}`:String(a/b)}});
+}
+function addList(b,items,color=C.ink,answers=false){items.forEach((q,i)=>{b.text(`${i+1}. ${answers?q.a:q.q}`,85,190+i*92,1110,82,(answers?q.a:q.q).length>100?21:25,color,answers);});}
+for(const week of plan){for(let day=1;day<=5;day++){const title=week.days[day-1],slug=slugify(title),item={year:5,title,week:week.week,day,slug},p=Presentation.create({slideSize:{width:1600,height:900}}),b=new Board(p,item),lower=questions(week.week,day,'lower'),expected=questions(week.week,day,'expected'),higher=questions(week.week,day,'higher');
+ b.slide(title,'Learning intention');b.text(`Year 5 Maths · ${week.term} · Week ${week.week} · Day ${day}`,110,245,1060,60,28,C.grey,false,'center');b.text(`Learning intention: ${title.split(':')[0].trim().toLowerCase()} ${week.unit.toLowerCase()}.`,110,345,1060,130,34,C.blue,true,'center');
+ b.slide('Retrieval','Five questions before today’s learning');addList(b,questions(Math.max(1,week.week-2),day,'lower'));
+ b.slide('Vocabulary',week.unit);const words=vocabulary(week.unit);words.forEach((w,i)=>b.text(w,110+(i%2)*560,220+Math.floor(i/2)*115,500,80,30,[C.blue,C.green,C.amber][i%3],true,'center'));
+ b.slide('Pre-teach',`Prepare for ${week.unit.toLowerCase()}`);addList(b,lower.slice(0,3));b.text('Use one representation. Say each step aloud. Check one example independently.',110,520,1060,90,28,C.green,true,'center');
+ b.slide('Teacher model',expected[0].q);b.text('1. Identify the known information.',120,245,1040,60,30,C.blue,true);b.text('2. Choose a representation or calculation.',120,340,1040,60,30,C.blue,true);b.text('3. Complete each step and check it.',120,435,1040,60,30,C.blue,true);b.result(expected[0].a);
+ b.slide('Guided practice',expected[1].q);b.text('What do we know?',120,275,460,80,32,C.blue,true,'center');b.text('Which method fits?',700,275,460,80,32,C.amber,true,'center');b.show(b.text(expected[1].a,170,470,940,80,34,C.green,true,'center'));
+ b.slide('Discuss',`A pupil gives this answer: ${expected[2].a}`);b.text('How could we check it?',120,265,1040,90,37,C.blue,true,'center');b.text('Which representation would make the reasoning clear?',120,410,1040,90,32,C.green,true,'center');
+ b.slide('Independent practice','Expected level');addList(b,expected);const activity=b.counter;
+ b.slide('Answers','Check each method');addList(b,expected,C.green,true);
+ b.slide('Lower support','Smaller steps and prompts');addList(b,lower);
+ b.slide('Higher challenge','Explain, prove or generalise');addList(b,higher);
+ b.slide('Review',expected[4].q);b.text('Explain your method to a partner.',140,290,1000,70,34,C.blue,true,'center');b.show(b.text(expected[4].a,140,465,1000,70,34,C.green,true,'center'));
+ const dest=path.join('lessons','year-5-maths',`week-${week.week}`,slug);await fs.mkdir(dest,{recursive:true});await (await PresentationFile.exportPptx(p)).save(path.join(dest,'interactive-teaching-slides.pptx'));await fs.writeFile(path.join(dest,'powerpoint-manifest.json'),JSON.stringify({year:5,week:week.week,day,slug,slides:b.counter,activitySlide:activity,expected},null,2));console.log(`BUILT ${week.week}.${day} ${slug}`);
+}}

@@ -4,7 +4,9 @@ import { environment } from '../../environments/environment';
 export function lessonFileUrl(path: string): string {
   const relative = path.replace(/^\/?lessons\//, '').replace(/^\/+/, '');
   if (relative.split('/').some(part => part === '..')) throw new Error('Invalid lesson path');
-  const version = /^year-4-maths\//.test(relative)
+  const version = /^year-5-maths\//.test(relative)
+    ? '?v=20260927-year5-powerpoints'
+    : /^year-4-maths\//.test(relative)
     ? '?v=20260924-year4-complete'
     : /^year-3-maths\//.test(relative)
     ? '?v=20260923-remainder-fix'
