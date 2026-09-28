@@ -44,7 +44,7 @@ interface ResourcePreview {
           <p class="intro">Nothing downloads until you choose the download button inside a preview.</p>
           <div class="downloads">
             <button class="download" type="button" (click)="openPreview('plan')"><span>📝</span><b>Editable teacher plan</b><small>One-page, supply-ready Word plan</small></button>
-            <button class="download" type="button" (click)="openPreview('slides')"><span>📽️</span><b>Teaching PowerPoint</b><small>{{ item.teachingSlides?.count ?? 12 }} slides · I do / You do</small></button>
+            <button class="download" type="button" (click)="openPreview('slides')"><span>📽️</span><b>Present PowerPoint in browser</b><small>{{ item.teachingSlides?.count ?? 12 }} slides · no download needed</small></button>
             <button class="download" type="button" (click)="openPreview('preteach')"><span>🌱</span><b>Pre-teach</b><small>Prior learning and adult guide</small></button>
             <button class="download" type="button" (click)="openPreview('lower')"><span>●</span><b>Lower support</b><small>Scaffolded practice and answers</small></button>
             <button class="download" type="button" (click)="openPreview('expected')"><span>●●</span><b>Expected level</b><small>Core practice and answers</small></button>
@@ -52,8 +52,8 @@ interface ResourcePreview {
           </div>
 
           @if (preview(); as resource) {
-            <section class="preview" aria-live="polite">
-              <div class="preview__head"><div><span class="bp-label">Preview before download</span><h3>{{ resource.title }}</h3><p>{{ resource.description }}</p></div><button class="preview__close" type="button" (click)="closePreview()" aria-label="Close preview">×</button></div>
+            <section class="preview" [class.presentation-preview]="resource.kind === 'slides'" aria-live="polite">
+              <div class="preview__head"><div><span class="bp-label">{{ resource.kind === 'slides' ? 'Present in browser' : 'Preview before download' }}</span><h3>{{ resource.title }}</h3><p>{{ resource.description }}</p></div><button class="preview__close" type="button" (click)="closePreview()" aria-label="Close preview">×</button></div>
               @if (resource.kind === 'plan') {
                 <div class="plan-preview">
                   <div class="plan-preview__title"><b>Year 6 Maths · Week {{ item.week }} Day {{ item.day }}</b><span>Teacher: __________ &nbsp; Date: __________</span></div>
@@ -69,7 +69,7 @@ interface ResourcePreview {
                 <div class="image-preview"><img [src]="previewImageSrc()" [alt]="resource.title + ', page ' + previewPage()" /></div>
                 <div class="preview-controls"><button type="button" (click)="changePage(-1)" [disabled]="previewPage() === (resource.start ?? 1)">← Previous</button><b>{{ resource.kind === 'slides' ? 'Slide' : 'Page' }} {{ displayPage() }} of {{ pageTotal() }}</b><button type="button" (click)="changePage(1)" [disabled]="previewPage() === (resource.end ?? 1)">Next →</button></div>
               }
-              <div class="preview__actions"><span>Happy with the preview?</span><a class="bp-btn" [href]="asset(resource.download)" (click)="$event.preventDefault(); downloadFile(asset(resource.download))">Download {{ resource.title }}</a></div>
+              <div class="preview__actions"><span>{{ resource.kind === 'slides' ? 'Present directly from this browser. Download is optional.' : 'Happy with the preview?' }}</span><a class="bp-btn" [href]="asset(resource.download)" (click)="$event.preventDefault(); downloadFile(asset(resource.download))">{{ resource.kind === 'slides' ? 'Download editable copy' : 'Download ' + resource.title }}</a></div>
             </section>
           }
         </nav>
