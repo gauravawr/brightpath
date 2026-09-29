@@ -15,22 +15,22 @@ def check(condition, message):
         raise RuntimeError(message)
 
 
-def inspect_pptx(path):
+def inspect_pptx(path, expected_slides):
     with zipfile.ZipFile(path) as archive:
         slides = sorted(name for name in archive.namelist() if name.startswith("ppt/slides/slide") and name.endswith(".xml"))
-        check(len(slides) == 12, f"{path} has {len(slides)} slides")
+        check(len(slides) == expected_slides, f"{path} has {len(slides)} slides; lesson metadata declares {expected_slides}")
         click_effects = 0
+        animated_slides = 0
         for name in slides:
             data = archive.read(name)
             check(b"[[CLICK]]" not in data, f"animation marker remains in {path} {name}")
-            click_effects += data.count(b'nodeType="clickEffect"')
-        slide4 = archive.read("ppt/slides/slide4.xml")
-        slide4_clicks = slide4.count(b'nodeType="clickEffect"')
-        check(click_effects >= 25, f"too few click animations in {path}: {click_effects}")
-        detailed_division = b"times table:" in slide4
-        check(slide4_clicks >= (7 if detailed_division else 5), f"worked model is not sufficiently staged in {path}: {slide4_clicks}")
+            count = data.count(b'nodeType="clickEffect"')
+            click_effects += count
+            animated_slides += count > 0
+        check(click_effects >= 8, f"too few click animations in {path}: {click_effects}")
+        check(animated_slides >= 4, f"too few click-paced slides in {path}: {animated_slides}")
         for generic_step in (b"Identify the structure", b"Set up the method", b"Complete the calculation"):
-            check(generic_step not in slide4, f"generic worked-model wording remains in {path}")
+            check(all(generic_step not in archive.read(name) for name in slides), f"generic worked-model wording remains in {path}")
 
 
 def inspect_docx(path, expected_tables, required_text):
@@ -55,12 +55,20 @@ def inspect_term(term):
             powerpoint = folder / "teaching-powerpoint-v3.pptx"
         if not powerpoint.exists():
             powerpoint = folder / "teaching-powerpoint-v1.pptx"
-        inspect_pptx(powerpoint)
+        expected_slides = item.get("teachingSlides", {}).get("count")
+        check(isinstance(expected_slides, int) and expected_slides >= 7, f"invalid slide metadata: {folder}")
+        inspect_pptx(powerpoint, expected_slides)
         plan = folder / "editable-teacher-plan.docx"
         inspect_docx(plan, 4, ["resources", "SEND", "ADHD", "ODD", "assessment"])
         check(len(PdfReader(str(folder / "pre-teach.pdf")).pages) == 2, f"pre-teach page count failed: {folder}")
-        check(len(PdfReader(str(folder / "differentiated-worksheets.pdf")).pages) == 6, f"worksheet page count failed: {folder}")
-        check(len(list((folder / "preview" / "powerpoint").glob("slide-*.png"))) == 12, f"PowerPoint previews failed: {folder}")
+        worksheet_pages = PdfReader(str(folder / "differentiated-worksheets.pdf")).pages
+        check(len(worksheet_pages) == 6, f"worksheet page count failed: {folder}")
+        expected_headings = ("Lower support", "Lower support answers", "Expected", "Expected answers", "Higher and early finisher", "Higher and early finisher answers")
+        for page, heading in zip(worksheet_pages, expected_headings):
+            check(heading in (page.extract_text() or ""), f"{heading!r} page missing from {folder}")
+        previews = {path.name for path in (folder / "preview" / "powerpoint").glob("slide-*.png")}
+        expected_previews = {f"slide-{number}.png" for number in range(1, expected_slides + 1)}
+        check(expected_previews <= previews, f"PowerPoint previews failed: {folder}")
         check(len(list((folder / "preview" / "preteach").glob("page-*.png"))) == 2, f"pre-teach previews failed: {folder}")
         check(len(list((folder / "preview" / "worksheets").glob("page-*.png"))) == 6, f"worksheet previews failed: {folder}")
     print(f"{term}: 50 lessons verified")

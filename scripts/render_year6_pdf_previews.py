@@ -1,5 +1,6 @@
 import subprocess
 import sys
+import json
 from pathlib import Path
 
 
@@ -23,8 +24,10 @@ def main():
     evaluation_only = len(sys.argv) > 2 and sys.argv[2] == "evaluation"
     lesson_root = ROOT / "lessons" / "year-6-maths" / term
     if not evaluation_only:
-        preteach = sorted(lesson_root.rglob("pre-teach.pdf"))
-        worksheets = sorted(lesson_root.rglob("differentiated-worksheets.pdf"))
+        lessons = json.loads((lesson_root / f"year6-{term}-lessons.json").read_text(encoding="utf-8"))
+        folders = [lesson_root / f"week-{item['week']}" / item["slug"] for item in lessons]
+        preteach = [folder / "pre-teach.pdf" for folder in folders]
+        worksheets = [folder / "differentiated-worksheets.pdf" for folder in folders]
         if len(preteach) != 50 or len(worksheets) != 50:
             raise RuntimeError(f"Expected 50 pre-teach and 50 worksheet PDFs, found {len(preteach)} and {len(worksheets)}")
         for index, source in enumerate(preteach, 1):

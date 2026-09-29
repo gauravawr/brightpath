@@ -128,8 +128,8 @@ export const EXPLICIT_WORKED_STEPS = {
   "22-1": ["x + 38 = 91", "Subtract 38 from both sides", "x = 91 - 38", "x = 53"],
   "22-2": ["5x - 7 = 48", "Add 7 to both sides: 5x = 55", "Divide both sides by 5", "x = 11"],
   "22-3": ["6(x + 4) = 72", "Divide both sides by 6: x + 4 = 12", "Subtract 4 from both sides", "x = 8"],
-  "22-4": ["3x + 14 = 65", "Subtract 14: 3x = 51", "Divide by 3", "x = 17"],
-  "22-5": ["4x + 12 = 40 → 4x = 28 → x = 7", "2x + 6 = 20 → 2x = 14 → x = 7", "Both equations give x = 7", "Yes, they have the same solution"],
+  "22-4": ["x + y = 12 and x < y", "Start x = 1, so y = 11", "Increase x by 1 as y decreases by 1", "(1,11), (2,10), (3,9), (4,8), (5,7)", "Stop before x reaches y"],
+  "22-5": ["6a + 4c = 24", "a = 0 → c = 6", "a = 2 → c = 3", "a = 4 → c = 0", "All combinations: (0,6), (2,3), (4,0)"],
 
   "23-1": ["4.375 km", "1 km = 1,000 m", "4.375 × 1,000", "4,375 m"],
   "23-2": ["2.65 kg × 1,000 = 2,650 g", "3,750 ml ÷ 1,000", "3,750 ml = 3.75 litres", "2,650 g and 3.75 litres"],
@@ -137,7 +137,7 @@ export const EXPLICIT_WORKED_STEPS = {
   "23-4": ["5 miles ≈ 8 km", "30 miles is 6 groups of 5 miles", "6 × 8 km", "About 48 km"],
   "23-5": ["12.5 m = 1,250 cm", "1,250 ÷ 40", "40 × 31 = 1,240; remainder 10", "31 complete pieces, 10 cm left"],
 
-  "24-1": ["Rectangle 14 cm by 9 cm", "Area = 14 × 9 = 126 cm²", "Perimeter = 2 × (14 + 9)", "Perimeter = 2 × 23 = 46 cm"],
+  "24-1": ["Both rectangles have area 24 cm²", "A: 6 × 4 = 24; perimeter = 2 × (6 + 4) = 20 cm", "B: 8 × 3 = 24; perimeter = 2 × (8 + 3) = 22 cm", "Equal area: 24 cm²", "Different perimeters: 20 cm and 22 cm"],
   "24-2": ["Parallelogram base = 12 cm, perpendicular height = 7 cm", "Area = base × perpendicular height", "Area = 12 × 7", "84 cm²"],
   "24-3": ["Triangle base = 15 cm, perpendicular height = 8 cm", "Area = base × height ÷ 2", "15 × 8 ÷ 2", "120 ÷ 2 = 60 cm²"],
   "24-4": ["Area = 54 cm², base = 12 cm", "54 = 12 × height ÷ 2", "54 × 2 = 12 × height", "108 ÷ 12 = 9 cm"],
@@ -153,7 +153,7 @@ export const EXPLICIT_WORKED_STEPS = {
   "26-2": ["One angle = 68°", "Vertically opposite angles are equal", "Opposite angle = 68°", "Answer: 68°"],
   "26-3": ["Angles in a triangle total 180°", "47° + 68° = 115°", "Third angle = 180° - 115°", "65°"],
   "26-4": ["Radius = 4.5 cm", "Diameter = 2 × radius", "2 × 4.5 cm", "Diameter = 9 cm"],
-  "26-5": ["Angles in a quadrilateral total 360°", "92° + 88° + 105° = 285°", "Fourth angle = 360° - 285°", "75°"],
+  "26-5": ["Draw a 6 cm base with a ruler", "At one endpoint, measure a 60° ray", "Mark 8 cm on the ray and join the third side", "Cube net: six equal joined squares", "Check that all six faces fold without overlap"],
 
   "27-1": ["A = (-4, 3)", "x is negative: move 4 left", "y is positive: move 3 up", "A lies in Quadrant II"],
   "27-2": ["P: (2, -5) → (-3, 1)", "x change: -3 - 2 = -5 → 5 left", "y change: 1 - (-5) = 6 → 6 up", "Translation: 5 left and 6 up"],

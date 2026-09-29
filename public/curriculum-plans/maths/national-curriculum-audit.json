@@ -1,0 +1,582 @@
+{
+  "source": "PRIMARY_national_curriculum_-_Mathematics_220714.pdf",
+  "scope": "Statutory requirements only; non-statutory guidance excluded",
+  "years": [
+    {
+      "year": 1,
+      "status": "covered",
+      "statutoryStatementCount": 30,
+      "lessonCount": 150,
+      "curriculumWeeks": 30,
+      "termEvaluations": [
+        "autumn",
+        "spring",
+        "summer"
+      ],
+      "coverageChecks": [
+        {
+          "requirementGroup": "count/read/write to 100 and count in 2s, 5s and 10s",
+          "status": "covered",
+          "matchedPhrase": "read and write numerals to 100"
+        },
+        {
+          "requirementGroup": "one more and one less",
+          "status": "covered",
+          "matchedPhrase": "one more and one less"
+        },
+        {
+          "requirementGroup": "represent, compare and order numbers on a number line",
+          "status": "covered",
+          "matchedPhrase": "number line"
+        },
+        {
+          "requirementGroup": "numbers to 20 in numerals and words",
+          "status": "covered",
+          "matchedPhrase": "write 12 in words"
+        },
+        {
+          "requirementGroup": "addition/subtraction signs, facts and bonds within 20",
+          "status": "covered",
+          "matchedPhrase": "number bonds"
+        },
+        {
+          "requirementGroup": "one-step and missing-number problems",
+          "status": "covered",
+          "matchedPhrase": "missing number"
+        },
+        {
+          "requirementGroup": "multiplication/division through arrays, grouping and sharing",
+          "status": "covered",
+          "matchedPhrase": "arrays"
+        },
+        {
+          "requirementGroup": "halves and quarters of shapes, objects and quantities",
+          "status": "covered",
+          "matchedPhrase": "halves"
+        },
+        {
+          "requirementGroup": "length and height",
+          "status": "covered",
+          "matchedPhrase": "length and height"
+        },
+        {
+          "requirementGroup": "mass, capacity and volume",
+          "status": "covered",
+          "matchedPhrase": "mass and capacity"
+        },
+        {
+          "requirementGroup": "coins and notes",
+          "status": "covered",
+          "matchedPhrase": "money"
+        },
+        {
+          "requirementGroup": "chronology, dates, days, weeks, months and years",
+          "status": "covered",
+          "matchedPhrase": "calendar"
+        },
+        {
+          "requirementGroup": "time to the hour and half hour",
+          "status": "covered",
+          "matchedPhrase": "half past"
+        },
+        {
+          "requirementGroup": "common 2-D and 3-D shapes",
+          "status": "covered",
+          "matchedPhrase": "name common 3d shapes"
+        },
+        {
+          "requirementGroup": "position, direction and turns",
+          "status": "covered",
+          "matchedPhrase": "position and direction"
+        }
+      ]
+    },
+    {
+      "year": 2,
+      "status": "covered",
+      "statutoryStatementCount": 40,
+      "lessonCount": 150,
+      "curriculumWeeks": 30,
+      "termEvaluations": [
+        "autumn",
+        "spring",
+        "summer"
+      ],
+      "coverageChecks": [
+        {
+          "requirementGroup": "count in 2s, 3s, 5s and 10s",
+          "status": "covered",
+          "matchedPhrase": "count in 2s, 3s, 5s and 10s"
+        },
+        {
+          "requirementGroup": "two-digit place value, representations and number line",
+          "status": "covered",
+          "matchedPhrase": "tens and ones within 100"
+        },
+        {
+          "requirementGroup": "compare, order, read and write to 100",
+          "status": "covered",
+          "matchedPhrase": "compare and order numbers"
+        },
+        {
+          "requirementGroup": "addition/subtraction facts and related facts",
+          "status": "covered",
+          "matchedPhrase": "related facts"
+        },
+        {
+          "requirementGroup": "mental and written addition/subtraction combinations",
+          "status": "covered",
+          "matchedPhrase": "two two digit"
+        },
+        {
+          "requirementGroup": "commutativity, inverse and missing numbers",
+          "status": "covered",
+          "matchedPhrase": "inverse"
+        },
+        {
+          "requirementGroup": "2, 5 and 10 tables, odd/even and multiplicative statements",
+          "status": "covered",
+          "matchedPhrase": "odd and even"
+        },
+        {
+          "requirementGroup": "multiplication/division arrays, repeated addition, grouping and sharing",
+          "status": "covered",
+          "matchedPhrase": "arrays"
+        },
+        {
+          "requirementGroup": "thirds, quarters, halves and equivalence",
+          "status": "covered",
+          "matchedPhrase": "third"
+        },
+        {
+          "requirementGroup": "metric length, mass, temperature and capacity",
+          "status": "covered",
+          "matchedPhrase": "temperature"
+        },
+        {
+          "requirementGroup": "money combinations, problems and change",
+          "status": "covered",
+          "matchedPhrase": "find change from one pound"
+        },
+        {
+          "requirementGroup": "time to five minutes and duration",
+          "status": "covered",
+          "matchedPhrase": "five minute"
+        },
+        {
+          "requirementGroup": "2-D properties and vertical symmetry",
+          "status": "covered",
+          "matchedPhrase": "lines of symmetry"
+        },
+        {
+          "requirementGroup": "3-D faces, edges and vertices and 2-D faces",
+          "status": "covered",
+          "matchedPhrase": "faces edges and vertices"
+        },
+        {
+          "requirementGroup": "position, rotation and turns",
+          "status": "covered",
+          "matchedPhrase": "clockwise and anticlockwise"
+        },
+        {
+          "requirementGroup": "pictograms, tally charts, block diagrams and tables",
+          "status": "covered",
+          "matchedPhrase": "tally marks"
+        }
+      ]
+    },
+    {
+      "year": 3,
+      "status": "covered",
+      "statutoryStatementCount": 36,
+      "lessonCount": 150,
+      "curriculumWeeks": 30,
+      "termEvaluations": [
+        "autumn",
+        "spring",
+        "summer"
+      ],
+      "coverageChecks": [
+        {
+          "requirementGroup": "place value to 1,000 and counting in 4, 8, 50 and 100",
+          "status": "covered",
+          "matchedPhrase": "place value to 1000"
+        },
+        {
+          "requirementGroup": "mental and formal addition/subtraction to three digits",
+          "status": "covered",
+          "matchedPhrase": "column addition"
+        },
+        {
+          "requirementGroup": "estimation, inverse, missing-number and contextual problems",
+          "status": "covered",
+          "matchedPhrase": "missing number"
+        },
+        {
+          "requirementGroup": "3, 4 and 8 multiplication/division facts",
+          "status": "covered",
+          "matchedPhrase": "three times table"
+        },
+        {
+          "requirementGroup": "two-digit by one-digit multiplication, scaling and correspondence",
+          "status": "covered",
+          "matchedPhrase": "two-digit"
+        },
+        {
+          "requirementGroup": "tenths and fractions of quantities",
+          "status": "covered",
+          "matchedPhrase": "tenths"
+        },
+        {
+          "requirementGroup": "fraction equivalence, comparison, ordering, addition and subtraction",
+          "status": "covered",
+          "matchedPhrase": "equivalent fractions"
+        },
+        {
+          "requirementGroup": "metric measures and perimeter",
+          "status": "covered",
+          "matchedPhrase": "perimeter"
+        },
+        {
+          "requirementGroup": "money and change",
+          "status": "covered",
+          "matchedPhrase": "money problems"
+        },
+        {
+          "requirementGroup": "time to the minute, Roman clock numerals and durations",
+          "status": "covered",
+          "matchedPhrase": "roman numeral clocks"
+        },
+        {
+          "requirementGroup": "2-D drawing and 3-D construction",
+          "status": "covered",
+          "matchedPhrase": "draw shapes on a grid"
+        },
+        {
+          "requirementGroup": "right angles and turns",
+          "status": "covered",
+          "matchedPhrase": "right angles"
+        },
+        {
+          "requirementGroup": "horizontal, vertical, parallel and perpendicular lines",
+          "status": "covered",
+          "matchedPhrase": "horizontal and vertical"
+        },
+        {
+          "requirementGroup": "bar charts, pictograms and tables with one/two-step questions",
+          "status": "covered",
+          "matchedPhrase": "two-step data"
+        }
+      ]
+    },
+    {
+      "year": 4,
+      "status": "covered",
+      "statutoryStatementCount": 42,
+      "lessonCount": 150,
+      "curriculumWeeks": 30,
+      "termEvaluations": [
+        "autumn",
+        "spring",
+        "summer"
+      ],
+      "coverageChecks": [
+        {
+          "requirementGroup": "place value to 10,000, negative numbers, rounding and Roman numerals",
+          "status": "covered",
+          "matchedPhrase": "roman numerals to 100"
+        },
+        {
+          "requirementGroup": "formal four-digit addition/subtraction, estimation and two-step problems",
+          "status": "covered",
+          "matchedPhrase": "four-digit"
+        },
+        {
+          "requirementGroup": "multiplication facts through 12 x 12",
+          "status": "covered",
+          "matchedPhrase": "twelve times table"
+        },
+        {
+          "requirementGroup": "mental multiplication/division, factors and commutativity",
+          "status": "covered",
+          "matchedPhrase": "factor pairs"
+        },
+        {
+          "requirementGroup": "formal multiplication, distributive law, scaling and correspondence",
+          "status": "covered",
+          "matchedPhrase": "distributive"
+        },
+        {
+          "requirementGroup": "equivalent fractions and hundredths",
+          "status": "covered",
+          "matchedPhrase": "hundredths"
+        },
+        {
+          "requirementGroup": "fraction quantities and same-denominator calculation",
+          "status": "covered",
+          "matchedPhrase": "add fractions with the same denominator"
+        },
+        {
+          "requirementGroup": "decimal equivalents and division by 10/100",
+          "status": "covered",
+          "matchedPhrase": "divide by 100"
+        },
+        {
+          "requirementGroup": "decimal rounding/comparison and measure/money problems",
+          "status": "covered",
+          "matchedPhrase": "round one-place decimals"
+        },
+        {
+          "requirementGroup": "unit conversion, perimeter and area",
+          "status": "covered",
+          "matchedPhrase": "convert kilometres"
+        },
+        {
+          "requirementGroup": "money and 12/24-hour time conversions",
+          "status": "covered",
+          "matchedPhrase": "24-hour"
+        },
+        {
+          "requirementGroup": "triangles, quadrilaterals and angle classification",
+          "status": "covered",
+          "matchedPhrase": "quadrilaterals"
+        },
+        {
+          "requirementGroup": "symmetry",
+          "status": "covered",
+          "matchedPhrase": "complete a symmetric"
+        },
+        {
+          "requirementGroup": "first-quadrant coordinates and translation",
+          "status": "covered",
+          "matchedPhrase": "first quadrant"
+        },
+        {
+          "requirementGroup": "bar charts, pictograms, tables and time graphs",
+          "status": "covered",
+          "matchedPhrase": "time graphs"
+        }
+      ]
+    },
+    {
+      "year": 5,
+      "status": "covered",
+      "statutoryStatementCount": 48,
+      "lessonCount": 150,
+      "curriculumWeeks": 30,
+      "termEvaluations": [
+        "autumn",
+        "spring",
+        "summer"
+      ],
+      "coverageChecks": [
+        {
+          "requirementGroup": "place value to 1,000,000, powers of ten, negatives, rounding and Roman numerals",
+          "status": "covered",
+          "matchedPhrase": "place value to 1,000,000"
+        },
+        {
+          "requirementGroup": "large-number formal/mental addition and subtraction",
+          "status": "covered",
+          "matchedPhrase": "calculate mentally with large numbers"
+        },
+        {
+          "requirementGroup": "rounding checks and multi-step problems",
+          "status": "covered",
+          "matchedPhrase": "rounding to check"
+        },
+        {
+          "requirementGroup": "multiples, factors, primes and composites",
+          "status": "covered",
+          "matchedPhrase": "prime and composite"
+        },
+        {
+          "requirementGroup": "formal and mental multiplication/division with remainders",
+          "status": "covered",
+          "matchedPhrase": "short division"
+        },
+        {
+          "requirementGroup": "multiply/divide whole and decimal numbers by powers of ten",
+          "status": "covered",
+          "matchedPhrase": "multiply and divide by 10 100 and 1,000"
+        },
+        {
+          "requirementGroup": "fraction comparison, equivalence, mixed/improper conversion",
+          "status": "covered",
+          "matchedPhrase": "improper fractions"
+        },
+        {
+          "requirementGroup": "fraction addition/subtraction and multiplication",
+          "status": "covered",
+          "matchedPhrase": "multiply fractions"
+        },
+        {
+          "requirementGroup": "decimal fractions, thousandths, rounding and ordering",
+          "status": "covered",
+          "matchedPhrase": "thousandths"
+        },
+        {
+          "requirementGroup": "percent meaning and fraction/decimal/percentage equivalence",
+          "status": "covered",
+          "matchedPhrase": "percent"
+        },
+        {
+          "requirementGroup": "metric and approximate imperial conversion",
+          "status": "covered",
+          "matchedPhrase": "imperial"
+        },
+        {
+          "requirementGroup": "composite perimeter and rectangle/irregular area",
+          "status": "covered",
+          "matchedPhrase": "composite rectilinear"
+        },
+        {
+          "requirementGroup": "volume/capacity estimation and time conversion",
+          "status": "covered",
+          "matchedPhrase": "estimate volume"
+        },
+        {
+          "requirementGroup": "four operations in measure",
+          "status": "covered",
+          "matchedPhrase": "four operations with measures"
+        },
+        {
+          "requirementGroup": "3-D shapes from 2-D representations",
+          "status": "covered",
+          "matchedPhrase": "3-d shapes from 2-d"
+        },
+        {
+          "requirementGroup": "angle measuring/drawing and angle facts",
+          "status": "covered",
+          "matchedPhrase": "draw angles"
+        },
+        {
+          "requirementGroup": "rectangle properties and regular/irregular polygons",
+          "status": "covered",
+          "matchedPhrase": "regular and irregular"
+        },
+        {
+          "requirementGroup": "reflection and translation",
+          "status": "covered",
+          "matchedPhrase": "reflection and translation"
+        },
+        {
+          "requirementGroup": "line graphs and tables/timetables",
+          "status": "covered",
+          "matchedPhrase": "line graphs"
+        }
+      ]
+    },
+    {
+      "year": 6,
+      "status": "covered",
+      "statutoryStatementCount": 43,
+      "lessonCount": 150,
+      "curriculumWeeks": 30,
+      "termEvaluations": [
+        "autumn",
+        "spring",
+        "summer"
+      ],
+      "coverageChecks": [
+        {
+          "requirementGroup": "place value to 10,000,000, rounding and negative intervals",
+          "status": "covered",
+          "matchedPhrase": "ten million"
+        },
+        {
+          "requirementGroup": "formal long multiplication and long/short division with remainder interpretation",
+          "status": "covered",
+          "matchedPhrase": "long multiplication"
+        },
+        {
+          "requirementGroup": "mental/mixed calculations, factors, multiples, primes and order of operations",
+          "status": "covered",
+          "matchedPhrase": "order of operations"
+        },
+        {
+          "requirementGroup": "multi-step problems",
+          "status": "covered",
+          "matchedPhrase": "multi-step problems"
+        },
+        {
+          "requirementGroup": "fraction simplification, comparison and unlike-denominator calculation",
+          "status": "covered",
+          "matchedPhrase": "simplify fractions"
+        },
+        {
+          "requirementGroup": "fraction multiplication/division and decimal equivalents",
+          "status": "covered",
+          "matchedPhrase": "multiply proper fractions"
+        },
+        {
+          "requirementGroup": "three-place decimals and powers of ten",
+          "status": "covered",
+          "matchedPhrase": "three decimal places"
+        },
+        {
+          "requirementGroup": "ratio, percentage, scale and unequal sharing",
+          "status": "covered",
+          "matchedPhrase": "unequal sharing"
+        },
+        {
+          "requirementGroup": "formulae, linear sequences and algebraic missing numbers",
+          "status": "covered",
+          "matchedPhrase": "simple formulae"
+        },
+        {
+          "requirementGroup": "equations with two unknowns",
+          "status": "covered",
+          "matchedPhrase": "equation with two unknowns"
+        },
+        {
+          "requirementGroup": "systematic combinations of two variables",
+          "status": "covered",
+          "matchedPhrase": "combinations of two variables"
+        },
+        {
+          "requirementGroup": "standard-unit and mile/kilometre conversions",
+          "status": "covered",
+          "matchedPhrase": "miles in kilometres"
+        },
+        {
+          "requirementGroup": "same area/different perimeter and area/volume formulae",
+          "status": "covered",
+          "matchedPhrase": "equal areas can have different perimeters"
+        },
+        {
+          "requirementGroup": "areas of triangles/parallelograms and volume of cubes/cuboids",
+          "status": "covered",
+          "matchedPhrase": "area of parallelograms"
+        },
+        {
+          "requirementGroup": "draw 2-D shapes and build 3-D nets",
+          "status": "covered",
+          "matchedPhrase": "draw 2-d shapes and build 3-d nets"
+        },
+        {
+          "requirementGroup": "shape classification, polygon angles and circle parts",
+          "status": "covered",
+          "matchedPhrase": "name parts of circles"
+        },
+        {
+          "requirementGroup": "angles at points/lines and vertically opposite angles",
+          "status": "covered",
+          "matchedPhrase": "vertically opposite"
+        },
+        {
+          "requirementGroup": "four-quadrant coordinates, translation and reflection",
+          "status": "covered",
+          "matchedPhrase": "four quadrants"
+        },
+        {
+          "requirementGroup": "pie charts, line graphs and mean",
+          "status": "covered",
+          "matchedPhrase": "pie charts"
+        }
+      ]
+    }
+  ],
+  "totalStatutoryStatementCount": 239,
+  "status": "covered"
+}

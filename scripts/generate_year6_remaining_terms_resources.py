@@ -247,12 +247,12 @@ WEEKS = [
          [("Solve one-step equations", "To solve one-step equations using inverse operations."),
           ("Solve two-step equations", "To solve two-step equations in a logical order."),
           ("Solve equations with brackets", "To solve equations containing grouped operations."),
-          ("Represent word problems with equations", "To form and solve equations from contexts."),
-          ("Reason about equivalent equations", "To compare equations and justify whether they have the same solution.")],
+          ("Find pairs for equations with two unknowns", "To find pairs of numbers that satisfy an equation with two unknowns."),
+          ("Enumerate combinations of two variables", "To list every possible combination of two variables systematically.")],
          [pair("Solve x + 38 = 91.", "x = 53."), pair("Solve 5x - 7 = 48.", "x = 11."),
           pair("Solve 6(x + 4) = 72.", "x = 8."),
-          pair("A number is tripled and 14 is added to make 65. Find the number.", "17."),
-          pair("Do 4x + 12 = 40 and 2x + 6 = 20 have the same solution?", "Yes, both give x = 7.")],
+          pair("Find all positive whole-number pairs (x, y) that satisfy x + y = 12 when x < y.", "(1,11), (2,10), (3,9), (4,8) and (5,7)."),
+          pair("Adult tickets cost £6 and child tickets cost £4. List every combination of adult tickets a and child tickets c that satisfies 6a + 4c = 24.", "(a,c) = (0,6), (2,3) and (4,0).")],
          "Miro changes one side of an equation without making the same balanced change to the other side.",
          "Use an inverse operation on the whole equation and check by substitution."),
 
@@ -277,12 +277,12 @@ WEEKS = [
          ["perimeter", "area", "base", "perpendicular height", "triangle", "parallelogram"],
          "Rulers, squared paper, cut-out shapes, formula cards, mini whiteboards.",
          ["Identify the required measure and mark the relevant lengths.", "Use the perpendicular height, not a sloping side, in the area formula.", "Include squared units for area and check by decomposition."],
-         [("Distinguish perimeter and area", "To choose whether a problem requires perimeter or area."),
+         [("Compare area and perimeter", "To explain that equal areas can have different perimeters and equal perimeters can enclose different areas."),
           ("Find the area of parallelograms", "To calculate the area of parallelograms using base and perpendicular height."),
           ("Find the area of triangles", "To calculate the area of triangles."),
           ("Find missing dimensions", "To use a known area to find a missing base or height."),
           ("Solve compound area problems", "To solve problems involving combined triangles and parallelograms.")],
-         [pair("A rectangle is 14 cm by 9 cm. Find its area and perimeter.", "Area 126 cm2; perimeter 46 cm."),
+         [pair("Rectangles A and B both have area 24 cm2. A is 6 cm by 4 cm and B is 8 cm by 3 cm. Compare their perimeters.", "A has perimeter 20 cm and B has perimeter 22 cm, so equal areas can have different perimeters."),
           pair("Find the area of a parallelogram with base 12 cm and perpendicular height 7 cm.", "84 cm2."),
           pair("Find the area of a triangle with base 15 cm and perpendicular height 8 cm.", "60 cm2."),
           pair("A triangle has area 54 cm2 and base 12 cm. Find its perpendicular height.", "9 cm."),
@@ -317,12 +317,12 @@ WEEKS = [
           ("Use vertically opposite angles", "To identify and use vertically opposite angles."),
           ("Find angles in triangles and quadrilaterals", "To calculate missing interior angles in polygons."),
           ("Name parts of circles", "To describe radius, diameter and circumference."),
-          ("Reason from shape properties", "To classify shapes and solve problems using their properties.")],
+          ("Draw 2-D shapes and build 3-D nets", "To draw 2-D shapes from given dimensions and angles and recognise and build 3-D shapes from nets.")],
          [pair("Angles around a point are 85 degrees, 140 degrees and x. Find x.", "135 degrees."),
           pair("One angle where two straight lines cross is 68 degrees. Find the vertically opposite angle.", "68 degrees."),
           pair("A triangle has angles 47 degrees and 68 degrees. Find the third angle.", "65 degrees."),
           pair("A circle has radius 4.5 cm. What is its diameter?", "9 cm."),
-          pair("A quadrilateral has three angles of 92 degrees, 88 degrees and 105 degrees. Find the fourth.", "75 degrees.")],
+          pair("Draw a triangle with sides 6 cm and 8 cm enclosing a 60-degree angle. Then name one valid net of a cube.", "An accurately constructed triangle and any valid arrangement of six joined squares that folds to a cube.")],
          "Miro estimates from the drawing even when the diagram is not to scale.",
          "Use labelled values and known geometric facts, then check the total angle relationship."),
 
@@ -398,6 +398,59 @@ WEEKS = [
          "Miro records a general target such as 'get better at maths'.",
          "Use assessment evidence to name the exact concept, method, example and support required next."),
 ]
+
+
+def replace_lesson(week_number, day, title, objective, model, guided, practice, challenge, misconception, correction):
+    selected_week = next(item for item in WEEKS if item["week"] == week_number)
+    selected_week["lessons"][day - 1] = base.lesson(
+        title, objective,
+        model["q"], model["a"], guided["q"], guided["a"], practice["q"], practice["a"],
+        challenge["q"], challenge["a"], misconception, correction,
+    )
+
+
+# Explicit coverage added after the statutory statement-by-statement audit. These
+# lessons keep I do, We do and You do focused on the same curriculum objective.
+replace_lesson(
+    22, 4, "Find pairs for equations with two unknowns",
+    "To find pairs of numbers that satisfy an equation with two unknowns.",
+    pair("Find all positive whole-number pairs (x, y) that satisfy x + y = 12 when x < y.", "(1,11), (2,10), (3,9), (4,8) and (5,7)."),
+    pair("Find all non-negative whole-number pairs (a, b) that satisfy a + 2b = 8.", "(8,0), (6,1), (4,2), (2,3) and (0,4)."),
+    pair("Find every positive whole-number pair (p, q) that satisfies 2p + q = 11.", "(1,9), (2,7), (3,5), (4,3) and (5,1)."),
+    pair("A farm has chickens c and sheep s. There are 12 animals and 32 legs. Find c and s and prove the pair is unique.", "c = 8 and s = 4. Then c + s = 12 and 2c + 4s = 32."),
+    "Miro finds one pair that works and stops, even though the question asks for all pairs.",
+    "Choose a systematic starting value, change it by a constant step and stop only when the allowed range is exhausted.",
+)
+replace_lesson(
+    22, 5, "Enumerate combinations of two variables",
+    "To list every possible combination of two variables systematically.",
+    pair("Adult tickets cost £6 and child tickets cost £4. List every combination (a, c) that satisfies 6a + 4c = 24.", "(a,c) = (0,6), (2,3) and (4,0)."),
+    pair("Use only £2 coins and £5 notes to make £20. List every possible combination.", "10 coins and 0 notes; 5 coins and 2 notes; or 0 coins and 4 notes."),
+    pair("A rectangle has whole-number side lengths and perimeter 20 cm. List every possible pair (length, width), ignoring rotations.", "(9,1), (8,2), (7,3), (6,4) and (5,5)."),
+    pair("Sam chooses one red and one blue counter. Red values are 1, 2, 3 and blue values are 2, 4, 6. List every pair whose total is at least 7.", "(1,6), (2,6), (3,4) and (3,6)."),
+    "Miro lists possibilities in a random order and cannot tell whether any are missing.",
+    "Hold one variable fixed while changing the other, record each valid pair in a table, then move to the next value.",
+)
+replace_lesson(
+    24, 1, "Compare area and perimeter",
+    "To compare area and perimeter when one measure stays equal.",
+    pair("Both rectangles have area 24 cm2. Compare 6 cm by 4 cm with 8 cm by 3 cm.", "Perimeters: 20 cm and 22 cm. Equal areas can have different perimeters."),
+    pair("Both rectangles have perimeter 20 cm. Compare 7 cm by 3 cm with 6 cm by 4 cm.", "Areas: 21 cm2 and 24 cm2. Equal perimeters can enclose different areas."),
+    pair("Find two rectangles with area 36 cm2 and different perimeters.", "For example, 9 by 4 has perimeter 26 cm; 6 by 6 has perimeter 24 cm."),
+    pair("Disprove: shapes with equal area must have equal perimeter.", "A 12 by 2 rectangle and a 6 by 4 rectangle both have area 24 cm2, but perimeters 28 cm and 20 cm."),
+    "Miro assumes a larger perimeter always means a larger area.",
+    "Calculate both measures. Changing dimensions can preserve one measure while changing the other.",
+)
+replace_lesson(
+    26, 5, "Draw 2-D shapes and build 3-D nets",
+    "To draw 2-D shapes accurately and recognise/build 3-D nets.",
+    pair("Draw a triangle with sides 6 cm and 8 cm enclosing 60 degrees. Sketch a valid cube net.", "An accurate triangle and six joined squares that fold to a cube."),
+    pair("Draw a parallelogram with adjacent sides 7 cm and 4 cm and one angle of 65 degrees.", "An accurate parallelogram with opposite sides parallel and equal, and the marked angle 65 degrees."),
+    pair("Sketch and label a net for a 5 cm by 3 cm by 2 cm cuboid.", "Two 5 by 3, two 5 by 2 and two 3 by 2 faces, arranged to fold without overlap."),
+    pair("How can you check a cube net without cutting it out?", "Track each folded face; no squares may overlap and all six faces must be used."),
+    "Miro draws by eye and assumes any six joined squares will fold into a cube.",
+    "Use a ruler and protractor, then track each face as the net folds.",
+)
 
 
 SCORE_BANDS = [
@@ -640,6 +693,10 @@ def build_term(term):
     lessons = base.build_lessons()
     base.OUT.mkdir(parents=True, exist_ok=True)
     data_path = base.OUT / f"year6-{term.lower()}-lessons.json"
+    if data_path.exists():
+        previous = {(item["week"], item["day"]): item.get("teachingSlides") for item in json.loads(data_path.read_text(encoding="utf-8"))}
+        for item in lessons:
+            item["teachingSlides"] = previous.get((item["week"], item["day"])) or {"count": 12}
     data_path.write_text(json.dumps(lessons, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     base.update_curriculum(lessons)
     for item in lessons:

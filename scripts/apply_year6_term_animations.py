@@ -122,6 +122,11 @@ def main():
         raise RuntimeError("Choose autumn, spring or summer.")
     lessons_root = ROOT / "lessons" / "year-6-maths" / term
     lessons = json.loads((lessons_root / f"year6-{term}-lessons.json").read_text(encoding="utf-8"))
+    selector = sys.argv[2] if len(sys.argv) > 2 else None
+    if selector:
+        lessons = [item for item in lessons if f"{item['week']}-{item['day']}" == selector]
+        if len(lessons) != 1:
+            raise RuntimeError(f"Expected one lesson for selector {selector}; found {len(lessons)}")
     stage_root = ROOT / ".qa" / f"year6-{term}-pptx"
     for index, item in enumerate(lessons, 1):
         stage_dir = stage_root / f"week-{item['week']}" / f"{item['day']}-{item['slug']}"

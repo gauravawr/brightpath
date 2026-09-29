@@ -259,8 +259,8 @@
       "Solve one-step equations",
       "Solve two-step equations",
       "Solve equations with brackets",
-      "Represent word problems with equations",
-      "Reason about equivalent equations"
+      "Find pairs for equations with two unknowns",
+      "Enumerate combinations of two variables"
     ]
   },
   {
@@ -280,7 +280,7 @@
     "term": "Summer",
     "unit": "Measurement - perimeter and area of triangles and parallelograms",
     "days": [
-      "Distinguish perimeter and area",
+      "Compare area and perimeter",
       "Find the area of parallelograms",
       "Find the area of triangles",
       "Find missing dimensions",
@@ -308,7 +308,7 @@
       "Use vertically opposite angles",
       "Find angles in triangles and quadrilaterals",
       "Name parts of circles",
-      "Reason from shape properties"
+      "Draw 2-D shapes and build 3-D nets"
     ]
   },
   {
