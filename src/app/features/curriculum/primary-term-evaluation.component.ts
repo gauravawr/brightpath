@@ -144,7 +144,7 @@ export class PrimaryTermEvaluationComponent {
   pupils: PupilEvaluation[] = Array.from({ length: 30 }, () => ({ name: '', score: null, secure: '', gap: '', intervention: '', review: '' }));
 
   constructor() {
-    if (![1, 2, 3, 4].includes(this.year) || !['autumn', 'spring', 'summer'].includes(this.termSlug)) {
+    if (![1, 2, 3, 4, 5].includes(this.year) || !['autumn', 'spring', 'summer'].includes(this.termSlug)) {
       this.notFound.set(true);
       return;
     }

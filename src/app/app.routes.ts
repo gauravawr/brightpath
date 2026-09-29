@@ -90,6 +90,11 @@ export const routes: Routes = [
         title: 'Year 4 Maths lesson · BrightPath',
       },
       {
+        path: 'lessons/year-5-maths/evaluation/:term',
+        loadComponent: () => import('./features/curriculum/primary-term-evaluation.component').then(m => m.PrimaryTermEvaluationComponent),
+        data: { year: 5, title: 'Year 5 Maths term assessment' },
+      },
+      {
         path: 'lessons/year-5-maths/:week/:slug',
         loadComponent: () => import('./features/curriculum/year5-maths-lesson.component').then(m => m.Year5MathsLessonComponent),
         title: 'Year 5 Maths lesson · BrightPath',

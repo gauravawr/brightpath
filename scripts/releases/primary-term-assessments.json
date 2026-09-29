@@ -479,6 +479,126 @@
     {
       "file": "lessons/year-4-maths/evaluations/summer/preview/teacher-record/page-2.png",
       "sha256": "45b69052e05106d7da637eb55532394d17a48409b0185d5a1a5b84887dbb550b"
+    },
+    {
+      "file": "lessons/year-5-maths/evaluations/autumn/evaluation.json",
+      "sha256": "507b8508fef7573c2434b5fcb757962cb4e836eb73b73a342a3ff4a07e017606"
+    },
+    {
+      "file": "lessons/year-5-maths/evaluations/autumn/term-assessment-and-mark-scheme.pdf",
+      "sha256": "879afba7f33df5a2213cc879c58b05a3106d22e11fc1bacaaf08db5b9c281673"
+    },
+    {
+      "file": "lessons/year-5-maths/evaluations/autumn/editable-teacher-evaluation-record.docx",
+      "sha256": "73839f2822d74e7663917db76deac1ad6789541d6dac3ce8accd2ddd3e1b2db2"
+    },
+    {
+      "file": "lessons/year-5-maths/evaluations/autumn/preview/assessment/page-1.png",
+      "sha256": "04af51d4640d2334872ca3fc6bc177c0525deafc20fbb68711c57e689e83a502"
+    },
+    {
+      "file": "lessons/year-5-maths/evaluations/autumn/preview/assessment/page-2.png",
+      "sha256": "3826fcf9dd768e1b3ecfa68303fbc0127ed036eb6f5ac985b24385adeba0cae3"
+    },
+    {
+      "file": "lessons/year-5-maths/evaluations/autumn/preview/assessment/page-3.png",
+      "sha256": "683b7b7704778fbf9ef1cb2af1ee5f360af847db918f269363ebd605c3da6ee8"
+    },
+    {
+      "file": "lessons/year-5-maths/evaluations/autumn/preview/assessment/page-4.png",
+      "sha256": "601880bb163fd8dc6a1ab7e32cd144d9a2696717600df5b5430859690ae346df"
+    },
+    {
+      "file": "lessons/year-5-maths/evaluations/autumn/preview/assessment/page-5.png",
+      "sha256": "609f2b5a4e083b4aef35445798f175416fd2a6f1c3ea59cece36526738ba93c3"
+    },
+    {
+      "file": "lessons/year-5-maths/evaluations/autumn/preview/teacher-record/page-1.png",
+      "sha256": "10fcb89387b3c1045896c6c7784d982e987bc0c31c9f3495f67ae41a964b95bd"
+    },
+    {
+      "file": "lessons/year-5-maths/evaluations/autumn/preview/teacher-record/page-2.png",
+      "sha256": "43216cbdc2e7cf9a6bd97c9c606a64a6ec6c3971413b3158998b28d4450609d4"
+    },
+    {
+      "file": "lessons/year-5-maths/evaluations/spring/evaluation.json",
+      "sha256": "a0b30b94c3689124896611ce8ff429841cec035e3b2c50c9949210b6ca09c06e"
+    },
+    {
+      "file": "lessons/year-5-maths/evaluations/spring/term-assessment-and-mark-scheme.pdf",
+      "sha256": "91a0e08306ecf79c3cfc08f2294e12441ae1278c2b62bb7208da4a91e7e696f5"
+    },
+    {
+      "file": "lessons/year-5-maths/evaluations/spring/editable-teacher-evaluation-record.docx",
+      "sha256": "6be4e5bbc3d049dee1229ae3a96cc594f7f987f8ca4ec259674834a2fdb6715e"
+    },
+    {
+      "file": "lessons/year-5-maths/evaluations/spring/preview/assessment/page-1.png",
+      "sha256": "b3118d551024bdf559a363976b5158328eb974a4c684d693b344ba2f96c2f050"
+    },
+    {
+      "file": "lessons/year-5-maths/evaluations/spring/preview/assessment/page-2.png",
+      "sha256": "a5939b26278bdd3ec30b50d10e15da6ab926fc8b2dfbb606746d809d7aac9954"
+    },
+    {
+      "file": "lessons/year-5-maths/evaluations/spring/preview/assessment/page-3.png",
+      "sha256": "19cac8e1293cb5a8dc7a9d1862013b1cdc9e213568ff195f299f656abaa82216"
+    },
+    {
+      "file": "lessons/year-5-maths/evaluations/spring/preview/assessment/page-4.png",
+      "sha256": "9dede03fd504d2e61123d037fb300c7e0be6416b95843c42d3127e0af5a0faf4"
+    },
+    {
+      "file": "lessons/year-5-maths/evaluations/spring/preview/assessment/page-5.png",
+      "sha256": "ebc59fa7fe6148221b3b227bf8aa1e3b432ccf91bf29ebdedc756741fe674b0e"
+    },
+    {
+      "file": "lessons/year-5-maths/evaluations/spring/preview/teacher-record/page-1.png",
+      "sha256": "c169144058e34a4591ee20aa34c877959c01464f4bbe61ed07322e0f39d235ff"
+    },
+    {
+      "file": "lessons/year-5-maths/evaluations/spring/preview/teacher-record/page-2.png",
+      "sha256": "e72de4b478e8f3764707802f5e6eaf59751008ba83475410480cfacdedace2c8"
+    },
+    {
+      "file": "lessons/year-5-maths/evaluations/summer/evaluation.json",
+      "sha256": "99528ba92889c1386fdb53528d5b5f3e0a2a46930c44e948d976bb55ad089613"
+    },
+    {
+      "file": "lessons/year-5-maths/evaluations/summer/term-assessment-and-mark-scheme.pdf",
+      "sha256": "4bfba321c9ebcd82ec5f8dc4cac90c9d0c451fa6e2fef0cca2d234a607e30fe0"
+    },
+    {
+      "file": "lessons/year-5-maths/evaluations/summer/editable-teacher-evaluation-record.docx",
+      "sha256": "558c2b9ec0b6c0181977831ea237f7ee7363fb31d206528600075981c13cb711"
+    },
+    {
+      "file": "lessons/year-5-maths/evaluations/summer/preview/assessment/page-1.png",
+      "sha256": "b5d71fa2bb291bf11b0815674e23eeab81ab09e497d566f48b56fb48094745a2"
+    },
+    {
+      "file": "lessons/year-5-maths/evaluations/summer/preview/assessment/page-2.png",
+      "sha256": "ecc455cb9883b956d3ec697cdd1f20515948263e6949ee2545998f3c20fc5429"
+    },
+    {
+      "file": "lessons/year-5-maths/evaluations/summer/preview/assessment/page-3.png",
+      "sha256": "0b20dde0b345ee96229ce0ca28c7dafb5b96b3c428bcc6ecd26faaf934ae79c0"
+    },
+    {
+      "file": "lessons/year-5-maths/evaluations/summer/preview/assessment/page-4.png",
+      "sha256": "941e43bf4713dcf1f9e439832b574b976cca684e6190bd098699532d86c99b8e"
+    },
+    {
+      "file": "lessons/year-5-maths/evaluations/summer/preview/assessment/page-5.png",
+      "sha256": "fc4bfe682138029c236e13e755d65281a47b7ebe3741714dd98adec56b0bd7d1"
+    },
+    {
+      "file": "lessons/year-5-maths/evaluations/summer/preview/teacher-record/page-1.png",
+      "sha256": "8eabd3d07549f90edd269bb6c206048f615a9e6b54a1242ada8160c718d10956"
+    },
+    {
+      "file": "lessons/year-5-maths/evaluations/summer/preview/teacher-record/page-2.png",
+      "sha256": "b9a14769d37596c43a27902b10f51c975cb3450104f159f2be29fcf2ac23b8ad"
     }
   ]
 }

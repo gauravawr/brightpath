@@ -99,7 +99,7 @@ interface CurriculumWeek {
                     </article>
                   }
                 </div>
-                @if (subject() === 'maths' && [1, 2, 3, 4, 6].includes(year())) {
+                @if (subject() === 'maths' && [1, 2, 3, 4, 5, 6].includes(year())) {
                   <a class="term-evaluation" [routerLink]="evaluationLink(term)">
                     <span aria-hidden="true">✓</span>
                     <div><b>{{ term }} term evaluation</b><small>{{ year() === 6 ? '40-mark assessment' : 'Term assessment with pictures and answers' }}, score bands and editable intervention record</small></div>

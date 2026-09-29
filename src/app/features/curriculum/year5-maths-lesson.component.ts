@@ -1,110 +1,111 @@
-import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
+import { PdfPreviewComponent } from '../../shared/pdf-preview.component';
+import { lessonFileUrl, downloadFile } from '../../shared/lesson-files';
+import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { LanguageService } from '../../core/services/language.service';
 import { RetrievalStarterComponent } from './retrieval-starter.component';
-import { downloadFile, lessonFileUrl } from '../../shared/lesson-files';
 
-interface CurriculumWeek { week:number; term:'Autumn'|'Spring'|'Summer'; unit:string; days:string[]; }
-interface PracticeQuestion { q:string; a:string; }
-interface BrowserSlide { kicker:string; title:string; subtitle?:string; lines:string[]; answer?:string; ordered?:boolean; }
+interface Question { q: string; a: string; }
+interface WeekLesson {
+  teachingSlides?: { count: number };
+  week?:number; day:number; slug:string; title:string; objective:string; vocabulary:string[]; successCriteria:string[]; prior:string; resources:string; misconception:string;
+  warmup:string; teacherModel:string[]; guided:string; independent:string; plenary:string;
+  preteach:{focus:string;steps:string[];questions:Question[]}; lower:Question[]; expected:Question[]; higher:Question[];
+}
+interface ResourcePreview { title:string; kind:'slides'|'pdf'; download:string; preview?:string; slideCount?:number; description:string; }
 
 @Component({
-  selector:'bp-year5-maths-lesson', standalone:true, imports:[RouterLink,FormsModule,RetrievalStarterComponent], changeDetection:ChangeDetectionStrategy.OnPush,
+  selector:'bp-year5-maths-lesson', standalone:true, imports:[RouterLink, FormsModule, PdfPreviewComponent, RetrievalStarterComponent], changeDetection:ChangeDetectionStrategy.OnPush,
   template:`
-    @if (title()) {
-      <header class="bp-page-hero"><div class="bp-container"><a class="back" [routerLink]="l('/curriculum/maths/year/5')">← Year 5 curriculum map</a><span class="bp-chip">Year 5 Maths · {{ term() }} · Week {{ week }} · Day {{ day() }}</span><h1>{{ title() }}</h1><p>Develop secure Year 5 understanding through representation, fluency, reasoning and application.</p></div></header>
+    @if (lesson(); as item) {
+      <header class="bp-page-hero"><div class="bp-container">
+        <a class="back" [routerLink]="l('/curriculum/maths/year/5')">← Curriculum map</a>
+        <span class="bp-chip">Year 5 Maths · {{ week <= 10 ? 'Autumn' : week <= 20 ? 'Spring' : 'Summer' }} · Week {{ week }} · Day {{ item.day }}</span>
+        <h1>{{ item.title }}</h1><p>{{ item.objective }}</p>
+      </div></header>
       <main class="bp-section"><div class="bp-container lesson-layout">
-        <section class="powerpoint bp-card" style="grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;padding:1.4rem 1.6rem;border-left:7px solid var(--accent-sky)"><div><span class="bp-label">Teaching resource</span><h2 style="margin:.3rem 0">Year 5 teaching PowerPoint</h2><p style="margin:0;color:var(--text-muted)">Open and present all 12 slides in the browser. Download is optional if you want an editable copy.</p></div><button class="bp-btn" style="white-space:nowrap" type="button" (click)="openPresentation()">Preview / present PowerPoint</button></section>
-        <section class="plan bp-card"><div class="section-head"><div><span class="bp-label">Teacher planning</span><h2>Lesson focus and preparation</h2></div><button class="bp-btn" type="button" (click)="saveDraft()">Save notes</button></div><p class="hint">Use these notes to adapt the lesson for your class.</p><div class="field-grid"><label>Teacher / class<input [(ngModel)]="draft.teacher" /></label><label>Date<input type="date" [(ngModel)]="draft.date" /></label></div><label>Pre-teach, SEND and EAL support<textarea rows="3" [(ngModel)]="draft.support"></textarea></label><label>Assessment notes and next steps<textarea rows="4" [(ngModel)]="draft.assessment"></textarea></label>@if(saved()){<p class="saved">✓ Saved on this device</p>}</section>
-        <aside class="overview bp-card"><span class="bp-label">Teaching point</span><h2>{{ unit() }}</h2><p>{{ teachingPoint() }}</p><h3>Key vocabulary</h3><p>{{ vocabulary() }}</p><h3>Watch for</h3><p>Pupils applying a remembered rule without checking whether it fits the representation or context.</p></aside>
-        <bp-retrieval-starter [year]="5" [week]="week" [day]="day()" />
-        <section class="sequence"><span class="bp-label">60-minute teaching sequence</span><h2>Lesson at a glance</h2><div class="sequence-grid"><article class="bp-card"><b>1 · Revisit</b><p>Complete the five retrieval questions and discuss efficient strategies.</p><small>5 minutes</small></article><article class="bp-card"><b>2 · Model</b><p>Represent {{ unit().toLowerCase() }} clearly. Think aloud, connect each step and model one common error.</p><small>15 minutes</small></article><article class="bp-card"><b>3 · Guided practice</b><p>Solve examples together. Ask pupils to justify choices using the model and precise vocabulary.</p><small>15 minutes</small></article><article class="bp-card"><b>4 · Independent</b><p>Move from fluency to reasoning and one contextual problem. Check methods, not only answers.</p><small>20 minutes</small></article><article class="bp-card"><b>5 · Review</b><p>Compare two strategies and complete one exit question linked to the lesson focus.</p><small>5 minutes</small></article></div></section>
-        <section class="practice"><div class="section-head"><div><span class="bp-label">Differentiated practice</span><h2>Lesson-specific pupil questions</h2></div><button class="answer-button" type="button" (click)="showAnswers.update(value=>!value)">{{ showAnswers()?'Hide answers':'Show answers' }}</button></div><div class="level-tabs" role="tablist"><button type="button" [class.active]="level()==='lower'" (click)="level.set('lower')">Lower support</button><button type="button" [class.active]="level()==='expected'" (click)="level.set('expected')">Expected</button><button type="button" [class.active]="level()==='higher'" (click)="level.set('higher')">Higher challenge</button></div><ol class="question-list">@for(item of questions();track item.q){<li><span>{{ item.q }}</span>@if(showAnswers()){<b>{{ item.a }}</b>}</li>}</ol><p class="practice-note">Lower uses smaller numbers and prompts. Expected matches the Year 5 objective. Higher requires explanation, proof or more than one step.</p></section>
-        <aside class="preteach bp-card"><div><span class="bp-label">Before the lesson</span><h2>Pre-teach focus</h2><p>Revisit the vocabulary and prerequisite fact pupils need for {{ unit().toLowerCase() }}.</p></div><ul><li>✓ Use one clear representation</li><li>✓ Rehearse a complete spoken sentence</li><li>✓ Check one example independently</li></ul></aside>
-      </div></main>
-      @if (previewOpen()) {
-        <section class="ppt-viewer" role="dialog" aria-modal="true" aria-label="Year 5 PowerPoint preview">
-          <header class="ppt-toolbar"><div><b>{{ title() }}</b><span>Slide {{ previewSlide()+1 }} of {{ browserSlides().length }}</span></div><div class="ppt-actions"><a [href]="powerpointUrl()" (click)="$event.preventDefault(); downloadFile(powerpointUrl())">Download editable PowerPoint</a><button type="button" (click)="closePresentation()">Close</button></div></header>
-          @if (currentBrowserSlide(); as slide) {
-            <article class="ppt-slide">
-              <span class="ppt-kicker">{{ slide.kicker }}</span><h2>{{ slide.title }}</h2>
-              @if (slide.subtitle) {<p class="ppt-subtitle">{{ slide.subtitle }}</p>}
-              @if (slide.ordered) {<ol>@for(line of slide.lines;track line){<li>{{ line }}</li>}</ol>} @else {<ul>@for(line of slide.lines;track line){<li>{{ line }}</li>}</ul>}
-              @if (slide.answer) {<div class="ppt-answer"><b>Teacher check</b><span>{{ slide.answer }}</span></div>}
-            </article>
+        <nav class="resource-card bp-card" aria-label="Lesson downloads">
+          <span class="bp-label">Complete lesson pack</span><h2>Open and adapt every resource</h2>
+          <div class="downloads">
+            <button class="download" type="button" (click)="openPreview('plan')"><span>📝</span><b>Editable teacher plan</b><small>Preview first · editable Word plan</small></button>
+            <button class="download" type="button" (click)="openPreview('slides')"><span>📽️</span><b>Present PowerPoint in browser</b><small>{{ item.teachingSlides?.count ?? 14 }} slides · no download needed</small></button>
+            <button class="download" type="button" (click)="openPreview('preteach')"><span>🌱</span><b>Pre-teach</b><small>Preview before printing</small></button>
+            <button class="download" type="button" (click)="openPreview('lower')"><span>●</span><b>Lower worksheet</b><small>Preview before printing</small></button>
+            <button class="download" type="button" (click)="openPreview('expected')"><span>●●</span><b>Expected worksheet</b><small>Preview before printing</small></button>
+            <button class="download" type="button" (click)="openPreview('higher')"><span>●●●</span><b>Higher worksheet</b><small>Preview before printing</small></button>
+          </div>
+          @if (preview(); as resource) {
+            <section class="preview" [class.presentation-preview]="resource.kind === 'slides'" aria-live="polite">
+              <div class="preview__head"><div><span class="bp-label">{{ resource.kind === 'slides' ? 'Present in browser' : 'Preview before download' }}</span><h3>{{ resource.title }}</h3><p>{{ resource.description }}</p></div><button class="preview__close" type="button" (click)="closePreview()" aria-label="Close preview">×</button></div>
+              @if (resource.kind === 'slides') {
+                <div class="slide-preview"><img [src]="slidePreviewSrc()" [alt]="resource.title + ', slide ' + previewSlide()" /></div>
+                <div class="slide-controls"><button type="button" (click)="changeSlide(-1)" [disabled]="previewSlide() === 1">← Previous</button><b>Slide {{ previewSlide() }} of {{ resource.slideCount }}</b><button type="button" (click)="changeSlide(1)" [disabled]="previewSlide() === resource.slideCount">Next →</button></div>
+              } @else if (previewUrl()) {
+                <bp-pdf-preview [url]="asset(resource.preview!)" />
+              }
+              <div class="preview__actions"><span>{{ resource.kind === 'slides' ? 'Present directly from this browser. Download is optional.' : 'Happy with the preview?' }}</span><a class="bp-btn" [href]="asset(resource.download)" (click)="$event.preventDefault(); downloadFile(asset(resource.download))">{{ resource.kind === 'slides' ? 'Download editable copy' : 'Download ' + resource.title }}</a></div>
+            </section>
           }
-          <footer class="ppt-controls"><button type="button" (click)="changePresentationSlide(-1)" [disabled]="previewSlide()===0">← Previous</button><div class="ppt-dots" aria-hidden="true">@for(slide of browserSlides();track $index){<span [class.active]="$index===previewSlide()"></span>}</div><button type="button" (click)="changePresentationSlide(1)" [disabled]="previewSlide()===browserSlides().length-1">Next →</button></footer>
+        </nav>
+
+        <section class="editor bp-card">
+          <div class="editor__head"><div><span class="bp-label">Editable in your browser</span><h2>Teacher planning notes</h2></div><button class="bp-btn" type="button" (click)="saveDraft()">Save on this device</button></div>
+          <p class="hint">Adapt these fields for your class. The downloadable Word plan contains the full lesson sequence and answer key.</p>
+          <div class="field-grid"><label>Teacher / class<input [(ngModel)]="draft.teacher" /></label><label>Date<input type="date" [(ngModel)]="draft.date" /></label></div>
+          <label>Pupil initials / focus group<textarea rows="2" [(ngModel)]="draft.initials"></textarea></label>
+          <label>SEND, EAL and individual needs<textarea rows="3" [(ngModel)]="draft.send"></textarea></label>
+          <label>Adaptations, reasonable adjustments and adult support<textarea rows="4" [(ngModel)]="draft.adaptations"></textarea></label>
+          <label>Assessment notes and next steps<textarea rows="4" [(ngModel)]="draft.assessment"></textarea></label>
+          @if (saved()) { <p class="saved" role="status">✓ Saved on this device</p> }
         </section>
-      }
-    } @else {<div class="bp-loading"><span class="bp-spinner"></span>Loading Year 5 lesson…</div>}
+
+        <bp-retrieval-starter [year]="5" [week]="week" [day]="item.day" />
+        <section class="sequence"><span class="bp-label">60-minute teaching sequence</span><h2>Lesson at a glance</h2>
+          <div class="sequence-grid">
+            <article class="bp-card"><b>1 · Revisit</b><p>{{ item.warmup }}</p><small>5 minutes</small></article>
+            <article class="bp-card"><b>2 · Model</b><ol>@for(step of item.teacherModel; track step){<li>{{ step }}</li>}</ol><small>15 minutes</small></article>
+            <article class="bp-card"><b>3 · Guided practice</b><p>{{ item.guided }}</p><small>15 minutes</small></article>
+            <article class="bp-card"><b>4 · Independent practice</b><p>{{ item.independent }}</p><small>20 minutes</small></article>
+            <article class="bp-card"><b>5 · Review</b><p>{{ item.plenary }}</p><small>5 minutes</small></article>
+          </div>
+        </section>
+
+        <aside class="preteach bp-card"><div><span class="bp-label">Before the lesson</span><h2>Pre-teach focus</h2><p>{{ item.preteach.focus }}</p></div><ul>@for(step of item.preteach.steps;track step){<li>✓ {{ step }}</li>}</ul></aside>
+        <aside class="overview bp-card"><div><b>Success criteria</b><ul>@for(point of item.successCriteria;track point){<li>{{ point }}</li>}</ul></div><div><b>Key vocabulary</b><p>{{ item.vocabulary.join(' · ') }}</p></div><div><b>Watch for</b><p>{{ item.misconception }}</p></div></aside>
+      </div></main>
+    } @else { <div class="bp-loading"><span class="bp-spinner"></span>Loading lesson…</div> }
   `,
-  styles:[`.back{display:block;width:max-content;margin-bottom:1rem;font-weight:700}.lesson-layout{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr);gap:1.5rem}.plan,.overview,.preteach{padding:clamp(1.2rem,3vw,2rem)}.section-head{display:flex;align-items:start;justify-content:space-between;gap:1rem}.section-head h2,.overview h2{margin:.3rem 0}.hint,.overview p{color:var(--text-muted)}label{display:block;margin-top:.85rem;font-size:.82rem;font-weight:750}label input,label textarea{margin-top:.3rem;font-weight:400}.field-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}.saved{color:var(--accent-emerald);font-weight:800}.overview{border-top:6px solid var(--accent-sky)}.overview h3{margin:1rem 0 .2rem;font-size:.9rem}.sequence,.practice,.preteach{grid-column:1/-1}.sequence h2,.practice h2{margin:.35rem 0 1rem}.sequence-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:.8rem}.sequence-grid article{display:flex;flex-direction:column;padding:1rem}.sequence-grid p{flex:1;color:var(--slate-600);font-size:.88rem}.sequence-grid small{color:var(--brand-d);font-weight:800}.preteach{display:grid;grid-template-columns:1fr 1fr;gap:2rem;background:linear-gradient(135deg,var(--brand-tint),var(--white))}.preteach li{margin:.45rem 0}@media(max-width:950px){.lesson-layout,.sequence-grid{grid-template-columns:1fr}.plan,.overview,.sequence,.practice,.preteach{grid-column:1}}@media(max-width:560px){.powerpoint{align-items:stretch!important;flex-direction:column}.field-grid,.preteach{grid-template-columns:1fr}.section-head{display:block}.section-head .bp-btn{margin-top:.6rem;width:100%;justify-content:center}}`,`.practice{padding:clamp(1.2rem,3vw,2rem);border-radius:var(--r-md);background:var(--white);box-shadow:var(--shadow-sm)}.answer-button,.level-tabs button{border:1px solid var(--border);border-radius:999px;padding:.6rem .9rem;background:var(--white);color:var(--brand-d);font:750 .82rem var(--font-body);cursor:pointer}.level-tabs{display:flex;flex-wrap:wrap;gap:.55rem;margin:1rem 0}.level-tabs button.active{border-color:var(--brand-d);background:var(--brand-d);color:var(--white)}.question-list{display:grid;grid-template-columns:repeat(2,1fr);gap:.75rem;margin:0;padding:0;list-style:none;counter-reset:q}.question-list li{counter-increment:q;min-height:95px;padding:1rem;border:1px solid var(--border);border-left:5px solid var(--accent-sky);border-radius:12px;background:var(--page-bg);font-weight:700}.question-list li::before{content:counter(q);display:inline-grid;place-items:center;width:1.5rem;height:1.5rem;margin-right:.5rem;border-radius:50%;background:var(--brand-d);color:var(--white);font-size:.72rem}.question-list b{display:block;margin:.7rem 0 0 2.1rem;color:var(--accent-emerald)}.practice-note{margin:.9rem 0 0;color:var(--text-muted);font-size:.82rem}@media(max-width:650px){.question-list{grid-template-columns:1fr}}`,`.ppt-viewer{position:fixed;inset:0;z-index:12000;display:grid;grid-template-rows:auto minmax(0,1fr) auto;gap:1rem;padding:1rem;background:#0b1b31}.ppt-toolbar,.ppt-controls{display:flex;align-items:center;justify-content:space-between;gap:1rem;color:#fff}.ppt-toolbar>div:first-child{display:grid;gap:.15rem}.ppt-toolbar span{color:#bfd0e8;font-size:.82rem}.ppt-actions{display:flex;align-items:center;gap:.65rem}.ppt-actions a,.ppt-actions button,.ppt-controls button{border:1px solid #86a4ca;border-radius:999px;padding:.65rem 1rem;background:#fff;color:#12345b;font:750 .82rem var(--font-body);cursor:pointer;text-decoration:none}.ppt-actions button{background:transparent;color:#fff}.ppt-slide{align-self:center;justify-self:center;width:min(100%,1280px);max-height:100%;aspect-ratio:16/9;overflow:auto;padding:clamp(2rem,5vw,5rem);border-radius:18px;background:linear-gradient(145deg,#fff 0%,#f4f8ff 100%);box-shadow:0 24px 70px #0008;color:#14233c}.ppt-kicker{display:inline-block;margin-bottom:1.1rem;color:#176d9b;font-weight:850;letter-spacing:.12em;text-transform:uppercase}.ppt-slide h2{max-width:1050px;margin:0;font-size:clamp(2rem,4vw,4.1rem);line-height:1.08}.ppt-subtitle{max-width:950px;margin:.8rem 0 1.4rem;color:#4c617d;font-size:clamp(1.05rem,2vw,1.6rem)}.ppt-slide ol,.ppt-slide ul{display:grid;gap:.65rem;max-width:1050px;margin:1.25rem 0 0;padding-left:1.8rem;font-size:clamp(1rem,1.55vw,1.45rem);line-height:1.35}.ppt-slide li::marker{color:#1685b6;font-weight:800}.ppt-answer{display:flex;gap:.8rem;align-items:center;margin-top:1.5rem;padding:1rem 1.2rem;border-left:6px solid #1d9a73;border-radius:10px;background:#e8f7f0;font-size:clamp(1rem,1.5vw,1.35rem)}.ppt-controls{justify-content:center}.ppt-controls button:disabled{opacity:.35;cursor:not-allowed}.ppt-dots{display:flex;gap:.35rem}.ppt-dots span{width:.48rem;height:.48rem;border-radius:50%;background:#66809f}.ppt-dots span.active{background:#fff;transform:scale(1.35)}@media(max-width:700px){.ppt-toolbar{align-items:flex-start}.ppt-actions{align-items:stretch;flex-direction:column}.ppt-actions a,.ppt-actions button{padding:.45rem .7rem}.ppt-slide{aspect-ratio:auto;min-height:65vh;padding:1.5rem}.ppt-slide h2{font-size:2rem}.ppt-dots{display:none}}`]
+  styles:[`
+    .back{display:block;width:max-content;margin-bottom:1rem;font-weight:700}.lesson-layout{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr);gap:1.5rem}.resource-card,.editor,.preteach,.overview{padding:clamp(1.2rem,3vw,2rem)}.resource-card h2,.editor h2{margin:.35rem 0 1rem}.downloads{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.75rem}.download{appearance:none;width:100%;font:inherit;text-align:left;display:grid;grid-template-columns:auto 1fr;column-gap:.7rem;align-items:center;border:1px solid var(--border);border-radius:12px;padding:.9rem;color:var(--text);background:var(--page-bg);cursor:pointer}.download:hover,.download:focus-visible{border-color:var(--brand-l);background:var(--brand-tint);color:var(--text);outline:2px solid transparent}.download span{grid-row:1/3;color:var(--brand-d)}.download b{font-size:.9rem}.download small{color:var(--text-muted)}.preview{margin-top:1rem;border:1px solid var(--border);border-radius:16px;padding:1rem;background:var(--white)}.preview__head{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem}.preview__head h3{margin:.25rem 0}.preview__head p{margin:.25rem 0 .8rem;color:var(--text-muted);font-size:.86rem}.preview__close{border:0;background:var(--page-bg);border-radius:50%;width:2rem;height:2rem;font-size:1.25rem;cursor:pointer}.slide-preview{background:var(--page-bg);border:1px solid var(--border);border-radius:12px;overflow:hidden}.slide-preview img{display:block;width:100%;height:auto}.slide-controls{display:flex;align-items:center;justify-content:space-between;gap:.75rem;margin-top:.75rem}.slide-controls button{border:1px solid var(--border);background:var(--white);border-radius:9px;padding:.55rem .75rem;cursor:pointer}.slide-controls button:disabled{opacity:.45;cursor:not-allowed}.document-preview{width:100%;height:560px;border:1px solid var(--border);border-radius:12px;background:var(--page-bg)}.preview__actions{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-top:.85rem}.preview__actions span{font-size:.86rem;color:var(--text-muted)}.editor__head{display:flex;justify-content:space-between;align-items:start;gap:1rem}.editor .bp-btn{padding:.65rem 1rem;white-space:nowrap}.hint{font-size:.86rem;color:var(--text-muted)}label{display:block;font-weight:700;font-size:.82rem;margin-top:.85rem}label input,label textarea{font-weight:400;margin-top:.3rem}.field-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}.saved{margin:.8rem 0 0;color:var(--accent-emerald);font-weight:700}.sequence{grid-column:1/-1}.sequence h2{margin:.35rem 0 1rem}.sequence-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:.8rem}.sequence-grid article{padding:1rem;display:flex;flex-direction:column}.sequence-grid p,.sequence-grid ol{font-size:.86rem;color:var(--slate-600);padding-left:1rem;flex:1}.sequence-grid p{padding-left:0}.sequence-grid small{color:var(--brand-d);font-weight:700}.preteach{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:2rem;background:linear-gradient(135deg,var(--brand-tint),var(--white))}.preteach ul li{margin:.45rem 0}.overview{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}.overview ul{list-style:disc;padding-left:1rem}.overview p,.overview li{font-size:.9rem;color:var(--slate-600)}@media(max-width:950px){.lesson-layout{grid-template-columns:1fr}.sequence-grid{grid-template-columns:repeat(2,1fr)}.overview{grid-template-columns:1fr}.resource-card,.editor,.sequence,.preteach,.overview{grid-column:1}.document-preview{height:480px}}@media(max-width:560px){.downloads,.field-grid,.sequence-grid,.preteach{grid-template-columns:1fr}.editor__head{display:block}.editor .bp-btn{margin-top:.5rem;width:100%;justify-content:center}.download{min-width:0}.preview__actions,.slide-controls{align-items:stretch;flex-direction:column}.preview__actions .bp-btn,.slide-controls button{width:100%;justify-content:center}.document-preview{height:420px}}
+  `]
 })
 export class Year5MathsLessonComponent {
-  readonly downloadFile=downloadFile;
-  private http=inject(HttpClient); private route=inject(ActivatedRoute); private lang=inject(LanguageService);
-  readonly week=Number((this.route.snapshot.paramMap.get('week')??'week-1').replace('week-','')); readonly slug=this.route.snapshot.paramMap.get('slug')??''; readonly plan=signal<CurriculumWeek[]>([]); readonly saved=signal(false); readonly showAnswers=signal(false); readonly level=signal<'lower'|'expected'|'higher'>('expected');
-  readonly weekData=computed(()=>this.plan().find(item=>item.week===this.week)); readonly day=computed(()=>Math.max(1,(this.weekData()?.days.findIndex(item=>this.slugify(item)===this.slug)??0)+1)); readonly title=computed(()=>this.weekData()?.days[this.day()-1]??''); readonly unit=computed(()=>this.weekData()?.unit??'Year 5 mathematics'); readonly term=computed(()=>this.weekData()?.term??(this.week<=10?'Autumn':this.week<=20?'Spring':'Summer'));
-  readonly teachingPoint=computed(()=>{const lead=this.title().split(':')[0];return `${lead}: connect the mathematical structure to an efficient method, then explain why the method works.`}); readonly vocabulary=computed(()=>this.vocabularyFor(this.unit()).join(' · '));
-  readonly questions=computed(()=>this.makeQuestions(this.level()));
-  readonly previewOpen=signal(false); readonly previewSlide=signal(0);
-  readonly browserSlides=computed<BrowserSlide[]>(()=>{
-    const lower=this.makeQuestions('lower'),expected=this.makeQuestions('expected'),higher=this.makeQuestions('higher');
-    return[
-      {kicker:`Year 5 · ${this.term()} · Week ${this.week} · Day ${this.day()}`,title:this.title(),subtitle:this.teachingPoint(),lines:['Represent it clearly','Explain the mathematical structure','Check that the answer is reasonable']},
-      {kicker:'Retrieval starter · 5 minutes',title:'Ready to remember?',subtitle:'Answer independently, then compare strategies with a partner.',lines:lower.map(item=>item.q),ordered:true},
-      {kicker:'Mathematical language',title:'Vocabulary for today',subtitle:'Say each word, explain it, then use it in a complete mathematical sentence.',lines:this.vocabularyFor(this.unit())},
-      {kicker:'Pre-teach and support',title:'Build the idea first',subtitle:'Use a clear representation and rehearse the reasoning aloud.',lines:lower.slice(0,3).map(item=>item.q),ordered:true},
-      {kicker:'Teacher modelling',title:'I do: watch the thinking',subtitle:expected[0].q,lines:['Identify what the question is asking.','Choose a representation or efficient method.','Work step by step and check the result.'],answer:expected[0].a},
-      {kicker:'Guided practice',title:'We do: solve and explain',subtitle:expected[1].q,lines:['What do we already know?','Which representation or method will help?','How can we check the answer?'],answer:expected[1].a},
-      {kicker:'Pause and discuss',title:'Convince your partner',subtitle:expected[2].q,lines:['Explain every step using today’s vocabulary.','Find or describe a different method.','Which mistake might someone make here?'],answer:expected[2].a},
-      {kicker:'Independent practice',title:'You do: fluency to reasoning',subtitle:'Complete the questions, showing enough working for someone else to follow.',lines:expected.map(item=>item.q),ordered:true},
-      {kicker:'Check and improve',title:'Answers',subtitle:'Correct any errors in a different colour and explain what changed.',lines:expected.map((item,index)=>`${index+1}. ${item.a}`)},
-      {kicker:'Lower-level support',title:'Use the scaffold',subtitle:'Use smaller steps, a representation and a complete spoken sentence.',lines:lower.map(item=>item.q),ordered:true},
-      {kicker:'Higher challenge',title:'Reason, prove and generalise',subtitle:'A correct answer is the beginning—justify why it must be true.',lines:higher.map(item=>item.q),ordered:true},
-      {kicker:'Review · 5 minutes',title:'Exit question',subtitle:expected[4].q,lines:['Solve it independently.','Explain which idea from today helped you.','Name one point you would teach someone else.'],answer:expected[4].a}
-    ];
-  });
-  readonly currentBrowserSlide=computed(()=>this.browserSlides()[this.previewSlide()]);
-  draft={teacher:'',date:'',support:'',assessment:''};
-  constructor(){this.http.get<CurriculumWeek[]>('/curriculum-plans/maths/year-5.json').subscribe(items=>{this.plan.set(items);this.loadDraft()})}
-  l(path:string):string{return this.lang.localise(path)} saveDraft():void{try{localStorage.setItem(this.key(),JSON.stringify(this.draft));this.saved.set(true);setTimeout(()=>this.saved.set(false),2500)}catch{}}
-  powerpointUrl():string{return lessonFileUrl(`year-5-maths/week-${this.week}/${this.slug}/interactive-teaching-slides.pptx`)}
-  openPresentation():void{this.previewSlide.set(0);this.previewOpen.set(true);document.body.style.overflow='hidden'}
-  closePresentation():void{this.previewOpen.set(false);document.body.style.overflow=''}
-  changePresentationSlide(change:number):void{this.previewSlide.update(value=>Math.max(0,Math.min(this.browserSlides().length-1,value+change)))}
-  private key():string{return `brightpath-plan-year5-week-${this.week}-${this.slug}`} private loadDraft():void{try{const value=localStorage.getItem(this.key());if(value)this.draft={...this.draft,...JSON.parse(value)}}catch{}}
-  private slugify(value:string):string{return value.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')}
-  private makeQuestions(level:'lower'|'expected'|'higher'):PracticeQuestion[]{
-    const hard=level==='higher',low=level==='lower',d=this.day(),s=this.week*17+d*11,n=low?100+s%80:hard?10000+s*37:1000+s*19;
-    const explain=(q:string)=>hard?`${q} Explain or prove your answer.`:q;
-    const list=(factory:(i:number)=>PracticeQuestion)=>Array.from({length:5},(_,i)=>factory(i));
-    if(this.week===1)return list(i=>{const x=n+i*1111;return{q:explain(`What is the value of ${String(x)[Math.min(2,i%String(x).length)]} in ${x.toLocaleString()}?`),a:`Use its place in ${x.toLocaleString()} to state the value.`}});
-    if(this.week===2)return list(i=>{const x=(i+2)*10**(low?2:hard?5:4);return{q:explain(`${x.toLocaleString()} ÷ 10 = ?`),a:(x/10).toLocaleString()}});
-    if(this.week===3)return list(i=>{const x=n+i*137,place=low?10:hard?10000:1000;return{q:explain(`Round ${x.toLocaleString()} to the nearest ${place.toLocaleString()}.`),a:(Math.round(x/place)*place).toLocaleString()}});
-    if(this.week===4)return list(i=>{const a=n+i*143,b=(low?80:hard?4827:827)+i*39,op=i%2?'-':'+';return{q:explain(`Calculate ${a.toLocaleString()} ${op} ${b.toLocaleString()}.`),a:(op==='+'?a+b:a-b).toLocaleString()}});
-    if(this.week===5)return list(i=>{const a=(low?23:hard?2345:345)+i*7,b=2+(i+d)%8;return{q:explain(`${a} × ${b} =`),a:String(a*b)}});
-    if(this.week===6)return list(i=>{const divisor=2+(i+d)%7,quot=(low?12:hard?1203:123)+i*9,total=divisor*quot;return{q:explain(`${total.toLocaleString()} ÷ ${divisor} =`),a:quot.toLocaleString()}});
-    if(this.week===7)return list(i=>{const x=[24,36,48,60,72][i]+(hard?12:0);return{q:explain(`Write all the factor pairs of ${x}.`),a:this.factorPairs(x)}});
-    if(this.week===8)return list(i=>{const x=2+i;return{q:explain(`Calculate ${x}³ + ${i+1}².`),a:String(x**3+(i+1)**2)}});
-    if(this.week===9)return list(i=>{const x=(low?3.4:hard?0.347:34.7)+i*.1,m=[10,100,1000][i%3];return{q:explain(`${Number(x.toFixed(3))} × ${m} =`),a:String(Number((x*m).toFixed(3)))}});
-    if(this.week>=11&&this.week<=14)return list(i=>{const den=low?8:12,num=1+(i+d)%5,other=1+(i*2)%5;if(this.week===14)return{q:explain(`${num}/${den} × ${2+i} =`),a:`${num*(2+i)}/${den}`};return{q:explain(`${num}/${den} + ${other}/${den} =`),a:`${num+other}/${den}`}});
-    if(this.week===15||this.week===16)return list(i=>{const x=Number(((low?1.2:hard?12.345:3.456)+i*.137).toFixed(3));return{q:explain(this.week===16?`Round ${x} to 2 decimal places.`:`What is the value of the digit 5 in ${x}?`),a:this.week===16?x.toFixed(2):'Use the tenths, hundredths and thousandths places.'}});
-    if(this.week===17)return list(i=>{const pct=[10,20,25,50,75][i],total=(low?40:hard?360:120)+i*20;return{q:explain(`Find ${pct}% of ${total}.`),a:String(total*pct/100)}});
-    if(this.week===18||this.week===19)return list(i=>{const pct=[10,20,25,50,75][i],decimal=pct/100;return{q:explain(`Write ${pct}% as a decimal and a fraction.`),a:`${decimal} and ${pct}/100`}});
-    if(this.week===21)return list(i=>{const km=(low?2:hard?3.75:2.5)+i*.25;return{q:explain(`Convert ${km} km to metres.`),a:`${km*1000} m`}});
-    if(this.week===22)return list(i=>{const a=(low?4:hard?14:8)+i,b=3+(i%4);return{q:explain(`A rectangle is ${a} cm by ${b} cm. Find its perimeter and area.`),a:`Perimeter ${2*(a+b)} cm; area ${a*b} cm²`}});
-    if(this.week===23)return list(i=>{const a=2+i,b=3+(i%3),c=4+(i%2);return{q:explain(`Find the volume of a cuboid ${a} cm × ${b} cm × ${c} cm.`),a:`${a*b*c} cm³`}});
-    if(this.week===24)return list(i=>{const a=35+i*10,b=90+i*5;return{q:explain(`Angles on a straight line are ${a}° and ${b}°. Find the missing angle.`),a:`${180-a-b}°`}});
-    if(this.week===25)return list(i=>({q:explain(`Name a quadrilateral with ${i%2?'one pair':'two pairs'} of parallel sides and state another property.`),a:i%2?'Trapezium; accept a correct property.':'Parallelogram, rectangle, rhombus or square; accept a correct property.'}));
-    if(this.week===26)return list(i=>{const x=1+i,y=2+(i%3),dx=2+(d%2),dy=1+(i%2);return{q:explain(`Translate (${x}, ${y}) ${dx} right and ${dy} up.`),a:`(${x+dx}, ${y+dy})`}});
-    if(this.week===27)return list(i=>{const values=[12+i,18+i*2,15+i,21+i,24+i];return{q:explain(`The values are ${values.join(', ')}. Find the total and the difference between the greatest and least.`),a:`Total ${values.reduce((a,b)=>a+b,0)}; difference ${Math.max(...values)-Math.min(...values)}`}});
-    if(this.week===28)return list(i=>{const price=(125+i*37)/100,count=2+i;return{q:explain(`${count} items cost £${price.toFixed(2)} each. Find the total.`),a:`£${(price*count).toFixed(2)}`}});
-    if(this.week===29)return list(i=>{const x=3+i;return{q:explain(`Investigate: is ${x}² + ${x+1}² always odd? Test and explain.`),a:`${x*x+(x+1)*(x+1)}; consecutive squares have opposite parity, so the sum is odd.`}});
-    return list(i=>{const a=(low?120:hard?12000:1200)+s+i*47,b=3+i;return{q:explain(`Calculate ${a.toLocaleString()} ÷ ${b}, then check by multiplication.`),a:`${a%b===0?a/b:`${Math.floor(a/b)} r ${a%b}`}`}});
+  readonly lessonFileUrl = lessonFileUrl;
+  readonly downloadFile = downloadFile;
+  private http=inject(HttpClient); private route=inject(ActivatedRoute); private lang=inject(LanguageService); private sanitizer=inject(DomSanitizer);
+  readonly slug=this.route.snapshot.paramMap.get('slug') ?? ''; readonly week=Number(this.route.snapshot.paramMap.get('week')?.replace('week-', '') ?? this.route.snapshot.data['week'] ?? 1); readonly lesson=signal<WeekLesson|null>(null); readonly saved=signal(false); readonly preview=signal<ResourcePreview|null>(null); readonly previewUrl=signal<SafeResourceUrl|null>(null); readonly previewSlide=signal(1);
+  draft={teacher:'',date:'',initials:'',send:'',adaptations:'',assessment:''};
+  constructor(){ this.http.get<WeekLesson[]>(lessonFileUrl(`year-5-maths/week-${this.week}/week${this.week}-lessons.json`)).subscribe(items=>{this.lesson.set(items.find(item=>item.slug===this.slug)??null);this.loadDraft();}); }
+  asset(file:string):string{return lessonFileUrl(`year-5-maths/week-${this.week}/${this.slug}/${file}`);} l(path:string):string{return this.lang.localise(path);}
+  private key():string{return `brightpath-plan-year5-week-${this.week}-${this.slug}`;} private loadDraft():void{try{const value=localStorage.getItem(this.key());if(value)this.draft={...this.draft,...JSON.parse(value)};}catch{}}
+  saveDraft():void{try{localStorage.setItem(this.key(),JSON.stringify(this.draft));this.saved.set(true);setTimeout(()=>this.saved.set(false),2500);}catch{}}
+  openPreview(kind:'plan'|'slides'|'preteach'|'lower'|'expected'|'higher'):void{
+    const resources:Record<typeof kind,ResourcePreview>={
+      plan:{title:'Editable teacher plan',kind:'pdf',download:'editable-teacher-plan.docx',preview:'preview/teacher-plan.pdf',description:'Complete lesson sequence and answer guide. Download the Word version only when you are ready to edit it.'},
+      slides:{title:'Teaching PowerPoint',kind:'slides',download:'interactive-teaching-slides.pptx',preview:'preview/powerpoint',slideCount:this.lesson()?.teachingSlides?.count ?? 14,description:'I do, We do and You do with moving maths models, Pip the penguin, five practice questions and answers. These previews show completed slides. Download and open PowerPoint Slide Show to play the animations.'},
+      preteach:{title:'Pre-teach resource',kind:'pdf',download:'pre-teach.pdf',preview:'pre-teach.pdf',description:'Adult guide and pupil quick check for the lower/CUSP group.'},
+      lower:{title:'Lower support worksheet',kind:'pdf',download:'lower-worksheet.pdf',preview:'lower-worksheet.pdf',description:'Five picture-supported questions on one A4 pupil page. Print page 1 for pupils; page 2 has the answers.'},
+      expected:{title:'Expected worksheet',kind:'pdf',download:'expected-worksheet.pdf',preview:'expected-worksheet.pdf',description:'Five questions with pictures and maths models on one A4 pupil page. Print page 1 for pupils; page 2 has the answers.'},
+      higher:{title:'Higher challenge worksheet',kind:'pdf',download:'higher-worksheet.pdf',preview:'higher-worksheet.pdf',description:'Five visual reasoning questions on one A4 pupil page. Print page 1 for pupils; page 2 has answers and example explanations.'},
+    };
+    const resource=resources[kind]; this.preview.set(resource); this.previewSlide.set(1);
+    this.previewUrl.set(resource.kind==='pdf'&&resource.preview?this.sanitizer.bypassSecurityTrustResourceUrl(this.asset(resource.preview)):null);
+    setTimeout(()=>document.querySelector('.preview')?.scrollIntoView({behavior:'smooth',block:'nearest'}));
   }
-  private factorPairs(value:number):string{const pairs:string[]=[];for(let i=1;i<=Math.sqrt(value);i++)if(value%i===0)pairs.push(`${i} × ${value/i}`);return pairs.join(', ')}
-  private vocabularyFor(unit:string):string[]{const u=unit.toLowerCase();if(u.includes('fraction'))return['numerator','denominator','equivalent','improper fraction','mixed number'];if(u.includes('decimal')||u.includes('percent'))return['decimal place','thousandth','percent','equivalent','round'];if(u.includes('multiply')||u.includes('factor')||u.includes('square'))return['factor','multiple','product','prime','composite'];if(u.includes('division'))return['dividend','divisor','quotient','remainder','inverse'];if(u.includes('measurement')||u.includes('perimeter')||u.includes('volume'))return['convert','unit','perimeter','area','volume'];if(u.includes('geometry'))return['angle','parallel','coordinate','translate','reflect'];if(u.includes('statistics'))return['axis','scale','interval','data','difference'];if(u.includes('financial'))return['pounds','pence','total','change','estimate'];return['place value','digit','partition','round','compare']}
+  closePreview():void{this.preview.set(null);this.previewUrl.set(null);this.previewSlide.set(1);}
+  changeSlide(delta:number):void{const total=this.preview()?.slideCount??1;this.previewSlide.set(Math.min(total,Math.max(1,this.previewSlide()+delta)));}
+  slidePreviewSrc():string{const folder=this.preview()?.preview??'preview/powerpoint';return this.asset(`${folder}/slide-${this.previewSlide()}.png`);}
 }

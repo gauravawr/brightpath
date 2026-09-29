@@ -61,6 +61,51 @@ YEAR4=[
 ('Two rectangles have sides 6 cm × 4 cm and 8 cm × 2 cm. Do they have the same perimeter? Explain.','Yes: both have perimeter 20 cm.','Measure reasoning',[],['6 × 4 cm','8 × 2 cm'])]
 ]
 
+YEAR5=[
+[
+('What is the value of the digit 7 in 472,615?','70,000.','Place value',['100,000s','10,000s','1,000s','100s','10s','1s'],['4','7','2','6','1','5']),
+('Write 604,090 in words.','Six hundred and four thousand and ninety.','Read large numbers',[],['604,090']),
+('The temperature is −6°C and rises by 11°C. What is it now?','5°C.','Negative numbers',[],['−6°C','+11°C','?']),
+('Write 944 using Roman numerals.','CMXLIV.','Roman numerals',[],['900 = CM','40 = XL','4 = IV']),
+('Round 384,726 to the nearest 10,000.','380,000.','Rounding',[],['380,000','384,726','390,000']),
+('Calculate 46,807 + 27,956.','74,763.','Addition',[],['46,807','+ 27,956']),
+('Calculate 80,004 − 37,658.','42,346.','Subtraction',[],['80,004','− 37,658']),
+('Calculate 3,406 × 7.','23,842.','Multiplication',[],['3,406','× 7']),
+('Calculate 2,315 × 24.','55,560.','Formal multiplication',[],['2,315 × 4','2,315 × 20']),
+('Calculate 6,384 ÷ 8.','798.','Short division',[],['6,384','÷ 8']),
+('Write all the common factors of 18 and 24.','1, 2, 3 and 6.','Common factors',[],['18','24']),
+('Write the prime numbers between 20 and 40.','23, 29, 31 and 37.','Prime numbers',[],['20','40'])
+],
+[
+('Convert 17/5 to a mixed number.','3 2/5.','Improper fractions',[],['17 ÷ 5','3 remainder 2']),
+('Convert 4 3/7 to an improper fraction.','31/7.','Mixed numbers',[],['4 × 7','+ 3']),
+('Calculate 3/4 + 5/8.','1 3/8 or 11/8.','Add related fractions',[],['3/4 = 6/8','6/8 + 5/8']),
+('Calculate 2 1/3 − 5/6.','1 1/2.','Subtract mixed numbers',[],['2 2/6','− 5/6']),
+('Calculate 3 × 4/7.','12/7 or 1 5/7.','Multiply fractions',[],['4/7 + 4/7 + 4/7']),
+('Write 0.375 as a fraction.','375/1000 or 3/8.','Decimals and fractions',[],['0.375','375/1000']),
+('Round 6.47 to the nearest whole number.','6.','Round decimals',[],['6','6.47','7']),
+('Find 35% of 240.','84.','Percentages',[],['10% = 24','30% = 72','5% = 12']),
+('Put 0.6, 58% and 3/5 in order from smallest.','58%, 0.6 and 3/5; the last two are equal.','Fractions decimals percentages',[],['58%','0.6','3/5']),
+('Convert 4.35 km to metres.','4,350 m.','Metric conversion',[],['4.35 km','× 1,000']),
+('Approximately how many centimetres are in 6 inches? Use 1 inch ≈ 2.5 cm.','About 15 cm.','Imperial measures',[],['6 × 2.5']),
+('A train leaves at 13:48 and arrives at 15:17. How long is the journey?','1 hour 29 minutes.','Time',[],['13:48','15:17'])
+],
+[
+('A rectangle is 13 cm by 8 cm. Find its perimeter.','42 cm.','Perimeter',[],['13 cm','8 cm']),
+('A rectangle is 12 cm by 7 cm. Find its area.','84 cm².','Area',[],['12 × 7']),
+('A cuboid is 5 cm by 4 cm by 3 cm. Find its volume.','60 cm³.','Volume',[],['5 × 4 × 3']),
+('Angles around a point total 360°. Two angles are 125° and 95°. Find the third.','140°.','Angle facts',[],['360°','− 125°','− 95°']),
+('A straight line contains angles of 68° and x. Find x.','112°.','Angles on a line',[],['180° − 68°']),
+('Name the 3-D shape made by a net of six equal squares.','A cube.','3-D shapes',[],['6 equal squares']),
+('Explain one difference between a regular and an irregular polygon.','A regular polygon has all sides and angles equal; an irregular polygon does not.','Polygons',[],['regular','irregular']),
+('Translate (3, 4) by 5 right and 2 up.','(8, 6).','Translation',[],['(3, 4)','+5, +2']),
+('Reflect (2, 5) in the vertical line x = 4.','(6, 5).','Reflection',[],['(2, 5)','x = 4']),
+('A line graph shows 18 visitors on Monday and 27 on Tuesday. How many more visited on Tuesday?','9 visitors.','Line graphs',[],['Monday 18','Tuesday 27']),
+('A timetable shows a bus at 09:35 and the next at 10:08. What is the interval?','33 minutes.','Timetables',[],['09:35','10:08']),
+('A shop sells 6 packs of 24 pencils and then 37 single pencils. How many pencils is that altogether?','181 pencils.','Multi-step problems',[],['6 × 24','+ 37'])
+]
+]
+
 def bands(total):
     cuts=[(0,3),(4,5),(6,7),(8,10)] if total==10 else [(0,4),(5,7),(8,9),(10,12)]
     names=['Lower','Cuspy','Expected','Higher']
@@ -69,6 +114,7 @@ def bands(total):
 
 def questions(year,term_index):
     if year==4:return [dict(q=q,a=a,topic=topic,labels=labels,values=values,year=4) for q,a,topic,labels,values in YEAR4[term_index]]
+    if year==5:return [dict(q=q,a=a,topic=topic,labels=labels,values=values,year=5) for q,a,topic,labels,values in YEAR5[term_index]]
     result=[]
     for i,(week,day) in enumerate(SELECTION[year][term_index]):
         lessons=json.loads((ROOT/f'lessons/year-{year}-maths/week-{week}/week{week}-lessons.json').read_text(encoding='utf-8'))
@@ -179,7 +225,7 @@ def record(year,term,total,folder):
 def main():
     OUT.mkdir(parents=True,exist_ok=True)
     (OUT/'artifact.md').write_text(f'# Evaluation record template contract\nReference: {REFERENCE}\nSHA256: {hashlib.sha256(REFERENCE.read_bytes()).hexdigest()}\nRetain both landscape pages, 30 pupil rows, Arial styles, table geometry, colours, headings, and all package parts except word/document.xml. Edit year, term, total and score ranges; intentionally add visible grid borders and minimum row heights for usable pupil notes. Reference previews: original preview/teacher-record/page-1.png and page-2.png. The packaged renderer failed because LibreOffice is unavailable; use installed Microsoft Word for PDF export, then inspect rendered PNGs.\n',encoding='utf-8')
-    for year in [1,2,4]:
+    for year in [1,2,4,5]:
         for t,term in enumerate(TERMS):
             folder=OUT/f'year-{year}'/term.lower();folder.mkdir(parents=True,exist_ok=True);qs=questions(year,t)
             assessment(year,term,qs,folder);record(year,term,len(qs),folder)
