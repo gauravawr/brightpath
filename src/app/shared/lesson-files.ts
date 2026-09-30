@@ -16,6 +16,11 @@ export function lessonFileUrl(path: string): string {
   return `${environment.blobContentBaseUrl}/lessons/${relative.split('/').map(encodeURIComponent).join('/')}${version}`;
 }
 
+/** Open a public PowerPoint in Microsoft PowerPoint for the web, preserving native slide animations. */
+export function powerPointViewerUrl(powerPointUrl: string): string {
+  return `https://view.officeapps.live.com/op/view.aspx?src=${encodeURIComponent(powerPointUrl)}`;
+}
+
 /** Cross-origin download attributes are ignored by browsers; download a fetched blob. */
 export async function downloadFile(url: string): Promise<void> {
   try {

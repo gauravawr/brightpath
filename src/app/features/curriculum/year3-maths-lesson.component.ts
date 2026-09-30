@@ -1,5 +1,5 @@
 import { PdfPreviewComponent } from '../../shared/pdf-preview.component';
-import { lessonFileUrl, downloadFile } from '../../shared/lesson-files';
+import { lessonFileUrl, downloadFile, powerPointViewerUrl } from '../../shared/lesson-files';
 import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute, RouterLink } from '@angular/router';
@@ -31,7 +31,7 @@ interface ResourcePreview { title:string; kind:'slides'|'pdf'; download:string; 
           <span class="bp-label">Complete lesson pack</span><h2>Open and adapt every resource</h2>
           <div class="downloads">
             <button class="download" type="button" (click)="openPreview('plan')"><span>📝</span><b>Editable teacher plan</b><small>Preview first · editable Word plan</small></button>
-            <a class="download" [href]="presentationUrl()" target="_blank" rel="noopener"><span>📽️</span><b>Open PowerPoint in browser</b><small>{{ item.teachingSlides?.count ?? 14 }} slides · opens in a new tab</small></a>
+            <a class="download" [href]="presentationUrl()" target="_blank" rel="noopener"><span>📽️</span><b>Open PowerPoint in browser</b><small>{{ item.teachingSlides?.count ?? 14 }} slides · native animations in PowerPoint for the web</small></a>
             <button class="download" type="button" (click)="openPreview('preteach')"><span>🌱</span><b>Pre-teach</b><small>Preview before printing</small></button>
             <button class="download" type="button" (click)="openPreview('lower')"><span>●</span><b>Lower worksheet</b><small>Preview before printing</small></button>
             <button class="download" type="button" (click)="openPreview('expected')"><span>●●</span><b>Expected worksheet</b><small>Preview before printing</small></button>
@@ -90,7 +90,7 @@ export class Year3MathsLessonComponent {
   draft={teacher:'',date:'',initials:'',send:'',adaptations:'',assessment:''};
   constructor(){ this.http.get<WeekLesson[]>(lessonFileUrl(`year-3-maths/week-${this.week}/week${this.week}-lessons.json`)).subscribe(items=>{this.lesson.set(items.find(item=>item.slug===this.slug)??null);this.loadDraft();}); }
   asset(file:string):string{return lessonFileUrl(`year-3-maths/week-${this.week}/${this.slug}/${file}`);} l(path:string):string{return this.lang.localise(path);}
-  presentationUrl():string{return this.l(`/presentations/maths/year/3/week/${this.week}/${this.slug}`);}
+  presentationUrl():string{return powerPointViewerUrl(this.asset('interactive-teaching-slides.pptx'));}
   private key():string{return `brightpath-plan-year3-week-${this.week}-${this.slug}`;} private loadDraft():void{try{const value=localStorage.getItem(this.key());if(value)this.draft={...this.draft,...JSON.parse(value)};}catch{}}
   saveDraft():void{try{localStorage.setItem(this.key(),JSON.stringify(this.draft));this.saved.set(true);setTimeout(()=>this.saved.set(false),2500);}catch{}}
   openPreview(kind:'plan'|'slides'|'preteach'|'lower'|'expected'|'higher'):void{

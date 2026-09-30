@@ -1,4 +1,4 @@
-import { lessonFileUrl, downloadFile } from '../../shared/lesson-files';
+import { lessonFileUrl, downloadFile, powerPointViewerUrl } from '../../shared/lesson-files';
 import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute, RouterLink } from '@angular/router';
@@ -44,7 +44,7 @@ interface ResourcePreview {
           <p class="intro">Nothing downloads until you choose the download button inside a preview.</p>
           <div class="downloads">
             <button class="download" type="button" (click)="openPreview('plan')"><span>📝</span><b>Editable teacher plan</b><small>One-page, supply-ready Word plan</small></button>
-            <a class="download" [href]="presentationUrl()" target="_blank" rel="noopener"><span>📽️</span><b>Open PowerPoint in browser</b><small>{{ item.teachingSlides?.count ?? 12 }} slides · opens in a new tab</small></a>
+            <a class="download" [href]="presentationUrl()" target="_blank" rel="noopener"><span>📽️</span><b>Open PowerPoint in browser</b><small>{{ item.teachingSlides?.count ?? 12 }} slides · native animations in PowerPoint for the web</small></a>
             <button class="download" type="button" (click)="openPreview('preteach')"><span>🌱</span><b>Pre-teach</b><small>Prior learning and adult guide</small></button>
             <button class="download" type="button" (click)="openPreview('lower')"><span>●</span><b>Lower support</b><small>Scaffolded practice and answers</small></button>
             <button class="download" type="button" (click)="openPreview('expected')"><span>●●</span><b>Expected level</b><small>Core practice and answers</small></button>
@@ -136,7 +136,7 @@ export class Year6AutumnLessonComponent {
 
   l(path: string): string { return this.lang.localise(path); }
   asset(file: string): string { return lessonFileUrl(`year-6-maths/${this.termSlug}/week-${this.week}/${this.slug}/${file}`); }
-  presentationUrl(): string { return this.l(`/presentations/maths/year/6/week/${this.week}/${this.slug}`); }
+  presentationUrl(): string { return powerPointViewerUrl(this.asset('teaching-powerpoint-v1.pptx')); }
   private key(): string { return `brightpath-year6-${this.termSlug}-${this.week}-${this.slug}`; }
   private loadDraft(): void { try { const value = localStorage.getItem(this.key()); if (value) this.draft = { ...this.draft, ...JSON.parse(value) }; } catch {} }
   saveDraft(): void { try { localStorage.setItem(this.key(), JSON.stringify(this.draft)); this.saved.set(true); setTimeout(() => this.saved.set(false), 2500); } catch {} }

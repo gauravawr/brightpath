@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, HostListener, inject, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute, RouterLink } from '@angular/router';
-import { lessonFileUrl, downloadFile } from '../../shared/lesson-files';
+import { lessonFileUrl, downloadFile, powerPointViewerUrl } from '../../shared/lesson-files';
 
 interface LessonSummary {
   week?: number;
@@ -25,7 +25,8 @@ interface LessonSummary {
         <nav aria-label="Presentation actions">
           <a [routerLink]="lessonRoute()">Back to lesson</a>
           <button type="button" (click)="downloadFile(powerPointUrl())">Download editable PowerPoint</button>
-          <button class="start" type="button" (click)="startSlideshow()">▶ Start slideshow</button>
+          <a class="start" [href]="animatedPowerPointUrl()" target="_blank" rel="noopener">▶ Play animated slideshow</a>
+          <button type="button" (click)="startSlideshow()">Open image fallback</button>
         </nav>
       </header>
 
@@ -109,6 +110,7 @@ export class MathsPresentationComponent {
 
   slideUrl(): string { return lessonFileUrl(`${this.lessonFolder()}/preview/powerpoint/slide-${this.slide()}.png`); }
   powerPointUrl(): string { return lessonFileUrl(`${this.lessonFolder()}/${this.year === 6 ? 'teaching-powerpoint-v1.pptx' : 'interactive-teaching-slides.pptx'}`); }
+  animatedPowerPointUrl(): string { return powerPointViewerUrl(this.powerPointUrl()); }
 
   private lessonFolder(): string {
     if (this.year === 6) return `year-6-maths/${this.termSlug()}/week-${this.week}/${this.slug}`;
