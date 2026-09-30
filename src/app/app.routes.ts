@@ -45,6 +45,11 @@ export const routes: Routes = [
 
       // Lessons
       {
+        path: 'presentations/maths/year/:year/week/:week/:slug',
+        loadComponent: () => import('./features/curriculum/maths-presentation.component').then(m => m.MathsPresentationComponent),
+        data: { title: 'Maths presentation', metaDescription: 'Present BrightPath Maths teaching slides directly in the browser.', noIndex: true },
+      },
+      {
         path: 'curriculum/:subject/year/:year',
         loadComponent: () => import('./features/curriculum/year1-maths-map.component').then(m => m.Year1MathsMapComponent),
         data: { title: '30-week curriculum map', metaDescription: 'A National Curriculum-aligned 30-week teaching map with five daily lesson focuses each week.' },
