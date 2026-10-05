@@ -12,6 +12,7 @@ interface CurriculumWeek {
   term: CurriculumTerm;
   unit: string;
   days: string[];
+  topTip?: { title:string; summary:string; facts:string[]; display:string; print:string; copies:number };
 }
 
 @Component({
@@ -84,6 +85,13 @@ interface CurriculumWeek {
                         </div>
                         <span class="week-card__count">5 days</span>
                       </div>
+                      @if (week.topTip; as tip) {
+                        <aside class="week-tip">
+                          <div class="week-tip__title"><span aria-hidden="true">★</span><div><b>Top tip · {{ tip.title }}</b><small>{{ tip.summary }}</small></div></div>
+                          <div class="week-tip__facts">@for (fact of tip.facts; track fact) { <span>{{ fact }}</span> }</div>
+                          <div class="week-tip__actions"><a [href]="tip.display" target="_blank" rel="noopener">Show chart</a><a [href]="tip.print" target="_blank" rel="noopener">Print {{ tip.copies }} book copies</a></div>
+                        </aside>
+                      }
                       <ol>
                         @for (day of week.days; track day; let dayNumber = $index) {
                           <li>

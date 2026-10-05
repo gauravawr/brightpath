@@ -243,6 +243,19 @@
     "week": 21,
     "term": "Summer",
     "unit": "Time and calendars",
+    "topTip": {
+      "title": "Time conversion chart",
+      "summary": "Display while teaching time and keep a small copy in pupils' books.",
+      "facts": [
+        "1 minute = 60 seconds",
+        "1 hour = 60 minutes",
+        "1 day = 24 hours",
+        "1 week = 7 days"
+      ],
+      "display": "/resources/maths/year-3/week-26-time-conversion-display.pdf",
+      "print": "/resources/maths/year-3/week-26-time-conversion-book-cards.pdf",
+      "copies": 6
+    },
     "days": [
       "Read time to the minute",
       "Roman numeral clocks",
@@ -303,6 +316,19 @@
     "week": 26,
     "term": "Summer",
     "unit": "Measure and time problems",
+    "topTip": {
+      "title": "Time conversion chart",
+      "summary": "Display before duration problems or print small copies for pupils' books.",
+      "facts": [
+        "1 minute = 60 seconds",
+        "1 hour = 60 minutes",
+        "1 day = 24 hours",
+        "1 week = 7 days"
+      ],
+      "display": "/resources/maths/year-3/week-26-time-conversion-display.pdf",
+      "print": "/resources/maths/year-3/week-26-time-conversion-book-cards.pdf",
+      "copies": 6
+    },
     "days": [
       "Calculate a duration",
       "Compare event times",
