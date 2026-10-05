@@ -9,7 +9,7 @@ export function lessonFileUrl(path: string): string {
     : /^year-4-maths\//.test(relative)
     ? '?v=20260924-year4-complete'
     : /^year-3-maths\//.test(relative)
-    ? '?v=20260923-remainder-fix'
+    ? '?v=20261003-lines-shapes-fix'
     : /^year-[12]-maths\//.test(relative)
       ? '?v=20260918-reviewed'
       : '';

@@ -11,6 +11,7 @@ import { RetrievalStarterComponent } from './retrieval-starter.component';
 interface Question { q: string; a: string; }
 interface WeekLesson {
   teachingSlides?: { count: number };
+  activity?: { title:string; file:string; description:string };
   week?:number; day:number; slug:string; title:string; objective:string; vocabulary:string[]; successCriteria:string[]; prior:string; resources:string; misconception:string;
   warmup:string; teacherModel:string[]; guided:string; independent:string; plenary:string;
   preteach:{focus:string;steps:string[];questions:Question[]}; lower:Question[]; expected:Question[]; higher:Question[];
@@ -33,6 +34,7 @@ interface ResourcePreview { title:string; kind:'slides'|'pdf'; download:string; 
             <button class="download" type="button" (click)="openPreview('plan')"><span>📝</span><b>Editable teacher plan</b><small>Preview first · editable Word plan</small></button>
             <a class="download" [href]="presentationUrl()" target="_blank" rel="noopener"><span>📽️</span><b>Open PowerPoint in browser</b><small>{{ item.teachingSlides?.count ?? 14 }} slides · native animations in PowerPoint for the web</small></a>
             <button class="download" type="button" (click)="openPreview('preteach')"><span>🌱</span><b>Pre-teach</b><small>Preview before printing</small></button>
+            @if (item.activity) { <button class="download" type="button" (click)="openPreview('activity')"><span>★</span><b>{{ item.activity.title }}</b><small>Teacher display + trim-ready pupil cards</small></button> }
             <button class="download" type="button" (click)="openPreview('lower')"><span>●</span><b>Lower worksheet</b><small>Preview before printing</small></button>
             <button class="download" type="button" (click)="openPreview('expected')"><span>●●</span><b>Expected worksheet</b><small>Preview before printing</small></button>
             <button class="download" type="button" (click)="openPreview('higher')"><span>●●●</span><b>Higher worksheet</b><small>Preview before printing</small></button>
@@ -93,11 +95,12 @@ export class Year3MathsLessonComponent {
   presentationUrl():string{return powerPointViewerUrl(this.asset('interactive-teaching-slides.pptx'));}
   private key():string{return `brightpath-plan-year3-week-${this.week}-${this.slug}`;} private loadDraft():void{try{const value=localStorage.getItem(this.key());if(value)this.draft={...this.draft,...JSON.parse(value)};}catch{}}
   saveDraft():void{try{localStorage.setItem(this.key(),JSON.stringify(this.draft));this.saved.set(true);setTimeout(()=>this.saved.set(false),2500);}catch{}}
-  openPreview(kind:'plan'|'slides'|'preteach'|'lower'|'expected'|'higher'):void{
+  openPreview(kind:'plan'|'slides'|'preteach'|'activity'|'lower'|'expected'|'higher'):void{
     const resources:Record<typeof kind,ResourcePreview>={
       plan:{title:'Editable teacher plan',kind:'pdf',download:'editable-teacher-plan.docx',preview:'preview/teacher-plan.pdf',description:'Complete lesson sequence and answer guide. Download the Word version only when you are ready to edit it.'},
       slides:{title:'Teaching PowerPoint',kind:'slides',download:'interactive-teaching-slides.pptx',preview:'preview/powerpoint',slideCount:this.lesson()?.teachingSlides?.count ?? 14,description:'I do, We do and You do with moving maths models, Tess the tortoise, five practice questions and answers. These previews show completed slides. Download and open PowerPoint Slide Show to play the animations.'},
       preteach:{title:'Pre-teach resource',kind:'pdf',download:'pre-teach.pdf',preview:'pre-teach.pdf',description:'Adult guide and pupil quick check for the lower/CUSP group.'},
+      activity:{title:this.lesson()?.activity?.title ?? 'Practical activity',kind:'pdf',download:this.lesson()?.activity?.file ?? 'practical-activity.pdf',preview:this.lesson()?.activity?.file ?? 'practical-activity.pdf',description:this.lesson()?.activity?.description ?? 'Teacher display and pupil activity cards.'},
       lower:{title:'Lower support worksheet',kind:'pdf',download:'lower-worksheet.pdf',preview:'lower-worksheet.pdf',description:'Five picture-supported questions on one A4 pupil page. Print page 1 for pupils; page 2 has the answers.'},
       expected:{title:'Expected worksheet',kind:'pdf',download:'expected-worksheet.pdf',preview:'expected-worksheet.pdf',description:'Five questions with pictures and maths models on one A4 pupil page. Print page 1 for pupils; page 2 has the answers.'},
       higher:{title:'Higher challenge worksheet',kind:'pdf',download:'higher-worksheet.pdf',preview:'higher-worksheet.pdf',description:'Five visual reasoning questions on one A4 pupil page. Print page 1 for pupils; page 2 has answers and example explanations.'},
