@@ -86,10 +86,16 @@ interface CurriculumWeek {
                         <span class="week-card__count">5 days</span>
                       </div>
                       @if (week.topTip; as tip) {
-                        <aside class="week-tip">
-                          <div class="week-tip__title"><span aria-hidden="true">★</span><div><b>Top tip · {{ tip.title }}</b><small>{{ tip.summary }}</small></div></div>
-                          <div class="week-tip__facts">@for (fact of tip.facts; track fact) { <span>{{ fact }}</span> }</div>
-                          <div class="week-tip__actions"><a [href]="tip.display" target="_blank" rel="noopener">Show chart</a><a [href]="tip.print" target="_blank" rel="noopener">Print {{ tip.copies }} book copies</a></div>
+                        <aside class="week-tip" [attr.aria-label]="'Hint sheet: ' + tip.title">
+                          <span class="week-tip__star" aria-hidden="true">★</span>
+                          <div class="week-tip__body">
+                            <b>Hint sheet: {{ tip.title }}</b>
+                            <small>{{ tip.summary }}</small>
+                            <div class="week-tip__actions">
+                              <a [href]="tip.display" target="_blank" rel="noopener">View hint sheet</a>
+                              <a [href]="tip.print" target="_blank" rel="noopener">Print {{ tip.copies }} small copies</a>
+                            </div>
+                          </div>
                         </aside>
                       }
                       <ol>

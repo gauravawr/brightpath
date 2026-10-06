@@ -147,6 +147,14 @@
     "week": 13,
     "term": "Spring",
     "unit": "Fractions decimals and percentages",
+    "topTip": {
+      "title": "Fraction, decimal and percentage equivalents",
+      "summary": "View the equivalence chart or print six small reference cards for pupils' books.",
+      "facts": ["1/2 = 0.5 = 50%", "1/4 = 0.25 = 25%", "3/4 = 0.75 = 75%", "1/5 = 0.2 = 20%"],
+      "display": "/resources/maths/year-5/year-5-fdp-equivalence-display.pdf",
+      "print": "/resources/maths/year-5/year-5-fdp-equivalence-book-cards.pdf",
+      "copies": 6
+    },
     "days": [
       "Convert fractions to decimals",
       "Convert decimals to fractions",
