@@ -47,11 +47,11 @@ interface CurriculumWeek {
             <p>{{ overview() }}</p>
           </div>
           <div class="term-path" aria-label="Three-term curriculum pathway">
-            <div class="term-node term-node--autumn"><strong>Autumn</strong><span>Weeks 1–10</span></div>
+            <a class="term-node term-node--autumn" href="#term-autumn" (click)="jumpToTerm('Autumn', $event)"><strong>Autumn</strong><span>Weeks 1–10</span></a>
             <span class="term-path__arrow" aria-hidden="true">→</span>
-            <div class="term-node term-node--spring"><strong>Spring</strong><span>Weeks 11–20</span></div>
+            <a class="term-node term-node--spring" href="#term-spring" (click)="jumpToTerm('Spring', $event)"><strong>Spring</strong><span>Weeks 11–20</span></a>
             <span class="term-path__arrow" aria-hidden="true">→</span>
-            <div class="term-node term-node--summer"><strong>Summer</strong><span>Weeks 21–30</span></div>
+            <a class="term-node term-node--summer" href="#term-summer" (click)="jumpToTerm('Summer', $event)"><strong>Summer</strong><span>Weeks 21–30</span></a>
           </div>
         </section>
 
@@ -65,7 +65,7 @@ interface CurriculumWeek {
         } @else {
           <div class="term-list">
             @for (term of terms; track term) {
-              <details class="term-panel" [open]="term === 'Autumn'">
+              <details class="term-panel" [id]="'term-' + term.toLowerCase()" [open]="term === 'Autumn'">
                 <summary>
                   <span class="term-panel__title">
                     <span class="term-dot" [class]="'term-dot term-dot--' + term.toLowerCase()"></span>
@@ -205,6 +205,14 @@ export class Year1MathsMapComponent {
     return this.plan().filter(week => week.term === term);
   }
 
+  jumpToTerm(term: CurriculumTerm, event: Event): void {
+    event.preventDefault();
+    const panel = document.getElementById(`term-${term.toLowerCase()}`) as HTMLDetailsElement | null;
+    if (!panel) return;
+    panel.open = true;
+    panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
   hasPublishedLesson(week: number): boolean {
     const yearOnePublished = this.year() === 1 && Boolean(this.weekLessonSlugs[week]);
     const yearSixPublished = this.year() === 6 && week >= 1 && week <= 30;
@@ -228,9 +236,7 @@ export class Year1MathsMapComponent {
   private loadPlan(): void {
     this.loading.set(true);
     this.plan.set([]);
-    const url = this.subject() === 'maths' && this.year() === 1
-      ? lessonFileUrl('year-1-maths/year1-maths-plan.json')
-      : `/curriculum-plans/${this.subject()}/year-${this.year()}.json`;
+    const url = `/curriculum-plans/${this.subject()}/year-${this.year()}.json`;
     this.http.get<CurriculumWeek[]>(url).subscribe({
       next: weeks => {
         this.plan.set(weeks);

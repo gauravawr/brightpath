@@ -9,7 +9,20 @@
       "Compare and order large numbers",
       "Calculate intervals across zero",
       "Solve place-value problems"
-    ]
+    ],
+    "topTip": {
+      "title": "Place value and negative numbers",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "10,000,000 = ten million",
+        "A digit is 10x the column to its right",
+        "Negative numbers are below zero",
+        "Count through zero carefully"
+      ],
+      "display": "/resources/maths/year-6/hints/place-value-display.pdf",
+      "print": "/resources/maths/year-6/hints/place-value-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 2,
@@ -21,7 +34,20 @@
       "Choose the required accuracy",
       "Estimate calculations by rounding",
       "Reason about rounding boundaries"
-    ]
+    ],
+    "topTip": {
+      "title": "Place value and negative numbers",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "10,000,000 = ten million",
+        "A digit is 10x the column to its right",
+        "Negative numbers are below zero",
+        "Count through zero carefully"
+      ],
+      "display": "/resources/maths/year-6/hints/place-value-display.pdf",
+      "print": "/resources/maths/year-6/hints/place-value-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 3,
@@ -33,7 +59,20 @@
       "Multiply up to four digits by two digits",
       "Solve long multiplication problems",
       "Explain and check long multiplication"
-    ]
+    ],
+    "topTip": {
+      "title": "Long multiplication and division",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "Align place-value columns",
+        "Record regrouping clearly",
+        "Long multiplication: include the zero placeholder",
+        "Division: divide, multiply, subtract, bring down"
+      ],
+      "display": "/resources/maths/year-6/hints/formal-methods-display.pdf",
+      "print": "/resources/maths/year-6/hints/formal-methods-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 4,
@@ -45,7 +84,20 @@
       "Use long division with exact answers",
       "Interpret division remainders",
       "Solve and check division problems"
-    ]
+    ],
+    "topTip": {
+      "title": "Long multiplication and division",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "Align place-value columns",
+        "Record regrouping clearly",
+        "Long multiplication: include the zero placeholder",
+        "Division: divide, multiply, subtract, bring down"
+      ],
+      "display": "/resources/maths/year-6/hints/formal-methods-display.pdf",
+      "print": "/resources/maths/year-6/hints/formal-methods-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 5,
@@ -69,7 +121,20 @@
       "Use brackets to change the order",
       "Solve missing-number expressions",
       "Reason about equivalent expressions"
-    ]
+    ],
+    "topTip": {
+      "title": "Order of operations",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "B: brackets",
+        "I: indices",
+        "DM: division and multiplication",
+        "AS: addition and subtraction"
+      ],
+      "display": "/resources/maths/year-6/hints/bidmas-display.pdf",
+      "print": "/resources/maths/year-6/hints/bidmas-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 7,
@@ -129,7 +194,20 @@
       "Compare fractions",
       "Order fractions",
       "Reason about fraction size"
-    ]
+    ],
+    "topTip": {
+      "title": "Fraction operations",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "Add/subtract: common denominator",
+        "Multiply: numerator x numerator",
+        "Divide by a fraction: multiply by reciprocal",
+        "Simplify using common factors"
+      ],
+      "display": "/resources/maths/year-6/hints/fractions-display.pdf",
+      "print": "/resources/maths/year-6/hints/fractions-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 12,
@@ -141,7 +219,20 @@
       "Add mixed numbers",
       "Subtract mixed numbers",
       "Solve fraction addition problems"
-    ]
+    ],
+    "topTip": {
+      "title": "Fraction operations",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "Add/subtract: common denominator",
+        "Multiply: numerator x numerator",
+        "Divide by a fraction: multiply by reciprocal",
+        "Simplify using common factors"
+      ],
+      "display": "/resources/maths/year-6/hints/fractions-display.pdf",
+      "print": "/resources/maths/year-6/hints/fractions-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 13,
@@ -153,7 +244,20 @@
       "Simplify before multiplying",
       "Multiply mixed numbers",
       "Solve fraction multiplication problems"
-    ]
+    ],
+    "topTip": {
+      "title": "Fraction operations",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "Add/subtract: common denominator",
+        "Multiply: numerator x numerator",
+        "Divide by a fraction: multiply by reciprocal",
+        "Simplify using common factors"
+      ],
+      "display": "/resources/maths/year-6/hints/fractions-display.pdf",
+      "print": "/resources/maths/year-6/hints/fractions-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 14,
@@ -165,7 +269,20 @@
       "Use equivalent fractions when dividing",
       "Divide mixed numbers",
       "Solve fraction division problems"
-    ]
+    ],
+    "topTip": {
+      "title": "Fraction operations",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "Add/subtract: common denominator",
+        "Multiply: numerator x numerator",
+        "Divide by a fraction: multiply by reciprocal",
+        "Simplify using common factors"
+      ],
+      "display": "/resources/maths/year-6/hints/fractions-display.pdf",
+      "print": "/resources/maths/year-6/hints/fractions-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 15,
@@ -189,7 +306,21 @@
       "Convert percentages to fractions",
       "Compare fractions decimals and percentages",
       "Solve equivalence problems"
-    ]
+    ],
+    "topTip": {
+      "title": "Fractions, decimals and percentages",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "1/2 = 0.5 = 50%",
+        "1/4 = 0.25 = 25%",
+        "3/4 = 0.75 = 75%",
+        "1/5 = 0.2 = 20%",
+        "Percentage means out of 100"
+      ],
+      "display": "/resources/maths/year-6/hints/fdp-display.pdf",
+      "print": "/resources/maths/year-6/hints/fdp-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 17,
@@ -201,7 +332,21 @@
       "Use one per cent",
       "Solve percentage change problems",
       "Find the whole from a percentage"
-    ]
+    ],
+    "topTip": {
+      "title": "Fractions, decimals and percentages",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "1/2 = 0.5 = 50%",
+        "1/4 = 0.25 = 25%",
+        "3/4 = 0.75 = 75%",
+        "1/5 = 0.2 = 20%",
+        "Percentage means out of 100"
+      ],
+      "display": "/resources/maths/year-6/hints/fdp-display.pdf",
+      "print": "/resources/maths/year-6/hints/fdp-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 18,
@@ -213,7 +358,20 @@
       "Generate equivalent ratios",
       "Simplify ratios",
       "Solve ratio problems"
-    ]
+    ],
+    "topTip": {
+      "title": "Ratio and proportion",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "Ratio compares parts",
+        "Keep the multiplier equal",
+        "Scale factor multiplies every length",
+        "Use bar models for unequal sharing"
+      ],
+      "display": "/resources/maths/year-6/hints/ratio-display.pdf",
+      "print": "/resources/maths/year-6/hints/ratio-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 19,
@@ -225,7 +383,20 @@
       "Find the value of one ratio part",
       "Share in a ratio",
       "Solve multi-step proportion problems"
-    ]
+    ],
+    "topTip": {
+      "title": "Ratio and proportion",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "Ratio compares parts",
+        "Keep the multiplier equal",
+        "Scale factor multiplies every length",
+        "Use bar models for unequal sharing"
+      ],
+      "display": "/resources/maths/year-6/hints/ratio-display.pdf",
+      "print": "/resources/maths/year-6/hints/ratio-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 20,
@@ -249,7 +420,20 @@
       "Use simple formulae",
       "Substitute into formulae",
       "Generate terms from a position rule"
-    ]
+    ],
+    "topTip": {
+      "title": "Algebra helper",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "A letter represents a number",
+        "Substitute before calculating",
+        "Keep both sides of an equation balanced",
+        "Use the inverse to find an unknown"
+      ],
+      "display": "/resources/maths/year-6/hints/algebra-display.pdf",
+      "print": "/resources/maths/year-6/hints/algebra-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 22,
@@ -261,7 +445,20 @@
       "Solve equations with brackets",
       "Find pairs for equations with two unknowns",
       "Enumerate combinations of two variables"
-    ]
+    ],
+    "topTip": {
+      "title": "Algebra helper",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "A letter represents a number",
+        "Substitute before calculating",
+        "Keep both sides of an equation balanced",
+        "Use the inverse to find an unknown"
+      ],
+      "display": "/resources/maths/year-6/hints/algebra-display.pdf",
+      "print": "/resources/maths/year-6/hints/algebra-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 23,
@@ -273,7 +470,21 @@
       "Use decimal notation in conversions",
       "Use approximate imperial conversions",
       "Solve multi-step measure problems"
-    ]
+    ],
+    "topTip": {
+      "title": "Conversion facts",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "1 km = 1,000 m",
+        "1 kg = 1,000 g",
+        "1 L = 1,000 ml",
+        "1 hour = 60 minutes",
+        "1 day = 24 hours"
+      ],
+      "display": "/resources/maths/year-6/hints/conversions-display.pdf",
+      "print": "/resources/maths/year-6/hints/conversions-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 24,
@@ -285,7 +496,20 @@
       "Find the area of triangles",
       "Find missing dimensions",
       "Solve compound area problems"
-    ]
+    ],
+    "topTip": {
+      "title": "Measurement formulas",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "Triangle A = base x height / 2",
+        "Parallelogram A = base x height",
+        "Cuboid V = L x W x H",
+        "Perimeter = total distance around"
+      ],
+      "display": "/resources/maths/year-6/hints/formulas-display.pdf",
+      "print": "/resources/maths/year-6/hints/formulas-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 25,
@@ -297,7 +521,20 @@
       "Find missing dimensions",
       "Compare cuboid volumes",
       "Solve volume problems"
-    ]
+    ],
+    "topTip": {
+      "title": "Measurement formulas",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "Triangle A = base x height / 2",
+        "Parallelogram A = base x height",
+        "Cuboid V = L x W x H",
+        "Perimeter = total distance around"
+      ],
+      "display": "/resources/maths/year-6/hints/formulas-display.pdf",
+      "print": "/resources/maths/year-6/hints/formulas-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 26,
@@ -309,7 +546,21 @@
       "Find angles in triangles and quadrilaterals",
       "Name parts of circles",
       "Draw 2-D shapes and build 3-D nets"
-    ]
+    ],
+    "topTip": {
+      "title": "Angles and circles",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "Line = 180 degrees",
+        "Point = 360 degrees",
+        "Triangle = 180 degrees",
+        "Diameter = 2 x radius",
+        "Radius = diameter / 2"
+      ],
+      "display": "/resources/maths/year-6/hints/angles-circles-display.pdf",
+      "print": "/resources/maths/year-6/hints/angles-circles-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 27,
@@ -333,7 +584,20 @@
       "Construct pie chart sectors",
       "Calculate the mean",
       "Solve statistical problems"
-    ]
+    ],
+    "topTip": {
+      "title": "Statistics helper",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "Mean = total / number of values",
+        "Pie chart whole = 360 degrees",
+        "50% of a pie chart = 180 degrees",
+        "Read scales before plotting"
+      ],
+      "display": "/resources/maths/year-6/hints/statistics-display.pdf",
+      "print": "/resources/maths/year-6/hints/statistics-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 29,

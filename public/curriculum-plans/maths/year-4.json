@@ -9,7 +9,20 @@
       "Partition four-digit numbers",
       "Find the value of each digit",
       "One thousand more and less"
-    ]
+    ],
+    "topTip": {
+      "title": "Place value to 10,000",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "10 ones = 1 ten",
+        "10 tens = 1 hundred",
+        "10 hundreds = 1 thousand",
+        "10 thousands = 10,000"
+      ],
+      "display": "/resources/maths/year-4/hints/place-value-display.pdf",
+      "print": "/resources/maths/year-4/hints/place-value-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 2,
@@ -33,7 +46,20 @@
       "Round to the nearest 1,000",
       "Choose a useful rounding point",
       "Solve place-value problems"
-    ]
+    ],
+    "topTip": {
+      "title": "Place value to 10,000",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "10 ones = 1 ten",
+        "10 tens = 1 hundred",
+        "10 hundreds = 1 thousand",
+        "10 thousands = 10,000"
+      ],
+      "display": "/resources/maths/year-4/hints/place-value-display.pdf",
+      "print": "/resources/maths/year-4/hints/place-value-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 4,
@@ -69,7 +95,20 @@
       "Nine times table",
       "Eleven times table",
       "Twelve times table"
-    ]
+    ],
+    "topTip": {
+      "title": "Times tables to 12 x 12",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "Use commutativity: 7 x 8 = 8 x 7",
+        "Use doubles for 4x and 8x",
+        "Use 10x and add 2x for 12x",
+        "Division checks multiplication"
+      ],
+      "display": "/resources/maths/year-4/hints/times-tables-display.pdf",
+      "print": "/resources/maths/year-4/hints/times-tables-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 7,
@@ -81,7 +120,20 @@
       "Use commutativity",
       "Multiply three numbers",
       "Use the distributive law"
-    ]
+    ],
+    "topTip": {
+      "title": "Times tables to 12 x 12",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "Use commutativity: 7 x 8 = 8 x 7",
+        "Use doubles for 4x and 8x",
+        "Use 10x and add 2x for 12x",
+        "Division checks multiplication"
+      ],
+      "display": "/resources/maths/year-4/hints/times-tables-display.pdf",
+      "print": "/resources/maths/year-4/hints/times-tables-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 8,
@@ -93,7 +145,20 @@
       "Multiply three digits by one digit",
       "Use short multiplication",
       "Solve multiplication problems"
-    ]
+    ],
+    "topTip": {
+      "title": "Times tables to 12 x 12",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "Use commutativity: 7 x 8 = 8 x 7",
+        "Use doubles for 4x and 8x",
+        "Use 10x and add 2x for 12x",
+        "Division checks multiplication"
+      ],
+      "display": "/resources/maths/year-4/hints/times-tables-display.pdf",
+      "print": "/resources/maths/year-4/hints/times-tables-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 9,
@@ -105,7 +170,20 @@
       "Use short division",
       "Solve integer scaling problems",
       "Solve correspondence problems"
-    ]
+    ],
+    "topTip": {
+      "title": "Times tables to 12 x 12",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "Use commutativity: 7 x 8 = 8 x 7",
+        "Use doubles for 4x and 8x",
+        "Use 10x and add 2x for 12x",
+        "Division checks multiplication"
+      ],
+      "display": "/resources/maths/year-4/hints/times-tables-display.pdf",
+      "print": "/resources/maths/year-4/hints/times-tables-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 10,
@@ -129,7 +207,21 @@
       "Convert centimetres and millimetres",
       "Compare mixed lengths",
       "Solve length conversion problems"
-    ]
+    ],
+    "topTip": {
+      "title": "Metric conversions",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "1 km = 1,000 m",
+        "1 m = 100 cm",
+        "1 cm = 10 mm",
+        "1 kg = 1,000 g",
+        "1 L = 1,000 ml"
+      ],
+      "display": "/resources/maths/year-4/hints/metric-display.pdf",
+      "print": "/resources/maths/year-4/hints/metric-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 12,
@@ -141,7 +233,20 @@
       "Perimeter of rectilinear shapes",
       "Find a missing side",
       "Solve perimeter problems"
-    ]
+    ],
+    "topTip": {
+      "title": "Perimeter and area",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "Perimeter = distance around",
+        "Rectangle perimeter = 2 x (L + W)",
+        "Area = space inside",
+        "Rectangle area = L x W"
+      ],
+      "display": "/resources/maths/year-4/hints/area-perimeter-display.pdf",
+      "print": "/resources/maths/year-4/hints/area-perimeter-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 13,
@@ -153,7 +258,20 @@
       "Make shapes with a given area",
       "Connect arrays and area",
       "Solve area problems"
-    ]
+    ],
+    "topTip": {
+      "title": "Perimeter and area",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "Perimeter = distance around",
+        "Rectangle perimeter = 2 x (L + W)",
+        "Area = space inside",
+        "Rectangle area = L x W"
+      ],
+      "display": "/resources/maths/year-4/hints/area-perimeter-display.pdf",
+      "print": "/resources/maths/year-4/hints/area-perimeter-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 14,
@@ -165,7 +283,21 @@
       "Use multiplication to find equivalents",
       "Simplify using common factors",
       "Explain fraction equivalence"
-    ]
+    ],
+    "topTip": {
+      "title": "Fractions and decimals",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "1/2 = 0.5",
+        "1/4 = 0.25",
+        "3/4 = 0.75",
+        "1/10 = 0.1",
+        "1/100 = 0.01"
+      ],
+      "display": "/resources/maths/year-4/hints/fractions-decimals-display.pdf",
+      "print": "/resources/maths/year-4/hints/fractions-decimals-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 15,
@@ -201,7 +333,21 @@
       "Write decimal equivalents",
       "Count in hundredths",
       "Connect fractions and decimals"
-    ]
+    ],
+    "topTip": {
+      "title": "Fractions and decimals",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "1/2 = 0.5",
+        "1/4 = 0.25",
+        "3/4 = 0.75",
+        "1/10 = 0.1",
+        "1/100 = 0.01"
+      ],
+      "display": "/resources/maths/year-4/hints/fractions-decimals-display.pdf",
+      "print": "/resources/maths/year-4/hints/fractions-decimals-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 18,
@@ -213,7 +359,21 @@
       "Compare decimals to two places",
       "Round one-place decimals",
       "Solve decimal place-value problems"
-    ]
+    ],
+    "topTip": {
+      "title": "Fractions and decimals",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "1/2 = 0.5",
+        "1/4 = 0.25",
+        "3/4 = 0.75",
+        "1/10 = 0.1",
+        "1/100 = 0.01"
+      ],
+      "display": "/resources/maths/year-4/hints/fractions-decimals-display.pdf",
+      "print": "/resources/maths/year-4/hints/fractions-decimals-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 19,
@@ -249,7 +409,20 @@
       "Convert hours and minutes",
       "Convert minutes and seconds",
       "Solve duration problems"
-    ]
+    ],
+    "topTip": {
+      "title": "Time conversions",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "60 seconds = 1 minute",
+        "60 minutes = 1 hour",
+        "24 hours = 1 day",
+        "7 days = 1 week"
+      ],
+      "display": "/resources/maths/year-4/hints/time-display.pdf",
+      "print": "/resources/maths/year-4/hints/time-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 22,
@@ -261,7 +434,20 @@
       "Order angles by size",
       "Recognise two right angles",
       "Solve angle reasoning problems"
-    ]
+    ],
+    "topTip": {
+      "title": "Angle facts",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "Right angle = 90 degrees",
+        "Straight line = 180 degrees",
+        "Full turn = 360 degrees",
+        "Acute < 90; obtuse > 90"
+      ],
+      "display": "/resources/maths/year-4/hints/angles-display.pdf",
+      "print": "/resources/maths/year-4/hints/angles-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 23,
@@ -297,7 +483,20 @@
       "Complete a rectangle on a grid",
       "Complete a polygon on a grid",
       "Solve coordinate problems"
-    ]
+    ],
+    "topTip": {
+      "title": "Coordinates",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "Write x before y",
+        "Move across, then up",
+        "Origin = (0, 0)",
+        "A point is written (x, y)"
+      ],
+      "display": "/resources/maths/year-4/hints/coordinates-display.pdf",
+      "print": "/resources/maths/year-4/hints/coordinates-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 26,
@@ -309,7 +508,20 @@
       "Describe a translation",
       "Translate a polygon",
       "Solve translation problems"
-    ]
+    ],
+    "topTip": {
+      "title": "Coordinates",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "Write x before y",
+        "Move across, then up",
+        "Origin = (0, 0)",
+        "A point is written (x, y)"
+      ],
+      "display": "/resources/maths/year-4/hints/coordinates-display.pdf",
+      "print": "/resources/maths/year-4/hints/coordinates-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 27,

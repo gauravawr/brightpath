@@ -33,7 +33,20 @@
       "Ten more and ten less",
       "Counting in threes",
       "Missing numbers in counting patterns"
-    ]
+    ],
+    "topTip": {
+      "title": "Counting patterns",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "2, 4, 6, 8, 10",
+        "5, 10, 15, 20",
+        "10, 20, 30, 40",
+        "Odd and even alternate"
+      ],
+      "display": "/resources/maths/year-2/hints/counting-display.pdf",
+      "print": "/resources/maths/year-2/hints/counting-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 4,
@@ -93,7 +106,20 @@
       "Add two digit numbers across ten",
       "Choose and explain an addition method",
       "Addition stories across ten"
-    ]
+    ],
+    "topTip": {
+      "title": "Bridge through 10",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "8 + 5 = 8 + 2 + 3",
+        "8 + 2 = 10",
+        "10 + 3 = 13",
+        "13 - 5 = 13 - 3 - 2"
+      ],
+      "display": "/resources/maths/year-2/hints/bridge-ten-display.pdf",
+      "print": "/resources/maths/year-2/hints/bridge-ten-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 9,
@@ -105,7 +131,20 @@
       "Subtract two digit numbers across ten",
       "Choose and explain a subtraction method",
       "Subtraction stories across ten"
-    ]
+    ],
+    "topTip": {
+      "title": "Bridge through 10",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "8 + 5 = 8 + 2 + 3",
+        "8 + 2 = 10",
+        "10 + 3 = 13",
+        "13 - 5 = 13 - 3 - 2"
+      ],
+      "display": "/resources/maths/year-2/hints/bridge-ten-display.pdf",
+      "print": "/resources/maths/year-2/hints/bridge-ten-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 10,
@@ -153,7 +192,20 @@
       "Odd and even numbers",
       "Divide by two",
       "Two times table problems"
-    ]
+    ],
+    "topTip": {
+      "title": "2, 5 and 10 times tables",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "2s are even",
+        "5s end in 0 or 5",
+        "10s end in 0",
+        "Multiplication makes equal groups"
+      ],
+      "display": "/resources/maths/year-2/hints/times-tables-display.pdf",
+      "print": "/resources/maths/year-2/hints/times-tables-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 14,
@@ -165,7 +217,20 @@
       "Connect the five and ten times tables",
       "Missing multiplication facts",
       "Five and ten times table problems"
-    ]
+    ],
+    "topTip": {
+      "title": "2, 5 and 10 times tables",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "2s are even",
+        "5s end in 0 or 5",
+        "10s end in 0",
+        "Multiplication makes equal groups"
+      ],
+      "display": "/resources/maths/year-2/hints/times-tables-display.pdf",
+      "print": "/resources/maths/year-2/hints/times-tables-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 15,
@@ -177,7 +242,20 @@
       "Multiplication and division families",
       "Choose sharing or grouping",
       "Solve division problems"
-    ]
+    ],
+    "topTip": {
+      "title": "2, 5 and 10 times tables",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "2s are even",
+        "5s end in 0 or 5",
+        "10s end in 0",
+        "Multiplication makes equal groups"
+      ],
+      "display": "/resources/maths/year-2/hints/times-tables-display.pdf",
+      "print": "/resources/maths/year-2/hints/times-tables-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 16,
@@ -213,7 +291,20 @@
       "Quarters of shapes and quantities",
       "Thirds of shapes and quantities",
       "Find a fraction of a set"
-    ]
+    ],
+    "topTip": {
+      "title": "Halves, thirds and quarters",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "1 whole = 2 halves",
+        "1 whole = 3 thirds",
+        "1 whole = 4 quarters",
+        "2 quarters = 1 half"
+      ],
+      "display": "/resources/maths/year-2/hints/fractions-display.pdf",
+      "print": "/resources/maths/year-2/hints/fractions-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 19,
@@ -225,7 +316,20 @@
       "Count in halves and quarters",
       "Find the whole from a part",
       "Fraction problems"
-    ]
+    ],
+    "topTip": {
+      "title": "Halves, thirds and quarters",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "1 whole = 2 halves",
+        "1 whole = 3 thirds",
+        "1 whole = 4 quarters",
+        "2 quarters = 1 half"
+      ],
+      "display": "/resources/maths/year-2/hints/fractions-display.pdf",
+      "print": "/resources/maths/year-2/hints/fractions-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 20,
@@ -273,7 +377,20 @@
       "Quarter to the hour",
       "Match analogue and digital times",
       "Hours minutes and duration"
-    ]
+    ],
+    "topTip": {
+      "title": "Telling time to 5 minutes",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "60 minutes = 1 hour",
+        "15 minutes = quarter hour",
+        "30 minutes = half hour",
+        "Count around the clock in 5s"
+      ],
+      "display": "/resources/maths/year-2/hints/time-display.pdf",
+      "print": "/resources/maths/year-2/hints/time-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 24,
@@ -285,7 +402,20 @@
       "Five minute times to the hour",
       "Draw hands on a clock",
       "Solve time problems"
-    ]
+    ],
+    "topTip": {
+      "title": "Telling time to 5 minutes",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "60 minutes = 1 hour",
+        "15 minutes = quarter hour",
+        "30 minutes = half hour",
+        "Count around the clock in 5s"
+      ],
+      "display": "/resources/maths/year-2/hints/time-display.pdf",
+      "print": "/resources/maths/year-2/hints/time-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 25,
@@ -297,7 +427,20 @@
       "Read a pictogram with a key of two",
       "Compare categories in a pictogram",
       "Make and explain a pictogram"
-    ]
+    ],
+    "topTip": {
+      "title": "Pictogram key",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "Read the key first",
+        "One picture may mean more than 1",
+        "Half a picture means half the key",
+        "Count, then multiply by the key"
+      ],
+      "display": "/resources/maths/year-2/hints/data-display.pdf",
+      "print": "/resources/maths/year-2/hints/data-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 26,

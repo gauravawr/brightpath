@@ -69,7 +69,21 @@
       "Recognise prime and composite numbers",
       "Use square and cube numbers and notation",
       "Solve number-property problems"
-    ]
+    ],
+    "topTip": {
+      "title": "Factors, multiples and primes",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "Factor: divides exactly",
+        "Multiple: result of multiplying",
+        "Prime: exactly 2 factors",
+        "Square number = n x n",
+        "Cube number = n x n x n"
+      ],
+      "display": "/resources/maths/year-5/hints/factors-primes-display.pdf",
+      "print": "/resources/maths/year-5/hints/factors-primes-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 7,
@@ -93,7 +107,20 @@
       "Order fractions with related denominators",
       "Convert improper fractions to mixed numbers",
       "Convert mixed numbers to improper fractions"
-    ]
+    ],
+    "topTip": {
+      "title": "Fraction forms",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "Proper: numerator < denominator",
+        "Improper: numerator >= denominator",
+        "Mixed number: whole and fraction",
+        "Equivalent fractions have equal value"
+      ],
+      "display": "/resources/maths/year-5/hints/fraction-types-display.pdf",
+      "print": "/resources/maths/year-5/hints/fraction-types-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 9,
@@ -149,10 +176,16 @@
     "unit": "Fractions decimals and percentages",
     "topTip": {
       "title": "Fraction, decimal and percentage equivalents",
-      "summary": "View the equivalence chart or print six small reference cards for pupils' books.",
-      "facts": ["1/2 = 0.5 = 50%", "1/4 = 0.25 = 25%", "3/4 = 0.75 = 75%", "1/5 = 0.2 = 20%"],
-      "display": "/resources/maths/year-5/year-5-fdp-equivalence-display.pdf",
-      "print": "/resources/maths/year-5/year-5-fdp-equivalence-book-cards.pdf",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "1/2 = 0.5 = 50%",
+        "1/4 = 0.25 = 25%",
+        "3/4 = 0.75 = 75%",
+        "1/5 = 0.2 = 20%",
+        "1/10 = 0.1 = 10%"
+      ],
+      "display": "/resources/maths/year-5/hints/fdp-display.pdf",
+      "print": "/resources/maths/year-5/hints/fdp-book-cards.pdf",
       "copies": 6
     },
     "days": [
@@ -169,10 +202,16 @@
     "unit": "Metric measure and conversion",
     "topTip": {
       "title": "Metric conversion chart",
-      "summary": "Display the conversion facts or print small copies for pupils' books.",
-      "facts": ["1 km = 1000 m", "1 m = 100 cm", "1 kg = 1000 g", "1 L = 1000 ml"],
-      "display": "/resources/maths/year-5/year-5-metric-conversion-display.pdf",
-      "print": "/resources/maths/year-5/year-5-metric-conversion-book-cards.pdf",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "1 km = 1,000 m",
+        "1 m = 100 cm",
+        "1 cm = 10 mm",
+        "1 kg = 1,000 g",
+        "1 L = 1,000 ml"
+      ],
+      "display": "/resources/maths/year-5/hints/metric-display.pdf",
+      "print": "/resources/maths/year-5/hints/metric-book-cards.pdf",
       "copies": 6
     },
     "days": [
@@ -193,7 +232,21 @@
       "Solve elapsed-time problems",
       "Use all four operations with measures",
       "Solve multi-step conversion problems"
-    ]
+    ],
+    "topTip": {
+      "title": "Measure and time conversions",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "60 sec = 1 min",
+        "60 min = 1 hour",
+        "24 hours = 1 day",
+        "1 inch is about 2.5 cm",
+        "1 mile is about 1.6 km"
+      ],
+      "display": "/resources/maths/year-5/hints/measure-time-display.pdf",
+      "print": "/resources/maths/year-5/hints/measure-time-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 16,
@@ -205,7 +258,20 @@
       "Find missing lengths from a perimeter",
       "Compare shapes with the same perimeter",
       "Solve perimeter problems"
-    ]
+    ],
+    "topTip": {
+      "title": "Perimeter, area and volume",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "Rectangle P = 2 x (L + W)",
+        "Rectangle A = L x W",
+        "Square A = side x side",
+        "Cuboid V = L x W x H"
+      ],
+      "display": "/resources/maths/year-5/hints/measure-formulas-display.pdf",
+      "print": "/resources/maths/year-5/hints/measure-formulas-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 17,
@@ -217,7 +283,20 @@
       "Estimate the area of irregular shapes",
       "Compare shapes with the same area",
       "Solve area and scale problems"
-    ]
+    ],
+    "topTip": {
+      "title": "Perimeter, area and volume",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "Rectangle P = 2 x (L + W)",
+        "Rectangle A = L x W",
+        "Square A = side x side",
+        "Cuboid V = L x W x H"
+      ],
+      "display": "/resources/maths/year-5/hints/measure-formulas-display.pdf",
+      "print": "/resources/maths/year-5/hints/measure-formulas-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 18,
@@ -229,7 +308,20 @@
       "Compare volume and capacity",
       "Find missing cuboid dimensions",
       "Solve volume and capacity problems"
-    ]
+    ],
+    "topTip": {
+      "title": "Perimeter, area and volume",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "Rectangle P = 2 x (L + W)",
+        "Rectangle A = L x W",
+        "Square A = side x side",
+        "Cuboid V = L x W x H"
+      ],
+      "display": "/resources/maths/year-5/hints/measure-formulas-display.pdf",
+      "print": "/resources/maths/year-5/hints/measure-formulas-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 19,
@@ -241,7 +333,20 @@
       "Draw angles accurately",
       "Use angles around a point and on a line",
       "Use other multiples of 90 degrees"
-    ]
+    ],
+    "topTip": {
+      "title": "Angle facts",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "On a line = 180 degrees",
+        "Around a point = 360 degrees",
+        "Right angle = 90 degrees",
+        "Two right angles = 180 degrees"
+      ],
+      "display": "/resources/maths/year-5/hints/angles-display.pdf",
+      "print": "/resources/maths/year-5/hints/angles-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 20,
@@ -265,7 +370,20 @@
       "Reflect shapes across an axis",
       "Describe position after a transformation",
       "Solve coordinate problems"
-    ]
+    ],
+    "topTip": {
+      "title": "Coordinates and transformations",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "Coordinates are (x, y)",
+        "Translate: slide",
+        "Reflect: mirror",
+        "Shape size stays the same"
+      ],
+      "display": "/resources/maths/year-5/hints/coordinates-display.pdf",
+      "print": "/resources/maths/year-5/hints/coordinates-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 22,
@@ -321,10 +439,16 @@
     "unit": "Fraction decimal and percentage consolidation",
     "topTip": {
       "title": "Fraction, decimal and percentage equivalents",
-      "summary": "Display the equivalence chart or print small reference cards for pupils' books.",
-      "facts": ["1/2 = 0.5 = 50%", "1/4 = 0.25 = 25%", "3/4 = 0.75 = 75%", "1/5 = 0.2 = 20%"],
-      "display": "/resources/maths/year-5/year-5-fdp-equivalence-display.pdf",
-      "print": "/resources/maths/year-5/year-5-fdp-equivalence-book-cards.pdf",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "1/2 = 0.5 = 50%",
+        "1/4 = 0.25 = 25%",
+        "3/4 = 0.75 = 75%",
+        "1/5 = 0.2 = 20%",
+        "1/10 = 0.1 = 10%"
+      ],
+      "display": "/resources/maths/year-5/hints/fdp-display.pdf",
+      "print": "/resources/maths/year-5/hints/fdp-book-cards.pdf",
       "copies": 6
     },
     "days": [
@@ -341,10 +465,16 @@
     "unit": "Measure consolidation",
     "topTip": {
       "title": "Metric conversion chart",
-      "summary": "Use before the conversion review and keep a small copy in pupils' books.",
-      "facts": ["1 km = 1000 m", "1 m = 100 cm", "1 kg = 1000 g", "1 L = 1000 ml"],
-      "display": "/resources/maths/year-5/year-5-metric-conversion-display.pdf",
-      "print": "/resources/maths/year-5/year-5-metric-conversion-book-cards.pdf",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "1 km = 1,000 m",
+        "1 m = 100 cm",
+        "1 cm = 10 mm",
+        "1 kg = 1,000 g",
+        "1 L = 1,000 ml"
+      ],
+      "display": "/resources/maths/year-5/hints/metric-display.pdf",
+      "print": "/resources/maths/year-5/hints/metric-book-cards.pdf",
       "copies": 6
     },
     "days": [

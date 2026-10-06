@@ -9,7 +9,20 @@
       "Flexible partitioning",
       "Ten more and ten less",
       "One hundred more and less"
-    ]
+    ],
+    "topTip": {
+      "title": "Place value to 1,000",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "1,000 = 10 hundreds",
+        "100 = 10 tens",
+        "10 = 10 ones",
+        "H T O: hundreds, tens, ones"
+      ],
+      "display": "/resources/maths/year-3/hints/place-value-display.pdf",
+      "print": "/resources/maths/year-3/hints/place-value-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 2,
@@ -45,7 +58,20 @@
       "Exchange ten tens",
       "Add with two exchanges",
       "Addition word problems"
-    ]
+    ],
+    "topTip": {
+      "title": "Column addition and subtraction",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "Line up place-value columns",
+        "Start with the ones",
+        "Exchange 10 ones for 1 ten",
+        "Exchange 10 tens for 1 hundred"
+      ],
+      "display": "/resources/maths/year-3/hints/column-methods-display.pdf",
+      "print": "/resources/maths/year-3/hints/column-methods-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 5,
@@ -57,7 +83,20 @@
       "Exchange a hundred",
       "Subtract across a zero",
       "Subtraction word problems"
-    ]
+    ],
+    "topTip": {
+      "title": "Column addition and subtraction",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "Line up place-value columns",
+        "Start with the ones",
+        "Exchange 10 ones for 1 ten",
+        "Exchange 10 tens for 1 hundred"
+      ],
+      "display": "/resources/maths/year-3/hints/column-methods-display.pdf",
+      "print": "/resources/maths/year-3/hints/column-methods-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 6,
@@ -81,7 +120,20 @@
       "Eight times table",
       "Double from four to eight",
       "Related division facts"
-    ]
+    ],
+    "topTip": {
+      "title": "3, 4 and 8 times tables",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "4x facts are double 2x",
+        "8x facts are double 4x",
+        "3x facts add three each time",
+        "Division is the inverse"
+      ],
+      "display": "/resources/maths/year-3/hints/times-tables-display.pdf",
+      "print": "/resources/maths/year-3/hints/times-tables-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 8,
@@ -141,7 +193,20 @@
       "Compare and calculate lengths",
       "Measure a perimeter",
       "Find a missing side"
-    ]
+    ],
+    "topTip": {
+      "title": "Metric measure facts",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "100 cm = 1 m",
+        "1,000 m = 1 km",
+        "1,000 g = 1 kg",
+        "1,000 ml = 1 L"
+      ],
+      "display": "/resources/maths/year-3/hints/metric-display.pdf",
+      "print": "/resources/maths/year-3/hints/metric-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 13,
@@ -153,7 +218,20 @@
       "Read capacity scales",
       "Litres and millilitres",
       "Add and subtract measures"
-    ]
+    ],
+    "topTip": {
+      "title": "Metric measure facts",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "100 cm = 1 m",
+        "1,000 m = 1 km",
+        "1,000 g = 1 kg",
+        "1,000 ml = 1 L"
+      ],
+      "display": "/resources/maths/year-3/hints/metric-display.pdf",
+      "print": "/resources/maths/year-3/hints/metric-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 14,
@@ -165,7 +243,20 @@
       "Unit fractions of sets",
       "Non-unit fractions of sets",
       "Fractions of lengths"
-    ]
+    ],
+    "topTip": {
+      "title": "Fraction helper",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "Numerator: parts counted",
+        "Denominator: equal parts",
+        "Equivalent fractions have equal value",
+        "Same denominator: compare numerators"
+      ],
+      "display": "/resources/maths/year-3/hints/fractions-display.pdf",
+      "print": "/resources/maths/year-3/hints/fractions-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 15,
@@ -189,7 +280,20 @@
       "Quarters and eighths",
       "Match equivalent fractions",
       "Explain equivalent fractions"
-    ]
+    ],
+    "topTip": {
+      "title": "Fraction helper",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "Numerator: parts counted",
+        "Denominator: equal parts",
+        "Equivalent fractions have equal value",
+        "Same denominator: compare numerators"
+      ],
+      "display": "/resources/maths/year-3/hints/fractions-display.pdf",
+      "print": "/resources/maths/year-3/hints/fractions-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 17,
@@ -201,7 +305,20 @@
       "Complete the whole",
       "Missing fraction addition",
       "Fraction word problems"
-    ]
+    ],
+    "topTip": {
+      "title": "Fraction helper",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "Numerator: parts counted",
+        "Denominator: equal parts",
+        "Equivalent fractions have equal value",
+        "Same denominator: compare numerators"
+      ],
+      "display": "/resources/maths/year-3/hints/fractions-display.pdf",
+      "print": "/resources/maths/year-3/hints/fractions-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 18,
@@ -213,7 +330,20 @@
       "Compare equal denominators",
       "Order equal denominators",
       "Explain fraction comparisons"
-    ]
+    ],
+    "topTip": {
+      "title": "Fraction helper",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "Numerator: parts counted",
+        "Denominator: equal parts",
+        "Equivalent fractions have equal value",
+        "Same denominator: compare numerators"
+      ],
+      "display": "/resources/maths/year-3/hints/fractions-display.pdf",
+      "print": "/resources/maths/year-3/hints/fractions-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 19,
@@ -244,16 +374,17 @@
     "term": "Summer",
     "unit": "Time and calendars",
     "topTip": {
-      "title": "Time conversion chart",
-      "summary": "Display while teaching time and keep a small copy in pupils' books.",
+      "title": "Time conversion facts",
+      "summary": "View the class reference or print six small copies for pupils' books.",
       "facts": [
-        "1 minute = 60 seconds",
-        "1 hour = 60 minutes",
-        "1 day = 24 hours",
-        "1 week = 7 days"
+        "60 seconds = 1 minute",
+        "60 minutes = 1 hour",
+        "24 hours = 1 day",
+        "7 days = 1 week",
+        "12 months = 1 year"
       ],
-      "display": "/resources/maths/year-3/week-26-time-conversion-display.pdf",
-      "print": "/resources/maths/year-3/week-26-time-conversion-book-cards.pdf",
+      "display": "/resources/maths/year-3/hints/time-display.pdf",
+      "print": "/resources/maths/year-3/hints/time-book-cards.pdf",
       "copies": 6
     },
     "days": [
@@ -274,7 +405,20 @@
       "Angles greater than a right angle",
       "Right angles and turns",
       "Compare angles in shapes"
-    ]
+    ],
+    "topTip": {
+      "title": "Turns and angles",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "Quarter turn = 90 degrees",
+        "Half turn = 180 degrees",
+        "Full turn = 360 degrees",
+        "Right angle = 90 degrees"
+      ],
+      "display": "/resources/maths/year-3/hints/angles-display.pdf",
+      "print": "/resources/maths/year-3/hints/angles-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 23,
@@ -298,7 +442,20 @@
       "Perpendicular lines",
       "Find lines in shapes",
       "Draw shapes with line clues"
-    ]
+    ],
+    "topTip": {
+      "title": "Lines in shapes",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "Parallel: never meet",
+        "Perpendicular: meet at 90 degrees",
+        "Horizontal: across",
+        "Vertical: up and down"
+      ],
+      "display": "/resources/maths/year-3/hints/lines-display.pdf",
+      "print": "/resources/maths/year-3/hints/lines-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 25,
@@ -317,16 +474,17 @@
     "term": "Summer",
     "unit": "Measure and time problems",
     "topTip": {
-      "title": "Time conversion chart",
-      "summary": "Display before duration problems or print small copies for pupils' books.",
+      "title": "Time conversion facts",
+      "summary": "View the class reference or print six small copies for pupils' books.",
       "facts": [
-        "1 minute = 60 seconds",
-        "1 hour = 60 minutes",
-        "1 day = 24 hours",
-        "1 week = 7 days"
+        "60 seconds = 1 minute",
+        "60 minutes = 1 hour",
+        "24 hours = 1 day",
+        "7 days = 1 week",
+        "12 months = 1 year"
       ],
-      "display": "/resources/maths/year-3/week-26-time-conversion-display.pdf",
-      "print": "/resources/maths/year-3/week-26-time-conversion-book-cards.pdf",
+      "display": "/resources/maths/year-3/hints/time-display.pdf",
+      "print": "/resources/maths/year-3/hints/time-book-cards.pdf",
       "copies": 6
     },
     "days": [
@@ -347,7 +505,20 @@
       "Find all outfit combinations",
       "Missing multiplication numbers",
       "Choose multiplication or division"
-    ]
+    ],
+    "topTip": {
+      "title": "3, 4 and 8 times tables",
+      "summary": "View the class reference or print six small copies for pupils' books.",
+      "facts": [
+        "4x facts are double 2x",
+        "8x facts are double 4x",
+        "3x facts add three each time",
+        "Division is the inverse"
+      ],
+      "display": "/resources/maths/year-3/hints/times-tables-display.pdf",
+      "print": "/resources/maths/year-3/hints/times-tables-book-cards.pdf",
+      "copies": 6
+    }
   },
   {
     "week": 28,
