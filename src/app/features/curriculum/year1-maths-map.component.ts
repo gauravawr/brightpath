@@ -79,10 +79,10 @@ interface CurriculumWeek {
                   @for (week of weeksFor(term); track week.week) {
                     <article class="week-card">
                       @if (week.topTip; as tip) {
-                        <aside class="week-tip" [attr.aria-label]="'Helpful cheat sheet: ' + tip.title">
+                        <aside class="week-tip" [attr.aria-label]="'Helpful hint: ' + tip.title">
                           <span class="week-tip__star" aria-hidden="true">★</span>
                           <div class="week-tip__body">
-                            <b>Helpful cheat sheet: {{ tip.title }}</b>
+                            <b>Helpful hint: {{ tip.title }}</b>
                             <small>{{ tip.summary }}</small>
                             <div class="week-tip__actions">
                               <a [href]="tip.display" target="_blank" rel="noopener">View hint sheet</a>
