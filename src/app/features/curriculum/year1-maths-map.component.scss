@@ -45,7 +45,7 @@
 .week-card__head > div > span { color: var(--brand-d); font-size: .72rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
 .week-card h3 { margin: .25rem 0 0; font-size: 1rem; }
 .week-card__count { flex: none; border-radius: var(--r-pill); padding: .25rem .55rem; background: var(--brand-tint); color: var(--brand-d); font-size: .72rem; font-weight: 800; }
-.week-tip { display:flex;gap:.55rem;margin-top:.85rem;border:1px solid #f0c36a;border-radius:10px;background:#fff9e8;padding:.65rem; }
+.week-tip { display:flex;gap:.55rem;margin-bottom:.85rem;border:1px solid #f0c36a;border-radius:10px;background:#fff9e8;padding:.65rem; }
 .week-tip__star { display:grid;place-items:center;flex:none;width:1.45rem;height:1.45rem;border-radius:50%;background:#f3a712;color:#fff; }
 .week-tip__body>b,.week-tip__body>small { display:block; }
 .week-tip__actions { display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.4rem; }

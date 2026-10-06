@@ -78,18 +78,11 @@ interface CurriculumWeek {
                 <div class="week-grid">
                   @for (week of weeksFor(term); track week.week) {
                     <article class="week-card">
-                      <div class="week-card__head">
-                        <div>
-                          <span>Week {{ week.week }}</span>
-                          <h3>{{ week.unit }}</h3>
-                        </div>
-                        <span class="week-card__count">5 days</span>
-                      </div>
                       @if (week.topTip; as tip) {
-                        <aside class="week-tip" [attr.aria-label]="'Hint sheet: ' + tip.title">
+                        <aside class="week-tip" [attr.aria-label]="'Helpful cheat sheet: ' + tip.title">
                           <span class="week-tip__star" aria-hidden="true">★</span>
                           <div class="week-tip__body">
-                            <b>Hint sheet: {{ tip.title }}</b>
+                            <b>Helpful cheat sheet: {{ tip.title }}</b>
                             <small>{{ tip.summary }}</small>
                             <div class="week-tip__actions">
                               <a [href]="tip.display" target="_blank" rel="noopener">View hint sheet</a>
@@ -98,6 +91,13 @@ interface CurriculumWeek {
                           </div>
                         </aside>
                       }
+                      <div class="week-card__head">
+                        <div>
+                          <span>Week {{ week.week }}</span>
+                          <h3>{{ week.unit }}</h3>
+                        </div>
+                        <span class="week-card__count">5 days</span>
+                      </div>
                       <ol>
                         @for (day of week.days; track day; let dayNumber = $index) {
                           <li>
