@@ -159,6 +159,14 @@
     "week": 14,
     "term": "Spring",
     "unit": "Metric measure and conversion",
+    "topTip": {
+      "title": "Metric conversion chart",
+      "summary": "Display the conversion facts or print small copies for pupils' books.",
+      "facts": ["1 km = 1000 m", "1 m = 100 cm", "1 kg = 1000 g", "1 L = 1000 ml"],
+      "display": "/resources/maths/year-5/year-5-metric-conversion-display.pdf",
+      "print": "/resources/maths/year-5/year-5-metric-conversion-book-cards.pdf",
+      "copies": 6
+    },
     "days": [
       "Convert kilometres and metres",
       "Convert metres centimetres and millimetres",
@@ -303,6 +311,14 @@
     "week": 26,
     "term": "Summer",
     "unit": "Fraction decimal and percentage consolidation",
+    "topTip": {
+      "title": "Fraction, decimal and percentage equivalents",
+      "summary": "Display the equivalence chart or print small reference cards for pupils' books.",
+      "facts": ["1/2 = 0.5 = 50%", "1/4 = 0.25 = 25%", "3/4 = 0.75 = 75%", "1/5 = 0.2 = 20%"],
+      "display": "/resources/maths/year-5/year-5-fdp-equivalence-display.pdf",
+      "print": "/resources/maths/year-5/year-5-fdp-equivalence-book-cards.pdf",
+      "copies": 6
+    },
     "days": [
       "Equivalent and mixed-fraction review",
       "Fraction calculation review",
@@ -315,6 +331,14 @@
     "week": 27,
     "term": "Summer",
     "unit": "Measure consolidation",
+    "topTip": {
+      "title": "Metric conversion chart",
+      "summary": "Use before the conversion review and keep a small copy in pupils' books.",
+      "facts": ["1 km = 1000 m", "1 m = 100 cm", "1 kg = 1000 g", "1 L = 1000 ml"],
+      "display": "/resources/maths/year-5/year-5-metric-conversion-display.pdf",
+      "print": "/resources/maths/year-5/year-5-metric-conversion-book-cards.pdf",
+      "copies": 6
+    },
     "days": [
       "Metric conversion review",
       "Imperial equivalence review",
