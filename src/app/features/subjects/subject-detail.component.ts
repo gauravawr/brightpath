@@ -22,7 +22,7 @@ import { LanguageService } from '../../core/services/language.service';
         @if (isMaths) {
           <a class="times-card bp-card" [routerLink]="l('/subjects/maths/times-tables')">
             <span class="times-card__icon" aria-hidden="true">×</span>
-            <span class="times-card__copy"><small>Early bird · 5 minutes</small><strong>Times tables practice</strong><span>Five mixed sheets per year, increasing from 20 to 60 questions</span></span>
+            <span class="times-card__copy"><small>Early bird · 5 minutes</small><strong>Times tables practice</strong><span>Five focused sheets per year, increasing from 20 to 60 questions</span></span>
             <b aria-hidden="true">Open sheets →</b>
           </a>
         }
